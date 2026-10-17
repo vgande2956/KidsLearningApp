@@ -1,0 +1,14 @@
+{
+  "name": "kids-learning-fun",
+  "version": "2.0.0",
+  "description": "Kids learning web app: tap a letter or number to see a picture and hear the word.",
+  "private": true,
+  "main": "server.js",
+  "scripts": {
+    "build": "node scripts/build.js",
+    "start": "node server.js",
+    "dev": "node scripts/build.js && node server.js",
+    "test": "node --test"
+  },
+  "engines": { "node": ">=18" }
+}

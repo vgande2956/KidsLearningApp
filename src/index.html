@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Kids Learning">
+<title>Kids Learning Fun</title>
+<meta name="theme-color" content="#fff3c4">
+<meta name="description" content="Kids learning app: tap a letter or number to see a picture and hear the word.">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="stylesheet" href="styles.css"></head><body>
+<section id="name">
+<div class="big">🌈</div><h1>Welcome!</h1><div style="font-size:1.5rem">What is your name?</div>
+<input id="nm" maxlength="20" autocomplete="off" placeholder="Type name">
+<div id="msg" style="color:#c0392b;min-height:1.4em"></div>
+<button class="go" id="start">Let's Learn! ▶</button>
+</section>
+<section id="app" hidden>
+<header><b id="hi"></b><button id="again" style="background:#2e9e5b">🔊 Again</button><button id="chg" style="background:#ff9800">Change Name</button></header>
+<div id="stage"></div><div id="st"></div><div id="pad"></div>
+</section>
+<script src="app.js" defer></script></body></html>
