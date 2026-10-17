@@ -1,7 +1,9 @@
 # KidsLearningApp
 
 On launch, an animated Kids Learning Fun logo introduces the app before the
-language-selection screen. Choose English, Telugu, or Hindi, then enter a name to begin.
+language-selection screen. The sound toggle appears after the logo and can mute
+speech and sound effects throughout the app. Choose English, Telugu, or Hindi,
+then enter a name to begin.
 The Maths option opens Addition, Subtraction, Multiplication, and Division. Each
 operation has a separate level picker with ten selectable levels (Level 1: 1–10,
 Level 2: 11–20, continuing through Level 10: 91–100), followed by a spoken, visual
@@ -19,12 +21,15 @@ Each activity includes number selectors, spoken guidance, multiple-choice questi
 and feedback.
 The language-selection screen reads its heading and available options aloud; use
 “Hear options” to replay the voice guidance.
-English opens the English letters-and-numbers lessons. Hindi opens an independent Hindi
-Devanagari lesson with 46 characters, 20 words per character, emoji illustrations, and
-Hindi speech. Telugu opens a Telugu letter lesson with Telugu words, emoji illustrations,
-English meanings, and speech. The Hindi and Telugu lessons speak the letter sound followed
-by the example word (for example, “Aa… Aam” or “Ka… Kalam”) at a slower pace, and show
-the pronunciation.
+English opens a word-length menu for two-letter, three-letter, and multi-letter
+words. Choose a letter to browse matching illustrated words; selecting a word
+speaks its pronunciation using the English (India) locale and an Indian English
+voice when available. Hindi opens an independent Hindi Devanagari lesson with
+46 characters, 20 words per character, emoji illustrations, and Hindi speech.
+Telugu opens a Telugu letter lesson with Telugu words, emoji illustrations, English
+meanings, and speech. The Hindi and Telugu lessons speak the letter sound followed
+by the example word (for example, “Aa… Aam” or “Ka… Kalam”) at a slower pace with a
+short pause between them, and show the pronunciation.
 Submitting a learner's name also plays a spoken welcome in the selected lesson language.
 If the device has no Telugu speech voice, it speaks the letter sound and the word's
 transliteration using an Indian English voice. Repeated taps cycle through

@@ -114,3 +114,33 @@ header b{flex:1;color:var(--blue);font-size:1.3rem}header button{font-size:.95re
 @media (max-width:480px){.addition-screen{padding:8px;gap:8px}.addition-header{justify-content:center}.addition-header h1{order:-1;flex-basis:100%}.addition-board{gap:4px;padding:8px 4px}.addition-group{padding:5px 2px}.addition-answer{min-width:66px;min-height:60px}}
 @media (max-height:700px){.addition-screen{gap:6px}.addition-board{padding:8px}.addition-icons{min-height:48px}}
 @media (max-width:380px){.addition-level-options{gap:6px}.addition-level-card{min-height:66px}.addition-pickers{gap:6px}.addition-picker{padding:6px 3px}.addition-picker select{min-height:42px}.addition-board{gap:2px}.addition-group{padding:4px 1px}.addition-total{flex-basis:54px;min-height:64px}.addition-icons{font-size:.9rem}}
+.mute-toggle{position:fixed;z-index:1000;top:calc(env(safe-area-inset-top,0px) + 8px);right:10px;min-height:42px;padding:8px 12px;border:2px solid #ffffffb8;border-radius:20px;background:#1f4e9c;box-shadow:0 3px 8px #00000024;font-size:.95rem}
+#language,#name,#app,.math-screen,.addition-level-screen,.addition-screen,.english-screen{padding-top:58px}
+.english-screen{height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:58px 16px 16px;overflow-y:auto;text-align:center}
+.english-screen>.big{font-size:min(22vmin,110px)}
+.english-screen>h1{font-size:clamp(1.8rem,6vw,2.6rem)}
+.english-screen>p{margin:0;color:var(--blue);font-size:clamp(1rem,3vw,1.25rem);font-weight:700}
+.english-type-options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;width:min(92vw,620px)}
+.english-type-card{min-height:clamp(120px,20vh,165px)}
+.english-type-card .choice-icon{font-size:clamp(2.4rem,8vmin,4rem)}
+.english-two-card{background:#18865b}.english-three-card{background:#4d60be}.english-multi-card{background:#bd7414;grid-column:1/-1}
+.english-back,.english-hear{min-height:44px;background:#5c6bc0;font-size:.95rem}
+.english-lesson{justify-content:flex-start;gap:8px}
+.english-header{width:min(100%,920px);min-height:46px;justify-content:space-between;gap:8px;padding:0;flex-wrap:wrap}
+.english-header h1{flex:1;min-width:140px;font-size:clamp(1.5rem,5vw,2.2rem)}
+.english-header .english-hear{background:#1f4e9c}
+.english-alphabet{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px;width:min(100%,680px);max-height:28vh;overflow-y:auto;padding:3px}
+.english-alphabet button{min-width:0;min-height:40px;padding:5px;border:2px solid #ffffffb8;background:var(--key);color:var(--ink);font-size:1.1rem}
+.english-alphabet button[aria-pressed="true"]{background:#ffb74d;color:#222;outline:2px solid var(--accent)}
+.english-word-content{width:min(100%,920px);min-height:0;flex:1;display:flex;flex-direction:column;gap:8px}
+.english-word-content h2{margin:0;color:var(--blue);font-size:clamp(1.2rem,4vw,1.7rem)}
+.english-word-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,180px));justify-content:center;align-content:start;gap:10px;overflow-y:auto;padding:4px}
+.english-word-card{min-height:100px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;padding:8px;border:2px solid #ffffffb8;border-radius:18px;background:#fff9df;color:#222;box-shadow:0 4px 0 #00000018}
+.english-word-card:hover,.english-word-card.is-selected{background:#dff3ff;transform:translateY(-2px)}
+.english-word-icon{font-size:2.4rem;line-height:1}
+.english-word-text{font-size:1.2rem;font-weight:800}
+.english-word-speaker{font-size:.9rem}
+.english-no-words{grid-column:1/-1;color:var(--blue);font-weight:700}
+.english-alphabet button:focus-visible,.english-word-card:focus-visible,.mute-toggle:focus-visible{outline:4px solid #ffad42;outline-offset:2px}
+@media (max-width:480px){.english-screen{padding-right:10px;padding-left:10px}.english-header{justify-content:center}.english-header h1{order:-1;flex-basis:100%}.english-alphabet{grid-template-columns:repeat(6,minmax(0,1fr));gap:4px}.english-alphabet button{min-height:38px}.english-word-list{grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}.english-word-card{min-height:88px}}
+@media (max-height:650px){.english-screen{gap:6px}.english-screen>.big{font-size:min(12vmin,60px)}.english-type-card{min-height:90px}.english-alphabet{max-height:22vh}.english-word-card{min-height:76px}.english-word-icon{font-size:1.8rem}}
