@@ -23,6 +23,12 @@ uses 1–10 objects per group, while division uses 1–10 groups. Object illustr
 are capped for readability at large number levels, with the exact count still
 displayed. Learning activities include number selectors and spoken guidance;
 questionaries include multiple-choice answers and feedback.
+The Maths menu also includes Numbers and Roman Numbers. Each opens a keyboard
+showing 15 consecutive values at a time, with Previous/Next navigation and no
+fixed final page. Numbers show the selected digit, its English name, and up to ten
+star icons. Larger numbers keep the digit and name without icon counting. The
+selected number is large, colorful, and animated; Roman Numbers show the Arabic
+value and its Roman numeral. Both options speak the selected value.
 The language-selection screen reads its heading and available options aloud; use
 “Hear options” to replay the voice guidance.
 English opens a menu for Alphabets, Identify Words, and two-letter, three-letter,

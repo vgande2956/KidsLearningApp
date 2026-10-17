@@ -101,8 +101,28 @@
 <button class="choice-card multiplication-card" type="button" data-math-topic="Multiplication"><span class="choice-icon" aria-hidden="true">✖️</span><span class="choice-label">Multiplication</span></button>
 <button class="choice-card subtraction-card" type="button" data-math-topic="Subtraction"><span class="choice-icon" aria-hidden="true">➖</span><span class="choice-label">Subtraction</span></button>
 <button class="choice-card division-card" type="button" data-math-topic="Division"><span class="choice-icon" aria-hidden="true">➗</span><span class="choice-label">Division</span></button>
+<button class="choice-card numbers-card" type="button" id="numbers-entry"><span class="choice-icon" aria-hidden="true">🔢</span><span class="choice-label">Numbers<small>Count and learn</small></span></button>
+<button class="choice-card roman-card" type="button" id="roman-entry"><span class="choice-icon" aria-hidden="true">🏛️</span><span class="choice-label">Roman Numbers<small>Explore I, V, X...</small></span></button>
 </div>
 <button class="math-back" type="button" id="math-language-back">← Back</button>
+</section>
+<section id="math-counting-screen" class="math-counting-screen" hidden aria-labelledby="math-counting-title">
+<header class="math-counting-header">
+<button class="math-back" type="button" id="math-counting-back">← Back</button>
+<h1 id="math-counting-title">Numbers</h1>
+<button class="math-counting-hear" type="button" id="math-counting-hear">🔊 Hear number</button>
+</header>
+<p class="math-counting-intro" id="math-counting-intro">Choose a number to see it, hear it, and count it!</p>
+<nav class="math-counting-pager" aria-label="Number pages">
+<button class="math-counting-page-button" type="button" id="math-counting-previous">← Previous 15</button>
+<span id="math-counting-page-label" aria-live="polite">Numbers 1–15</span>
+<button class="math-counting-page-button math-counting-next" type="button" id="math-counting-next">Next 15 ➜</button>
+</nav>
+<div class="math-counting-display" id="math-counting-display" aria-live="polite">
+<span class="math-counting-placeholder" aria-hidden="true">🌟</span>
+<strong>Pick a number!</strong>
+</div>
+<div class="math-counting-keyboard" id="math-counting-keyboard" role="group" aria-label="Choose a number"></div>
 </section>
 <section id="math-mode-screen" class="math-screen" hidden aria-labelledby="math-mode-title">
 <button class="math-back" type="button" id="math-mode-back">← Back</button>
