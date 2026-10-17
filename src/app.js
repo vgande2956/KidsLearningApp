@@ -100,6 +100,9 @@ function number(n){const c=C[Math.floor(Math.random()*C.length)],nm=n==1?c[0]:c[
  say([NW[n]+" "+nm,NW.slice(1,n+1).join(", ")])}
 function englishWordsForLetter(character){if(englishWordType==="two")return TWO_LETTER_WORDS[character]||[];const entries=W[character]||[];if(englishWordType==="three"){const found=entries.filter(([word])=>word.length===3);return found.length?found:character==="Q"?[["qua","🪶"]]:character==="X"?[["xis","❌"]]:[]}return entries.filter(([word])=>word.replace(/[^a-z]/gi,"").length>=4)}
 function showEnglishTypes(){hideScreens();$("english-types").hidden=false;say([`Hello ${kid}! Choose a word length to start learning English.`])}
+function showEnglishAlphabets(){stopSpeech();englishLetter="";hideScreens();$("english-alphabets").hidden=false;$("english-alphabet-display").innerHTML='<div class="alphabet-display-placeholder"><span aria-hidden="true">🌟</span><strong>Choose a letter!</strong></div>';const grid=$("english-alphabets-grid");grid.innerHTML=[..."ABCDEFGHIJKLMNOPQRSTUVWXYZ"].map(character=>`<button type="button" aria-label="Show letter ${character}" aria-pressed="false">${character}</button>`).join("");grid.querySelectorAll("button").forEach(button=>button.onclick=()=>showEnglishAlphabet(button.textContent));say(["Tap a letter to learn the alphabet."])}
+function showEnglishAlphabet(character){englishLetter=character;const[word,icon]=W[character][0],display=$("english-alphabet-display");$("english-alphabets-grid").querySelectorAll("button").forEach(button=>button.setAttribute("aria-pressed",String(button.textContent===character)));display.innerHTML=`<div class="alphabet-display-card"><div class="alphabet-display-letter" aria-label="${character} uppercase, ${character.toLowerCase()} lowercase">${character}<span>${character.toLowerCase()}</span></div><div class="alphabet-display-icon" aria-hidden="true">${icon}</div><div class="alphabet-display-example"><strong>${character} is for ${word}!</strong><span>${word}</span></div></div>`;say([`${character}. ${character} is for ${word}.`])}
+function sayEnglishAlphabet(){if(!englishLetter){say(["Tap a letter to learn the alphabet."]);return}const[word]=W[englishLetter][0];say([`${englishLetter}. ${englishLetter} is for ${word}.`])}
 function showEnglishLetter(character){englishLetter=character;const words=englishWordsForLetter(character),list=$("english-word-list");$("english-selected-letter").textContent=`${character} words (${words.length})`;list.innerHTML="";$("english-alphabet").querySelectorAll("button").forEach(button=>button.setAttribute("aria-pressed",String(button.textContent===character)));
  if(!words.length){list.innerHTML='<p class="english-no-words">No words in this group yet. Try another letter!</p>';say([character]);return}
  words.forEach(([word,icon])=>{const button=document.createElement("button");button.type="button";button.className="english-word-card";button.setAttribute("aria-label",`Hear ${word}`);button.innerHTML=`<span class="english-word-icon" aria-hidden="true">${icon}</span><span class="english-word-text">${word}</span><span class="english-word-speaker" aria-hidden="true">🔊</span>`;button.onclick=()=>{list.querySelectorAll(".english-word-card").forEach(card=>card.classList.remove("is-selected"));button.classList.add("is-selected");say([word])};list.appendChild(button)});say([character,words[0][0]])}
@@ -108,7 +111,7 @@ function show(){if(selectedLanguage==="Telugu"){showTelugu();return}if(selectedL
  if(selectedLanguage==="English"){showEnglishTypes();return}
  $("stage").classList.remove("language-lesson-stage");$("language").hidden=true;$("name").hidden=true;$("app").hidden=false;$("hi").textContent="Hello, "+kid+"!";
  $("stage").innerHTML='<div class="L">A B C &nbsp;1 2 3</div><div class="W">Tap a letter or number!</div>';renderPad();say(["Hello "+kid+"!","Tap any letter or number."])}
-function hideScreens(){["splash","language","name","app","english-types","english-lesson","math-menu","addition-level-screen","addition-screen"].forEach(id=>$(id).hidden=true)}
+function hideScreens(){["splash","language","name","app","english-types","english-alphabets","english-lesson","math-menu","addition-level-screen","addition-screen"].forEach(id=>$(id).hidden=true)}
 function sayLanguageOptions(){say(["Select an option to start having fun learning.","English.","Telugu.","Hindi.","Maths."])}
 function showLanguage(){hideScreens();$("language").hidden=false;if(voiceSetupPromptShown)sayLanguageOptions();else scheduleSpeechVoiceCheck()}
 function showName(){hideScreens();$("name").hidden=false;$("msg").textContent=""}
@@ -176,6 +179,9 @@ $("voice-setup-recheck").onclick=()=>{const missing=missingSpeechLocales(typeof 
 $("voice-setup-dialog").addEventListener("cancel",()=>{voiceSetupPromptShown=true});
 $("english-types-back").onclick=()=>{stopSpeech();showLanguage()};
 document.querySelectorAll("[data-english-type]").forEach(button=>button.onclick=()=>showEnglishLesson(button.dataset.englishType));
+$("english-alphabets-entry").onclick=showEnglishAlphabets;
+$("english-alphabets-back").onclick=()=>{stopSpeech();showEnglishTypes()};
+$("english-alphabets-hear").onclick=sayEnglishAlphabet;
 $("english-lesson-back").onclick=()=>{stopSpeech();showEnglishTypes()};
 $("english-hear-letter").onclick=()=>say(englishLetter?[englishLetter]:["Choose a letter to hear its words."]);
 $("math-entry").onclick=chooseMath;

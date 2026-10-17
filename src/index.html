@@ -36,8 +36,21 @@
 <button class="choice-card english-type-card english-two-card" type="button" data-english-type="two"><span class="choice-icon" aria-hidden="true">🐝</span><span class="choice-label">2-letter words<small>am, in, to</small></span></button>
 <button class="choice-card english-type-card english-three-card" type="button" data-english-type="three"><span class="choice-icon" aria-hidden="true">🐈</span><span class="choice-label">3-letter words<small>cat, sun, dog</small></span></button>
 <button class="choice-card english-type-card english-multi-card" type="button" data-english-type="multi"><span class="choice-icon" aria-hidden="true">🦋</span><span class="choice-label">Multi-letter words<small>butterfly, rainbow</small></span></button>
+<button class="choice-card english-type-card english-alphabets-card" type="button" id="english-alphabets-entry"><span class="choice-icon" aria-hidden="true">🔠</span><span class="choice-label">Alphabets<small>Learn A to Z</small></span></button>
 </div>
 <button class="english-back" type="button" id="english-types-back">← Choose a language</button>
+</section>
+<section id="english-alphabets" class="english-screen english-alphabet-screen" hidden aria-labelledby="english-alphabets-title">
+<header class="english-header">
+<button class="english-back" type="button" id="english-alphabets-back">← Word lengths</button>
+<h1 id="english-alphabets-title">English Alphabets</h1>
+<button class="english-hear" type="button" id="english-alphabets-hear">🔊 Hear letter</button>
+</header>
+<p>Tap a letter to see it, learn an example, and hear its name.</p>
+<div id="english-alphabet-display" class="english-alphabet-display" aria-live="polite">
+<div class="alphabet-display-placeholder"><span aria-hidden="true">🌟</span><strong>Choose a letter!</strong></div>
+</div>
+<div class="english-alphabets-grid" id="english-alphabets-grid" role="group" aria-label="Choose an English letter"></div>
 </section>
 <section id="english-lesson" class="english-screen english-lesson" hidden aria-labelledby="english-lesson-title">
 <header class="english-header">
