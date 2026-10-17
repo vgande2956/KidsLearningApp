@@ -28,21 +28,49 @@
 <button class="choice-card maths-card" type="button" id="math-entry"><span class="choice-icon" aria-hidden="true">🧮</span><span class="choice-label">Maths</span></button>
 </div>
 </section>
-<section id="english-types" class="english-screen" hidden aria-labelledby="english-types-title">
+<section id="english-types" class="english-screen english-types-screen" hidden aria-labelledby="english-types-title">
 <div class="big" aria-hidden="true">📚</div>
-<h1 id="english-types-title">Choose a word length</h1>
-<p>Pick the kind of words you want to learn!</p>
-<div class="english-type-options" role="group" aria-label="Choose an English word length">
-<button class="choice-card english-type-card english-two-card" type="button" data-english-type="two"><span class="choice-icon" aria-hidden="true">🐝</span><span class="choice-label">2-letter words<small>am, in, to</small></span></button>
-<button class="choice-card english-type-card english-three-card" type="button" data-english-type="three"><span class="choice-icon" aria-hidden="true">🐈</span><span class="choice-label">3-letter words<small>cat, sun, dog</small></span></button>
-<button class="choice-card english-type-card english-multi-card" type="button" data-english-type="multi"><span class="choice-icon" aria-hidden="true">🦋</span><span class="choice-label">Multi-letter words<small>butterfly, rainbow</small></span></button>
+<h1 id="english-types-title">Choose the option to start learning</h1>
+<p>Pick a fun activity and let’s learn!</p>
+<div class="english-type-options" role="group" aria-label="Choose an English learning activity">
+<button class="choice-card english-type-card english-two-card" type="button" data-english-type="two"><span class="choice-icon" aria-hidden="true">🐝</span><span class="choice-label">2-letter words<small>am · in · to</small></span></button>
+<button class="choice-card english-type-card english-three-card" type="button" data-english-type="three"><span class="choice-icon" aria-hidden="true">🐈</span><span class="choice-label">3-letter words<small>cat · sun · dog</small></span></button>
+<button class="choice-card english-type-card english-multi-card" type="button" data-english-type="multi"><span class="choice-icon" aria-hidden="true">🦋</span><span class="choice-label">Multi-letter words<small>butterfly · rainbow</small></span></button>
 <button class="choice-card english-type-card english-alphabets-card" type="button" id="english-alphabets-entry"><span class="choice-icon" aria-hidden="true">🔠</span><span class="choice-label">Alphabets<small>Learn A to Z</small></span></button>
+<button class="choice-card english-type-card english-identify-card" type="button" id="english-identify-entry"><span class="choice-icon" aria-hidden="true">🕵️</span><span class="choice-label">Identify words<small>Match the picture</small></span></button>
 </div>
-<button class="english-back" type="button" id="english-types-back">← Choose a language</button>
+<button class="english-back" type="button" id="english-types-back">← Back</button>
+</section>
+<section id="english-identify-levels" class="english-screen english-identify-levels" hidden aria-labelledby="english-identify-levels-title">
+<header class="english-header">
+<button class="english-back" type="button" id="english-identify-levels-back">← Back</button>
+<h1 id="english-identify-levels-title">Identify the Picture</h1>
+<span></span>
+</header>
+<p>Complete 10 questions to unlock the next level!</p>
+<nav class="addition-level-pager" aria-label="Picture quiz level pages">
+<button class="addition-level-page-button" type="button" id="english-identify-previous">← Previous 10</button>
+<span id="english-identify-page-label" aria-live="polite"></span>
+<button class="addition-level-page-button" type="button" id="english-identify-next-page">Next 10 ➜</button>
+</nav>
+<div class="english-identify-level-grid" id="english-identify-level-grid" role="group" aria-label="Choose a picture quiz level"></div>
+<p class="english-identify-progress" id="english-identify-level-feedback" aria-live="polite"></p>
+</section>
+<section id="english-identify-quiz" class="english-screen english-identify-quiz" hidden aria-labelledby="english-identify-title">
+<header class="english-header">
+<button class="english-back" type="button" id="english-identify-quit">← Back</button>
+<h1 id="english-identify-title">Identify the Picture</h1>
+<button class="english-hear" type="button" id="english-identify-hear">🔊 Hear question</button>
+</header>
+<p class="english-identify-counter" id="english-identify-counter"></p>
+<p class="english-identify-question" id="english-identify-question"></p>
+<div class="english-identify-options" id="english-identify-options" role="group" aria-label="Choose the matching picture"></div>
+<p class="english-identify-feedback" id="english-identify-feedback" aria-live="polite">Choose the correct picture!</p>
+<button class="english-identify-next" id="english-identify-next" type="button" disabled>Next question ➜</button>
 </section>
 <section id="english-alphabets" class="english-screen english-alphabet-screen" hidden aria-labelledby="english-alphabets-title">
 <header class="english-header">
-<button class="english-back" type="button" id="english-alphabets-back">← Word lengths</button>
+<button class="english-back" type="button" id="english-alphabets-back">← Back</button>
 <h1 id="english-alphabets-title">English Alphabets</h1>
 <button class="english-hear" type="button" id="english-alphabets-hear">🔊 Hear letter</button>
 </header>
@@ -54,7 +82,7 @@
 </section>
 <section id="english-lesson" class="english-screen english-lesson" hidden aria-labelledby="english-lesson-title">
 <header class="english-header">
-<button class="english-back" type="button" id="english-lesson-back">← Word lengths</button>
+<button class="english-back" type="button" id="english-lesson-back">← Back</button>
 <h1 id="english-lesson-title">English words</h1>
 <button class="english-hear" type="button" id="english-hear-letter">🔊 Hear letter</button>
 </header>
@@ -74,10 +102,10 @@
 <button class="choice-card subtraction-card" type="button" data-math-topic="Subtraction"><span class="choice-icon" aria-hidden="true">➖</span><span class="choice-label">Subtraction</span></button>
 <button class="choice-card division-card" type="button" data-math-topic="Division"><span class="choice-icon" aria-hidden="true">➗</span><span class="choice-label">Division</span></button>
 </div>
-<button class="math-back" type="button" id="math-language-back">← Choose a language</button>
+<button class="math-back" type="button" id="math-language-back">← Back</button>
 </section>
 <section id="addition-level-screen" class="addition-level-screen" hidden aria-labelledby="addition-level-title">
-<button class="math-back addition-level-back" type="button" id="addition-levels-back"><span id="addition-level-back-title">← Maths topics</span></button>
+<button class="math-back addition-level-back" type="button" id="addition-levels-back"><span id="addition-level-back-title">← Back</span></button>
 <div class="big" id="addition-level-icon" aria-hidden="true">➕</div>
 <h1 id="addition-level-title">Choose your Maths Level</h1>
 <p id="addition-level-intro">Pick a level to start your learning adventure!</p>
@@ -91,7 +119,7 @@
 </section>
 <section id="addition-screen" class="addition-screen" hidden aria-labelledby="addition-title">
 <header class="addition-header">
-<button class="math-back" type="button" id="addition-menu-back">← Addition levels</button>
+<button class="math-back" type="button" id="addition-menu-back">← Back</button>
 <h1 id="addition-title">Addition Adventure</h1>
 <button class="addition-hear" type="button" id="addition-hear">🔊 Hear explanation</button>
 </header>
@@ -116,17 +144,18 @@
 <div class="addition-actions">
 <button class="addition-practice" id="addition-practice" type="button">Try a question ➜</button>
 <button class="addition-next" id="addition-next" type="button" hidden>Next question ➜</button>
-<button class="addition-builder-back" id="addition-builder-back" type="button" hidden>← Choose numbers</button>
+<button class="addition-builder-back" id="addition-builder-back" type="button" hidden>← Back</button>
 </div>
 </section>
 <section id="name" hidden>
+<button class="name-back" id="name-back" type="button">← Back</button>
 <div class="big">🌈</div><h1>Welcome!</h1><div style="font-size:1.5rem">Enter your name</div>
 <input id="nm" maxlength="20" autocomplete="off" placeholder="Type name">
 <div id="msg" style="color:#c0392b;min-height:1.4em"></div>
 <button class="go" id="start">Let's Learn! ▶</button>
 </section>
 <section id="app" hidden>
-<header><b id="hi"></b><button id="again" style="background:#2e9e5b">🔊 Again</button><button id="chg" style="background:#ff9800">Change Name</button><button id="lang" style="background:#5c6bc0">Change Language</button></header>
+<header><b id="hi"></b><button id="again" style="background:#2e9e5b">🔊 Again</button><button id="chg" style="background:#ff9800">← Back</button><button id="lang" style="background:#5c6bc0">Change Language</button></header>
 <div id="stage"></div><div id="st"></div><div id="pad"></div>
 </section>
 <dialog id="voice-setup-dialog" class="voice-setup-dialog" aria-labelledby="voice-setup-title">
