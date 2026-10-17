@@ -2,7 +2,10 @@
 
 On launch, an animated Kids Learning Fun logo introduces the app before the
 language-selection screen. The sound toggle appears after the logo and can mute
-speech and sound effects throughout the app. Choose English, Telugu, or Hindi,
+speech and sound effects throughout the app. The app checks for Telugu (India),
+Hindi (India), and English (India) speech voices on the device. If any are not
+available, it asks whether you want to view device-specific setup instructions;
+the web app cannot install system voices itself. Choose English, Telugu, or Hindi,
 then enter a name to begin.
 The Maths option opens Addition, Subtraction, Multiplication, and Division. Each
 operation has a separate level picker with ten selectable levels (Level 1: 1–10,
