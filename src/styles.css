@@ -30,6 +30,9 @@ body{background:var(--bg);color:var(--ink);font-family:"Comic Sans MS","Chalkboa
 .math-screen .big{font-size:min(18vmin,90px)}
 .math-screen h1{max-width:760px;font-size:clamp(1.7rem,6vw,2.5rem)}
 .math-options .choice-card{min-height:clamp(105px,18vh,145px)}
+.math-mode-intro{max-width:600px;margin:0;color:var(--blue);font-size:clamp(1rem,3vw,1.25rem);font-weight:700}
+.math-mode-options .choice-card{min-height:clamp(145px,24vh,190px)}
+.math-learning-card{background:#18865b}.math-questions-card{background:#4d60be}
 .math-back{background:#5c6bc0;font-size:1rem}
 .addition-level-screen{height:100%;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;gap:clamp(6px,1.5vh,12px);padding:12px;overflow-y:auto;text-align:center}
 .addition-level-screen .big{font-size:min(14vmin,72px)}
@@ -63,6 +66,12 @@ body{background:var(--bg);color:var(--ink);font-family:"Comic Sans MS","Chalkboa
 .addition-count{font-size:clamp(1.5rem,4vw,2rem);font-weight:900;color:var(--blue)}
 .addition-icons{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));align-content:start;justify-items:center;justify-content:center;gap:1px;width:100%;min-height:clamp(58px,13vw,105px);max-height:clamp(80px,18vh,150px);overflow-y:auto;font-size:clamp(1rem,4vw,1.8rem);line-height:1.05}
 .addition-icon{line-height:1}
+.addition-icon.is-arriving{animation:addition-icon-arrive .36s cubic-bezier(.2,.8,.3,1) both}
+.addition-group .addition-icon.is-moving,.multiplication-row .addition-icon.is-moving{animation:addition-icon-move .42s ease-in both}
+.addition-total.is-counting{animation:addition-total-pop .2s ease-out}
+@keyframes addition-icon-arrive{from{opacity:.15;transform:translateY(12px) scale(.45)}to{opacity:1;transform:translateY(0) scale(1)}}
+@keyframes addition-icon-move{to{opacity:.2;transform:translate(20px,-12px) scale(.5)}}
+@keyframes addition-total-pop{50%{transform:scale(1.12)}}
 .addition-icon.is-removed{position:relative;opacity:.48;filter:grayscale(.8)}
 .addition-icon.is-removed::after{position:absolute;inset:0;display:grid;place-items:center;content:"×";color:#c0392b;font-size:1.2em;font-weight:900}
 .addition-group-label{font-size:clamp(.8rem,2.8vw,1.05rem);font-weight:700}
@@ -119,7 +128,7 @@ header b{flex:1;color:var(--blue);font-size:1.3rem}header button{font-size:.95re
 @media (max-height:560px){#app header{flex-wrap:nowrap;gap:3px;padding:2px 6px}#app header b{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:.9rem}#app header button{flex:0 0 auto;padding:5px 6px;font-size:.68rem;white-space:nowrap}#pad{max-height:21vh;gap:3px;padding:4px 6px}#pad button{min-width:32px;padding:5px 0;font-size:1rem}#stage.language-lesson-stage{gap:2px;padding:4px}#stage.language-lesson-stage .L{font-size:clamp(1.6rem,7vmin,3.2rem)}#stage.language-lesson-stage .E{font-size:clamp(2.4rem,13vmin,5rem)}#stage.language-lesson-stage .W{font-size:clamp(1.1rem,4vmin,1.8rem)}#stage.language-lesson-stage .pronunciation,#stage.language-lesson-stage .meaning{font-size:clamp(.75rem,2.8vmin,1.1rem)}}
 @media (max-height:650px){#language{gap:8px;padding:8px}#language .big{font-size:min(18vmin,88px)}.languages{gap:8px}.languages .choice-card{min-height:100px}.choice-icon{font-size:2.5rem}}
 @media (prefers-reduced-motion:reduce){#splash{transition:none}.splash-logo,.splash-title,.splash-tagline,.splash-sparkle{animation:none}.choice-card{transition:none}}
-@media (max-width:480px){.addition-screen{padding:8px;gap:8px}.addition-header{justify-content:center}.addition-header h1{order:-1;flex-basis:100%}.addition-board{gap:4px;padding:8px 4px}.addition-group{padding:5px 2px}.addition-answer{min-width:66px;min-height:60px}}
+@media (max-width:480px){.addition-screen{padding:8px;gap:8px}.addition-header{justify-content:center}.addition-header h1{order:-1;flex-basis:100%}.addition-board{gap:4px;padding:8px 4px}.addition-group{padding:5px 2px}.addition-answer{min-width:66px;min-height:60px}.math-mode-options{width:min(92vw,420px);grid-template-columns:1fr}.math-mode-options .choice-card{min-height:112px;flex-direction:row}}
 @media (max-height:700px){.addition-screen{gap:6px}.addition-board{padding:8px}.addition-icons{min-height:48px}}
 @media (max-width:380px){.addition-level-options{gap:6px}.addition-level-card{min-height:66px}.addition-pickers{gap:6px}.addition-picker{padding:6px 3px}.addition-picker select{min-height:42px}.addition-board{gap:2px}.addition-group{padding:4px 1px}.addition-total{flex-basis:54px;min-height:64px}.addition-icons{font-size:.9rem}}
 .mute-toggle{position:fixed;z-index:1000;top:calc(env(safe-area-inset-top,0px) + 8px);right:10px;min-height:42px;padding:8px 12px;border:2px solid #ffffffb8;border-radius:20px;background:#1f4e9c;box-shadow:0 3px 8px #00000024;font-size:.95rem}
@@ -180,7 +189,7 @@ header b{flex:1;color:var(--blue);font-size:1.3rem}header button{font-size:.95re
 @media (max-height:650px){.english-screen{gap:6px}.english-screen>.big{font-size:min(12vmin,60px)}.english-type-card{min-height:90px}.english-alphabet{max-height:22vh}.english-word-card{min-height:76px}.english-word-icon{font-size:1.8rem}}
 @media (max-width:480px){.english-alphabet-display{min-height:clamp(135px,24vh,190px)}.alphabet-display-card{grid-template-columns:.9fr 1fr 1.1fr;gap:3px;padding:8px}.english-alphabets-grid{grid-template-columns:repeat(6,minmax(0,1fr));gap:4px}.english-alphabets-grid button{min-height:38px}}
 @media (max-height:560px){.english-alphabet-screen{gap:4px}.english-alphabet-screen>p{font-size:.82rem}.english-alphabet-display{min-height:clamp(100px,34vh,140px)}.english-alphabets-grid{max-height:25vh}.alphabet-display-card{padding:4px}.alphabet-display-letter{font-size:clamp(2rem,9vmin,4rem)}.alphabet-display-icon{font-size:clamp(2.5rem,12vmin,4.5rem)}.alphabet-display-example{font-size:clamp(.8rem,2.6vmin,1.1rem)}.alphabet-display-example span{font-size:clamp(1rem,3.5vmin,1.4rem)}}
-@media (prefers-reduced-motion:reduce){.alphabet-display-placeholder span,.alphabet-display-card,.alphabet-display-icon{animation:none}}
+@media (prefers-reduced-motion:reduce){.alphabet-display-placeholder span,.alphabet-display-card,.alphabet-display-icon,.addition-icon.is-arriving,.addition-group .addition-icon.is-moving,.multiplication-row .addition-icon.is-moving,.addition-total.is-counting{animation:none}}
 .english-identify-levels,.english-identify-quiz{justify-content:flex-start;gap:clamp(6px,1.2vh,12px)}
 .english-identify-levels>p{margin:0;color:var(--blue);font-size:clamp(.95rem,3vw,1.2rem);font-weight:700}
 .english-identify-levels .addition-level-pager{flex:0 0 auto}

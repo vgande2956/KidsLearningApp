@@ -104,6 +104,16 @@
 </div>
 <button class="math-back" type="button" id="math-language-back">← Back</button>
 </section>
+<section id="math-mode-screen" class="math-screen" hidden aria-labelledby="math-mode-title">
+<button class="math-back" type="button" id="math-mode-back">← Back</button>
+<div class="big" id="math-mode-icon" aria-hidden="true">➕</div>
+<h1 id="math-mode-title">Choose how to learn</h1>
+<p class="math-mode-intro" id="math-mode-intro">Choose a learning activity!</p>
+<div class="math-options math-mode-options" role="group" aria-label="Choose learning or questions">
+<button class="choice-card math-learning-card" type="button" id="math-learning-entry"><span class="choice-icon" aria-hidden="true">📘</span><span class="choice-label">Learning<small>Learn with pictures</small></span></button>
+<button class="choice-card math-questions-card" type="button" id="math-questions-entry"><span class="choice-icon" aria-hidden="true">📝</span><span class="choice-label">Questionaries<small>Practice with questions</small></span></button>
+</div>
+</section>
 <section id="addition-level-screen" class="addition-level-screen" hidden aria-labelledby="addition-level-title">
 <button class="math-back addition-level-back" type="button" id="addition-levels-back"><span id="addition-level-back-title">← Back</span></button>
 <div class="big" id="addition-level-icon" aria-hidden="true">➕</div>
@@ -136,8 +146,8 @@
 <select id="addition-second-select" aria-label="Choose the second group number"></select>
 </div>
 </section>
-<div class="addition-board" id="addition-board" aria-live="polite"></div>
-<p class="addition-question" id="addition-question"></p>
+<div class="addition-board" id="addition-board"></div>
+<p class="addition-question" id="addition-question" aria-live="polite"></p>
 <p class="addition-word-problem" id="addition-word-problem" hidden></p>
 <div class="addition-answers" id="addition-answers" role="group" aria-label="Choose the answer"></div>
 <p class="addition-feedback" id="addition-feedback" aria-live="polite">Tap an answer to try!</p>
