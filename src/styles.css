@@ -3,7 +3,11 @@
 :root[data-theme="dark"]{--bg:#1d2433;--ink:#f3f3f3;--accent:#ff8a65;--blue:#9dbdff;--key:#34405c;--l:22%}
 *{box-sizing:border-box}[hidden]{display:none!important}html,body{height:100%;margin:0}
 body{background:var(--bg);color:var(--ink);font-family:"Comic Sans MS","Chalkboard SE",system-ui,sans-serif;overflow:hidden;-webkit-tap-highlight-color:transparent}
-#app,#name{height:100%;display:flex;flex-direction:column}
+#app,#name,#language{height:100%;display:flex;flex-direction:column}
+#language{align-items:center;justify-content:center;gap:18px;text-align:center;padding:20px}
+#language .big{font-size:min(30vmin,150px)}
+.languages{display:flex;flex-direction:column;gap:12px;width:min(88vw,380px)}
+.languages button{width:100%;min-height:58px}
 #name{align-items:center;justify-content:center;gap:14px;text-align:center;padding:20px}
 #name .big{font-size:min(30vmin,150px)}h1{margin:0;color:var(--accent);font-size:2.2rem}
 input{font:inherit;font-size:1.6rem;text-align:center;padding:10px;border-radius:14px;border:3px solid var(--blue);width:min(80vw,360px);background:var(--key);color:var(--ink)}

@@ -11,14 +11,22 @@
 <link rel="icon" href="icon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="stylesheet" href="styles.css"></head><body>
-<section id="name">
-<div class="big">🌈</div><h1>Welcome!</h1><div style="font-size:1.5rem">What is your name?</div>
+<section id="language">
+<div class="big">🌈</div><h1>Choose a language</h1>
+<div class="languages" role="group" aria-label="Choose a learning language">
+<button class="go" type="button" data-language="English">English</button>
+<button class="go" type="button" data-language="Telugu">తెలుగు (Telugu)</button>
+<button class="go" type="button" data-language="Hindi">हिन्दी (Hindi)</button>
+</div>
+</section>
+<section id="name" hidden>
+<div class="big">🌈</div><h1>Welcome!</h1><div style="font-size:1.5rem">Enter your name</div>
 <input id="nm" maxlength="20" autocomplete="off" placeholder="Type name">
 <div id="msg" style="color:#c0392b;min-height:1.4em"></div>
 <button class="go" id="start">Let's Learn! ▶</button>
 </section>
 <section id="app" hidden>
-<header><b id="hi"></b><button id="again" style="background:#2e9e5b">🔊 Again</button><button id="chg" style="background:#ff9800">Change Name</button></header>
+<header><b id="hi"></b><button id="again" style="background:#2e9e5b">🔊 Again</button><button id="chg" style="background:#ff9800">Change Name</button><button id="lang" style="background:#5c6bc0">Change Language</button></header>
 <div id="stage"></div><div id="st"></div><div id="pad"></div>
 </section>
 <script src="app.js" defer></script></body></html>
