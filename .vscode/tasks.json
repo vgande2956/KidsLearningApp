@@ -1,0 +1,30 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Launch KidsLearningApp locally",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"run",
+				"dev"
+			],
+			"isBackground": true,
+			"problemMatcher": []
+		},
+		{
+			"label": "Serve app locally without Node",
+			"type": "shell",
+			"command": "py",
+			"args": [
+				"-m",
+				"http.server",
+				"3000",
+				"--directory",
+				"src"
+			],
+			"isBackground": true,
+			"problemMatcher": []
+		}
+	]
+}

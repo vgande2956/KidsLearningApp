@@ -17,8 +17,11 @@ header{display:flex;align-items:center;gap:8px;padding:8px 12px;flex-wrap:wrap}
 header b{flex:1;color:var(--blue);font-size:1.3rem}header button{font-size:.95rem;padding:7px 12px}
 #stage{flex:1;min-height:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;background:hsl(var(--h,50) 80% var(--l));margin:0 10px;border-radius:22px;padding:6px;overflow:hidden}
 .L{font-size:min(16vmin,110px);font-weight:bold;color:var(--accent);line-height:1.05}
+.L[lang="te"],.W[lang="te"],#pad button[lang="te"]{font-family:"Nirmala UI","Noto Sans Telugu",system-ui,sans-serif}
 .E{font-size:min(46vmin,380px);line-height:1.05}
 .W{font-size:min(9vmin,56px);font-weight:bold}
+.pronunciation{font-size:min(5vmin,32px);font-weight:600;letter-spacing:.04em}
+.meaning{font-size:min(7vmin,42px);font-weight:600;color:var(--blue)}
 .G{display:flex;flex-wrap:wrap;justify-content:center;align-content:center;gap:2px;max-width:100%}
 #pad{display:flex;flex-wrap:wrap;gap:5px;justify-content:center;padding:8px 8px 6px;max-height:34vh;overflow-y:auto}
 #pad button{background:var(--key);color:var(--ink);width:11.5%;min-width:38px;padding:8px 0;font-size:1.15rem;border:2px solid var(--blue)}

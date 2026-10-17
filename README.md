@@ -1,7 +1,12 @@
 # KidsLearningApp
 
 Choose English, Telugu, or Hindi on the start screen, then enter a name to begin.
-All three choices currently continue to the existing English letters-and-numbers lessons.
+English and Hindi open the English letters-and-numbers lessons. Telugu opens a Telugu
+letter lesson with Telugu words, emoji illustrations, English meanings, and speech. If
+the device has no Telugu speech voice, it speaks the word's transliteration (for example,
+“Amma”) using an Indian English voice. The fallback uses a natural transliteration without
+inserted pauses, and its transliteration is also shown on screen. Repeated taps cycle through
+all 20 examples for each character. The English meaning is shown but not spoken.
 
 ## Run locally
 

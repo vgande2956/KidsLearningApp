@@ -1,0 +1,6224 @@
+{
+  "అ": [
+    {
+      "word": "అమ్మ",
+      "transliteration": "Amma",
+      "meaning": "mother",
+      "emoji": "👩"
+    },
+    {
+      "word": "అన్నం",
+      "transliteration": "Annam",
+      "meaning": "cooked rice",
+      "emoji": "🍚"
+    },
+    {
+      "word": "అడవి",
+      "transliteration": "Adavi",
+      "meaning": "forest",
+      "emoji": "🌳"
+    },
+    {
+      "word": "అరటి",
+      "transliteration": "Arati",
+      "meaning": "banana",
+      "emoji": "🍌"
+    },
+    {
+      "word": "అక్షరం",
+      "transliteration": "Aksharam",
+      "meaning": "letter",
+      "emoji": "🔤"
+    },
+    {
+      "word": "అద్దం",
+      "transliteration": "Addam",
+      "meaning": "mirror",
+      "emoji": "🪞"
+    },
+    {
+      "word": "అంగడి",
+      "transliteration": "Angadi",
+      "meaning": "shop",
+      "emoji": "🏪"
+    },
+    {
+      "word": "అల",
+      "transliteration": "Ala",
+      "meaning": "wave",
+      "emoji": "🌊"
+    },
+    {
+      "word": "అలసట",
+      "transliteration": "Alasata",
+      "meaning": "tiredness",
+      "emoji": "😴"
+    },
+    {
+      "word": "అందం",
+      "transliteration": "Andam",
+      "meaning": "beauty",
+      "emoji": "✨"
+    },
+    {
+      "word": "అననం",
+      "transliteration": "Ananam",
+      "meaning": "face",
+      "emoji": "🙂"
+    },
+    {
+      "word": "అనుమతి",
+      "transliteration": "Anumati",
+      "meaning": "permission",
+      "emoji": "✅"
+    },
+    {
+      "word": "అభయం",
+      "transliteration": "Abhayam",
+      "meaning": "safety",
+      "emoji": "🛡️"
+    },
+    {
+      "word": "అభిమానం",
+      "transliteration": "Abhimanam",
+      "meaning": "affection",
+      "emoji": "❤️"
+    },
+    {
+      "word": "అమృతం",
+      "transliteration": "Amrutam",
+      "meaning": "nectar",
+      "emoji": "🍯"
+    },
+    {
+      "word": "అరుగు",
+      "transliteration": "Arugu",
+      "meaning": "threshold",
+      "emoji": "🚪"
+    },
+    {
+      "word": "అల్లం",
+      "transliteration": "Allam",
+      "meaning": "ginger",
+      "emoji": "🫚"
+    },
+    {
+      "word": "అవకాశం",
+      "transliteration": "Avakasham",
+      "meaning": "chance",
+      "emoji": "🌟"
+    },
+    {
+      "word": "అవును",
+      "transliteration": "Avunu",
+      "meaning": "yes",
+      "emoji": "👍"
+    },
+    {
+      "word": "అలంకారం",
+      "transliteration": "Alankaram",
+      "meaning": "decoration",
+      "emoji": "🎀"
+    }
+  ],
+  "ఆ": [
+    {
+      "word": "ఆవు",
+      "transliteration": "Aavu",
+      "meaning": "cow",
+      "emoji": "🐄"
+    },
+    {
+      "word": "ఆకు",
+      "transliteration": "Aaku",
+      "meaning": "leaf",
+      "emoji": "🍃"
+    },
+    {
+      "word": "ఆకాశం",
+      "transliteration": "Aakasham",
+      "meaning": "sky",
+      "emoji": "🌌"
+    },
+    {
+      "word": "ఆట",
+      "transliteration": "Aata",
+      "meaning": "game",
+      "emoji": "🎮"
+    },
+    {
+      "word": "ఆటవస్తువు",
+      "transliteration": "Aatavastuvu",
+      "meaning": "toy",
+      "emoji": "🧸"
+    },
+    {
+      "word": "ఆహారం",
+      "transliteration": "Aaharam",
+      "meaning": "food",
+      "emoji": "🍲"
+    },
+    {
+      "word": "ఆనందం",
+      "transliteration": "Aanandam",
+      "meaning": "joy",
+      "emoji": "😄"
+    },
+    {
+      "word": "ఆలయం",
+      "transliteration": "Aalayam",
+      "meaning": "temple",
+      "emoji": "🛕"
+    },
+    {
+      "word": "ఆలస్యం",
+      "transliteration": "Aalasyam",
+      "meaning": "delay",
+      "emoji": "⏰"
+    },
+    {
+      "word": "ఆభరణం",
+      "transliteration": "Aabharanam",
+      "meaning": "jewel",
+      "emoji": "💎"
+    },
+    {
+      "word": "ఆశ",
+      "transliteration": "Aasha",
+      "meaning": "hope",
+      "emoji": "🌈"
+    },
+    {
+      "word": "ఆశయం",
+      "transliteration": "Aashayam",
+      "meaning": "purpose",
+      "emoji": "🎯"
+    },
+    {
+      "word": "ఆశీర్వాదం",
+      "transliteration": "Aasheervadam",
+      "meaning": "blessing",
+      "emoji": "🙏"
+    },
+    {
+      "word": "ఆవిరి",
+      "transliteration": "Aaviri",
+      "meaning": "steam",
+      "emoji": "♨️"
+    },
+    {
+      "word": "ఆవకాయ",
+      "transliteration": "Avakaya",
+      "meaning": "mango pickle",
+      "emoji": "🥭"
+    },
+    {
+      "word": "ఆవరణం",
+      "transliteration": "Aavaranam",
+      "meaning": "courtyard",
+      "emoji": "🏡"
+    },
+    {
+      "word": "ఆహ్వానం",
+      "transliteration": "Aahvanam",
+      "meaning": "invitation",
+      "emoji": "💌"
+    },
+    {
+      "word": "ఆయుధం",
+      "transliteration": "Aayudham",
+      "meaning": "weapon",
+      "emoji": "🛡️"
+    },
+    {
+      "word": "ఆరోగ్యం",
+      "transliteration": "Aarogyam",
+      "meaning": "health",
+      "emoji": "💚"
+    },
+    {
+      "word": "ఆరతి",
+      "transliteration": "Aarati",
+      "meaning": "lamp offering",
+      "emoji": "🪔"
+    }
+  ],
+  "ఇ": [
+    {
+      "word": "ఇల్లు",
+      "transliteration": "Illu",
+      "meaning": "house",
+      "emoji": "🏠"
+    },
+    {
+      "word": "ఇంటి",
+      "transliteration": "Inti",
+      "meaning": "home's",
+      "emoji": "🏡"
+    },
+    {
+      "word": "ఇంకు",
+      "transliteration": "Inku",
+      "meaning": "ink",
+      "emoji": "🖋️"
+    },
+    {
+      "word": "ఇంగువ",
+      "transliteration": "Inguva",
+      "meaning": "asafoetida",
+      "emoji": "🧂"
+    },
+    {
+      "word": "ఇంద్రధనుస్సు",
+      "transliteration": "Indradhanussu",
+      "meaning": "rainbow",
+      "emoji": "🌈"
+    },
+    {
+      "word": "ఇంద్రుడు",
+      "transliteration": "Indrudu",
+      "meaning": "Indra",
+      "emoji": "⚡"
+    },
+    {
+      "word": "ఇనుము",
+      "transliteration": "Inumu",
+      "meaning": "iron",
+      "emoji": "🔩"
+    },
+    {
+      "word": "ఇసుక",
+      "transliteration": "Isuka",
+      "meaning": "sand",
+      "emoji": "🏖️"
+    },
+    {
+      "word": "ఇష్టము",
+      "transliteration": "Ishtamu",
+      "meaning": "liking",
+      "emoji": "❤️"
+    },
+    {
+      "word": "ఇష్టం",
+      "transliteration": "Ishtam",
+      "meaning": "wish",
+      "emoji": "💭"
+    },
+    {
+      "word": "ఇతిహాసం",
+      "transliteration": "Itihasam",
+      "meaning": "epic",
+      "emoji": "📖"
+    },
+    {
+      "word": "ఇతరుడు",
+      "transliteration": "Itarudu",
+      "meaning": "another person",
+      "emoji": "👤"
+    },
+    {
+      "word": "ఇడ్లీ",
+      "transliteration": "Idli",
+      "meaning": "idli",
+      "emoji": "🥟"
+    },
+    {
+      "word": "ఇరుగు",
+      "transliteration": "Irugu",
+      "meaning": "neighbor",
+      "emoji": "🏘️"
+    },
+    {
+      "word": "ఇరుసు",
+      "transliteration": "Irusu",
+      "meaning": "axle",
+      "emoji": "⚙️"
+    },
+    {
+      "word": "ఇరుపక్కల",
+      "transliteration": "Irupakkala",
+      "meaning": "both sides",
+      "emoji": "↔️"
+    },
+    {
+      "word": "ఇరవై",
+      "transliteration": "Iravai",
+      "meaning": "twenty",
+      "emoji": "2️⃣"
+    },
+    {
+      "word": "ఇలవేల్పు",
+      "transliteration": "Ilavelpu",
+      "meaning": "household deity",
+      "emoji": "🛕"
+    },
+    {
+      "word": "ఇసుకగడియారం",
+      "transliteration": "Isukagadiyaram",
+      "meaning": "hourglass",
+      "emoji": "⌛"
+    },
+    {
+      "word": "ఇబ్బంది",
+      "transliteration": "Ibbandi",
+      "meaning": "trouble",
+      "emoji": "😟"
+    }
+  ],
+  "ఈ": [
+    {
+      "word": "ఈగ",
+      "transliteration": "Eega",
+      "meaning": "fly",
+      "emoji": "🪰"
+    },
+    {
+      "word": "ఈత",
+      "transliteration": "Eeta",
+      "meaning": "swimming",
+      "emoji": "🏊"
+    },
+    {
+      "word": "ఈతచెట్టు",
+      "transliteration": "Eetachettu",
+      "meaning": "palm tree",
+      "emoji": "🌴"
+    },
+    {
+      "word": "ఈతకాయ",
+      "transliteration": "Eetakaya",
+      "meaning": "palm fruit",
+      "emoji": "🥥"
+    },
+    {
+      "word": "ఈదురు",
+      "transliteration": "Eeduru",
+      "meaning": "headwind",
+      "emoji": "💨"
+    },
+    {
+      "word": "ఈదురుగాలి",
+      "transliteration": "Eedurugaali",
+      "meaning": "breeze",
+      "emoji": "🌬️"
+    },
+    {
+      "word": "ఈడ్చు",
+      "transliteration": "Eedchu",
+      "meaning": "pull",
+      "emoji": "🪢"
+    },
+    {
+      "word": "ఈల",
+      "transliteration": "Eela",
+      "meaning": "whistle",
+      "emoji": "📣"
+    },
+    {
+      "word": "ఈలపాట",
+      "transliteration": "Eelapaata",
+      "meaning": "whistling tune",
+      "emoji": "🎶"
+    },
+    {
+      "word": "ఈలకట్టు",
+      "transliteration": "Eelakattu",
+      "meaning": "whistle call",
+      "emoji": "🎵"
+    },
+    {
+      "word": "ఈర్ష్య",
+      "transliteration": "Eershya",
+      "meaning": "jealousy",
+      "emoji": "😒"
+    },
+    {
+      "word": "ఈశ్వరుడు",
+      "transliteration": "Eeshwarudu",
+      "meaning": "Lord Shiva",
+      "emoji": "🔱"
+    },
+    {
+      "word": "ఈశ్వరి",
+      "transliteration": "Eeshwari",
+      "meaning": "goddess",
+      "emoji": "🙏"
+    },
+    {
+      "word": "ఈశాన్యం",
+      "transliteration": "Eeshaanyam",
+      "meaning": "northeast",
+      "emoji": "🧭"
+    },
+    {
+      "word": "ఈశానుడు",
+      "transliteration": "Eeshaanudu",
+      "meaning": "Shiva",
+      "emoji": "🔱"
+    },
+    {
+      "word": "ఈశ్వరకృప",
+      "transliteration": "Eeshwarakripa",
+      "meaning": "divine grace",
+      "emoji": "✨"
+    },
+    {
+      "word": "ఈశ్వరభక్తి",
+      "transliteration": "Eeshwarabhakti",
+      "meaning": "devotion",
+      "emoji": "🙏"
+    },
+    {
+      "word": "ఈతకొలను",
+      "transliteration": "Eetakolanu",
+      "meaning": "swimming pool",
+      "emoji": "🏊"
+    },
+    {
+      "word": "ఈగలవల",
+      "transliteration": "Eegalavala",
+      "meaning": "fly net",
+      "emoji": "🪰"
+    },
+    {
+      "word": "ఈనాడు",
+      "transliteration": "Eenadu",
+      "meaning": "today",
+      "emoji": "📅"
+    }
+  ],
+  "ఉ": [
+    {
+      "word": "ఉడుత",
+      "transliteration": "Uduta",
+      "meaning": "squirrel",
+      "emoji": "🐿️"
+    },
+    {
+      "word": "ఉంగరం",
+      "transliteration": "Ungaram",
+      "meaning": "ring",
+      "emoji": "💍"
+    },
+    {
+      "word": "ఉప్పు",
+      "transliteration": "Uppu",
+      "meaning": "salt",
+      "emoji": "🧂"
+    },
+    {
+      "word": "ఉల్లి",
+      "transliteration": "Ulli",
+      "meaning": "onion",
+      "emoji": "🧅"
+    },
+    {
+      "word": "ఉడకబెట్టినది",
+      "transliteration": "Udakabettinadi",
+      "meaning": "boiled food",
+      "emoji": "🍲"
+    },
+    {
+      "word": "ఉదయం",
+      "transliteration": "Udayam",
+      "meaning": "morning",
+      "emoji": "🌅"
+    },
+    {
+      "word": "ఉత్సాహం",
+      "transliteration": "Utsaaham",
+      "meaning": "enthusiasm",
+      "emoji": "🎉"
+    },
+    {
+      "word": "ఉయ్యాల",
+      "transliteration": "Uyyala",
+      "meaning": "cradle",
+      "emoji": "🛏️"
+    },
+    {
+      "word": "ఉడక",
+      "transliteration": "Udaka",
+      "meaning": "water",
+      "emoji": "💧"
+    },
+    {
+      "word": "ఉదాహరణ",
+      "transliteration": "Udaharana",
+      "meaning": "example",
+      "emoji": "📝"
+    },
+    {
+      "word": "ఉపాధ్యాయుడు",
+      "transliteration": "Upadhyayudu",
+      "meaning": "teacher",
+      "emoji": "👨‍🏫"
+    },
+    {
+      "word": "ఉపాయం",
+      "transliteration": "Upayam",
+      "meaning": "solution",
+      "emoji": "💡"
+    },
+    {
+      "word": "ఉపవనం",
+      "transliteration": "Upavanam",
+      "meaning": "garden",
+      "emoji": "🌷"
+    },
+    {
+      "word": "ఉపకారం",
+      "transliteration": "Upakaram",
+      "meaning": "help",
+      "emoji": "🤝"
+    },
+    {
+      "word": "ఉత్సవం",
+      "transliteration": "Utsavam",
+      "meaning": "festival",
+      "emoji": "🎊"
+    },
+    {
+      "word": "ఉలవలు",
+      "transliteration": "Ulavalu",
+      "meaning": "horse gram",
+      "emoji": "🫘"
+    },
+    {
+      "word": "ఉడుము",
+      "transliteration": "Udumu",
+      "meaning": "monitor lizard",
+      "emoji": "🦎"
+    },
+    {
+      "word": "ఉదయసూర్యుడు",
+      "transliteration": "Udayasuryudu",
+      "meaning": "morning sun",
+      "emoji": "🌞"
+    },
+    {
+      "word": "ఉన్నతి",
+      "transliteration": "Unnati",
+      "meaning": "progress",
+      "emoji": "📈"
+    },
+    {
+      "word": "ఉపహారం",
+      "transliteration": "Upaharam",
+      "meaning": "gift",
+      "emoji": "🎁"
+    }
+  ],
+  "ఊ": [
+    {
+      "word": "ఊయల",
+      "transliteration": "Uyala",
+      "meaning": "swing",
+      "emoji": "🪁"
+    },
+    {
+      "word": "ఊరు",
+      "transliteration": "Uuru",
+      "meaning": "village",
+      "emoji": "🏘️"
+    },
+    {
+      "word": "ఊట",
+      "transliteration": "Uuta",
+      "meaning": "spring of water",
+      "emoji": "💦"
+    },
+    {
+      "word": "ఊపిరి",
+      "transliteration": "Uupiri",
+      "meaning": "breath",
+      "emoji": "🫁"
+    },
+    {
+      "word": "ఊహ",
+      "transliteration": "Uuha",
+      "meaning": "imagination",
+      "emoji": "💭"
+    },
+    {
+      "word": "ఊరగాయ",
+      "transliteration": "Uuragaya",
+      "meaning": "pickle",
+      "emoji": "🥒"
+    },
+    {
+      "word": "ఊరేగింపు",
+      "transliteration": "Uuregimpu",
+      "meaning": "procession",
+      "emoji": "🥁"
+    },
+    {
+      "word": "ఊయలబల్ల",
+      "transliteration": "Uuyalaballa",
+      "meaning": "swing seat",
+      "emoji": "🪑"
+    },
+    {
+      "word": "ఊడ",
+      "transliteration": "Uuda",
+      "meaning": "banyan root",
+      "emoji": "🌳"
+    },
+    {
+      "word": "ఊడ్చు",
+      "transliteration": "Uudchu",
+      "meaning": "sweep",
+      "emoji": "🧹"
+    },
+    {
+      "word": "ఊతకర్ర",
+      "transliteration": "Uutakarra",
+      "meaning": "walking stick",
+      "emoji": "🦯"
+    },
+    {
+      "word": "ఊపిరితిత్తులు",
+      "transliteration": "Uupiritittulu",
+      "meaning": "lungs",
+      "emoji": "🫁"
+    },
+    {
+      "word": "ఊరట",
+      "transliteration": "Uurata",
+      "meaning": "comfort",
+      "emoji": "🫂"
+    },
+    {
+      "word": "ఊరటమాట",
+      "transliteration": "Uuratamaata",
+      "meaning": "comforting word",
+      "emoji": "💬"
+    },
+    {
+      "word": "ఊరిమి",
+      "transliteration": "Uurimi",
+      "meaning": "patience",
+      "emoji": "🧘"
+    },
+    {
+      "word": "ఊరంతా",
+      "transliteration": "Uurantaa",
+      "meaning": "whole village",
+      "emoji": "🏘️"
+    },
+    {
+      "word": "ఊరిపండుగ",
+      "transliteration": "Uuripanduga",
+      "meaning": "village festival",
+      "emoji": "🎉"
+    },
+    {
+      "word": "ఊహాచిత్రం",
+      "transliteration": "Uuhaachitram",
+      "meaning": "imaginary picture",
+      "emoji": "🖼️"
+    },
+    {
+      "word": "ఊరిపేరు",
+      "transliteration": "Uuriperu",
+      "meaning": "village name",
+      "emoji": "📍"
+    },
+    {
+      "word": "ఊటబావి",
+      "transliteration": "Uutabaavi",
+      "meaning": "spring well",
+      "emoji": "🪣"
+    }
+  ],
+  "ఋ": [
+    {
+      "word": "ఋషి",
+      "transliteration": "Rushi",
+      "meaning": "sage",
+      "emoji": "🧘"
+    },
+    {
+      "word": "ఋతువు",
+      "transliteration": "Ruthuvu",
+      "meaning": "season",
+      "emoji": "🌦️"
+    },
+    {
+      "word": "ఋణం",
+      "transliteration": "Runam",
+      "meaning": "debt",
+      "emoji": "💰"
+    },
+    {
+      "word": "ఋజువు",
+      "transliteration": "Rujuvu",
+      "meaning": "proof",
+      "emoji": "✅"
+    },
+    {
+      "word": "ఋగ్వేదం",
+      "transliteration": "Rigvedam",
+      "meaning": "Rigveda",
+      "emoji": "📜"
+    },
+    {
+      "word": "ఋతం",
+      "transliteration": "Rutam",
+      "meaning": "truth",
+      "emoji": "⚖️"
+    },
+    {
+      "word": "ఋతుపవనం",
+      "transliteration": "Rutupaavanam",
+      "meaning": "seasonal breeze",
+      "emoji": "🌬️"
+    },
+    {
+      "word": "ఋతుచక్రం",
+      "transliteration": "Rutuchakram",
+      "meaning": "cycle of seasons",
+      "emoji": "🔄"
+    },
+    {
+      "word": "ఋతుస్రావం",
+      "transliteration": "Rutusraavam",
+      "meaning": "menstruation",
+      "emoji": "🌸"
+    },
+    {
+      "word": "ఋణదాత",
+      "transliteration": "Runadata",
+      "meaning": "lender",
+      "emoji": "🏦"
+    },
+    {
+      "word": "ఋణగ్రస్తుడు",
+      "transliteration": "Runagrastudu",
+      "meaning": "debtor",
+      "emoji": "💳"
+    },
+    {
+      "word": "ఋణమాఫీ",
+      "transliteration": "Runamaafi",
+      "meaning": "debt waiver",
+      "emoji": "🧾"
+    },
+    {
+      "word": "ఋణపత్రం",
+      "transliteration": "Runapatram",
+      "meaning": "debt note",
+      "emoji": "📄"
+    },
+    {
+      "word": "ఋణభారం",
+      "transliteration": "Runabhaaram",
+      "meaning": "debt burden",
+      "emoji": "🎒"
+    },
+    {
+      "word": "ఋణవిముక్తి",
+      "transliteration": "Runavimukti",
+      "meaning": "debt relief",
+      "emoji": "🕊️"
+    },
+    {
+      "word": "ఋషికుమారుడు",
+      "transliteration": "Rushikumaarudu",
+      "meaning": "sage's son",
+      "emoji": "👦"
+    },
+    {
+      "word": "ఋషిపత్నీ",
+      "transliteration": "Rushipatni",
+      "meaning": "sage's wife",
+      "emoji": "👩"
+    },
+    {
+      "word": "ఋషిమండలం",
+      "transliteration": "Rushimandalam",
+      "meaning": "constellation of sages",
+      "emoji": "✨"
+    },
+    {
+      "word": "ఋషివాక్యం",
+      "transliteration": "Rushivaakyam",
+      "meaning": "sage's saying",
+      "emoji": "💬"
+    },
+    {
+      "word": "ఋష్యశృంగుడు",
+      "transliteration": "Rushyashrungudu",
+      "meaning": "sage Rishyasringa",
+      "emoji": "📖"
+    }
+  ],
+  "ఎ": [
+    {
+      "word": "ఎలుక",
+      "transliteration": "Eluka",
+      "meaning": "mouse",
+      "emoji": "🐭"
+    },
+    {
+      "word": "ఎండ",
+      "transliteration": "Enda",
+      "meaning": "sunshine",
+      "emoji": "☀️"
+    },
+    {
+      "word": "ఎండాకాలం",
+      "transliteration": "Endakaalam",
+      "meaning": "summer",
+      "emoji": "🏖️"
+    },
+    {
+      "word": "ఎర",
+      "transliteration": "Era",
+      "meaning": "bait",
+      "emoji": "🪱"
+    },
+    {
+      "word": "ఎరుపు",
+      "transliteration": "Erupu",
+      "meaning": "red",
+      "emoji": "🔴"
+    },
+    {
+      "word": "ఎర్రచందనం",
+      "transliteration": "Errachandanam",
+      "meaning": "red sandalwood",
+      "emoji": "🌳"
+    },
+    {
+      "word": "ఎర్రగులాబి",
+      "transliteration": "Erragulabi",
+      "meaning": "red rose",
+      "emoji": "🌹"
+    },
+    {
+      "word": "ఎలుగుబంటి",
+      "transliteration": "Elugubanti",
+      "meaning": "bear",
+      "emoji": "🐻"
+    },
+    {
+      "word": "ఎగురు",
+      "transliteration": "Eguru",
+      "meaning": "fly",
+      "emoji": "🕊️"
+    },
+    {
+      "word": "ఎగరడం",
+      "transliteration": "Egaradam",
+      "meaning": "flying",
+      "emoji": "🪁"
+    },
+    {
+      "word": "ఎత్తు",
+      "transliteration": "Ettu",
+      "meaning": "height",
+      "emoji": "📏"
+    },
+    {
+      "word": "ఎత్తైన",
+      "transliteration": "Ettaina",
+      "meaning": "tall",
+      "emoji": "🗼"
+    },
+    {
+      "word": "ఎదురు",
+      "transliteration": "Eduru",
+      "meaning": "opposite",
+      "emoji": "↔️"
+    },
+    {
+      "word": "ఎదుగుదల",
+      "transliteration": "Edugudala",
+      "meaning": "growth",
+      "emoji": "🌱"
+    },
+    {
+      "word": "ఎదురు చూపు",
+      "transliteration": "Eduru choopu",
+      "meaning": "waiting",
+      "emoji": "⏳"
+    },
+    {
+      "word": "ఎన్నిక",
+      "transliteration": "Ennika",
+      "meaning": "election",
+      "emoji": "🗳️"
+    },
+    {
+      "word": "ఎముక",
+      "transliteration": "Emuka",
+      "meaning": "bone",
+      "emoji": "🦴"
+    },
+    {
+      "word": "ఎన్నికలపత్రం",
+      "transliteration": "Ennikalapatram",
+      "meaning": "ballot paper",
+      "emoji": "🗳️"
+    },
+    {
+      "word": "ఎనుగు",
+      "transliteration": "Enugu",
+      "meaning": "elephant",
+      "emoji": "🐘"
+    },
+    {
+      "word": "ఎరువు",
+      "transliteration": "Eruvu",
+      "meaning": "fertilizer",
+      "emoji": "🌱"
+    }
+  ],
+  "ఏ": [
+    {
+      "word": "ఏనుగు",
+      "transliteration": "Eenugu",
+      "meaning": "elephant",
+      "emoji": "🐘"
+    },
+    {
+      "word": "ఏడు",
+      "transliteration": "Eedu",
+      "meaning": "seven",
+      "emoji": "7️⃣"
+    },
+    {
+      "word": "ఏడాది",
+      "transliteration": "Eedaadi",
+      "meaning": "year",
+      "emoji": "📅"
+    },
+    {
+      "word": "ఏడుపు",
+      "transliteration": "Edupu",
+      "meaning": "crying",
+      "emoji": "😢"
+    },
+    {
+      "word": "ఏరు",
+      "transliteration": "Eru",
+      "meaning": "stream",
+      "emoji": "🏞️"
+    },
+    {
+      "word": "ఏకత",
+      "transliteration": "Ekata",
+      "meaning": "unity",
+      "emoji": "🤝"
+    },
+    {
+      "word": "ఏకాగ్రత",
+      "transliteration": "Ekagrata",
+      "meaning": "focus",
+      "emoji": "🎯"
+    },
+    {
+      "word": "ఏకాంతం",
+      "transliteration": "Ekaantam",
+      "meaning": "solitude",
+      "emoji": "🌄"
+    },
+    {
+      "word": "ఏకైక",
+      "transliteration": "Ekaika",
+      "meaning": "only one",
+      "emoji": "☝️"
+    },
+    {
+      "word": "ఏకత్వం",
+      "transliteration": "Ekatvam",
+      "meaning": "oneness",
+      "emoji": "🕉️"
+    },
+    {
+      "word": "ఏలకులు",
+      "transliteration": "Elakulu",
+      "meaning": "cardamom",
+      "emoji": "🌿"
+    },
+    {
+      "word": "ఏలుబడి",
+      "transliteration": "Elubadi",
+      "meaning": "rule",
+      "emoji": "👑"
+    },
+    {
+      "word": "ఏలిక",
+      "transliteration": "Elika",
+      "meaning": "ruler",
+      "emoji": "👑"
+    },
+    {
+      "word": "ఏనుగు దంతం",
+      "transliteration": "Eenugu dantam",
+      "meaning": "ivory tusk",
+      "emoji": "🦣"
+    },
+    {
+      "word": "ఏనుగుపిల్ల",
+      "transliteration": "Eenugupilla",
+      "meaning": "elephant calf",
+      "emoji": "🐘"
+    },
+    {
+      "word": "ఏటవాలు",
+      "transliteration": "Etavaalu",
+      "meaning": "slope",
+      "emoji": "⛰️"
+    },
+    {
+      "word": "ఏతం",
+      "transliteration": "Etam",
+      "meaning": "water-lifting device",
+      "emoji": "🪣"
+    },
+    {
+      "word": "ఏకాదశి",
+      "transliteration": "Ekadashi",
+      "meaning": "eleventh lunar day",
+      "emoji": "🌙"
+    },
+    {
+      "word": "ఏర్పాటు",
+      "transliteration": "Erpaatu",
+      "meaning": "arrangement",
+      "emoji": "🗂️"
+    },
+    {
+      "word": "ఏర్పాటు చేయు",
+      "transliteration": "Erpaatu cheyu",
+      "meaning": "arrange",
+      "emoji": "🛠️"
+    }
+  ],
+  "ఐ": [
+    {
+      "word": "ఐదు",
+      "transliteration": "Aidu",
+      "meaning": "five",
+      "emoji": "5️⃣"
+    },
+    {
+      "word": "ఐదవ",
+      "transliteration": "Aidava",
+      "meaning": "fifth",
+      "emoji": "🥇"
+    },
+    {
+      "word": "ఐదుగురు",
+      "transliteration": "Aiduguru",
+      "meaning": "five people",
+      "emoji": "👥"
+    },
+    {
+      "word": "ఐకమత్యం",
+      "transliteration": "Aikyamatyam",
+      "meaning": "harmony",
+      "emoji": "🤝"
+    },
+    {
+      "word": "ఐక్యత",
+      "transliteration": "Aikyata",
+      "meaning": "unity",
+      "emoji": "🫶"
+    },
+    {
+      "word": "ఐశ్వర్యం",
+      "transliteration": "Aishwaryam",
+      "meaning": "prosperity",
+      "emoji": "💰"
+    },
+    {
+      "word": "ఐశ్వర్యవంతుడు",
+      "transliteration": "Aishwaryavantudu",
+      "meaning": "wealthy person",
+      "emoji": "💎"
+    },
+    {
+      "word": "ఐరావతం",
+      "transliteration": "Airavatam",
+      "meaning": "Airavata elephant",
+      "emoji": "🐘"
+    },
+    {
+      "word": "ఐరన్",
+      "transliteration": "Airon",
+      "meaning": "iron",
+      "emoji": "🔩"
+    },
+    {
+      "word": "ఐస్",
+      "transliteration": "Ais",
+      "meaning": "ice",
+      "emoji": "🧊"
+    },
+    {
+      "word": "ఐస్‌క్రీమ్",
+      "transliteration": "Aiskreem",
+      "meaning": "ice cream",
+      "emoji": "🍦"
+    },
+    {
+      "word": "ఐదు వందలు",
+      "transliteration": "Aidu vandalu",
+      "meaning": "five hundred",
+      "emoji": "💵"
+    },
+    {
+      "word": "ఐదు రూపాయలు",
+      "transliteration": "Aidu rupaayalu",
+      "meaning": "five rupees",
+      "emoji": "🪙"
+    },
+    {
+      "word": "ఐదు వేళ్లు",
+      "transliteration": "Aidu velllu",
+      "meaning": "five fingers",
+      "emoji": "✋"
+    },
+    {
+      "word": "ఐదు రంగులు",
+      "transliteration": "Aidu rangulu",
+      "meaning": "five colors",
+      "emoji": "🎨"
+    },
+    {
+      "word": "ఐదు రోజులు",
+      "transliteration": "Aidu rojulu",
+      "meaning": "five days",
+      "emoji": "📆"
+    },
+    {
+      "word": "ఐదు పూలు",
+      "transliteration": "Aidu poolu",
+      "meaning": "five flowers",
+      "emoji": "💐"
+    },
+    {
+      "word": "ఐదు పండ్లు",
+      "transliteration": "Aidu pandlu",
+      "meaning": "five fruits",
+      "emoji": "🍎"
+    },
+    {
+      "word": "ఐదు నక్షత్రాలు",
+      "transliteration": "Aidu nakshatraalu",
+      "meaning": "five stars",
+      "emoji": "⭐"
+    },
+    {
+      "word": "ఐదు బంతులు",
+      "transliteration": "Aidu bantulu",
+      "meaning": "five balls",
+      "emoji": "⚽"
+    }
+  ],
+  "ఒ": [
+    {
+      "word": "ఒంటె",
+      "transliteration": "Onte",
+      "meaning": "camel",
+      "emoji": "🐪"
+    },
+    {
+      "word": "ఒకటి",
+      "transliteration": "Okati",
+      "meaning": "one",
+      "emoji": "1️⃣"
+    },
+    {
+      "word": "ఒకరు",
+      "transliteration": "Okaru",
+      "meaning": "one person",
+      "emoji": "👤"
+    },
+    {
+      "word": "ఒంటరి",
+      "transliteration": "Ontari",
+      "meaning": "alone",
+      "emoji": "🚶"
+    },
+    {
+      "word": "ఒంటరితనం",
+      "transliteration": "Ontaritanam",
+      "meaning": "loneliness",
+      "emoji": "🌙"
+    },
+    {
+      "word": "ఒడ్డు",
+      "transliteration": "Oddu",
+      "meaning": "riverbank",
+      "emoji": "🏞️"
+    },
+    {
+      "word": "ఒడ్డు దాటు",
+      "transliteration": "Oddu daatu",
+      "meaning": "cross the bank",
+      "emoji": "🚣"
+    },
+    {
+      "word": "ఒలువు",
+      "transliteration": "Oluvu",
+      "meaning": "beauty",
+      "emoji": "🌼"
+    },
+    {
+      "word": "ఒర",
+      "transliteration": "Ora",
+      "meaning": "sheath",
+      "emoji": "🗡️"
+    },
+    {
+      "word": "ఒరుగు",
+      "transliteration": "Orugu",
+      "meaning": "rest",
+      "emoji": "🛌"
+    },
+    {
+      "word": "ఒలివ్",
+      "transliteration": "Oliv",
+      "meaning": "olive",
+      "emoji": "🫒"
+    },
+    {
+      "word": "ఒకే",
+      "transliteration": "Oke",
+      "meaning": "same",
+      "emoji": "✅"
+    },
+    {
+      "word": "ఒప్పందం",
+      "transliteration": "Oppandam",
+      "meaning": "agreement",
+      "emoji": "🤝"
+    },
+    {
+      "word": "ఒప్పుకోలు",
+      "transliteration": "Oppukolu",
+      "meaning": "acceptance",
+      "emoji": "👍"
+    },
+    {
+      "word": "ఒప్పు",
+      "transliteration": "Oppu",
+      "meaning": "agree",
+      "emoji": "👌"
+    },
+    {
+      "word": "ఒడంబడిక",
+      "transliteration": "Odambadika",
+      "meaning": "contract",
+      "emoji": "📜"
+    },
+    {
+      "word": "ఒడుపు",
+      "transliteration": "Odupu",
+      "meaning": "skill",
+      "emoji": "🧠"
+    },
+    {
+      "word": "ఒలికించు",
+      "transliteration": "Olikinchu",
+      "meaning": "pour out",
+      "emoji": "🫗"
+    },
+    {
+      "word": "ఒత్తిడి",
+      "transliteration": "Ottidi",
+      "meaning": "pressure",
+      "emoji": "🫨"
+    },
+    {
+      "word": "ఒలిచినది",
+      "transliteration": "Olichinadi",
+      "meaning": "peeled item",
+      "emoji": "🥔"
+    }
+  ],
+  "ఓ": [
+    {
+      "word": "ఓడ",
+      "transliteration": "Oda",
+      "meaning": "boat",
+      "emoji": "⛵"
+    },
+    {
+      "word": "ఓటు",
+      "transliteration": "Otu",
+      "meaning": "vote",
+      "emoji": "🗳️"
+    },
+    {
+      "word": "ఓటరు",
+      "transliteration": "Otaru",
+      "meaning": "voter",
+      "emoji": "🙋"
+    },
+    {
+      "word": "ఓటమి",
+      "transliteration": "Otami",
+      "meaning": "defeat",
+      "emoji": "😞"
+    },
+    {
+      "word": "ఓదార్పు",
+      "transliteration": "Odaarpu",
+      "meaning": "comfort",
+      "emoji": "🫂"
+    },
+    {
+      "word": "ఓదార్చు",
+      "transliteration": "Odarchu",
+      "meaning": "console",
+      "emoji": "🤗"
+    },
+    {
+      "word": "ఓర్పు",
+      "transliteration": "Orpu",
+      "meaning": "patience",
+      "emoji": "🧘"
+    },
+    {
+      "word": "ఓర్పుగా",
+      "transliteration": "Orpuga",
+      "meaning": "patiently",
+      "emoji": "🙂"
+    },
+    {
+      "word": "ఓపిక",
+      "transliteration": "Opika",
+      "meaning": "patience",
+      "emoji": "⏳"
+    },
+    {
+      "word": "ఓపికగా",
+      "transliteration": "Opikaga",
+      "meaning": "patiently",
+      "emoji": "🧘"
+    },
+    {
+      "word": "ఓపెన్",
+      "transliteration": "Open",
+      "meaning": "open",
+      "emoji": "🚪"
+    },
+    {
+      "word": "ఓమం",
+      "transliteration": "Omam",
+      "meaning": "ajwain",
+      "emoji": "🌿"
+    },
+    {
+      "word": "ఓంకారం",
+      "transliteration": "Omkaaram",
+      "meaning": "sacred Om",
+      "emoji": "🕉️"
+    },
+    {
+      "word": "ఓంకారము",
+      "transliteration": "Omkaaramu",
+      "meaning": "sacred Om",
+      "emoji": "🕉️"
+    },
+    {
+      "word": "ఓడరేవు",
+      "transliteration": "Odarevu",
+      "meaning": "harbor",
+      "emoji": "⚓"
+    },
+    {
+      "word": "ఓడరేవు నగరం",
+      "transliteration": "Odarevu nagaram",
+      "meaning": "port city",
+      "emoji": "🏙️"
+    },
+    {
+      "word": "ఓడమాలి",
+      "transliteration": "Odamali",
+      "meaning": "boatman",
+      "emoji": "🛶"
+    },
+    {
+      "word": "ఓడపందెం",
+      "transliteration": "Odapandem",
+      "meaning": "boat race",
+      "emoji": "🚣"
+    },
+    {
+      "word": "ఓటుహక్కు",
+      "transliteration": "Otuhakku",
+      "meaning": "right to vote",
+      "emoji": "🗳️"
+    },
+    {
+      "word": "ఓదెలు",
+      "transliteration": "Odelu",
+      "meaning": "Odelu village",
+      "emoji": "🏘️"
+    }
+  ],
+  "ఔ": [
+    {
+      "word": "ఔషధం",
+      "transliteration": "Aushadham",
+      "meaning": "medicine",
+      "emoji": "💊"
+    },
+    {
+      "word": "ఔషధి",
+      "transliteration": "Aushadhi",
+      "meaning": "medicinal herb",
+      "emoji": "🌿"
+    },
+    {
+      "word": "ఔషధశాల",
+      "transliteration": "Aushadhasala",
+      "meaning": "pharmacy",
+      "emoji": "🏥"
+    },
+    {
+      "word": "ఔషధగుణం",
+      "transliteration": "Aushadhagunam",
+      "meaning": "medicinal property",
+      "emoji": "🧪"
+    },
+    {
+      "word": "ఔషధ మొక్క",
+      "transliteration": "Aushadha mokka",
+      "meaning": "medicinal plant",
+      "emoji": "🪴"
+    },
+    {
+      "word": "ఔదార్యం",
+      "transliteration": "Audaryam",
+      "meaning": "generosity",
+      "emoji": "💝"
+    },
+    {
+      "word": "ఔదార్యము",
+      "transliteration": "Audaryamu",
+      "meaning": "generosity",
+      "emoji": "🤲"
+    },
+    {
+      "word": "ఔత్సాహికుడు",
+      "transliteration": "Autsahikudu",
+      "meaning": "enthusiast",
+      "emoji": "🌟"
+    },
+    {
+      "word": "ఔత్సుక్యం",
+      "transliteration": "Autsukyam",
+      "meaning": "eagerness",
+      "emoji": "👀"
+    },
+    {
+      "word": "ఔచిత్యం",
+      "transliteration": "Auchityam",
+      "meaning": "propriety",
+      "emoji": "⚖️"
+    },
+    {
+      "word": "ఔన్నత్యం",
+      "transliteration": "Aunnatyam",
+      "meaning": "greatness",
+      "emoji": "🏔️"
+    },
+    {
+      "word": "ఔన్నత్యము",
+      "transliteration": "Aunnatyamu",
+      "meaning": "nobility",
+      "emoji": "👑"
+    },
+    {
+      "word": "ఔపచారికం",
+      "transliteration": "Aupacharikam",
+      "meaning": "formal",
+      "emoji": "🤝"
+    },
+    {
+      "word": "ఔపాసన",
+      "transliteration": "Aupaasana",
+      "meaning": "ritual worship",
+      "emoji": "🪔"
+    },
+    {
+      "word": "ఔరసుడు",
+      "transliteration": "Aurasudu",
+      "meaning": "natural son",
+      "emoji": "👦"
+    },
+    {
+      "word": "ఔరసం",
+      "transliteration": "Aurasam",
+      "meaning": "legitimate birth",
+      "emoji": "👶"
+    },
+    {
+      "word": "ఔషధతైలం",
+      "transliteration": "Aushadhatailam",
+      "meaning": "medicinal oil",
+      "emoji": "🧴"
+    },
+    {
+      "word": "ఔషధపత్రం",
+      "transliteration": "Aushadhapatram",
+      "meaning": "prescription",
+      "emoji": "📄"
+    },
+    {
+      "word": "ఔషధమూలిక",
+      "transliteration": "Aushadhamoolika",
+      "meaning": "healing herb",
+      "emoji": "🌱"
+    },
+    {
+      "word": "ఔత్సవికుడు",
+      "transliteration": "Autsavikudu",
+      "meaning": "festival participant",
+      "emoji": "🎉"
+    }
+  ],
+  "అం": [
+    {
+      "word": "అంకె",
+      "transliteration": "Anke",
+      "meaning": "number",
+      "emoji": "🔢"
+    },
+    {
+      "word": "అంకురం",
+      "transliteration": "Ankuram",
+      "meaning": "sprout",
+      "emoji": "🌱"
+    },
+    {
+      "word": "అంకితం",
+      "transliteration": "Ankitam",
+      "meaning": "dedication",
+      "emoji": "🎁"
+    },
+    {
+      "word": "అంకితభావం",
+      "transliteration": "Ankitabhavam",
+      "meaning": "commitment",
+      "emoji": "❤️"
+    },
+    {
+      "word": "అంకుశం",
+      "transliteration": "Ankusham",
+      "meaning": "goad",
+      "emoji": "🪝"
+    },
+    {
+      "word": "అంకోలం",
+      "transliteration": "Ankolam",
+      "meaning": "ankola tree",
+      "emoji": "🌳"
+    },
+    {
+      "word": "అంగం",
+      "transliteration": "Angam",
+      "meaning": "limb",
+      "emoji": "💪"
+    },
+    {
+      "word": "అంగడి",
+      "transliteration": "Angadi",
+      "meaning": "shop",
+      "emoji": "🏪"
+    },
+    {
+      "word": "అంగవస్త్రం",
+      "transliteration": "Angavastram",
+      "meaning": "shawl",
+      "emoji": "🧣"
+    },
+    {
+      "word": "అంగరంగ",
+      "transliteration": "Angarangam",
+      "meaning": "grandly",
+      "emoji": "🎊"
+    },
+    {
+      "word": "అంగారం",
+      "transliteration": "Angaaram",
+      "meaning": "ember",
+      "emoji": "🔥"
+    },
+    {
+      "word": "అంగుళం",
+      "transliteration": "Angulam",
+      "meaning": "inch",
+      "emoji": "📏"
+    },
+    {
+      "word": "అంగుళి",
+      "transliteration": "Anguli",
+      "meaning": "finger",
+      "emoji": "☝️"
+    },
+    {
+      "word": "అంగుళీయకం",
+      "transliteration": "Anguliyakam",
+      "meaning": "ring",
+      "emoji": "💍"
+    },
+    {
+      "word": "అంగన",
+      "transliteration": "Angana",
+      "meaning": "courtyard",
+      "emoji": "🏡"
+    },
+    {
+      "word": "అంగనవాడి",
+      "transliteration": "Anganavaadi",
+      "meaning": "childcare center",
+      "emoji": "🏫"
+    },
+    {
+      "word": "అంగరక్షకుడు",
+      "transliteration": "Angarakshakudu",
+      "meaning": "bodyguard",
+      "emoji": "🛡️"
+    },
+    {
+      "word": "అంగసౌష్టవం",
+      "transliteration": "Angasaushtavam",
+      "meaning": "good physique",
+      "emoji": "🏋️"
+    },
+    {
+      "word": "అంగవైకల్యం",
+      "transliteration": "Angavaikalyam",
+      "meaning": "disability",
+      "emoji": "♿"
+    },
+    {
+      "word": "అంగీకారం",
+      "transliteration": "Angeekaram",
+      "meaning": "acceptance",
+      "emoji": "✅"
+    }
+  ],
+  "అః": [
+    {
+      "word": "దుఃఖం",
+      "transliteration": "Duhkham",
+      "meaning": "sorrow",
+      "emoji": "😢"
+    },
+    {
+      "word": "దుఃఖము",
+      "transliteration": "Duhkhamu",
+      "meaning": "grief",
+      "emoji": "😞"
+    },
+    {
+      "word": "దుఃఖితుడు",
+      "transliteration": "Duhkhitudu",
+      "meaning": "sorrowful person",
+      "emoji": "😔"
+    },
+    {
+      "word": "దుఃఖాంతం",
+      "transliteration": "Duhkhantam",
+      "meaning": "end of sorrow",
+      "emoji": "🌤️"
+    },
+    {
+      "word": "నిఃశబ్దం",
+      "transliteration": "Nihshabdam",
+      "meaning": "silence",
+      "emoji": "🤫"
+    },
+    {
+      "word": "నిఃశబ్దంగా",
+      "transliteration": "Nihshabdamga",
+      "meaning": "silently",
+      "emoji": "🤫"
+    },
+    {
+      "word": "నిఃస్వార్థం",
+      "transliteration": "Nihsvartham",
+      "meaning": "selflessness",
+      "emoji": "🤲"
+    },
+    {
+      "word": "నిఃసహాయం",
+      "transliteration": "Nihsahaayam",
+      "meaning": "helplessness",
+      "emoji": "🆘"
+    },
+    {
+      "word": "నిఃసందేహం",
+      "transliteration": "Nihsandeham",
+      "meaning": "without doubt",
+      "emoji": "✅"
+    },
+    {
+      "word": "నిఃశుల్కం",
+      "transliteration": "Nihshulkam",
+      "meaning": "free of charge",
+      "emoji": "🆓"
+    },
+    {
+      "word": "నిఃశ్వాసం",
+      "transliteration": "Nihshvaasam",
+      "meaning": "exhalation",
+      "emoji": "😮‍💨"
+    },
+    {
+      "word": "దుఃస్థితి",
+      "transliteration": "Duhsthiti",
+      "meaning": "misfortune",
+      "emoji": "😟"
+    },
+    {
+      "word": "అంతఃపురం",
+      "transliteration": "Antahpuram",
+      "meaning": "inner palace",
+      "emoji": "🏰"
+    },
+    {
+      "word": "అంతఃకరణం",
+      "transliteration": "Antahkaranam",
+      "meaning": "inner conscience",
+      "emoji": "💭"
+    },
+    {
+      "word": "అంతఃప్రవేశం",
+      "transliteration": "Antahpravesham",
+      "meaning": "entry within",
+      "emoji": "🚪"
+    },
+    {
+      "word": "ప్రాతఃకాలం",
+      "transliteration": "Praatahkaalam",
+      "meaning": "early morning",
+      "emoji": "🌅"
+    },
+    {
+      "word": "పునఃప్రారంభం",
+      "transliteration": "Punaha praarambham",
+      "meaning": "restart",
+      "emoji": "🔄"
+    },
+    {
+      "word": "పునఃపరిశీలన",
+      "transliteration": "Punaha parishilana",
+      "meaning": "review",
+      "emoji": "🔎"
+    },
+    {
+      "word": "బహిఃప్రపంచం",
+      "transliteration": "Bahihprapancham",
+      "meaning": "outer world",
+      "emoji": "🌍"
+    },
+    {
+      "word": "అంతఃశక్తి",
+      "transliteration": "Antahshakti",
+      "meaning": "inner strength",
+      "emoji": "💪"
+    }
+  ],
+  "క": [
+    {
+      "word": "కలం",
+      "transliteration": "Kalam",
+      "meaning": "pen",
+      "emoji": "🖊️"
+    },
+    {
+      "word": "కలము",
+      "transliteration": "Kalamu",
+      "meaning": "pen",
+      "emoji": "✒️"
+    },
+    {
+      "word": "కల",
+      "transliteration": "Kala",
+      "meaning": "dream",
+      "emoji": "💭"
+    },
+    {
+      "word": "కలువ",
+      "transliteration": "Kaluva",
+      "meaning": "water lily",
+      "emoji": "🪷"
+    },
+    {
+      "word": "కథ",
+      "transliteration": "Katha",
+      "meaning": "story",
+      "emoji": "📖"
+    },
+    {
+      "word": "కర్ర",
+      "transliteration": "Karra",
+      "meaning": "stick",
+      "emoji": "🪵"
+    },
+    {
+      "word": "కప్ప",
+      "transliteration": "Kappa",
+      "meaning": "frog",
+      "emoji": "🐸"
+    },
+    {
+      "word": "కప్పు",
+      "transliteration": "Kappu",
+      "meaning": "cup",
+      "emoji": "☕"
+    },
+    {
+      "word": "కత్తి",
+      "transliteration": "Katti",
+      "meaning": "knife",
+      "emoji": "🔪"
+    },
+    {
+      "word": "కత్తెర",
+      "transliteration": "Kattera",
+      "meaning": "scissors",
+      "emoji": "✂️"
+    },
+    {
+      "word": "కన్ను",
+      "transliteration": "Kannu",
+      "meaning": "eye",
+      "emoji": "👁️"
+    },
+    {
+      "word": "కన్నీరు",
+      "transliteration": "Kanneeru",
+      "meaning": "tear",
+      "emoji": "💧"
+    },
+    {
+      "word": "కాకి",
+      "transliteration": "Kaaki",
+      "meaning": "crow",
+      "emoji": "🐦‍⬛"
+    },
+    {
+      "word": "కాయ",
+      "transliteration": "Kaaya",
+      "meaning": "fruit",
+      "emoji": "🍈"
+    },
+    {
+      "word": "కారం",
+      "transliteration": "Kaaram",
+      "meaning": "spice",
+      "emoji": "🌶️"
+    },
+    {
+      "word": "కాగితం",
+      "transliteration": "Kaagitam",
+      "meaning": "paper",
+      "emoji": "📄"
+    },
+    {
+      "word": "కిటికీ",
+      "transliteration": "Kitikee",
+      "meaning": "window",
+      "emoji": "🪟"
+    },
+    {
+      "word": "కిరీటం",
+      "transliteration": "Kireetam",
+      "meaning": "crown",
+      "emoji": "👑"
+    },
+    {
+      "word": "కుక్క",
+      "transliteration": "Kukka",
+      "meaning": "dog",
+      "emoji": "🐕"
+    },
+    {
+      "word": "కుందేలు",
+      "transliteration": "Kundelu",
+      "meaning": "rabbit",
+      "emoji": "🐇"
+    }
+  ],
+  "ఖ": [
+    {
+      "word": "ఖడ్గం",
+      "transliteration": "Khadgam",
+      "meaning": "sword",
+      "emoji": "⚔️"
+    },
+    {
+      "word": "ఖడ్గమృగం",
+      "transliteration": "Khadgamrugam",
+      "meaning": "rhinoceros",
+      "emoji": "🦏"
+    },
+    {
+      "word": "ఖగోళం",
+      "transliteration": "Khagolam",
+      "meaning": "astronomy",
+      "emoji": "🌌"
+    },
+    {
+      "word": "ఖగోళశాస్త్రం",
+      "transliteration": "Khagolashastram",
+      "meaning": "astronomy",
+      "emoji": "🔭"
+    },
+    {
+      "word": "ఖగోళవేత్త",
+      "transliteration": "Khagolavetta",
+      "meaning": "astronomer",
+      "emoji": "👩‍🚀"
+    },
+    {
+      "word": "ఖగం",
+      "transliteration": "Khagam",
+      "meaning": "bird",
+      "emoji": "🕊️"
+    },
+    {
+      "word": "ఖగరాజు",
+      "transliteration": "Khagaraaju",
+      "meaning": "king of birds",
+      "emoji": "🦅"
+    },
+    {
+      "word": "ఖజానా",
+      "transliteration": "Khajaanaa",
+      "meaning": "treasury",
+      "emoji": "💰"
+    },
+    {
+      "word": "ఖనిజం",
+      "transliteration": "Khanijam",
+      "meaning": "mineral",
+      "emoji": "💎"
+    },
+    {
+      "word": "ఖనిజజలం",
+      "transliteration": "Khanijajalam",
+      "meaning": "mineral water",
+      "emoji": "💧"
+    },
+    {
+      "word": "ఖనిజవనరు",
+      "transliteration": "Khanijavanaru",
+      "meaning": "mineral resource",
+      "emoji": "⛏️"
+    },
+    {
+      "word": "ఖననం",
+      "transliteration": "Khananam",
+      "meaning": "mining",
+      "emoji": "⛏️"
+    },
+    {
+      "word": "ఖనిజశాస్త్రం",
+      "transliteration": "Khanijashastram",
+      "meaning": "mineralogy",
+      "emoji": "🪨"
+    },
+    {
+      "word": "ఖనిజలవణం",
+      "transliteration": "Khanijalavanam",
+      "meaning": "mineral salt",
+      "emoji": "🧂"
+    },
+    {
+      "word": "ఖర్జూరం",
+      "transliteration": "Kharjooram",
+      "meaning": "date fruit",
+      "emoji": "🌴"
+    },
+    {
+      "word": "ఖరుడు",
+      "transliteration": "Kharudu",
+      "meaning": "Khara, a mythic figure",
+      "emoji": "📖"
+    },
+    {
+      "word": "ఖరగోషం",
+      "transliteration": "Kharagosham",
+      "meaning": "hare",
+      "emoji": "🐇"
+    },
+    {
+      "word": "ఖరీదు",
+      "transliteration": "Khareedu",
+      "meaning": "price",
+      "emoji": "🏷️"
+    },
+    {
+      "word": "ఖర్చు",
+      "transliteration": "Kharchu",
+      "meaning": "expense",
+      "emoji": "💸"
+    },
+    {
+      "word": "ఖాతా",
+      "transliteration": "Khaata",
+      "meaning": "account",
+      "emoji": "📒"
+    }
+  ],
+  "గ": [
+    {
+      "word": "గది",
+      "transliteration": "Gadi",
+      "meaning": "room",
+      "emoji": "🚪"
+    },
+    {
+      "word": "గడియారం",
+      "transliteration": "Gadiyaaram",
+      "meaning": "clock",
+      "emoji": "⏰"
+    },
+    {
+      "word": "గాలి",
+      "transliteration": "Gaali",
+      "meaning": "air",
+      "emoji": "💨"
+    },
+    {
+      "word": "గడ్డి",
+      "transliteration": "Gaddi",
+      "meaning": "grass",
+      "emoji": "🌿"
+    },
+    {
+      "word": "గుడి",
+      "transliteration": "Gudi",
+      "meaning": "temple",
+      "emoji": "🛕"
+    },
+    {
+      "word": "గుడ్డు",
+      "transliteration": "Guddu",
+      "meaning": "egg",
+      "emoji": "🥚"
+    },
+    {
+      "word": "గుర్రం",
+      "transliteration": "Gurram",
+      "meaning": "horse",
+      "emoji": "🐎"
+    },
+    {
+      "word": "గులాబి",
+      "transliteration": "Gulaabi",
+      "meaning": "rose",
+      "emoji": "🌹"
+    },
+    {
+      "word": "గుమ్మడికాయ",
+      "transliteration": "Gummadikaaya",
+      "meaning": "pumpkin",
+      "emoji": "🎃"
+    },
+    {
+      "word": "గోరు",
+      "transliteration": "Goru",
+      "meaning": "nail",
+      "emoji": "💅"
+    },
+    {
+      "word": "గోధుమ",
+      "transliteration": "Godhuma",
+      "meaning": "wheat",
+      "emoji": "🌾"
+    },
+    {
+      "word": "గొడుగు",
+      "transliteration": "Godugu",
+      "meaning": "umbrella",
+      "emoji": "☂️"
+    },
+    {
+      "word": "గొర్రె",
+      "transliteration": "Gorre",
+      "meaning": "sheep",
+      "emoji": "🐑"
+    },
+    {
+      "word": "గిన్నె",
+      "transliteration": "Ginne",
+      "meaning": "bowl",
+      "emoji": "🥣"
+    },
+    {
+      "word": "గిన్నెలు",
+      "transliteration": "Ginnelu",
+      "meaning": "bowls",
+      "emoji": "🍽️"
+    },
+    {
+      "word": "గీత",
+      "transliteration": "Geeta",
+      "meaning": "line",
+      "emoji": "〰️"
+    },
+    {
+      "word": "గీతం",
+      "transliteration": "Geetam",
+      "meaning": "song",
+      "emoji": "🎵"
+    },
+    {
+      "word": "గాయం",
+      "transliteration": "Gaayam",
+      "meaning": "wound",
+      "emoji": "🩹"
+    },
+    {
+      "word": "గంట",
+      "transliteration": "Ganta",
+      "meaning": "bell",
+      "emoji": "🔔"
+    },
+    {
+      "word": "గణితం",
+      "transliteration": "Ganitam",
+      "meaning": "mathematics",
+      "emoji": "➗"
+    }
+  ],
+  "ఘ": [
+    {
+      "word": "ఘంట",
+      "transliteration": "Ghanta",
+      "meaning": "bell",
+      "emoji": "🔔"
+    },
+    {
+      "word": "ఘంటిక",
+      "transliteration": "Ghantika",
+      "meaning": "small bell",
+      "emoji": "🔔"
+    },
+    {
+      "word": "ఘంటానాదం",
+      "transliteration": "Ghantanaadam",
+      "meaning": "bell sound",
+      "emoji": "🎶"
+    },
+    {
+      "word": "ఘంటసాల",
+      "transliteration": "Ghantasala",
+      "meaning": "Ghantasala",
+      "emoji": "🎤"
+    },
+    {
+      "word": "ఘటము",
+      "transliteration": "Ghatamu",
+      "meaning": "pot",
+      "emoji": "🏺"
+    },
+    {
+      "word": "ఘటం",
+      "transliteration": "Ghatam",
+      "meaning": "clay pot",
+      "emoji": "🏺"
+    },
+    {
+      "word": "ఘటస్థాపన",
+      "transliteration": "Ghatasthaapana",
+      "meaning": "pot installation",
+      "emoji": "🪔"
+    },
+    {
+      "word": "ఘటోత్కచుడు",
+      "transliteration": "Ghatotkachudu",
+      "meaning": "Ghatotkacha",
+      "emoji": "📖"
+    },
+    {
+      "word": "ఘనము",
+      "transliteration": "Ghanamu",
+      "meaning": "solid",
+      "emoji": "🧊"
+    },
+    {
+      "word": "ఘనత",
+      "transliteration": "Ghanata",
+      "meaning": "greatness",
+      "emoji": "🏆"
+    },
+    {
+      "word": "ఘనపరిమాణం",
+      "transliteration": "Ghanaparimaanam",
+      "meaning": "volume",
+      "emoji": "📦"
+    },
+    {
+      "word": "ఘనకాయం",
+      "transliteration": "Ghanakaayam",
+      "meaning": "sturdy body",
+      "emoji": "💪"
+    },
+    {
+      "word": "ఘనమూలం",
+      "transliteration": "Ghanamoolam",
+      "meaning": "cube root",
+      "emoji": "🧮"
+    },
+    {
+      "word": "ఘనవనం",
+      "transliteration": "Ghanavanam",
+      "meaning": "dense forest",
+      "emoji": "🌲"
+    },
+    {
+      "word": "ఘనమైన",
+      "transliteration": "Ghanamaina",
+      "meaning": "dense",
+      "emoji": "🌳"
+    },
+    {
+      "word": "ఘోష",
+      "transliteration": "Ghosha",
+      "meaning": "sound",
+      "emoji": "📣"
+    },
+    {
+      "word": "ఘోషణ",
+      "transliteration": "Ghoshana",
+      "meaning": "announcement",
+      "emoji": "📢"
+    },
+    {
+      "word": "ఘోషయాత్ర",
+      "transliteration": "Ghoshayatra",
+      "meaning": "rally",
+      "emoji": "🚶"
+    },
+    {
+      "word": "ఘర్షణ",
+      "transliteration": "Gharshana",
+      "meaning": "friction",
+      "emoji": "🪵"
+    },
+    {
+      "word": "ఘర్షణశక్తి",
+      "transliteration": "Gharshanashakti",
+      "meaning": "frictional force",
+      "emoji": "⚙️"
+    }
+  ],
+  "ఙ": [
+    {
+      "word": "వాఙ్మయం",
+      "transliteration": "Vaangmayam",
+      "meaning": "literature",
+      "emoji": "📚"
+    },
+    {
+      "word": "వాఙ్మయి",
+      "transliteration": "Vaangmayi",
+      "meaning": "literary",
+      "emoji": "✍️"
+    },
+    {
+      "word": "వాఙ్మయశాస్త్రం",
+      "transliteration": "Vaangmayashastram",
+      "meaning": "literary studies",
+      "emoji": "📖"
+    },
+    {
+      "word": "వాఙ్మయకారుడు",
+      "transliteration": "Vaangmayakaarudu",
+      "meaning": "author",
+      "emoji": "🖋️"
+    },
+    {
+      "word": "వాఙ్మయరంగం",
+      "transliteration": "Vaangmayarangam",
+      "meaning": "literary field",
+      "emoji": "🎭"
+    },
+    {
+      "word": "వాఙ్మయసేవ",
+      "transliteration": "Vaangmayaseva",
+      "meaning": "literary service",
+      "emoji": "📚"
+    },
+    {
+      "word": "వాఙ్మయచరిత్ర",
+      "transliteration": "Vaangmayacharitra",
+      "meaning": "literary history",
+      "emoji": "📜"
+    },
+    {
+      "word": "వాఙ్మయవిమర్శ",
+      "transliteration": "Vaangmayavimarsha",
+      "meaning": "literary criticism",
+      "emoji": "🔎"
+    },
+    {
+      "word": "వాఙ్మయసభ",
+      "transliteration": "Vaangmayasabha",
+      "meaning": "literary gathering",
+      "emoji": "🗣️"
+    },
+    {
+      "word": "వాఙ్మయసంపద",
+      "transliteration": "Vaangmayasampada",
+      "meaning": "literary wealth",
+      "emoji": "💎"
+    },
+    {
+      "word": "వాఙ్మయభాష",
+      "transliteration": "Vaangmayabhaasha",
+      "meaning": "literary language",
+      "emoji": "📝"
+    },
+    {
+      "word": "వాఙ్మయప్రపంచం",
+      "transliteration": "Vaangmayaprapancham",
+      "meaning": "world of literature",
+      "emoji": "🌍"
+    },
+    {
+      "word": "వాఙ్మయరచన",
+      "transliteration": "Vaangmayarachana",
+      "meaning": "literary composition",
+      "emoji": "✍️"
+    },
+    {
+      "word": "వాఙ్మయపురస్కారం",
+      "transliteration": "Vaangmayapuraskaaram",
+      "meaning": "literary award",
+      "emoji": "🏆"
+    },
+    {
+      "word": "వాఙ్మయపత్రిక",
+      "transliteration": "Vaangmayapatrika",
+      "meaning": "literary magazine",
+      "emoji": "📰"
+    },
+    {
+      "word": "వాఙ్మయోత్సవం",
+      "transliteration": "Vaangmayotsavam",
+      "meaning": "literary festival",
+      "emoji": "🎉"
+    },
+    {
+      "word": "వాఙ్మయకృతి",
+      "transliteration": "Vaangmayakruti",
+      "meaning": "literary work",
+      "emoji": "📕"
+    },
+    {
+      "word": "వాఙ్మయరత్నం",
+      "transliteration": "Vaangmayaratnam",
+      "meaning": "literary gem",
+      "emoji": "💠"
+    },
+    {
+      "word": "వాఙ్మయసంప్రదాయం",
+      "transliteration": "Vaangmayasampradaayam",
+      "meaning": "literary tradition",
+      "emoji": "📜"
+    },
+    {
+      "word": "వాఙ్మయాభిమాని",
+      "transliteration": "Vaangmayaabhimaani",
+      "meaning": "literature enthusiast",
+      "emoji": "🤓"
+    }
+  ],
+  "చ": [
+    {
+      "word": "చిలుక",
+      "transliteration": "Chiluka",
+      "meaning": "parrot",
+      "emoji": "🦜"
+    },
+    {
+      "word": "చెట్టు",
+      "transliteration": "Chettu",
+      "meaning": "tree",
+      "emoji": "🌳"
+    },
+    {
+      "word": "చేప",
+      "transliteration": "Chepa",
+      "meaning": "fish",
+      "emoji": "🐟"
+    },
+    {
+      "word": "చంద్రుడు",
+      "transliteration": "Chandrudu",
+      "meaning": "moon",
+      "emoji": "🌙"
+    },
+    {
+      "word": "చందమామ",
+      "transliteration": "Chandamama",
+      "meaning": "moon",
+      "emoji": "🌕"
+    },
+    {
+      "word": "చక్రం",
+      "transliteration": "Chakram",
+      "meaning": "wheel",
+      "emoji": "⚙️"
+    },
+    {
+      "word": "చక్రవర్తి",
+      "transliteration": "Chakravarti",
+      "meaning": "emperor",
+      "emoji": "👑"
+    },
+    {
+      "word": "చక్కెర",
+      "transliteration": "Chakkera",
+      "meaning": "sugar",
+      "emoji": "🍬"
+    },
+    {
+      "word": "చెయ్యి",
+      "transliteration": "Cheyyi",
+      "meaning": "hand",
+      "emoji": "✋"
+    },
+    {
+      "word": "చెవి",
+      "transliteration": "Chevi",
+      "meaning": "ear",
+      "emoji": "👂"
+    },
+    {
+      "word": "చీమ",
+      "transliteration": "Cheema",
+      "meaning": "ant",
+      "emoji": "🐜"
+    },
+    {
+      "word": "చీమలపుట్ట",
+      "transliteration": "Cheemalaputta",
+      "meaning": "anthill",
+      "emoji": "🐜"
+    },
+    {
+      "word": "చీర",
+      "transliteration": "Cheera",
+      "meaning": "sari",
+      "emoji": "🥻"
+    },
+    {
+      "word": "చింత",
+      "transliteration": "Chinta",
+      "meaning": "tamarind",
+      "emoji": "🫘"
+    },
+    {
+      "word": "చింతపండు",
+      "transliteration": "Chintapandu",
+      "meaning": "tamarind fruit",
+      "emoji": "🫘"
+    },
+    {
+      "word": "చిరునవ్వు",
+      "transliteration": "Chirunavvu",
+      "meaning": "smile",
+      "emoji": "😊"
+    },
+    {
+      "word": "చిన్నారి",
+      "transliteration": "Chinnaari",
+      "meaning": "little child",
+      "emoji": "👶"
+    },
+    {
+      "word": "చెరువు",
+      "transliteration": "Cheruvu",
+      "meaning": "pond",
+      "emoji": "🦆"
+    },
+    {
+      "word": "చుక్క",
+      "transliteration": "Chukka",
+      "meaning": "star",
+      "emoji": "⭐"
+    },
+    {
+      "word": "చెరకు",
+      "transliteration": "Cheraku",
+      "meaning": "sugarcane",
+      "emoji": "🎋"
+    }
+  ],
+  "ఛ": [
+    {
+      "word": "ఛత్రం",
+      "transliteration": "Chatram",
+      "meaning": "umbrella",
+      "emoji": "☂️"
+    },
+    {
+      "word": "ఛత్రపతి",
+      "transliteration": "Chatrapati",
+      "meaning": "sovereign",
+      "emoji": "👑"
+    },
+    {
+      "word": "ఛత్రధారి",
+      "transliteration": "Chatradhaari",
+      "meaning": "umbrella bearer",
+      "emoji": "☂️"
+    },
+    {
+      "word": "ఛాయ",
+      "transliteration": "Chaaya",
+      "meaning": "shade",
+      "emoji": "🌳"
+    },
+    {
+      "word": "ఛాయాచిత్రం",
+      "transliteration": "Chaayaachitram",
+      "meaning": "photograph",
+      "emoji": "📷"
+    },
+    {
+      "word": "ఛాయాగ్రాహకుడు",
+      "transliteration": "Chaayaagraahakudu",
+      "meaning": "photographer",
+      "emoji": "📸"
+    },
+    {
+      "word": "ఛాయాగ్రహణం",
+      "transliteration": "Chaayaagrahanam",
+      "meaning": "photography",
+      "emoji": "📷"
+    },
+    {
+      "word": "ఛాయానాటకం",
+      "transliteration": "Chaayaanatakam",
+      "meaning": "shadow play",
+      "emoji": "🎭"
+    },
+    {
+      "word": "ఛాయావృక్షం",
+      "transliteration": "Chaayaavruksham",
+      "meaning": "shade tree",
+      "emoji": "🌳"
+    },
+    {
+      "word": "ఛాయాదానం",
+      "transliteration": "Chaayaadaanam",
+      "meaning": "giving shade",
+      "emoji": "🌤️"
+    },
+    {
+      "word": "ఛాయావర్ణం",
+      "transliteration": "Chaayaavarnam",
+      "meaning": "shade of color",
+      "emoji": "🎨"
+    },
+    {
+      "word": "ఛాయారూపం",
+      "transliteration": "Chaayaaroopam",
+      "meaning": "silhouette",
+      "emoji": "👤"
+    },
+    {
+      "word": "ఛాయాగీతం",
+      "transliteration": "Chaayaageetam",
+      "meaning": "shadow song",
+      "emoji": "🎶"
+    },
+    {
+      "word": "ఛాయాచిత్రశాల",
+      "transliteration": "Chaayaachitrashaala",
+      "meaning": "photo studio",
+      "emoji": "📸"
+    },
+    {
+      "word": "ఛాయావాది",
+      "transliteration": "Chaayaavaadi",
+      "meaning": "shadow puppeteer",
+      "emoji": "🎭"
+    },
+    {
+      "word": "ఛాయానృత్యం",
+      "transliteration": "Chaayaanrutyam",
+      "meaning": "shadow dance",
+      "emoji": "💃"
+    },
+    {
+      "word": "ఛాయారేఖ",
+      "transliteration": "Chaayaarekha",
+      "meaning": "shadow line",
+      "emoji": "〰️"
+    },
+    {
+      "word": "ఛాయామార్గం",
+      "transliteration": "Chaayaamaargam",
+      "meaning": "shaded path",
+      "emoji": "🌲"
+    },
+    {
+      "word": "ఛాయాపటం",
+      "transliteration": "Chaayaapatam",
+      "meaning": "picture",
+      "emoji": "🖼️"
+    },
+    {
+      "word": "ఛాయాదీపం",
+      "transliteration": "Chaayaadeepam",
+      "meaning": "shadow lamp",
+      "emoji": "🪔"
+    }
+  ],
+  "జ": [
+    {
+      "word": "జింక",
+      "transliteration": "Jinka",
+      "meaning": "deer",
+      "emoji": "🦌"
+    },
+    {
+      "word": "జలము",
+      "transliteration": "Jalamu",
+      "meaning": "water",
+      "emoji": "💧"
+    },
+    {
+      "word": "జలం",
+      "transliteration": "Jalam",
+      "meaning": "water",
+      "emoji": "💦"
+    },
+    {
+      "word": "జలపాతం",
+      "transliteration": "Jalapaatam",
+      "meaning": "waterfall",
+      "emoji": "🏞️"
+    },
+    {
+      "word": "జలచరం",
+      "transliteration": "Jalacharam",
+      "meaning": "aquatic animal",
+      "emoji": "🐬"
+    },
+    {
+      "word": "జలచరాలు",
+      "transliteration": "Jalacharaalu",
+      "meaning": "aquatic animals",
+      "emoji": "🐠"
+    },
+    {
+      "word": "జననం",
+      "transliteration": "Jananam",
+      "meaning": "birth",
+      "emoji": "👶"
+    },
+    {
+      "word": "జన్మదినం",
+      "transliteration": "Janmadinam",
+      "meaning": "birthday",
+      "emoji": "🎂"
+    },
+    {
+      "word": "జనపదం",
+      "transliteration": "Janapadam",
+      "meaning": "region",
+      "emoji": "🗺️"
+    },
+    {
+      "word": "జనజీవనం",
+      "transliteration": "Janajeevanam",
+      "meaning": "everyday life",
+      "emoji": "🏘️"
+    },
+    {
+      "word": "జనసమూహం",
+      "transliteration": "Janasamooham",
+      "meaning": "crowd",
+      "emoji": "👥"
+    },
+    {
+      "word": "జనవరి",
+      "transliteration": "Janavari",
+      "meaning": "January",
+      "emoji": "📅"
+    },
+    {
+      "word": "జలుబు",
+      "transliteration": "Jalubu",
+      "meaning": "cold",
+      "emoji": "🤧"
+    },
+    {
+      "word": "జవాబు",
+      "transliteration": "Javabu",
+      "meaning": "answer",
+      "emoji": "💬"
+    },
+    {
+      "word": "జాబిలి",
+      "transliteration": "Jaabili",
+      "meaning": "moon",
+      "emoji": "🌙"
+    },
+    {
+      "word": "జాజి",
+      "transliteration": "Jaaji",
+      "meaning": "jasmine",
+      "emoji": "🌼"
+    },
+    {
+      "word": "జామ",
+      "transliteration": "Jaama",
+      "meaning": "guava",
+      "emoji": "🍐"
+    },
+    {
+      "word": "జంతువు",
+      "transliteration": "Jantuvu",
+      "meaning": "animal",
+      "emoji": "🐾"
+    },
+    {
+      "word": "జెండా",
+      "transliteration": "Jenda",
+      "meaning": "flag",
+      "emoji": "🏳️"
+    },
+    {
+      "word": "జుట్టు",
+      "transliteration": "Juttu",
+      "meaning": "hair",
+      "emoji": "💇"
+    }
+  ],
+  "ఝ": [
+    {
+      "word": "ఝరి",
+      "transliteration": "Jhari",
+      "meaning": "waterfall",
+      "emoji": "🏞️"
+    },
+    {
+      "word": "ఝరి జలం",
+      "transliteration": "Jhari jalam",
+      "meaning": "waterfall water",
+      "emoji": "💦"
+    },
+    {
+      "word": "ఝంకారం",
+      "transliteration": "Jhankaaram",
+      "meaning": "musical resonance",
+      "emoji": "🎶"
+    },
+    {
+      "word": "ఝంకారము",
+      "transliteration": "Jhankaaramu",
+      "meaning": "ringing sound",
+      "emoji": "🔔"
+    },
+    {
+      "word": "ఝణఝణ",
+      "transliteration": "Jhanajhana",
+      "meaning": "jingling sound",
+      "emoji": "🔔"
+    },
+    {
+      "word": "ఝణ్కారం",
+      "transliteration": "Jhankaaram",
+      "meaning": "clanging",
+      "emoji": "🔔"
+    },
+    {
+      "word": "ఝలక్",
+      "transliteration": "Jhalak",
+      "meaning": "glimpse",
+      "emoji": "👀"
+    },
+    {
+      "word": "ఝలక్ చూపు",
+      "transliteration": "Jhalak choopu",
+      "meaning": "quick glance",
+      "emoji": "👁️"
+    },
+    {
+      "word": "ఝలజలా",
+      "transliteration": "Jhalajalaa",
+      "meaning": "sparklingly",
+      "emoji": "✨"
+    },
+    {
+      "word": "ఝలమని",
+      "transliteration": "Jhalamani",
+      "meaning": "suddenly shining",
+      "emoji": "🌟"
+    },
+    {
+      "word": "ఝాము",
+      "transliteration": "Jhaamu",
+      "meaning": "watch of the night",
+      "emoji": "🌙"
+    },
+    {
+      "word": "ఝాంఝ",
+      "transliteration": "Jhanjha",
+      "meaning": "cymbals",
+      "emoji": "🥁"
+    },
+    {
+      "word": "ఝంజావాతం",
+      "transliteration": "Jhanjaavaatam",
+      "meaning": "storm",
+      "emoji": "🌪️"
+    },
+    {
+      "word": "ఝాన్సీ",
+      "transliteration": "Jhaansi",
+      "meaning": "Jhansi",
+      "emoji": "🏰"
+    },
+    {
+      "word": "ఝాన్సీ రాణి",
+      "transliteration": "Jhaansi raani",
+      "meaning": "Queen of Jhansi",
+      "emoji": "👑"
+    },
+    {
+      "word": "ఝలరి",
+      "transliteration": "Jhalari",
+      "meaning": "fringe",
+      "emoji": "🧵"
+    },
+    {
+      "word": "ఝల్లుమను",
+      "transliteration": "Jhallumanu",
+      "meaning": "shiver",
+      "emoji": "🥶"
+    },
+    {
+      "word": "ఝల్లు",
+      "transliteration": "Jhallu",
+      "meaning": "sudden splash",
+      "emoji": "💦"
+    },
+    {
+      "word": "ఝషం",
+      "transliteration": "Jhasham",
+      "meaning": "fish (Sanskrit)",
+      "emoji": "🐟"
+    },
+    {
+      "word": "ఝషకేతుడు",
+      "transliteration": "Jhashaketudu",
+      "meaning": "Kamadeva",
+      "emoji": "💘"
+    }
+  ],
+  "ఞ": [
+    {
+      "word": "జ్ఞానం",
+      "transliteration": "Jnyaanam",
+      "meaning": "knowledge",
+      "emoji": "🧠"
+    },
+    {
+      "word": "జ్ఞాని",
+      "transliteration": "Jnyaani",
+      "meaning": "wise person",
+      "emoji": "🧑‍🏫"
+    },
+    {
+      "word": "జ్ఞాపకం",
+      "transliteration": "Jnyaapakam",
+      "meaning": "memory",
+      "emoji": "💭"
+    },
+    {
+      "word": "జ్ఞాపకశక్తి",
+      "transliteration": "Jnyaapakashakti",
+      "meaning": "memory power",
+      "emoji": "🧠"
+    },
+    {
+      "word": "జ్ఞానోదయం",
+      "transliteration": "Jnyaanodayam",
+      "meaning": "enlightenment",
+      "emoji": "🌅"
+    },
+    {
+      "word": "జ్ఞానవంతుడు",
+      "transliteration": "Jnyaanavantudu",
+      "meaning": "knowledgeable person",
+      "emoji": "📚"
+    },
+    {
+      "word": "జ్ఞానపీఠం",
+      "transliteration": "Jnyaanapeetham",
+      "meaning": "seat of learning",
+      "emoji": "🏛️"
+    },
+    {
+      "word": "జ్ఞానదీపం",
+      "transliteration": "Jnyaanadeepam",
+      "meaning": "lamp of knowledge",
+      "emoji": "🪔"
+    },
+    {
+      "word": "జ్ఞానయోగం",
+      "transliteration": "Jnyaanayogam",
+      "meaning": "path of wisdom",
+      "emoji": "🧘"
+    },
+    {
+      "word": "జ్ఞానేంద్రియం",
+      "transliteration": "Jnyaanendriyam",
+      "meaning": "sense organ",
+      "emoji": "👁️"
+    },
+    {
+      "word": "విజ్ఞానం",
+      "transliteration": "Vijnyaanam",
+      "meaning": "science",
+      "emoji": "🔬"
+    },
+    {
+      "word": "విజ్ఞాని",
+      "transliteration": "Vijnyaani",
+      "meaning": "scientist",
+      "emoji": "👩‍🔬"
+    },
+    {
+      "word": "విజ్ఞానశాస్త్రం",
+      "transliteration": "Vijnyaanashastram",
+      "meaning": "science",
+      "emoji": "🧪"
+    },
+    {
+      "word": "ప్రజ్ఞ",
+      "transliteration": "Prajnya",
+      "meaning": "wisdom",
+      "emoji": "💡"
+    },
+    {
+      "word": "ప్రజ్ఞావంతుడు",
+      "transliteration": "Prajnyaavantudu",
+      "meaning": "intelligent person",
+      "emoji": "🧠"
+    },
+    {
+      "word": "అజ్ఞానం",
+      "transliteration": "Ajnyaanam",
+      "meaning": "ignorance",
+      "emoji": "❓"
+    },
+    {
+      "word": "అజ్ఞాని",
+      "transliteration": "Ajnyaani",
+      "meaning": "uninformed person",
+      "emoji": "🙈"
+    },
+    {
+      "word": "విజ్ఞాపన",
+      "transliteration": "Vijnyaapana",
+      "meaning": "request",
+      "emoji": "🙏"
+    },
+    {
+      "word": "సంజ్ఞ",
+      "transliteration": "Sanjnya",
+      "meaning": "signal",
+      "emoji": "🚦"
+    },
+    {
+      "word": "సర్వజ్ఞుడు",
+      "transliteration": "Sarvajnyudu",
+      "meaning": "all-knowing one",
+      "emoji": "✨"
+    }
+  ],
+  "ట": [
+    {
+      "word": "టమాటా",
+      "transliteration": "Tamaataa",
+      "meaning": "tomato",
+      "emoji": "🍅"
+    },
+    {
+      "word": "టపా",
+      "transliteration": "Tapaa",
+      "meaning": "post",
+      "emoji": "📮"
+    },
+    {
+      "word": "టపాకాయ",
+      "transliteration": "Tapaakaaya",
+      "meaning": "firecracker",
+      "emoji": "🧨"
+    },
+    {
+      "word": "టపాసు",
+      "transliteration": "Tapaasu",
+      "meaning": "firework",
+      "emoji": "🎆"
+    },
+    {
+      "word": "టపాసులపండుగ",
+      "transliteration": "Tapaasulapanduga",
+      "meaning": "fireworks festival",
+      "emoji": "🎇"
+    },
+    {
+      "word": "టపటప",
+      "transliteration": "Tapatapa",
+      "meaning": "pattering sound",
+      "emoji": "🌧️"
+    },
+    {
+      "word": "టపాసుల పెట్టె",
+      "transliteration": "Tapaasula petta",
+      "meaning": "firecracker box",
+      "emoji": "📦"
+    },
+    {
+      "word": "టంకం",
+      "transliteration": "Tankam",
+      "meaning": "coin",
+      "emoji": "🪙"
+    },
+    {
+      "word": "టంకశాల",
+      "transliteration": "Tankashaala",
+      "meaning": "mint",
+      "emoji": "🏦"
+    },
+    {
+      "word": "టంకించు",
+      "transliteration": "Tankinchu",
+      "meaning": "engrave",
+      "emoji": "🔨"
+    },
+    {
+      "word": "టంకము",
+      "transliteration": "Tankamu",
+      "meaning": "metal coin",
+      "emoji": "🪙"
+    },
+    {
+      "word": "టక్కరి",
+      "transliteration": "Takkari",
+      "meaning": "clever rogue",
+      "emoji": "🦊"
+    },
+    {
+      "word": "టక్కరి పని",
+      "transliteration": "Takkari pani",
+      "meaning": "trick",
+      "emoji": "🎭"
+    },
+    {
+      "word": "టక్కున",
+      "transliteration": "Takkuna",
+      "meaning": "quickly",
+      "emoji": "⚡"
+    },
+    {
+      "word": "టవల్",
+      "transliteration": "Taval",
+      "meaning": "towel",
+      "emoji": "🧻"
+    },
+    {
+      "word": "టైరు",
+      "transliteration": "Tairu",
+      "meaning": "tyre",
+      "emoji": "🛞"
+    },
+    {
+      "word": "టై",
+      "transliteration": "Tai",
+      "meaning": "tie",
+      "emoji": "👔"
+    },
+    {
+      "word": "టైగర్",
+      "transliteration": "Taigar",
+      "meaning": "tiger",
+      "emoji": "🐅"
+    },
+    {
+      "word": "టీకా",
+      "transliteration": "Teeka",
+      "meaning": "vaccine",
+      "emoji": "💉"
+    },
+    {
+      "word": "టీకాకరణం",
+      "transliteration": "Teekaakaranam",
+      "meaning": "vaccination",
+      "emoji": "💉"
+    }
+  ],
+  "ఠ": [
+    {
+      "word": "ఠాణా",
+      "transliteration": "Thaanaa",
+      "meaning": "police station",
+      "emoji": "🚓"
+    },
+    {
+      "word": "ఠాణాదారు",
+      "transliteration": "Thaanaadaaru",
+      "meaning": "police officer",
+      "emoji": "👮"
+    },
+    {
+      "word": "ఠక్కున",
+      "transliteration": "Thakkuna",
+      "meaning": "suddenly",
+      "emoji": "⚡"
+    },
+    {
+      "word": "ఠక్కున లేచు",
+      "transliteration": "Thakkuna lechu",
+      "meaning": "spring up",
+      "emoji": "🦘"
+    },
+    {
+      "word": "ఠస్సు",
+      "transliteration": "Thassu",
+      "meaning": "hissing sound",
+      "emoji": "🐍"
+    },
+    {
+      "word": "ఠావు",
+      "transliteration": "Thaavu",
+      "meaning": "place",
+      "emoji": "📍"
+    },
+    {
+      "word": "ఠీవి",
+      "transliteration": "Theevi",
+      "meaning": "dignity",
+      "emoji": "👑"
+    },
+    {
+      "word": "ఠీవిగా",
+      "transliteration": "Theevigaa",
+      "meaning": "with dignity",
+      "emoji": "🦚"
+    },
+    {
+      "word": "ఠీవైన",
+      "transliteration": "Theevaina",
+      "meaning": "graceful",
+      "emoji": "✨"
+    },
+    {
+      "word": "ఠీకా",
+      "transliteration": "Theekaa",
+      "meaning": "commentary",
+      "emoji": "📖"
+    },
+    {
+      "word": "ఠీకాదారు",
+      "transliteration": "Theekaadaaru",
+      "meaning": "contractor",
+      "emoji": "👷"
+    },
+    {
+      "word": "ఠీకు",
+      "transliteration": "Theeku",
+      "meaning": "correct",
+      "emoji": "✅"
+    },
+    {
+      "word": "ఠీగ",
+      "transliteration": "Theega",
+      "meaning": "vine",
+      "emoji": "🌿"
+    },
+    {
+      "word": "ఠొంపు",
+      "transliteration": "Thompu",
+      "meaning": "ridge",
+      "emoji": "⛰️"
+    },
+    {
+      "word": "ఠోపీ",
+      "transliteration": "Thopee",
+      "meaning": "hat",
+      "emoji": "🎩"
+    },
+    {
+      "word": "ఠోకరు",
+      "transliteration": "Thokaru",
+      "meaning": "stumble",
+      "emoji": "🚶"
+    },
+    {
+      "word": "ఠీవికల రూపం",
+      "transliteration": "Theevikala roopam",
+      "meaning": "stately form",
+      "emoji": "🦚"
+    },
+    {
+      "word": "ఠాణా గది",
+      "transliteration": "Thaanaa gadi",
+      "meaning": "station room",
+      "emoji": "🚪"
+    },
+    {
+      "word": "ఠక్కరివాడు",
+      "transliteration": "Thakkarivaadu",
+      "meaning": "trickster",
+      "emoji": "🦊"
+    },
+    {
+      "word": "ఠక్కరి",
+      "transliteration": "Thakkari",
+      "meaning": "trickster",
+      "emoji": "🦹"
+    }
+  ],
+  "డ": [
+    {
+      "word": "డబ్బు",
+      "transliteration": "Dabbu",
+      "meaning": "money",
+      "emoji": "💰"
+    },
+    {
+      "word": "డబ్బా",
+      "transliteration": "Dabba",
+      "meaning": "box",
+      "emoji": "📦"
+    },
+    {
+      "word": "డప్పు",
+      "transliteration": "Dappu",
+      "meaning": "drum",
+      "emoji": "🥁"
+    },
+    {
+      "word": "డప్పులవాడు",
+      "transliteration": "Dappulavaadu",
+      "meaning": "drummer",
+      "emoji": "🥁"
+    },
+    {
+      "word": "డమరు",
+      "transliteration": "Damaru",
+      "meaning": "hand drum",
+      "emoji": "🥁"
+    },
+    {
+      "word": "డమరుకం",
+      "transliteration": "Damarukam",
+      "meaning": "small drum",
+      "emoji": "🥁"
+    },
+    {
+      "word": "డాక్టర్",
+      "transliteration": "Daaktar",
+      "meaning": "doctor",
+      "emoji": "👩‍⚕️"
+    },
+    {
+      "word": "డాక్టరు",
+      "transliteration": "Daaktaru",
+      "meaning": "doctor",
+      "emoji": "🩺"
+    },
+    {
+      "word": "డాక్టరమ్మ",
+      "transliteration": "Daaktaramma",
+      "meaning": "woman doctor",
+      "emoji": "👩‍⚕️"
+    },
+    {
+      "word": "డాక్యుమెంట్",
+      "transliteration": "Daakyument",
+      "meaning": "document",
+      "emoji": "📄"
+    },
+    {
+      "word": "డాక్యుమెంటు",
+      "transliteration": "Daakyumentu",
+      "meaning": "document",
+      "emoji": "📃"
+    },
+    {
+      "word": "డాక్యుమెంటరీ",
+      "transliteration": "Daakyumentari",
+      "meaning": "documentary",
+      "emoji": "🎥"
+    },
+    {
+      "word": "డాబా",
+      "transliteration": "Daabaa",
+      "meaning": "terrace",
+      "emoji": "🏠"
+    },
+    {
+      "word": "డాబా ఇల్లు",
+      "transliteration": "Daabaa illu",
+      "meaning": "terraced house",
+      "emoji": "🏡"
+    },
+    {
+      "word": "డేగ",
+      "transliteration": "Dega",
+      "meaning": "eagle",
+      "emoji": "🦅"
+    },
+    {
+      "word": "డోలు",
+      "transliteration": "Dolu",
+      "meaning": "drum",
+      "emoji": "🥁"
+    },
+    {
+      "word": "డోలక్",
+      "transliteration": "Dolak",
+      "meaning": "dholak drum",
+      "emoji": "🥁"
+    },
+    {
+      "word": "డొంక",
+      "transliteration": "Donka",
+      "meaning": "winding path",
+      "emoji": "〰️"
+    },
+    {
+      "word": "డొంకతిరుగుడు",
+      "transliteration": "Donkatirugudu",
+      "meaning": "roundabout way",
+      "emoji": "↪️"
+    },
+    {
+      "word": "డొక్క",
+      "transliteration": "Dokka",
+      "meaning": "belly",
+      "emoji": "🫃"
+    }
+  ],
+  "ఢ": [
+    {
+      "word": "ఢంకా",
+      "transliteration": "Dhankaa",
+      "meaning": "drum",
+      "emoji": "🥁"
+    },
+    {
+      "word": "ఢంకా మోగించు",
+      "transliteration": "Dhankaa moginchu",
+      "meaning": "beat a drum",
+      "emoji": "🥁"
+    },
+    {
+      "word": "ఢక్క",
+      "transliteration": "Dhakka",
+      "meaning": "small drum",
+      "emoji": "🪘"
+    },
+    {
+      "word": "ఢమరుకం",
+      "transliteration": "Dhamarukam",
+      "meaning": "hand drum",
+      "emoji": "🥁"
+    },
+    {
+      "word": "ఢమఢమ",
+      "transliteration": "Dhamadham",
+      "meaning": "drumming sound",
+      "emoji": "🥁"
+    },
+    {
+      "word": "ఢంకారావం",
+      "transliteration": "Dhankaaraavam",
+      "meaning": "drumbeat",
+      "emoji": "🎶"
+    },
+    {
+      "word": "ఢంకానాదం",
+      "transliteration": "Dhankanaadam",
+      "meaning": "drum sound",
+      "emoji": "🥁"
+    },
+    {
+      "word": "ఢోల్",
+      "transliteration": "Dhol",
+      "meaning": "dhol drum",
+      "emoji": "🥁"
+    },
+    {
+      "word": "ఢోలక్",
+      "transliteration": "Dholak",
+      "meaning": "dholak",
+      "emoji": "🥁"
+    },
+    {
+      "word": "ఢోలు",
+      "transliteration": "Dholu",
+      "meaning": "drums",
+      "emoji": "🥁"
+    },
+    {
+      "word": "ఢోలిక",
+      "transliteration": "Dholika",
+      "meaning": "drum",
+      "emoji": "🪘"
+    },
+    {
+      "word": "ఢక్కావాద్యం",
+      "transliteration": "Dhakkaavaadyam",
+      "meaning": "drum instrument",
+      "emoji": "🎼"
+    },
+    {
+      "word": "ఢమరువు",
+      "transliteration": "Dhamaruvu",
+      "meaning": "small drum",
+      "emoji": "🥁"
+    },
+    {
+      "word": "ఢవళం",
+      "transliteration": "Dhavalam",
+      "meaning": "white color",
+      "emoji": "⚪"
+    },
+    {
+      "word": "ఢవళేశ్వరం",
+      "transliteration": "Dhavaleshvaram",
+      "meaning": "Dowleswaram",
+      "emoji": "🌉"
+    },
+    {
+      "word": "ఢంకా బజాయించు",
+      "transliteration": "Dhankaa bajaayinchu",
+      "meaning": "sound the drum",
+      "emoji": "📣"
+    },
+    {
+      "word": "ఢాకా",
+      "transliteration": "Dhaakaa",
+      "meaning": "Dhaka",
+      "emoji": "🏙️"
+    },
+    {
+      "word": "ఢాకా టోపీ",
+      "transliteration": "Dhaakaa topi",
+      "meaning": "Dhaka hat",
+      "emoji": "🎩"
+    },
+    {
+      "word": "ఢమరుధ్వని",
+      "transliteration": "Dhamarudhvani",
+      "meaning": "drum resonance",
+      "emoji": "🔊"
+    },
+    {
+      "word": "ఢక్కనాదం",
+      "transliteration": "Dhakkanadam",
+      "meaning": "drum sound",
+      "emoji": "🎵"
+    }
+  ],
+  "ణ": [
+    {
+      "word": "ప్రాణం",
+      "transliteration": "Praanam",
+      "meaning": "life",
+      "emoji": "🔤"
+    },
+    {
+      "word": "పుణ్యం",
+      "transliteration": "Punyam",
+      "meaning": "merit",
+      "emoji": "🗣️"
+    },
+    {
+      "word": "బాణం",
+      "transliteration": "Baanam",
+      "meaning": "arrow",
+      "emoji": "🐾"
+    },
+    {
+      "word": "కారణం",
+      "transliteration": "Kaaranam",
+      "meaning": "reason",
+      "emoji": "📚"
+    },
+    {
+      "word": "కణం",
+      "transliteration": "Kanam",
+      "meaning": "particle",
+      "emoji": "⚛️"
+    },
+    {
+      "word": "గణితం",
+      "transliteration": "Ganitam",
+      "meaning": "mathematics",
+      "emoji": "➗"
+    },
+    {
+      "word": "గుణం",
+      "transliteration": "Gunam",
+      "meaning": "quality",
+      "emoji": "⭐"
+    },
+    {
+      "word": "గుణవంతుడు",
+      "transliteration": "Gunavantudu",
+      "meaning": "virtuous person",
+      "emoji": "🌟"
+    },
+    {
+      "word": "గుణపాఠం",
+      "transliteration": "Gunapaatham",
+      "meaning": "lesson",
+      "emoji": "📖"
+    },
+    {
+      "word": "గుణకారం",
+      "transliteration": "Gunakaaram",
+      "meaning": "multiplication",
+      "emoji": "✖️"
+    },
+    {
+      "word": "గణపతి",
+      "transliteration": "Ganapati",
+      "meaning": "Ganesha",
+      "emoji": "🐘"
+    },
+    {
+      "word": "గణేశుడు",
+      "transliteration": "Ganeshudu",
+      "meaning": "Ganesha",
+      "emoji": "🐘"
+    },
+    {
+      "word": "గణపండుగ",
+      "transliteration": "Ganapanduga",
+      "meaning": "festival of Ganesha",
+      "emoji": "🎉"
+    },
+    {
+      "word": "గుణగణాలు",
+      "transliteration": "Gunaganaalu",
+      "meaning": "good qualities",
+      "emoji": "💎"
+    },
+    {
+      "word": "గణాంకం",
+      "transliteration": "Ganaankam",
+      "meaning": "statistic",
+      "emoji": "📊"
+    },
+    {
+      "word": "గణన",
+      "transliteration": "Gananaa",
+      "meaning": "counting",
+      "emoji": "🔢"
+    },
+    {
+      "word": "గణపాఠం",
+      "transliteration": "Ganapaatham",
+      "meaning": "chanting lesson",
+      "emoji": "📿"
+    },
+    {
+      "word": "గుణింతం",
+      "transliteration": "Gunintam",
+      "meaning": "vowel sign lesson",
+      "emoji": "🔤"
+    },
+    {
+      "word": "గుణింతాలు",
+      "transliteration": "Gunintaalu",
+      "meaning": "vowel signs",
+      "emoji": "📚"
+    },
+    {
+      "word": "కణితి",
+      "transliteration": "Kaniti",
+      "meaning": "small particle",
+      "emoji": "⚛️"
+    }
+  ],
+  "త": [
+    {
+      "word": "తల",
+      "transliteration": "Tala",
+      "meaning": "head",
+      "emoji": "🧑"
+    },
+    {
+      "word": "తల్లి",
+      "transliteration": "Talli",
+      "meaning": "mother",
+      "emoji": "👩"
+    },
+    {
+      "word": "తాత",
+      "transliteration": "Taata",
+      "meaning": "grandfather",
+      "emoji": "👴"
+    },
+    {
+      "word": "తాబేలు",
+      "transliteration": "Taabelu",
+      "meaning": "tortoise",
+      "emoji": "🐢"
+    },
+    {
+      "word": "తేనె",
+      "transliteration": "Tene",
+      "meaning": "honey",
+      "emoji": "🍯"
+    },
+    {
+      "word": "తేనెటీగ",
+      "transliteration": "Teneteega",
+      "meaning": "honeybee",
+      "emoji": "🐝"
+    },
+    {
+      "word": "తలుపు",
+      "transliteration": "Talupu",
+      "meaning": "door",
+      "emoji": "🚪"
+    },
+    {
+      "word": "తాళం",
+      "transliteration": "Taalam",
+      "meaning": "key",
+      "emoji": "🔑"
+    },
+    {
+      "word": "తాళపత్రం",
+      "transliteration": "Taalapatram",
+      "meaning": "palm leaf manuscript",
+      "emoji": "📜"
+    },
+    {
+      "word": "తామర",
+      "transliteration": "Taamara",
+      "meaning": "lotus",
+      "emoji": "🪷"
+    },
+    {
+      "word": "తిండి",
+      "transliteration": "Tindi",
+      "meaning": "food",
+      "emoji": "🍲"
+    },
+    {
+      "word": "తీపి",
+      "transliteration": "Teepi",
+      "meaning": "sweetness",
+      "emoji": "🍭"
+    },
+    {
+      "word": "తెలుగు",
+      "transliteration": "Telugu",
+      "meaning": "Telugu language",
+      "emoji": "🗣️"
+    },
+    {
+      "word": "తెలివి",
+      "transliteration": "Telivi",
+      "meaning": "intelligence",
+      "emoji": "🧠"
+    },
+    {
+      "word": "తెల్లవారు",
+      "transliteration": "Tellavaaru",
+      "meaning": "dawn",
+      "emoji": "🌅"
+    },
+    {
+      "word": "తోట",
+      "transliteration": "Tota",
+      "meaning": "garden",
+      "emoji": "🌷"
+    },
+    {
+      "word": "తోడు",
+      "transliteration": "Todu",
+      "meaning": "companion",
+      "emoji": "🤝"
+    },
+    {
+      "word": "తాడు",
+      "transliteration": "Taadu",
+      "meaning": "rope",
+      "emoji": "🪢"
+    },
+    {
+      "word": "తార",
+      "transliteration": "Taara",
+      "meaning": "star",
+      "emoji": "⭐"
+    },
+    {
+      "word": "తారాజువ్వ",
+      "transliteration": "Taara juvva",
+      "meaning": "sparkler",
+      "emoji": "🎇"
+    }
+  ],
+  "థ": [
+    {
+      "word": "థర్మామీటరు",
+      "transliteration": "Thermameetaru",
+      "meaning": "thermometer",
+      "emoji": "🌡️"
+    },
+    {
+      "word": "థర్మామీటర్",
+      "transliteration": "Thermameetar",
+      "meaning": "thermometer",
+      "emoji": "🌡️"
+    },
+    {
+      "word": "థర్మోస్",
+      "transliteration": "Thermos",
+      "meaning": "thermos flask",
+      "emoji": "🧴"
+    },
+    {
+      "word": "థర్మోకోల్",
+      "transliteration": "Thermokool",
+      "meaning": "foam sheet",
+      "emoji": "📦"
+    },
+    {
+      "word": "థర్మల్",
+      "transliteration": "Thermal",
+      "meaning": "thermal",
+      "emoji": "🔥"
+    },
+    {
+      "word": "థర్మల్ దుస్తులు",
+      "transliteration": "Thermal dustulu",
+      "meaning": "thermal clothes",
+      "emoji": "🧥"
+    },
+    {
+      "word": "థియేటరు",
+      "transliteration": "Theeyetaru",
+      "meaning": "theater",
+      "emoji": "🎭"
+    },
+    {
+      "word": "థియేటర్",
+      "transliteration": "Theeyetar",
+      "meaning": "theater",
+      "emoji": "🎬"
+    },
+    {
+      "word": "థియేటర్ కళ",
+      "transliteration": "Theeyetar kala",
+      "meaning": "theater art",
+      "emoji": "🎭"
+    },
+    {
+      "word": "థియేటర్ వేదిక",
+      "transliteration": "Theeyetar vedika",
+      "meaning": "stage",
+      "emoji": "🎤"
+    },
+    {
+      "word": "థియేటర్ టికెట్",
+      "transliteration": "Theeyetar tiket",
+      "meaning": "theater ticket",
+      "emoji": "🎟️"
+    },
+    {
+      "word": "థీమ్",
+      "transliteration": "Theem",
+      "meaning": "theme",
+      "emoji": "🎨"
+    },
+    {
+      "word": "థీమ్ పార్కు",
+      "transliteration": "Theem paarku",
+      "meaning": "theme park",
+      "emoji": "🎡"
+    },
+    {
+      "word": "థీమాటిక్",
+      "transliteration": "Theemaatik",
+      "meaning": "thematic",
+      "emoji": "🧩"
+    },
+    {
+      "word": "థైరాయిడ్",
+      "transliteration": "Thairaayid",
+      "meaning": "thyroid",
+      "emoji": "🦋"
+    },
+    {
+      "word": "థైరాయిడ్ గ్రంథి",
+      "transliteration": "Thairaayid granthi",
+      "meaning": "thyroid gland",
+      "emoji": "🩺"
+    },
+    {
+      "word": "థాలీ",
+      "transliteration": "Thaali",
+      "meaning": "plate meal",
+      "emoji": "🍛"
+    },
+    {
+      "word": "థాళం",
+      "transliteration": "Thaalam",
+      "meaning": "cymbal",
+      "emoji": "🥁"
+    },
+    {
+      "word": "థాళవాద్యం",
+      "transliteration": "Thaalavaadyam",
+      "meaning": "percussion instrument",
+      "emoji": "🎼"
+    },
+    {
+      "word": "థాతువు",
+      "transliteration": "Dhaatuvu",
+      "meaning": "element",
+      "emoji": "⚗️"
+    }
+  ],
+  "ద": [
+    {
+      "word": "దారి",
+      "transliteration": "Daari",
+      "meaning": "path",
+      "emoji": "🛤️"
+    },
+    {
+      "word": "దీపం",
+      "transliteration": "Deepam",
+      "meaning": "lamp",
+      "emoji": "🪔"
+    },
+    {
+      "word": "దీపావళి",
+      "transliteration": "Deepavali",
+      "meaning": "Diwali",
+      "emoji": "🪔"
+    },
+    {
+      "word": "దుస్తులు",
+      "transliteration": "Dustulu",
+      "meaning": "clothes",
+      "emoji": "👕"
+    },
+    {
+      "word": "దుప్పటి",
+      "transliteration": "Duppati",
+      "meaning": "blanket",
+      "emoji": "🛌"
+    },
+    {
+      "word": "దోసె",
+      "transliteration": "Dose",
+      "meaning": "dosa",
+      "emoji": "🥞"
+    },
+    {
+      "word": "దోసకాయ",
+      "transliteration": "Dosakaaya",
+      "meaning": "cucumber",
+      "emoji": "🥒"
+    },
+    {
+      "word": "దొండ",
+      "transliteration": "Donda",
+      "meaning": "ivy gourd",
+      "emoji": "🥒"
+    },
+    {
+      "word": "దొంగ",
+      "transliteration": "Donga",
+      "meaning": "thief",
+      "emoji": "🦹"
+    },
+    {
+      "word": "దొడ్డి",
+      "transliteration": "Doddi",
+      "meaning": "yard",
+      "emoji": "🏡"
+    },
+    {
+      "word": "దేవుడు",
+      "transliteration": "Devudu",
+      "meaning": "God",
+      "emoji": "🙏"
+    },
+    {
+      "word": "దేవాలయం",
+      "transliteration": "Devaalayam",
+      "meaning": "temple",
+      "emoji": "🛕"
+    },
+    {
+      "word": "దేవత",
+      "transliteration": "Devata",
+      "meaning": "deity",
+      "emoji": "✨"
+    },
+    {
+      "word": "దేవదూత",
+      "transliteration": "Devadoota",
+      "meaning": "angel",
+      "emoji": "👼"
+    },
+    {
+      "word": "దయ",
+      "transliteration": "Daya",
+      "meaning": "kindness",
+      "emoji": "💗"
+    },
+    {
+      "word": "దయచేయి",
+      "transliteration": "Dayacheyi",
+      "meaning": "please",
+      "emoji": "🙏"
+    },
+    {
+      "word": "దానం",
+      "transliteration": "Daanam",
+      "meaning": "charity",
+      "emoji": "🤲"
+    },
+    {
+      "word": "దానిమ్మ",
+      "transliteration": "Daanimma",
+      "meaning": "pomegranate",
+      "emoji": "🍎"
+    },
+    {
+      "word": "దంతం",
+      "transliteration": "Dantam",
+      "meaning": "tooth",
+      "emoji": "🦷"
+    },
+    {
+      "word": "దంతవైద్యుడు",
+      "transliteration": "Dantavaidyudu",
+      "meaning": "dentist",
+      "emoji": "🦷"
+    }
+  ],
+  "ధ": [
+    {
+      "word": "ధనం",
+      "transliteration": "Dhanam",
+      "meaning": "wealth",
+      "emoji": "💰"
+    },
+    {
+      "word": "ధనవంతుడు",
+      "transliteration": "Dhanavantudu",
+      "meaning": "wealthy person",
+      "emoji": "💎"
+    },
+    {
+      "word": "ధనుస్సు",
+      "transliteration": "Dhanussu",
+      "meaning": "bow",
+      "emoji": "🏹"
+    },
+    {
+      "word": "ధనుర్విద్య",
+      "transliteration": "Dhanurvidya",
+      "meaning": "archery",
+      "emoji": "🏹"
+    },
+    {
+      "word": "ధనుర్మాసం",
+      "transliteration": "Dhanurmaasam",
+      "meaning": "month of Dhanus",
+      "emoji": "📅"
+    },
+    {
+      "word": "ధనుర్ధారి",
+      "transliteration": "Dhanurdhaari",
+      "meaning": "archer",
+      "emoji": "🏹"
+    },
+    {
+      "word": "ధరణి",
+      "transliteration": "Dharani",
+      "meaning": "earth",
+      "emoji": "🌍"
+    },
+    {
+      "word": "ధరణి తల్లి",
+      "transliteration": "Dharani talli",
+      "meaning": "Mother Earth",
+      "emoji": "🌍"
+    },
+    {
+      "word": "ధర",
+      "transliteration": "Dhara",
+      "meaning": "price",
+      "emoji": "🏷️"
+    },
+    {
+      "word": "ధరిత్రి",
+      "transliteration": "Dharitri",
+      "meaning": "earth",
+      "emoji": "🌎"
+    },
+    {
+      "word": "ధర్మం",
+      "transliteration": "Dharmam",
+      "meaning": "righteousness",
+      "emoji": "⚖️"
+    },
+    {
+      "word": "ధర్మశాల",
+      "transliteration": "Dharmashaala",
+      "meaning": "pilgrim rest house",
+      "emoji": "🏠"
+    },
+    {
+      "word": "ధర్మచక్రం",
+      "transliteration": "Dharmachakram",
+      "meaning": "wheel of dharma",
+      "emoji": "☸️"
+    },
+    {
+      "word": "ధర్మరాజు",
+      "transliteration": "Dharmaraaju",
+      "meaning": "righteous king",
+      "emoji": "👑"
+    },
+    {
+      "word": "ధైర్యం",
+      "transliteration": "Dhairyam",
+      "meaning": "courage",
+      "emoji": "🦁"
+    },
+    {
+      "word": "ధైర్యవంతుడు",
+      "transliteration": "Dhairyavantudu",
+      "meaning": "brave person",
+      "emoji": "🦸"
+    },
+    {
+      "word": "ధ్వని",
+      "transliteration": "Dhvani",
+      "meaning": "sound",
+      "emoji": "🔊"
+    },
+    {
+      "word": "ధ్వజం",
+      "transliteration": "Dhvajam",
+      "meaning": "flag",
+      "emoji": "🏳️"
+    },
+    {
+      "word": "ధూపం",
+      "transliteration": "Dhoopam",
+      "meaning": "incense",
+      "emoji": "🪔"
+    },
+    {
+      "word": "ధూళి",
+      "transliteration": "Dhooli",
+      "meaning": "dust",
+      "emoji": "🌫️"
+    }
+  ],
+  "న": [
+    {
+      "word": "నక్క",
+      "transliteration": "Nakka",
+      "meaning": "fox",
+      "emoji": "🦊"
+    },
+    {
+      "word": "నది",
+      "transliteration": "Nadi",
+      "meaning": "river",
+      "emoji": "🏞️"
+    },
+    {
+      "word": "నడక",
+      "transliteration": "Nadaka",
+      "meaning": "walk",
+      "emoji": "🚶"
+    },
+    {
+      "word": "నడుము",
+      "transliteration": "Nadumu",
+      "meaning": "waist",
+      "emoji": "🧍"
+    },
+    {
+      "word": "నవ్వు",
+      "transliteration": "Navvu",
+      "meaning": "smile",
+      "emoji": "😊"
+    },
+    {
+      "word": "నవ్వుల",
+      "transliteration": "Navvula",
+      "meaning": "laughter",
+      "emoji": "😂"
+    },
+    {
+      "word": "నక్షత్రం",
+      "transliteration": "Nakshatram",
+      "meaning": "star",
+      "emoji": "⭐"
+    },
+    {
+      "word": "నక్షత్రాలు",
+      "transliteration": "Nakshatraalu",
+      "meaning": "stars",
+      "emoji": "✨"
+    },
+    {
+      "word": "నాన్న",
+      "transliteration": "Naanna",
+      "meaning": "father",
+      "emoji": "👨"
+    },
+    {
+      "word": "నానమ్మ",
+      "transliteration": "Naanamma",
+      "meaning": "grandmother",
+      "emoji": "👵"
+    },
+    {
+      "word": "నిమ్మకాయ",
+      "transliteration": "Nimmakaaya",
+      "meaning": "lemon",
+      "emoji": "🍋"
+    },
+    {
+      "word": "నీలం",
+      "transliteration": "Neelam",
+      "meaning": "blue",
+      "emoji": "🔵"
+    },
+    {
+      "word": "నీరు",
+      "transliteration": "Neeru",
+      "meaning": "water",
+      "emoji": "💧"
+    },
+    {
+      "word": "నీడ",
+      "transliteration": "Needa",
+      "meaning": "shade",
+      "emoji": "🌳"
+    },
+    {
+      "word": "నెమలి",
+      "transliteration": "Nemali",
+      "meaning": "peacock",
+      "emoji": "🦚"
+    },
+    {
+      "word": "నెయ్యి",
+      "transliteration": "Neyyi",
+      "meaning": "ghee",
+      "emoji": "🧈"
+    },
+    {
+      "word": "నూలు",
+      "transliteration": "Noolu",
+      "meaning": "thread",
+      "emoji": "🧵"
+    },
+    {
+      "word": "నూనె",
+      "transliteration": "Noone",
+      "meaning": "oil",
+      "emoji": "🫒"
+    },
+    {
+      "word": "నోటు",
+      "transliteration": "Notu",
+      "meaning": "banknote",
+      "emoji": "💵"
+    },
+    {
+      "word": "నౌక",
+      "transliteration": "Nauka",
+      "meaning": "ship",
+      "emoji": "🚢"
+    }
+  ],
+  "ప": [
+    {
+      "word": "పండు",
+      "transliteration": "Pandu",
+      "meaning": "fruit",
+      "emoji": "🍎"
+    },
+    {
+      "word": "పాలు",
+      "transliteration": "Paalu",
+      "meaning": "milk",
+      "emoji": "🥛"
+    },
+    {
+      "word": "పిల్లి",
+      "transliteration": "Pilli",
+      "meaning": "cat",
+      "emoji": "🐈"
+    },
+    {
+      "word": "పులి",
+      "transliteration": "Puli",
+      "meaning": "tiger",
+      "emoji": "🐅"
+    },
+    {
+      "word": "పుస్తకం",
+      "transliteration": "Pustakam",
+      "meaning": "book",
+      "emoji": "📚"
+    },
+    {
+      "word": "పువ్వు",
+      "transliteration": "Puvvu",
+      "meaning": "flower",
+      "emoji": "🌼"
+    },
+    {
+      "word": "పప్పు",
+      "transliteration": "Pappu",
+      "meaning": "lentils",
+      "emoji": "🥣"
+    },
+    {
+      "word": "పప్పాయి",
+      "transliteration": "Pappaayi",
+      "meaning": "papaya",
+      "emoji": "🍈"
+    },
+    {
+      "word": "పాము",
+      "transliteration": "Paamu",
+      "meaning": "snake",
+      "emoji": "🐍"
+    },
+    {
+      "word": "పక్షి",
+      "transliteration": "Pakshi",
+      "meaning": "bird",
+      "emoji": "🐦"
+    },
+    {
+      "word": "పాఠశాల",
+      "transliteration": "Paathashaala",
+      "meaning": "school",
+      "emoji": "🏫"
+    },
+    {
+      "word": "పాఠం",
+      "transliteration": "Paatham",
+      "meaning": "lesson",
+      "emoji": "📖"
+    },
+    {
+      "word": "పాదం",
+      "transliteration": "Paadam",
+      "meaning": "foot",
+      "emoji": "🦶"
+    },
+    {
+      "word": "పాదరక్ష",
+      "transliteration": "Paadaraksha",
+      "meaning": "shoe",
+      "emoji": "👞"
+    },
+    {
+      "word": "పాలకూర",
+      "transliteration": "Paalakoora",
+      "meaning": "spinach",
+      "emoji": "🥬"
+    },
+    {
+      "word": "పాలకుడు",
+      "transliteration": "Paalakudu",
+      "meaning": "ruler",
+      "emoji": "👑"
+    },
+    {
+      "word": "పనస",
+      "transliteration": "Panasa",
+      "meaning": "jackfruit",
+      "emoji": "🍈"
+    },
+    {
+      "word": "పనసపండు",
+      "transliteration": "Panasapandu",
+      "meaning": "jackfruit",
+      "emoji": "🍈"
+    },
+    {
+      "word": "పటము",
+      "transliteration": "Patamu",
+      "meaning": "map",
+      "emoji": "🗺️"
+    },
+    {
+      "word": "పతంగి",
+      "transliteration": "Patangi",
+      "meaning": "kite",
+      "emoji": "🪁"
+    }
+  ],
+  "ఫ": [
+    {
+      "word": "ఫలం",
+      "transliteration": "Phalam",
+      "meaning": "fruit",
+      "emoji": "🍎"
+    },
+    {
+      "word": "ఫలితం",
+      "transliteration": "Phalitam",
+      "meaning": "result",
+      "emoji": "✅"
+    },
+    {
+      "word": "ఫలకం",
+      "transliteration": "Phalakam",
+      "meaning": "board",
+      "emoji": "🪧"
+    },
+    {
+      "word": "ఫలహారం",
+      "transliteration": "Phalahaaram",
+      "meaning": "fruit meal",
+      "emoji": "🍇"
+    },
+    {
+      "word": "ఫలవంతం",
+      "transliteration": "Phalavantam",
+      "meaning": "fruitful",
+      "emoji": "🌱"
+    },
+    {
+      "word": "ఫలవృక్షం",
+      "transliteration": "Phalavruksham",
+      "meaning": "fruit tree",
+      "emoji": "🌳"
+    },
+    {
+      "word": "ఫలరసం",
+      "transliteration": "Phalarasam",
+      "meaning": "fruit juice",
+      "emoji": "🧃"
+    },
+    {
+      "word": "ఫలదాయకం",
+      "transliteration": "Phaladaayakam",
+      "meaning": "beneficial",
+      "emoji": "🌟"
+    },
+    {
+      "word": "ఫలశృతి",
+      "transliteration": "Phalashruti",
+      "meaning": "reward passage",
+      "emoji": "📜"
+    },
+    {
+      "word": "ఫలితాంశం",
+      "transliteration": "Phalitaamsham",
+      "meaning": "outcome",
+      "emoji": "📊"
+    },
+    {
+      "word": "ఫలితపత్రం",
+      "transliteration": "Phalitapatram",
+      "meaning": "report card",
+      "emoji": "📄"
+    },
+    {
+      "word": "ఫలితాలు",
+      "transliteration": "Phalitaalu",
+      "meaning": "results",
+      "emoji": "📈"
+    },
+    {
+      "word": "ఫలితం పొందు",
+      "transliteration": "Phalitam pondu",
+      "meaning": "get a result",
+      "emoji": "🏆"
+    },
+    {
+      "word": "ఫలభారం",
+      "transliteration": "Phalabhaaram",
+      "meaning": "fruit load",
+      "emoji": "🧺"
+    },
+    {
+      "word": "ఫలదానం",
+      "transliteration": "Phaladaanam",
+      "meaning": "offering fruit",
+      "emoji": "🙏"
+    },
+    {
+      "word": "ఫణి",
+      "transliteration": "Phani",
+      "meaning": "serpent",
+      "emoji": "🐍"
+    },
+    {
+      "word": "ఫణేశుడు",
+      "transliteration": "Phaneshudu",
+      "meaning": "serpent lord",
+      "emoji": "🐍"
+    },
+    {
+      "word": "ఫణితి",
+      "transliteration": "Phaniti",
+      "meaning": "eloquence",
+      "emoji": "🗣️"
+    },
+    {
+      "word": "ఫణిమండలం",
+      "transliteration": "Phanimandalam",
+      "meaning": "snake hood",
+      "emoji": "🐍"
+    },
+    {
+      "word": "ఫణిముకుటం",
+      "transliteration": "Phanimukutam",
+      "meaning": "serpent crown",
+      "emoji": "👑"
+    }
+  ],
+  "బ": [
+    {
+      "word": "బడి",
+      "transliteration": "Badi",
+      "meaning": "school",
+      "emoji": "🏫"
+    },
+    {
+      "word": "బంతి",
+      "transliteration": "Banti",
+      "meaning": "ball",
+      "emoji": "⚽"
+    },
+    {
+      "word": "బండి",
+      "transliteration": "Bandi",
+      "meaning": "cart",
+      "emoji": "🛒"
+    },
+    {
+      "word": "బంగారం",
+      "transliteration": "Bangaaram",
+      "meaning": "gold",
+      "emoji": "🥇"
+    },
+    {
+      "word": "బంగారు",
+      "transliteration": "Bangaaru",
+      "meaning": "golden",
+      "emoji": "✨"
+    },
+    {
+      "word": "బరువు",
+      "transliteration": "Baruvu",
+      "meaning": "weight",
+      "emoji": "⚖️"
+    },
+    {
+      "word": "బలము",
+      "transliteration": "Balamu",
+      "meaning": "strength",
+      "emoji": "💪"
+    },
+    {
+      "word": "బలం",
+      "transliteration": "Balam",
+      "meaning": "strength",
+      "emoji": "🏋️"
+    },
+    {
+      "word": "బలపం",
+      "transliteration": "Balapam",
+      "meaning": "chalk",
+      "emoji": "🖍️"
+    },
+    {
+      "word": "బల్ల",
+      "transliteration": "Balla",
+      "meaning": "table",
+      "emoji": "🪑"
+    },
+    {
+      "word": "బల్లి",
+      "transliteration": "Balli",
+      "meaning": "lizard",
+      "emoji": "🦎"
+    },
+    {
+      "word": "బాతు",
+      "transliteration": "Baatu",
+      "meaning": "duck",
+      "emoji": "🦆"
+    },
+    {
+      "word": "బావి",
+      "transliteration": "Baavi",
+      "meaning": "well",
+      "emoji": "🪣"
+    },
+    {
+      "word": "బావమరిది",
+      "transliteration": "Baavam aridi",
+      "meaning": "brother-in-law",
+      "emoji": "👨"
+    },
+    {
+      "word": "బొమ్మ",
+      "transliteration": "Bomma",
+      "meaning": "picture",
+      "emoji": "🖼️"
+    },
+    {
+      "word": "బొమ్మలాట",
+      "transliteration": "Bommalata",
+      "meaning": "puppet show",
+      "emoji": "🎭"
+    },
+    {
+      "word": "బొగ్గు",
+      "transliteration": "Boggu",
+      "meaning": "coal",
+      "emoji": "⚫"
+    },
+    {
+      "word": "బొప్పాయి",
+      "transliteration": "Boppaayi",
+      "meaning": "papaya",
+      "emoji": "🍈"
+    },
+    {
+      "word": "బూడిద",
+      "transliteration": "Boodida",
+      "meaning": "ash",
+      "emoji": "🌫️"
+    },
+    {
+      "word": "బుట్ట",
+      "transliteration": "Butta",
+      "meaning": "basket",
+      "emoji": "🧺"
+    }
+  ],
+  "భ": [
+    {
+      "word": "భూమి",
+      "transliteration": "Bhoomi",
+      "meaning": "earth",
+      "emoji": "🌍"
+    },
+    {
+      "word": "భానుడు",
+      "transliteration": "Bhaanudu",
+      "meaning": "sun",
+      "emoji": "☀️"
+    },
+    {
+      "word": "భోజనం",
+      "transliteration": "Bhojanam",
+      "meaning": "meal",
+      "emoji": "🍛"
+    },
+    {
+      "word": "భోజనశాల",
+      "transliteration": "Bhojanashaala",
+      "meaning": "dining hall",
+      "emoji": "🍽️"
+    },
+    {
+      "word": "భక్తి",
+      "transliteration": "Bhakti",
+      "meaning": "devotion",
+      "emoji": "🙏"
+    },
+    {
+      "word": "భక్తుడు",
+      "transliteration": "Bhaktudu",
+      "meaning": "devotee",
+      "emoji": "🛕"
+    },
+    {
+      "word": "భయం",
+      "transliteration": "Bhayam",
+      "meaning": "fear",
+      "emoji": "😨"
+    },
+    {
+      "word": "భయపడు",
+      "transliteration": "Bhayapadu",
+      "meaning": "be afraid",
+      "emoji": "😱"
+    },
+    {
+      "word": "భద్రత",
+      "transliteration": "Bhadrata",
+      "meaning": "safety",
+      "emoji": "🛡️"
+    },
+    {
+      "word": "భద్రంగా",
+      "transliteration": "Bhadranga",
+      "meaning": "safely",
+      "emoji": "✅"
+    },
+    {
+      "word": "భవనం",
+      "transliteration": "Bhavanam",
+      "meaning": "building",
+      "emoji": "🏢"
+    },
+    {
+      "word": "భవిష్యత్తు",
+      "transliteration": "Bhavishyattu",
+      "meaning": "future",
+      "emoji": "🔮"
+    },
+    {
+      "word": "భాష",
+      "transliteration": "Bhaasha",
+      "meaning": "language",
+      "emoji": "🗣️"
+    },
+    {
+      "word": "భాష్యం",
+      "transliteration": "Bhaashyam",
+      "meaning": "commentary",
+      "emoji": "📖"
+    },
+    {
+      "word": "భాగం",
+      "transliteration": "Bhaagam",
+      "meaning": "part",
+      "emoji": "🧩"
+    },
+    {
+      "word": "భాగ్యం",
+      "transliteration": "Bhaagyam",
+      "meaning": "good fortune",
+      "emoji": "🍀"
+    },
+    {
+      "word": "భారతం",
+      "transliteration": "Bhaaratam",
+      "meaning": "India",
+      "emoji": "🇮🇳"
+    },
+    {
+      "word": "భారతదేశం",
+      "transliteration": "Bhaaratadesham",
+      "meaning": "India",
+      "emoji": "🇮🇳"
+    },
+    {
+      "word": "భారం",
+      "transliteration": "Bhaaram",
+      "meaning": "load",
+      "emoji": "🎒"
+    },
+    {
+      "word": "భారీ",
+      "transliteration": "Bhaaree",
+      "meaning": "heavy",
+      "emoji": "🏋️"
+    }
+  ],
+  "మ": [
+    {
+      "word": "మామిడి",
+      "transliteration": "Maamidi",
+      "meaning": "mango",
+      "emoji": "🥭"
+    },
+    {
+      "word": "మామిడి పండు",
+      "transliteration": "Maamidi pandu",
+      "meaning": "mango fruit",
+      "emoji": "🥭"
+    },
+    {
+      "word": "మేక",
+      "transliteration": "Meka",
+      "meaning": "goat",
+      "emoji": "🐐"
+    },
+    {
+      "word": "మేఘం",
+      "transliteration": "Megham",
+      "meaning": "cloud",
+      "emoji": "☁️"
+    },
+    {
+      "word": "మంచు",
+      "transliteration": "Manchu",
+      "meaning": "snow",
+      "emoji": "❄️"
+    },
+    {
+      "word": "మంచం",
+      "transliteration": "Mancham",
+      "meaning": "bed",
+      "emoji": "🛏️"
+    },
+    {
+      "word": "మంట",
+      "transliteration": "Manta",
+      "meaning": "flame",
+      "emoji": "🔥"
+    },
+    {
+      "word": "మంటపం",
+      "transliteration": "Mantapam",
+      "meaning": "pavilion",
+      "emoji": "🏛️"
+    },
+    {
+      "word": "మంచి",
+      "transliteration": "Manchi",
+      "meaning": "good",
+      "emoji": "👍"
+    },
+    {
+      "word": "మిరప",
+      "transliteration": "Mirapa",
+      "meaning": "chili",
+      "emoji": "🌶️"
+    },
+    {
+      "word": "మిరియం",
+      "transliteration": "Miriyam",
+      "meaning": "pepper",
+      "emoji": "🧂"
+    },
+    {
+      "word": "మొక్క",
+      "transliteration": "Mokka",
+      "meaning": "plant",
+      "emoji": "🪴"
+    },
+    {
+      "word": "మొక్కజొన్న",
+      "transliteration": "Mokkajonna",
+      "meaning": "corn",
+      "emoji": "🌽"
+    },
+    {
+      "word": "ముత్యం",
+      "transliteration": "Mutyam",
+      "meaning": "pearl",
+      "emoji": "🦪"
+    },
+    {
+      "word": "ముత్యాలహారం",
+      "transliteration": "Mutyaalahaaram",
+      "meaning": "pearl necklace",
+      "emoji": "📿"
+    },
+    {
+      "word": "ముసలి",
+      "transliteration": "Musali",
+      "meaning": "old person",
+      "emoji": "👴"
+    },
+    {
+      "word": "మూడు",
+      "transliteration": "Moodu",
+      "meaning": "three",
+      "emoji": "3️⃣"
+    },
+    {
+      "word": "మేధస్సు",
+      "transliteration": "Medhassu",
+      "meaning": "intelligence",
+      "emoji": "🧠"
+    },
+    {
+      "word": "మొగ్గ",
+      "transliteration": "Mogga",
+      "meaning": "bud",
+      "emoji": "🌷"
+    },
+    {
+      "word": "ముద్దు",
+      "transliteration": "Muddu",
+      "meaning": "kiss",
+      "emoji": "😘"
+    }
+  ],
+  "య": [
+    {
+      "word": "యోగం",
+      "transliteration": "Yogam",
+      "meaning": "yoga",
+      "emoji": "🧘"
+    },
+    {
+      "word": "యోగి",
+      "transliteration": "Yogi",
+      "meaning": "yogi",
+      "emoji": "🧘‍♂️"
+    },
+    {
+      "word": "యోగశాల",
+      "transliteration": "Yogashaala",
+      "meaning": "yoga studio",
+      "emoji": "🧘"
+    },
+    {
+      "word": "యోగాసనం",
+      "transliteration": "Yogasanam",
+      "meaning": "yoga pose",
+      "emoji": "🧘‍♀️"
+    },
+    {
+      "word": "యోగాభ్యాసం",
+      "transliteration": "Yogaabhyaasam",
+      "meaning": "yoga practice",
+      "emoji": "🧘"
+    },
+    {
+      "word": "యోగ్యత",
+      "transliteration": "Yogyata",
+      "meaning": "ability",
+      "emoji": "🌟"
+    },
+    {
+      "word": "యుక్తి",
+      "transliteration": "Yukti",
+      "meaning": "clever idea",
+      "emoji": "💡"
+    },
+    {
+      "word": "యుక్తవయసు",
+      "transliteration": "Yuktavayasu",
+      "meaning": "adolescence",
+      "emoji": "🧑"
+    },
+    {
+      "word": "యుద్ధం",
+      "transliteration": "Yuddham",
+      "meaning": "war",
+      "emoji": "⚔️"
+    },
+    {
+      "word": "యుద్ధవిమానం",
+      "transliteration": "Yuddhavimaanam",
+      "meaning": "fighter plane",
+      "emoji": "✈️"
+    },
+    {
+      "word": "యువకుడు",
+      "transliteration": "Yuvakudu",
+      "meaning": "young man",
+      "emoji": "🧑‍🦱"
+    },
+    {
+      "word": "యువతి",
+      "transliteration": "Yuvati",
+      "meaning": "young woman",
+      "emoji": "👩"
+    },
+    {
+      "word": "యువరాజు",
+      "transliteration": "Yuvaraaju",
+      "meaning": "prince",
+      "emoji": "🤴"
+    },
+    {
+      "word": "యువరాణి",
+      "transliteration": "Yuvaraani",
+      "meaning": "princess",
+      "emoji": "👸"
+    },
+    {
+      "word": "యువత",
+      "transliteration": "Yuvata",
+      "meaning": "youth",
+      "emoji": "🧑‍🤝‍🧑"
+    },
+    {
+      "word": "యుగం",
+      "transliteration": "Yugam",
+      "meaning": "era",
+      "emoji": "⌛"
+    },
+    {
+      "word": "యుగాది",
+      "transliteration": "Yugaadi",
+      "meaning": "New Year festival",
+      "emoji": "🎉"
+    },
+    {
+      "word": "యజ్ఞం",
+      "transliteration": "Yajnyam",
+      "meaning": "ritual offering",
+      "emoji": "🔥"
+    },
+    {
+      "word": "యజమాని",
+      "transliteration": "Yajamaani",
+      "meaning": "owner",
+      "emoji": "🏠"
+    },
+    {
+      "word": "యాత్ర",
+      "transliteration": "Yaatra",
+      "meaning": "journey",
+      "emoji": "🧳"
+    }
+  ],
+  "ర": [
+    {
+      "word": "రథం",
+      "transliteration": "Ratham",
+      "meaning": "chariot",
+      "emoji": "🛞"
+    },
+    {
+      "word": "రంగు",
+      "transliteration": "Rangu",
+      "meaning": "color",
+      "emoji": "🎨"
+    },
+    {
+      "word": "రంగవల్లి",
+      "transliteration": "Rangavalli",
+      "meaning": "rangoli",
+      "emoji": "🌈"
+    },
+    {
+      "word": "రవి",
+      "transliteration": "Ravi",
+      "meaning": "sun",
+      "emoji": "☀️"
+    },
+    {
+      "word": "రాత్రి",
+      "transliteration": "Raatri",
+      "meaning": "night",
+      "emoji": "🌙"
+    },
+    {
+      "word": "రాయి",
+      "transliteration": "Raayi",
+      "meaning": "stone",
+      "emoji": "🪨"
+    },
+    {
+      "word": "రాజు",
+      "transliteration": "Raaju",
+      "meaning": "king",
+      "emoji": "👑"
+    },
+    {
+      "word": "రాణి",
+      "transliteration": "Raani",
+      "meaning": "queen",
+      "emoji": "👸"
+    },
+    {
+      "word": "రాజ్యం",
+      "transliteration": "Raajyam",
+      "meaning": "kingdom",
+      "emoji": "🏰"
+    },
+    {
+      "word": "రైలు",
+      "transliteration": "Railu",
+      "meaning": "train",
+      "emoji": "🚆"
+    },
+    {
+      "word": "రైలు బండి",
+      "transliteration": "Railu bandi",
+      "meaning": "train",
+      "emoji": "🚂"
+    },
+    {
+      "word": "రెక్క",
+      "transliteration": "Rekka",
+      "meaning": "wing",
+      "emoji": "🪽"
+    },
+    {
+      "word": "రెక్కలు",
+      "transliteration": "Rekkalu",
+      "meaning": "wings",
+      "emoji": "🪽"
+    },
+    {
+      "word": "రొట్టె",
+      "transliteration": "Rotte",
+      "meaning": "bread",
+      "emoji": "🍞"
+    },
+    {
+      "word": "రోజు",
+      "transliteration": "Roju",
+      "meaning": "day",
+      "emoji": "📅"
+    },
+    {
+      "word": "రోజాపువ్వు",
+      "transliteration": "Rojaapuvvu",
+      "meaning": "rose",
+      "emoji": "🌹"
+    },
+    {
+      "word": "రోగి",
+      "transliteration": "Rogi",
+      "meaning": "patient",
+      "emoji": "🤒"
+    },
+    {
+      "word": "రోగం",
+      "transliteration": "Rogam",
+      "meaning": "illness",
+      "emoji": "🩺"
+    },
+    {
+      "word": "రేగు",
+      "transliteration": "Regu",
+      "meaning": "jujube",
+      "emoji": "🍒"
+    },
+    {
+      "word": "రేగుపండు",
+      "transliteration": "Regupandu",
+      "meaning": "jujube fruit",
+      "emoji": "🍒"
+    }
+  ],
+  "ల": [
+    {
+      "word": "లడ్డు",
+      "transliteration": "Laddu",
+      "meaning": "sweet ball",
+      "emoji": "🍬"
+    },
+    {
+      "word": "లవంగం",
+      "transliteration": "Lavangam",
+      "meaning": "clove",
+      "emoji": "🌿"
+    },
+    {
+      "word": "లవంగాలు",
+      "transliteration": "Lavangaalu",
+      "meaning": "cloves",
+      "emoji": "🌿"
+    },
+    {
+      "word": "లక్ష్యం",
+      "transliteration": "Lakshyam",
+      "meaning": "goal",
+      "emoji": "🎯"
+    },
+    {
+      "word": "లక్ష్మి",
+      "transliteration": "Lakshmi",
+      "meaning": "Lakshmi",
+      "emoji": "🪷"
+    },
+    {
+      "word": "లక్ష్మీదేవి",
+      "transliteration": "Lakshmidevi",
+      "meaning": "Goddess Lakshmi",
+      "emoji": "🙏"
+    },
+    {
+      "word": "లక్షణం",
+      "transliteration": "Lakshanam",
+      "meaning": "feature",
+      "emoji": "🔍"
+    },
+    {
+      "word": "లక్షణాలు",
+      "transliteration": "Lakshanaalu",
+      "meaning": "features",
+      "emoji": "📝"
+    },
+    {
+      "word": "లంకె",
+      "transliteration": "Lanke",
+      "meaning": "link",
+      "emoji": "🔗"
+    },
+    {
+      "word": "లంకెబిందెలు",
+      "transliteration": "Lankebindelu",
+      "meaning": "linked pots",
+      "emoji": "🏺"
+    },
+    {
+      "word": "లత",
+      "transliteration": "Lata",
+      "meaning": "creeper",
+      "emoji": "🌿"
+    },
+    {
+      "word": "లతాగృహం",
+      "transliteration": "Lataagruham",
+      "meaning": "vine-covered bower",
+      "emoji": "🌱"
+    },
+    {
+      "word": "లవణం",
+      "transliteration": "Lavanam",
+      "meaning": "salt",
+      "emoji": "🧂"
+    },
+    {
+      "word": "లవణజలం",
+      "transliteration": "Lavanajalam",
+      "meaning": "salt water",
+      "emoji": "🌊"
+    },
+    {
+      "word": "లెక్క",
+      "transliteration": "Lekka",
+      "meaning": "count",
+      "emoji": "🔢"
+    },
+    {
+      "word": "లెక్కపెట్టు",
+      "transliteration": "Lekkapettu",
+      "meaning": "count",
+      "emoji": "🧮"
+    },
+    {
+      "word": "లేఖ",
+      "transliteration": "Lekha",
+      "meaning": "letter",
+      "emoji": "✉️"
+    },
+    {
+      "word": "లేఖనం",
+      "transliteration": "Lekhanam",
+      "meaning": "writing",
+      "emoji": "✍️"
+    },
+    {
+      "word": "లేఖిని",
+      "transliteration": "Lekhini",
+      "meaning": "pen",
+      "emoji": "🖊️"
+    },
+    {
+      "word": "లేడి",
+      "transliteration": "Ledi",
+      "meaning": "doe",
+      "emoji": "🦌"
+    }
+  ],
+  "వ": [
+    {
+      "word": "వాన",
+      "transliteration": "Vaana",
+      "meaning": "rain",
+      "emoji": "🌧️"
+    },
+    {
+      "word": "వానచినుకు",
+      "transliteration": "Vaanachinuku",
+      "meaning": "raindrop",
+      "emoji": "💧"
+    },
+    {
+      "word": "వానాకాలం",
+      "transliteration": "Vaanaakaalam",
+      "meaning": "rainy season",
+      "emoji": "🌧️"
+    },
+    {
+      "word": "వాకిలి",
+      "transliteration": "Vaakili",
+      "meaning": "doorway",
+      "emoji": "🚪"
+    },
+    {
+      "word": "వాక్యం",
+      "transliteration": "Vaakyam",
+      "meaning": "sentence",
+      "emoji": "📝"
+    },
+    {
+      "word": "వాగు",
+      "transliteration": "Vaagu",
+      "meaning": "stream",
+      "emoji": "🏞️"
+    },
+    {
+      "word": "వాగ్దానం",
+      "transliteration": "Vaagdaanam",
+      "meaning": "promise",
+      "emoji": "🤞"
+    },
+    {
+      "word": "వాగ్గేయకారుడు",
+      "transliteration": "Vaaggeyakaarudu",
+      "meaning": "composer-singer",
+      "emoji": "🎼"
+    },
+    {
+      "word": "వాగ్దేవి",
+      "transliteration": "Vaagadevi",
+      "meaning": "goddess of speech",
+      "emoji": "🪷"
+    },
+    {
+      "word": "వాద్యం",
+      "transliteration": "Vaadyam",
+      "meaning": "musical instrument",
+      "emoji": "🎻"
+    },
+    {
+      "word": "వాద్యకారుడు",
+      "transliteration": "Vaadyakaarudu",
+      "meaning": "musician",
+      "emoji": "🎺"
+    },
+    {
+      "word": "వార్త",
+      "transliteration": "Vaarta",
+      "meaning": "news",
+      "emoji": "📰"
+    },
+    {
+      "word": "వార్తాపత్రిక",
+      "transliteration": "Vaartaapatrika",
+      "meaning": "newspaper",
+      "emoji": "🗞️"
+    },
+    {
+      "word": "వాహనం",
+      "transliteration": "Vaahanam",
+      "meaning": "vehicle",
+      "emoji": "🚗"
+    },
+    {
+      "word": "వాహనశాల",
+      "transliteration": "Vaahanashaala",
+      "meaning": "garage",
+      "emoji": "🅿️"
+    },
+    {
+      "word": "విషయం",
+      "transliteration": "Vishayam",
+      "meaning": "topic",
+      "emoji": "💬"
+    },
+    {
+      "word": "విహారం",
+      "transliteration": "Vihaaram",
+      "meaning": "outing",
+      "emoji": "🧺"
+    },
+    {
+      "word": "విజయం",
+      "transliteration": "Vijayam",
+      "meaning": "victory",
+      "emoji": "🏆"
+    },
+    {
+      "word": "విద్య",
+      "transliteration": "Vidya",
+      "meaning": "education",
+      "emoji": "📚"
+    },
+    {
+      "word": "విద్యార్థి",
+      "transliteration": "Vidyaarthi",
+      "meaning": "student",
+      "emoji": "🎒"
+    }
+  ],
+  "శ": [
+    {
+      "word": "శంఖం",
+      "transliteration": "Shankham",
+      "meaning": "conch",
+      "emoji": "🐚"
+    },
+    {
+      "word": "శంఖము",
+      "transliteration": "Shankhamu",
+      "meaning": "conch shell",
+      "emoji": "🐚"
+    },
+    {
+      "word": "శక్తి",
+      "transliteration": "Shakti",
+      "meaning": "power",
+      "emoji": "⚡"
+    },
+    {
+      "word": "శక్తివంతం",
+      "transliteration": "Shaktivantam",
+      "meaning": "powerful",
+      "emoji": "💪"
+    },
+    {
+      "word": "శకటం",
+      "transliteration": "Shakatam",
+      "meaning": "cart",
+      "emoji": "🛒"
+    },
+    {
+      "word": "శతకం",
+      "transliteration": "Shatakam",
+      "meaning": "century",
+      "emoji": "💯"
+    },
+    {
+      "word": "శతాబ్దం",
+      "transliteration": "Shataabdam",
+      "meaning": "century",
+      "emoji": "📅"
+    },
+    {
+      "word": "శతభిషం",
+      "transliteration": "Shatabhisham",
+      "meaning": "a star constellation",
+      "emoji": "✨"
+    },
+    {
+      "word": "శని",
+      "transliteration": "Shani",
+      "meaning": "Saturn",
+      "emoji": "🪐"
+    },
+    {
+      "word": "శనివారం",
+      "transliteration": "Shanivaaram",
+      "meaning": "Saturday",
+      "emoji": "📆"
+    },
+    {
+      "word": "శబ్దం",
+      "transliteration": "Shabdam",
+      "meaning": "sound",
+      "emoji": "🔊"
+    },
+    {
+      "word": "శబ్దకోశం",
+      "transliteration": "Shabdakosham",
+      "meaning": "dictionary",
+      "emoji": "📚"
+    },
+    {
+      "word": "శబరి",
+      "transliteration": "Shabari",
+      "meaning": "Shabari",
+      "emoji": "🙏"
+    },
+    {
+      "word": "శరము",
+      "transliteration": "Sharamu",
+      "meaning": "arrow",
+      "emoji": "🏹"
+    },
+    {
+      "word": "శరదృతువు",
+      "transliteration": "Sharadrutuvu",
+      "meaning": "autumn",
+      "emoji": "🍂"
+    },
+    {
+      "word": "శరద్",
+      "transliteration": "Sharad",
+      "meaning": "autumn",
+      "emoji": "🍁"
+    },
+    {
+      "word": "శరద్పూర్ణిమ",
+      "transliteration": "Sharadpoornima",
+      "meaning": "autumn full moon",
+      "emoji": "🌕"
+    },
+    {
+      "word": "శలభం",
+      "transliteration": "Shalabham",
+      "meaning": "moth",
+      "emoji": "🦋"
+    },
+    {
+      "word": "శాలువా",
+      "transliteration": "Shaaluvaa",
+      "meaning": "shawl",
+      "emoji": "🧣"
+    },
+    {
+      "word": "శాకం",
+      "transliteration": "Shaakam",
+      "meaning": "vegetable",
+      "emoji": "🥬"
+    }
+  ],
+  "ష": [
+    {
+      "word": "షట్కోణం",
+      "transliteration": "Shatkonam",
+      "meaning": "hexagon",
+      "emoji": "⬡"
+    },
+    {
+      "word": "షడ్రుచులు",
+      "transliteration": "Shadruchulu",
+      "meaning": "six tastes",
+      "emoji": "🍽️"
+    },
+    {
+      "word": "షడ్రసాలు",
+      "transliteration": "Shadrasalu",
+      "meaning": "six flavors",
+      "emoji": "🍋"
+    },
+    {
+      "word": "షడ్భుజం",
+      "transliteration": "Shadbujam",
+      "meaning": "hexagon",
+      "emoji": "⬡"
+    },
+    {
+      "word": "షడంగాలు",
+      "transliteration": "Shadangalu",
+      "meaning": "six parts",
+      "emoji": "📚"
+    },
+    {
+      "word": "షష్ఠి",
+      "transliteration": "Shashthi",
+      "meaning": "sixth lunar day",
+      "emoji": "🌙"
+    },
+    {
+      "word": "షష్ఠి దేవి",
+      "transliteration": "Shashthi devi",
+      "meaning": "goddess Shashthi",
+      "emoji": "🙏"
+    },
+    {
+      "word": "షష్టిపూర్తి",
+      "transliteration": "Shashtipoorti",
+      "meaning": "sixtieth birthday",
+      "emoji": "🎂"
+    },
+    {
+      "word": "షడ్జమం",
+      "transliteration": "Shadjamam",
+      "meaning": "musical note sa",
+      "emoji": "🎵"
+    },
+    {
+      "word": "షడ్జం",
+      "transliteration": "Shadjam",
+      "meaning": "musical tonic",
+      "emoji": "🎶"
+    },
+    {
+      "word": "షరతు",
+      "transliteration": "Sharatu",
+      "meaning": "condition",
+      "emoji": "📋"
+    },
+    {
+      "word": "షరతులు",
+      "transliteration": "Sharatulu",
+      "meaning": "conditions",
+      "emoji": "📝"
+    },
+    {
+      "word": "షరాబు",
+      "transliteration": "Sharaabu",
+      "meaning": "liquor",
+      "emoji": "🍷"
+    },
+    {
+      "word": "షరాబందీ",
+      "transliteration": "Sharaabandi",
+      "meaning": "liquor ban",
+      "emoji": "🚫"
+    },
+    {
+      "word": "షహరం",
+      "transliteration": "Shaharam",
+      "meaning": "city",
+      "emoji": "🏙️"
+    },
+    {
+      "word": "షహర్",
+      "transliteration": "Shahar",
+      "meaning": "city",
+      "emoji": "🏙️"
+    },
+    {
+      "word": "షాహీ",
+      "transliteration": "Shaahi",
+      "meaning": "royal",
+      "emoji": "👑"
+    },
+    {
+      "word": "షాహుకారు",
+      "transliteration": "Shaahukaaru",
+      "meaning": "moneylender",
+      "emoji": "💰"
+    },
+    {
+      "word": "షికారు",
+      "transliteration": "Shikaaru",
+      "meaning": "hunt",
+      "emoji": "🦌"
+    },
+    {
+      "word": "షిర్డీ",
+      "transliteration": "Shirdi",
+      "meaning": "Shirdi",
+      "emoji": "🛕"
+    }
+  ],
+  "స": [
+    {
+      "word": "సూర్యుడు",
+      "transliteration": "Sooryudu",
+      "meaning": "sun",
+      "emoji": "☀️"
+    },
+    {
+      "word": "సముద్రం",
+      "transliteration": "Samudram",
+      "meaning": "sea",
+      "emoji": "🌊"
+    },
+    {
+      "word": "సమయం",
+      "transliteration": "Samayam",
+      "meaning": "time",
+      "emoji": "⏰"
+    },
+    {
+      "word": "సబ్బు",
+      "transliteration": "Sabbu",
+      "meaning": "soap",
+      "emoji": "🧼"
+    },
+    {
+      "word": "సీతాకోకచిలుక",
+      "transliteration": "Seetakokachiluka",
+      "meaning": "butterfly",
+      "emoji": "🦋"
+    },
+    {
+      "word": "సింహం",
+      "transliteration": "Simham",
+      "meaning": "lion",
+      "emoji": "🦁"
+    },
+    {
+      "word": "సింహాసనం",
+      "transliteration": "Simhaasanam",
+      "meaning": "throne",
+      "emoji": "👑"
+    },
+    {
+      "word": "సీత",
+      "transliteration": "Seeta",
+      "meaning": "Sita",
+      "emoji": "🌾"
+    },
+    {
+      "word": "సీతమ్మ",
+      "transliteration": "Seetamma",
+      "meaning": "Mother Sita",
+      "emoji": "🙏"
+    },
+    {
+      "word": "సంతోషం",
+      "transliteration": "Santosham",
+      "meaning": "happiness",
+      "emoji": "😊"
+    },
+    {
+      "word": "స్నేహం",
+      "transliteration": "Sneham",
+      "meaning": "friendship",
+      "emoji": "🫶"
+    },
+    {
+      "word": "స్నేహితుడు",
+      "transliteration": "Snehitudu",
+      "meaning": "friend",
+      "emoji": "🧑‍🤝‍🧑"
+    },
+    {
+      "word": "సంగీతం",
+      "transliteration": "Sangeetam",
+      "meaning": "music",
+      "emoji": "🎵"
+    },
+    {
+      "word": "సంగీతకారుడు",
+      "transliteration": "Sangeetakaarudu",
+      "meaning": "musician",
+      "emoji": "🎸"
+    },
+    {
+      "word": "సర్పం",
+      "transliteration": "Sarpam",
+      "meaning": "snake",
+      "emoji": "🐍"
+    },
+    {
+      "word": "సరస్సు",
+      "transliteration": "Sarassu",
+      "meaning": "lake",
+      "emoji": "🏞️"
+    },
+    {
+      "word": "సరళి",
+      "transliteration": "Sarali",
+      "meaning": "simple pattern",
+      "emoji": "〰️"
+    },
+    {
+      "word": "సారంగి",
+      "transliteration": "Saarangi",
+      "meaning": "sarangi instrument",
+      "emoji": "🎻"
+    },
+    {
+      "word": "సైకిలు",
+      "transliteration": "Saikilu",
+      "meaning": "bicycle",
+      "emoji": "🚲"
+    },
+    {
+      "word": "సైనికుడు",
+      "transliteration": "Sainikudu",
+      "meaning": "soldier",
+      "emoji": "🪖"
+    }
+  ],
+  "హ": [
+    {
+      "word": "హంస",
+      "transliteration": "Hamsa",
+      "meaning": "swan",
+      "emoji": "🦢"
+    },
+    {
+      "word": "హంసపాదు",
+      "transliteration": "Hamsapaadu",
+      "meaning": "swan's foot",
+      "emoji": "🦢"
+    },
+    {
+      "word": "హంసగీతం",
+      "transliteration": "Hamsageetam",
+      "meaning": "swan song",
+      "emoji": "🎶"
+    },
+    {
+      "word": "హంసతూలిక",
+      "transliteration": "Hamsatoolika",
+      "meaning": "soft swan down",
+      "emoji": "🪶"
+    },
+    {
+      "word": "హారం",
+      "transliteration": "Haaram",
+      "meaning": "necklace",
+      "emoji": "📿"
+    },
+    {
+      "word": "హారతి",
+      "transliteration": "Haarati",
+      "meaning": "lamp offering",
+      "emoji": "🪔"
+    },
+    {
+      "word": "హారతి పళ్లెం",
+      "transliteration": "Haarati pallem",
+      "meaning": "offering plate",
+      "emoji": "🪔"
+    },
+    {
+      "word": "హాస్యం",
+      "transliteration": "Haasyam",
+      "meaning": "humor",
+      "emoji": "😂"
+    },
+    {
+      "word": "హాస్యకథ",
+      "transliteration": "Haasyakatha",
+      "meaning": "funny story",
+      "emoji": "📖"
+    },
+    {
+      "word": "హాస్యనటుడు",
+      "transliteration": "Haasyanatudu",
+      "meaning": "comedian",
+      "emoji": "🎭"
+    },
+    {
+      "word": "హాస్యరసం",
+      "transliteration": "Haasyarasam",
+      "meaning": "comedy",
+      "emoji": "😄"
+    },
+    {
+      "word": "హృదయం",
+      "transliteration": "Hridayam",
+      "meaning": "heart",
+      "emoji": "❤️"
+    },
+    {
+      "word": "హృదయ స్పందన",
+      "transliteration": "Hridaya spandana",
+      "meaning": "heartbeat",
+      "emoji": "💓"
+    },
+    {
+      "word": "హిమం",
+      "transliteration": "Himam",
+      "meaning": "snow",
+      "emoji": "❄️"
+    },
+    {
+      "word": "హిమగిరి",
+      "transliteration": "Himagiri",
+      "meaning": "snowy mountain",
+      "emoji": "🏔️"
+    },
+    {
+      "word": "హిమాలయం",
+      "transliteration": "Himaalayam",
+      "meaning": "Himalayas",
+      "emoji": "🏔️"
+    },
+    {
+      "word": "హిమపాతం",
+      "transliteration": "Himapaatam",
+      "meaning": "snowfall",
+      "emoji": "🌨️"
+    },
+    {
+      "word": "హిప్పో",
+      "transliteration": "Hippo",
+      "meaning": "hippopotamus",
+      "emoji": "🦛"
+    },
+    {
+      "word": "హీరో",
+      "transliteration": "Hero",
+      "meaning": "hero",
+      "emoji": "🦸"
+    },
+    {
+      "word": "హెలికాప్టర్",
+      "transliteration": "Helicopter",
+      "meaning": "helicopter",
+      "emoji": "🚁"
+    }
+  ],
+  "ళ": [
+    {
+      "word": "ళకారం",
+      "transliteration": "Llakaaram",
+      "meaning": "Telugu letter lla",
+      "emoji": "🔤"
+    },
+    {
+      "word": "బళ్లు",
+      "transliteration": "Ballu",
+      "meaning": "schools (dialectal)",
+      "emoji": "🏫"
+    },
+    {
+      "word": "పళ్లు",
+      "transliteration": "Pallu",
+      "meaning": "teeth",
+      "emoji": "🦷"
+    },
+    {
+      "word": "కళ్లు",
+      "transliteration": "Kallu",
+      "meaning": "eyes",
+      "emoji": "👀"
+    },
+    {
+      "word": "ముళ్లు",
+      "transliteration": "Mullu",
+      "meaning": "thorns",
+      "emoji": "🌵"
+    },
+    {
+      "word": "వేళ్లు",
+      "transliteration": "Vellu",
+      "meaning": "fingers",
+      "emoji": "✋"
+    },
+    {
+      "word": "గుళ్లు",
+      "transliteration": "Gullu",
+      "meaning": "temples",
+      "emoji": "🛕"
+    },
+    {
+      "word": "పెళ్లి",
+      "transliteration": "Pelli",
+      "meaning": "wedding",
+      "emoji": "💍"
+    },
+    {
+      "word": "పెళ్లికూతురు",
+      "transliteration": "Pellikooturu",
+      "meaning": "bride",
+      "emoji": "👰"
+    },
+    {
+      "word": "పెళ్లికొడుకు",
+      "transliteration": "Pellikoduku",
+      "meaning": "groom",
+      "emoji": "🤵"
+    },
+    {
+      "word": "పళ్ళెం",
+      "transliteration": "Pallem",
+      "meaning": "plate",
+      "emoji": "🍽️"
+    },
+    {
+      "word": "పళ్ళు",
+      "transliteration": "Pallu",
+      "meaning": "fruit",
+      "emoji": "🍊"
+    },
+    {
+      "word": "వాళ్లు",
+      "transliteration": "Vaallu",
+      "meaning": "they",
+      "emoji": "👥"
+    },
+    {
+      "word": "ఇళ్లు",
+      "transliteration": "Illu",
+      "meaning": "houses",
+      "emoji": "🏘️"
+    },
+    {
+      "word": "ఉళ్లు",
+      "transliteration": "Ullu",
+      "meaning": "villages (dialectal)",
+      "emoji": "🏘️"
+    },
+    {
+      "word": "కాళ్లు",
+      "transliteration": "Kaallu",
+      "meaning": "legs",
+      "emoji": "🦵"
+    },
+    {
+      "word": "చెళ్లు",
+      "transliteration": "Chellu",
+      "meaning": "splashing",
+      "emoji": "💦"
+    },
+    {
+      "word": "దళం",
+      "transliteration": "Dhalam",
+      "meaning": "group",
+      "emoji": "👥"
+    },
+    {
+      "word": "తళం",
+      "transliteration": "Talam",
+      "meaning": "cymbal",
+      "emoji": "🥁"
+    },
+    {
+      "word": "విళంబం",
+      "transliteration": "Vilambam",
+      "meaning": "delay",
+      "emoji": "⏳"
+    }
+  ],
+  "క్ష": [
+    {
+      "word": "క్షీరము",
+      "transliteration": "Ksheeramu",
+      "meaning": "milk",
+      "emoji": "🥛"
+    },
+    {
+      "word": "క్షీరసాగరం",
+      "transliteration": "Ksheerasaagaram",
+      "meaning": "ocean of milk",
+      "emoji": "🌊"
+    },
+    {
+      "word": "క్షీరనది",
+      "transliteration": "Ksheeranadi",
+      "meaning": "river of milk",
+      "emoji": "🥛"
+    },
+    {
+      "word": "క్షీరపాకం",
+      "transliteration": "Ksheerapakam",
+      "meaning": "milk pudding",
+      "emoji": "🍮"
+    },
+    {
+      "word": "క్షీరాన్నం",
+      "transliteration": "Ksheeraannam",
+      "meaning": "milk rice",
+      "emoji": "🍚"
+    },
+    {
+      "word": "క్షేత్రం",
+      "transliteration": "Kshetram",
+      "meaning": "field",
+      "emoji": "🌾"
+    },
+    {
+      "word": "క్షేత్రపాలకుడు",
+      "transliteration": "Kshetrapaalakudu",
+      "meaning": "field guardian",
+      "emoji": "🛡️"
+    },
+    {
+      "word": "క్షేత్రజ్ఞుడు",
+      "transliteration": "Kshetrajnyudu",
+      "meaning": "knower of the field",
+      "emoji": "🧘"
+    },
+    {
+      "word": "క్షేత్రఫలం",
+      "transliteration": "Kshetraphalam",
+      "meaning": "field fruit",
+      "emoji": "🍈"
+    },
+    {
+      "word": "క్షేత్రసేవ",
+      "transliteration": "Kshetraseva",
+      "meaning": "service to a shrine",
+      "emoji": "🙏"
+    },
+    {
+      "word": "క్షమ",
+      "transliteration": "Kshama",
+      "meaning": "forgiveness",
+      "emoji": "💗"
+    },
+    {
+      "word": "క్షమాపణ",
+      "transliteration": "Kshamaapana",
+      "meaning": "apology",
+      "emoji": "🙏"
+    },
+    {
+      "word": "క్షమించు",
+      "transliteration": "Kshaminchu",
+      "meaning": "forgive",
+      "emoji": "🤝"
+    },
+    {
+      "word": "క్షమాశీలి",
+      "transliteration": "Kshamaasheeli",
+      "meaning": "forgiving person",
+      "emoji": "😇"
+    },
+    {
+      "word": "క్షయ",
+      "transliteration": "Kshaya",
+      "meaning": "decline",
+      "emoji": "📉"
+    },
+    {
+      "word": "క్షయవ్యాధి",
+      "transliteration": "Kshayavyaadhi",
+      "meaning": "tuberculosis",
+      "emoji": "🩺"
+    },
+    {
+      "word": "క్షయరోగం",
+      "transliteration": "Kshayarogam",
+      "meaning": "tuberculosis",
+      "emoji": "🩺"
+    },
+    {
+      "word": "క్షణం",
+      "transliteration": "Kshanam",
+      "meaning": "moment",
+      "emoji": "⏱️"
+    },
+    {
+      "word": "క్షణికం",
+      "transliteration": "Kshanikam",
+      "meaning": "brief",
+      "emoji": "⚡"
+    },
+    {
+      "word": "క్షణభంగురం",
+      "transliteration": "Kshanabhanguram",
+      "meaning": "transient",
+      "emoji": "🍃"
+    }
+  ],
+  "ఱ": [
+    {
+      "word": "కఱ్ఱ",
+      "transliteration": "Karra",
+      "meaning": "stick",
+      "emoji": "🪵"
+    },
+    {
+      "word": "కఱ్ఱలు",
+      "transliteration": "Karralu",
+      "meaning": "sticks",
+      "emoji": "🪵"
+    },
+    {
+      "word": "కఱ్ఱపుల్ల",
+      "transliteration": "Karrapulla",
+      "meaning": "wooden splinter",
+      "emoji": "🪵"
+    },
+    {
+      "word": "కఱ్ఱపెట్టె",
+      "transliteration": "Karrapette",
+      "meaning": "wooden box",
+      "emoji": "📦"
+    },
+    {
+      "word": "కఱ్ఱబండి",
+      "transliteration": "Karrabandi",
+      "meaning": "wooden cart",
+      "emoji": "🛒"
+    },
+    {
+      "word": "కఱ్ఱబొమ్మ",
+      "transliteration": "Karrabomma",
+      "meaning": "wooden doll",
+      "emoji": "🪆"
+    },
+    {
+      "word": "కఱ్ఱకుర్చీ",
+      "transliteration": "Karrakurchee",
+      "meaning": "wooden chair",
+      "emoji": "🪑"
+    },
+    {
+      "word": "కఱ్ఱవంతెన",
+      "transliteration": "Karravanten",
+      "meaning": "wooden bridge",
+      "emoji": "🌉"
+    },
+    {
+      "word": "కఱ్ఱదువ్వెన",
+      "transliteration": "Karraduvvena",
+      "meaning": "wooden comb",
+      "emoji": "🪮"
+    },
+    {
+      "word": "కఱ్ఱగుర్రం",
+      "transliteration": "Karragurram",
+      "meaning": "wooden horse",
+      "emoji": "🐴"
+    },
+    {
+      "word": "పఱుగు",
+      "transliteration": "Parugu",
+      "meaning": "running",
+      "emoji": "🏃"
+    },
+    {
+      "word": "పఱుగెత్తు",
+      "transliteration": "Parugettu",
+      "meaning": "run quickly",
+      "emoji": "🏃"
+    },
+    {
+      "word": "పఱుగుపందెం",
+      "transliteration": "Parugupandem",
+      "meaning": "running race",
+      "emoji": "🏁"
+    },
+    {
+      "word": "మఱి",
+      "transliteration": "Mari",
+      "meaning": "again; also",
+      "emoji": "🔁"
+    },
+    {
+      "word": "మఱచిపోవు",
+      "transliteration": "Marachipovu",
+      "meaning": "forget",
+      "emoji": "🤔"
+    },
+    {
+      "word": "మఱపు",
+      "transliteration": "Marapu",
+      "meaning": "forgetfulness",
+      "emoji": "💭"
+    },
+    {
+      "word": "మఱచిన",
+      "transliteration": "Marachina",
+      "meaning": "forgotten",
+      "emoji": "🧠"
+    },
+    {
+      "word": "తఱచు",
+      "transliteration": "Tarachu",
+      "meaning": "often",
+      "emoji": "🔁"
+    },
+    {
+      "word": "తఱచుగా",
+      "transliteration": "Tarachuga",
+      "meaning": "frequently",
+      "emoji": "📆"
+    },
+    {
+      "word": "చిఱుత",
+      "transliteration": "Chiruta",
+      "meaning": "leopard (older spelling)",
+      "emoji": "🐆"
+    }
+  ]
+}
