@@ -24,8 +24,10 @@ Each activity includes number selectors, spoken guidance, multiple-choice questi
 and feedback.
 The language-selection screen reads its heading and available options aloud; use
 “Hear options” to replay the voice guidance.
-English opens a word-length menu for two-letter, three-letter, and multi-letter
-words. Choose a letter to browse matching illustrated words; selecting a word
+English opens a menu for Alphabets and two-letter, three-letter, and multi-letter
+words. Alphabets opens an interactive A–Z screen that animates each selected
+uppercase/lowercase letter with an example picture and spoken word. In the word
+lessons, choose a letter to browse matching illustrated words; selecting a word
 speaks its pronunciation using the English (India) locale and an Indian English
 voice when available. Hindi opens an independent Hindi Devanagari lesson with
 46 characters, 20 words per character, emoji illustrations, and Hindi speech.
