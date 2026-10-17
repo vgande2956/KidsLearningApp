@@ -1,4 +1,31 @@
-const D={A:"Apple🍎|Animals🐾|Action🤸|Aeroplane✈️|Ant🐜|Ambulance🚑|Anchor⚓|Avocado🥑",B:"Ball⚽|Banana🍌|Bus🚌|Butterfly🦋|Bird🐦|Bear🐻|Book📚|Balloon🎈|Bicycle🚲|Bed🛏️",C:"Cat🐱|Car🚗|Cake🎂|Cow🐮|Carrot🥕|Camera📷|Cherry🍒|Crown👑",D:"Dog🐶|Duck🦆|Dolphin🐬|Drum🥁|Donut🍩|Door🚪|Dinosaur🦖|Dragon🐉|Diamond💎",E:"Elephant🐘|Egg🥚|Eagle🦅|Eye👁️|Ear👂|Earth🌍|Envelope✉️",F:"Fish🐟|Flower🌸|Frog🐸|Fire🔥|Fox🦊|Flag🚩|Football🏈|French fries🍟",G:"Grapes🍇|Giraffe🦒|Gift🎁|Guitar🎸|Gorilla🦍|Goat🐐|Ghost👻|Glasses👓",H:"House🏠|Horse🐴|Heart❤️|Hat🎩|Helicopter🚁|Hippo🦛|Hammer🔨|Hamburger🍔|Hand✋|Hen🐔",I:"Ice cream🍦|Insect🐛|Island🏝️|Ice🧊|Iguana🦎",J:"Juice🧃|Jeep🚙|Jacket🧥|Jigsaw🧩|Joker🃏|Jack-o-lantern🎃",K:"Kite🪁|Key🔑|Kangaroo🦘|Koala🐨|Keyboard⌨️|Kiwi🥝",L:"Lion🦁|Lemon🍋|Leaf🍃|Lock🔒|Ladybug🐞|Lollipop🍭|Laptop💻|Leopard🐆",M:"Monkey🐒|Moon🌙|Mango🥭|Mouse🐭|Mushroom🍄|Milk🥛|Mountain⛰️|Music🎵|Microphone🎤|Magnet🧲",N:"Nose👃|Notebook📓|Newspaper📰|Noodles🍜|Nuts🥜|Necklace📿|Numbers🔢",O:"Orange🍊|Owl🦉|Octopus🐙|Onion🧅|Ocean🌊|Otter🦦|Open book📖",P:"Pizza🍕|Panda🐼|Penguin🐧|Pig🐷|Pineapple🍍|Parrot🦜|Pencil✏️|Peach🍑|Pumpkin🎃|Piano🎹|Pear🍐",Q:"Queen👸|Question mark❓|Quiet🤫",R:"Rainbow🌈|Rabbit🐰|Rocket🚀|Rose🌹|Robot🤖|Ring💍|Rain🌧️|Radio📻|Rhino🦏|Rice🍚",S:"Sun☀️|Star⭐|Snake🐍|Ship🚢|Strawberry🍓|Spider🕷️|Shoe👟|Snail🐌|Socks🧦|Squirrel🐿️|Swan🦢",T:"Tiger🐯|Tree🌳|Train🚆|Turtle🐢|Tomato🍅|Telephone☎️|Tent⛺|Teddy bear🧸|Tractor🚜|Trophy🏆|Tooth🦷",U:"Umbrella☂️|Unicorn🦄|UFO🛸|Up arrow⬆️",V:"Violin🎻|Van🚐|Volcano🌋|Vegetables🥦|Volleyball🏐|Vest🦺",W:"Watch⌚|Whale🐳|Watermelon🍉|Water drop💧|Wolf🐺|Witch🧙|Web🕸️|Wind💨",X:"Xmas tree🎄|X mark❌|Xmas Santa🎅",Y:"Yacht⛵|Yo-yo🪀|Yarn🧶|Yellow heart💛|Yam🍠",Z:"Zebra🦓|Zip🤐|Zzz sleep💤"};
+const D={
+ A:"Apple🍎|Animals🐾|Action🤸|Aeroplane✈️|Ant🐜|Ambulance🚑|Anchor⚓|Avocado🥑|Alligator🐊|Astronaut🧑‍🚀|Acorn🌰|Apron🥼|Arrow➡️|Artist🎨",
+ B:"Ball⚽|Banana🍌|Bus🚌|Butterfly🦋|Bird🐦|Bear🐻|Book📚|Balloon🎈|Bicycle🚲|Bed🛏️|Bee🐝|Boat⛵|Bucket🪣|Button🔘|Bread🍞",
+ C:"Cat🐱|Car🚗|Cake🎂|Cow🐮|Carrot🥕|Camera📷|Cherry🍒|Crown👑|Crab🦀|Candle🕯️|Clock🕒|Cloud☁️|Cookie🍪|Cactus🌵",
+ D:"Dog🐶|Duck🦆|Dolphin🐬|Drum🥁|Donut🍩|Door🚪|Dinosaur🦖|Dragon🐉|Diamond💎|Deer🦌|Daisy🌼|Desk🪑|Drill🛠️|Dice🎲",
+ E:"Elephant🐘|Egg🥚|Eagle🦅|Eye👁️|Ear👂|Earth🌍|Envelope✉️|Engine🚂|Elbow💪|Eight🎱|Elf🧝|Eraser🧽|Exit🚪",
+ F:"Fish🐟|Flower🌸|Frog🐸|Fire🔥|Fox🦊|Flag🚩|Football🏈|French fries🍟|Firefighter👩‍🚒|Feather🪶|Fence🚧|Fan🪭|Family👨‍👩‍👧",
+ G:"Grapes🍇|Giraffe🦒|Gift🎁|Guitar🎸|Gorilla🦍|Goat🐐|Ghost👻|Glasses👓|Garden🪴|Goose🪿|Globe🌐|Gate🚪|Gum🍬",
+ H:"House🏠|Horse🐴|Heart❤️|Hat🎩|Helicopter🚁|Hippo🦛|Hammer🔨|Hamburger🍔|Hand✋|Hen🐔|Honey🍯|Hot air balloon🎈|Hedgehog🦔|Harp🎼",
+ I:"Ice cream🍦|Insect🐛|Island🏝️|Ice🧊|Iguana🦎|Igloo🧊|Inchworm🐛|Ink🖋️|Iron🧲|Invitation💌",
+ J:"Juice🧃|Jeep🚙|Jacket🧥|Jigsaw🧩|Joker🃏|Jack-o-lantern🎃|Jellyfish🪼|Jam🍓|Jar🫙|Jeans👖|Jungle🌴",
+ K:"Kite🪁|Key🔑|Kangaroo🦘|Koala🐨|Keyboard⌨️|Kiwi🥝|King👑|Kitten🐱|Kettle🫖|Knee🦵|Ketchup🍅",
+ L:"Lion🦁|Lemon🍋|Leaf🍃|Lock🔒|Ladybug🐞|Lollipop🍭|Laptop💻|Leopard🐆|Ladder🪜|Lamp💡|Lamb🐑|Library📚|Lighthouse🗼",
+ M:"Monkey🐒|Moon🌙|Mango🥭|Mouse🐭|Mushroom🍄|Milk🥛|Mountain⛰️|Music🎵|Microphone🎤|Magnet🧲|Mitten🧤|Mermaid🧜‍♀️|Mirror🪞",
+ N:"Nose👃|Notebook📓|Newspaper📰|Noodles🍜|Nuts🥜|Necklace📿|Numbers🔢|Nest🪺|Nurse👩‍⚕️|Nightingale🐦|Narwhal🐋|Net🥅",
+ O:"Orange🍊|Owl🦉|Octopus🐙|Onion🧅|Ocean🌊|Otter🦦|Open book📖|Ostrich🪶|Olive🫒|Oyster🦪|Oven♨️|Orchestra🎻",
+ P:"Pizza🍕|Panda🐼|Penguin🐧|Pig🐷|Pineapple🍍|Parrot🦜|Pencil✏️|Peach🍑|Pumpkin🎃|Piano🎹|Pear🍐|Peacock🦚|Puppy🐶|Popsicle🍡",
+ Q:"Queen👸|Question mark❓|Quiet🤫|Quail🐦|Quarter🪙|Quilt🛏️|Quokka🦘|Quiz📝",
+ R:"Rainbow🌈|Rabbit🐰|Rocket🚀|Rose🌹|Robot🤖|Ring💍|Rain🌧️|Radio📻|Rhino🦏|Rice🍚|Raccoon🦝|Ruler📏|Rope🪢|Raspberry🫐",
+ S:"Sun☀️|Star⭐|Snake🐍|Ship🚢|Strawberry🍓|Spider🕷️|Shoe👟|Snail🐌|Socks🧦|Squirrel🐿️|Swan🦢|Sandwich🥪|School🏫|Shark🦈|Sheep🐑",
+ T:"Tiger🐯|Tree🌳|Train🚆|Turtle🐢|Tomato🍅|Telephone☎️|Tent⛺|Teddy bear🧸|Tractor🚜|Trophy🏆|Tooth🦷|Teacher🧑‍🏫|Telescope🔭|Teapot🫖",
+ U:"Umbrella☂️|Unicorn🦄|UFO🛸|Up arrow⬆️|Unicycle🚲|Uniform🥋|Ukulele🎸|Urchin🦔|Uncle👨|Umpire🧑‍⚖️",
+ V:"Violin🎻|Van🚐|Volcano🌋|Vegetables🥦|Volleyball🏐|Vest🦺|Vase🏺|Vulture🦅|Violet🪻|Vacuum🧹|Village🏘️|Video📹",
+ W:"Watch⌚|Whale🐳|Watermelon🍉|Water drop💧|Wolf🐺|Witch🧙|Web🕸️|Wind💨|Walrus🦭|Wagon🛒|Waffle🧇|Waterfall💦|Window🪟|Worm🪱",
+ X:"Xmas tree🎄|X mark❌|Xmas Santa🎅|X-ray🩻|Xylophone🎼|Xerus🐿️|Xenops🐦",
+ Y:"Yacht⛵|Yo-yo🪀|Yarn🧶|Yellow heart💛|Yam🍠|Yak🐂|Yo-yo trick🪀|Yogurt🥣|Yolk🍳|Yawn🥱",
+ Z:"Zebra🦓|Zip🤐|Zzz sleep💤|Zipper🤐|Zoo🦒|Zucchini🥒|Zeppelin🛩️|Zero⭕|Zinnia🌼|Zigzag〰️"
+};
 const W={};for(const k in D)W[k]=D[k].split("|").map(s=>{const m=s.match(/^([ -~]+)(.+)$/u);return[m[1],m[2]]});
 const NW=["","One","Two","Three","Four","Five","Six","Seven","Eight","Nine","Ten"];
 const C=[["apple","apples","🍎"],["dog","dogs","🐶"],["star","stars","⭐"],["balloon","balloons","🎈"],["car","cars","🚗"],["cat","cats","🐱"],["flower","flowers","🌸"],["banana","bananas","🍌"],["fish","fish","🐟"],["ball","balls","⚽"],["butterfly","butterflies","🦋"],["strawberry","strawberries","🍓"],["duck","ducks","🦆"],["heart","hearts","❤️"],["ladybug","ladybugs","🐞"],["cookie","cookies","🍪"]];
@@ -35,4 +62,3 @@ if("serviceWorker"in navigator&&location.protocol!=="file:"){
  // Reload once when a newer service worker takes over, so an outdated cached copy is replaced straight away.
  let reloaded=false;if(navigator.serviceWorker.controller)navigator.serviceWorker.addEventListener("controllerchange",()=>{if(!reloaded){reloaded=true;location.reload()}});
  window.addEventListener("load",()=>navigator.serviceWorker.register("sw.js",{updateViaCache:"none"}).then(r=>r.update()).catch(()=>{}))}
-
