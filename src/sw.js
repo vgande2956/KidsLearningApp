@@ -12,7 +12,15 @@ self.addEventListener("activate", e => {
       .then(() => self.clients.claim())
   );
 });
+// Network-first so a new deploy is used as soon as it's online; the cache is only an offline fallback.
 self.addEventListener("fetch", e => {
-  if (e.request.method !== "GET") return;
-  e.respondWith(caches.match(e.request).then(hit => hit || fetch(e.request)));
+  if (e.request.method !== "GET" || new URL(e.request.url).origin !== location.origin) return;
+  e.respondWith(
+    fetch(e.request)
+      .then(res => {
+        if (res.ok) { const copy = res.clone(); caches.open(CACHE).then(c => c.put(e.request, copy)); }
+        return res;
+      })
+      .catch(() => caches.match(e.request).then(hit => hit || caches.match("/")))
+  );
 });
