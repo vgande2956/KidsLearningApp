@@ -44,7 +44,12 @@
 <h1 id="addition-level-title">Choose your Maths Level</h1>
 <p id="addition-level-intro">Pick a level to start your learning adventure!</p>
 <button class="addition-level-hear" type="button" id="addition-level-hear">🔊 Hear levels</button>
-<div class="addition-level-options" id="addition-level-options" role="group" aria-label="Choose an addition level"></div>
+<nav class="addition-level-pager" aria-label="Level pages">
+<button class="addition-level-page-button" type="button" id="addition-level-previous">← Previous 10</button>
+<span id="addition-level-page-label" aria-live="polite"></span>
+<button class="addition-level-page-button" type="button" id="addition-level-next">Next 10 ➜</button>
+</nav>
+<div class="addition-level-options" id="addition-level-options" role="group" aria-label="Choose a level"></div>
 </section>
 <section id="addition-screen" class="addition-screen" hidden aria-labelledby="addition-title">
 <header class="addition-header">

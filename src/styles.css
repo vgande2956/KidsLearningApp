@@ -37,6 +37,9 @@ body{background:var(--bg);color:var(--ink);font-family:"Comic Sans MS","Chalkboa
 .addition-level-screen p{margin:0;color:var(--blue);font-size:clamp(1rem,3vw,1.25rem);font-weight:700}
 .addition-level-back{align-self:flex-start}
 .addition-level-hear{background:#1f4e9c;font-size:1rem}
+.addition-level-pager{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:10px;width:min(92vw,640px);color:var(--blue);font-weight:800}
+.addition-level-page-button{min-height:42px;padding:7px 10px;background:#5c6bc0;font-size:.95rem}
+.addition-level-page-button:last-child{justify-self:end;background:#18865b}
 .addition-level-options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;width:min(92vw,640px)}
 .addition-level-card{min-height:clamp(72px,11vh,100px);padding:8px;font-size:1rem}
 .addition-level-card .choice-icon{font-size:clamp(1.7rem,5vmin,2.5rem)}
@@ -71,7 +74,8 @@ body{background:var(--bg);color:var(--ink);font-family:"Comic Sans MS","Chalkboa
 .addition-total-icons{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));justify-items:center;align-content:start;width:100%;max-height:clamp(56px,11vh,90px);overflow-y:auto;font-size:clamp(.7rem,2.5vw,1.1rem);line-height:1}
 .addition-overflow{grid-column:1/-1;font-size:.8rem;color:var(--blue)}
 .multiplication-groups{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:3px;width:100%;max-height:clamp(80px,18vh,150px);overflow-y:auto}
-.multiplication-row{display:flex;align-items:center;justify-content:center;gap:4px;padding:3px;border-radius:8px;background:#fff;font-size:clamp(.65rem,2vw,.9rem);font-weight:700}
+.multiplication-row{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;padding:3px;border-radius:8px;background:#fff;font-size:clamp(.65rem,2vw,.9rem);font-weight:700}
+.multiplication-row>span:first-child{display:flex;gap:1px}
 .addition-question{margin:0;font-size:clamp(2rem,7vw,3.5rem);font-weight:900;color:var(--ink);letter-spacing:.06em}
 .addition-word-problem{max-width:800px;margin:0;color:var(--ink);font-size:clamp(1.2rem,4vw,1.75rem);font-weight:800}
 .addition-answers{display:flex;flex-wrap:wrap;justify-content:center;gap:12px}
