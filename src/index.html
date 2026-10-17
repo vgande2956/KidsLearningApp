@@ -38,12 +38,43 @@
 </div>
 <button class="math-back" type="button" id="math-language-back">← Choose a language</button>
 </section>
-<section id="math-topic" class="math-screen" hidden aria-live="polite">
-<div class="big" aria-hidden="true">🚧</div>
-<h1 id="math-topic-title"></h1>
-<p class="math-coming-message">We are working on it now. We’ll get back to you soon!</p>
-<button class="go" type="button" id="math-options-back">← Back to Maths options</button>
-<button class="math-back" type="button" id="math-topic-language-back">Choose a language</button>
+<section id="addition-level-screen" class="addition-level-screen" hidden aria-labelledby="addition-level-title">
+<button class="math-back addition-level-back" type="button" id="addition-levels-back"><span id="addition-level-back-title">← Maths topics</span></button>
+<div class="big" id="addition-level-icon" aria-hidden="true">➕</div>
+<h1 id="addition-level-title">Choose your Maths Level</h1>
+<p id="addition-level-intro">Pick a level to start your learning adventure!</p>
+<button class="addition-level-hear" type="button" id="addition-level-hear">🔊 Hear levels</button>
+<div class="addition-level-options" id="addition-level-options" role="group" aria-label="Choose an addition level"></div>
+</section>
+<section id="addition-screen" class="addition-screen" hidden aria-labelledby="addition-title">
+<header class="addition-header">
+<button class="math-back" type="button" id="addition-menu-back">← Addition levels</button>
+<h1 id="addition-title">Addition Adventure</h1>
+<button class="addition-hear" type="button" id="addition-hear">🔊 Hear explanation</button>
+</header>
+<p class="addition-intro" id="addition-intro">Addition means putting groups together!</p>
+<p class="addition-status" id="addition-status" aria-live="polite"></p>
+<section class="addition-builder" id="addition-builder" aria-label="Choose how many objects in each group">
+<div class="addition-pickers">
+<label class="addition-picker" for="addition-first-select">
+<span id="addition-builder-first-label">First group (this level)</span>
+<select id="addition-first-select" aria-label="Choose the first group number"></select>
+</label>
+<label class="addition-picker" for="addition-second-select">
+<span id="addition-builder-second-label">Second group</span>
+<select id="addition-second-select" aria-label="Choose the second group number"></select>
+</div>
+</section>
+<div class="addition-board" id="addition-board" aria-live="polite"></div>
+<p class="addition-question" id="addition-question"></p>
+<p class="addition-word-problem" id="addition-word-problem" hidden></p>
+<div class="addition-answers" id="addition-answers" role="group" aria-label="Choose the answer"></div>
+<p class="addition-feedback" id="addition-feedback" aria-live="polite">Tap an answer to try!</p>
+<div class="addition-actions">
+<button class="addition-practice" id="addition-practice" type="button">Try a question ➜</button>
+<button class="addition-next" id="addition-next" type="button" hidden>Next question ➜</button>
+<button class="addition-builder-back" id="addition-builder-back" type="button" hidden>← Choose numbers</button>
+</div>
 </section>
 <section id="name" hidden>
 <div class="big">🌈</div><h1>Welcome!</h1><div style="font-size:1.5rem">Enter your name</div>

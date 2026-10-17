@@ -2,8 +2,16 @@
 
 On launch, an animated Kids Learning Fun logo introduces the app before the
 language-selection screen. Choose English, Telugu, or Hindi, then enter a name to begin.
-The Maths option opens Addition, Multiplication, Subtraction, and Division topic screens;
-each currently displays a coming-soon message.
+The Maths option opens Addition, Subtraction, Multiplication, and Division. Each
+operation has a separate level picker with ten selectable levels (Level 1: 1–10,
+Level 2: 11–20, continuing through Level 10: 91–100), followed by a spoken, visual
+lesson and practice questions. Addition and subtraction show objects being combined
+or taken away; multiplication shows equal groups; division practices equal sharing
+with exact answers. The selected range controls the first addend, starting amount,
+number of groups, or dividend respectively; multiplication uses 1–10 objects per
+group, while division only offers divisors that divide the chosen amount evenly.
+Each activity includes number selectors, spoken guidance, multiple-choice questions,
+and feedback.
 The language-selection screen reads its heading and available options aloud; use
 “Hear options” to replay the voice guidance.
 English opens the English letters-and-numbers lessons. Hindi opens an independent Hindi
