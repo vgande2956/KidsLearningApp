@@ -30,6 +30,37 @@ body{background:var(--bg);color:var(--ink);font-family:"Comic Sans MS","Chalkboa
 .math-screen .big{font-size:min(18vmin,90px)}
 .math-screen h1{max-width:760px;font-size:clamp(1.7rem,6vw,2.5rem)}
 .math-options .choice-card{min-height:clamp(105px,18vh,145px)}
+.math-options .numbers-card{background:#138b8b}.math-options .roman-card{background:#8b5bb5}
+.math-counting-screen{height:100%;display:flex;flex-direction:column;align-items:center;gap:clamp(7px,1.5vh,12px);padding:58px 12px 12px;overflow-y:auto;text-align:center}
+.math-counting-header{width:min(100%,880px);display:flex;align-items:center;justify-content:space-between;gap:8px;padding:0}
+.math-counting-header h1{flex:1;margin:0;color:var(--accent);font-size:clamp(1.5rem,5vw,2.4rem);text-align:center}
+.math-counting-hear{min-height:44px;background:#1f4e9c;font-size:.9rem;padding:8px 10px}
+.math-counting-intro{margin:0;color:var(--blue);font-size:clamp(.95rem,3vw,1.2rem);font-weight:700}
+.math-counting-pager{width:min(100%,680px);display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:8px;color:var(--blue);font-size:clamp(.78rem,2.7vw,1rem);font-weight:800}
+.math-counting-page-button{min-height:42px;padding:7px 9px;background:#5c6bc0;font-size:clamp(.75rem,2.7vw,.95rem)}
+.math-counting-next{justify-self:end;background:#18865b}
+.math-counting-page-button:disabled{opacity:.45;cursor:not-allowed}
+.math-counting-display{position:relative;width:min(100%,880px);min-height:clamp(140px,26vh,250px);flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;padding:8px;border:3px solid #ffffffb8;border-radius:24px;background:linear-gradient(135deg,#fff9df,#e5f6ff);box-shadow:0 7px 18px #24324d20;overflow:hidden}
+.math-counting-placeholder{font-size:clamp(3rem,11vmin,6rem)}
+.math-counting-display strong{color:var(--blue);font-size:clamp(1.2rem,4vw,1.8rem)}
+.math-counting-digit{position:relative;z-index:1;color:var(--accent);font-size:clamp(4.5rem,23vmin,11rem);font-weight:1000;line-height:.95;letter-spacing:-.06em}
+.math-counting-display.is-number{border-color:#ffffff;background:radial-gradient(circle at 50% 44%,#ffffff 0 24%,#fff8d5 55%,#dff6ff 100%);box-shadow:0 0 0 5px #ffcc4d70,0 12px 26px #24324d24}
+.math-counting-display.is-number::before,.math-counting-display.is-number::after{position:absolute;z-index:0;font-size:clamp(1.4rem,5vmin,3rem);opacity:.8;animation:counting-sparkle 1.8s ease-in-out infinite alternate}
+.math-counting-display.is-number::before{content:"✨";top:12%;left:12%;transform:rotate(-15deg)}
+.math-counting-display.is-number::after{content:"⭐";right:12%;bottom:12%;animation-delay:.5s}
+.math-counting-name{color:var(--blue);font-size:clamp(1.3rem,4.5vmin,2.2rem);font-weight:900;text-transform:capitalize}
+.math-counting-roman{color:#7843a2;font-family:Georgia,"Times New Roman",serif;font-size:clamp(2rem,8vmin,4.4rem);font-weight:900;letter-spacing:.06em}
+.math-counting-icons{width:min(100%,680px);max-height:9vh;display:flex;flex-wrap:wrap;align-content:center;justify-content:center;gap:1px 3px;overflow:auto;font-size:clamp(.9rem,3vmin,1.5rem);line-height:1}
+.math-counting-cap{color:var(--blue);font-size:clamp(.78rem,2.5vw,1rem);font-weight:700}
+.math-counting-keyboard{width:min(100%,680px);display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:clamp(5px,1.4vw,10px)}
+.math-counting-key{min-width:0;min-height:clamp(42px,7vh,60px);padding:5px;border:2px solid #ffffffc9;border-radius:16px;background:#138b8b;box-shadow:0 4px 0 #00000020;font-size:clamp(1rem,4vw,1.5rem);font-weight:900}
+.math-counting-key:nth-child(5n+2){background:#4d60be}.math-counting-key:nth-child(5n+3){background:#bd7414}.math-counting-key:nth-child(5n+4){background:#99468a}.math-counting-key:nth-child(5n){background:#18865b}
+.math-counting-key[aria-pressed="true"]{outline:4px solid #ffad42;outline-offset:1px;transform:scale(.96)}
+.math-counting-key:focus-visible,.math-counting-page-button:focus-visible,.math-counting-hear:focus-visible{outline:4px solid #ffad42;outline-offset:2px}
+.math-counting-display.has-number .math-counting-digit,.math-counting-display.has-number .math-counting-name,.math-counting-display.has-number .math-counting-roman{animation:counting-result-arrive .55s cubic-bezier(.2,.85,.25,1.25) both}
+.math-counting-display.is-number .math-counting-digit{background:linear-gradient(145deg,#f43f8b 5%,#ff8d32 42%,#6954d9 78%,#12a5c2);background-clip:text;-webkit-background-clip:text;color:transparent;-webkit-text-stroke:1px #ffffff;filter:drop-shadow(0 5px 0 #623ca438) drop-shadow(0 9px 8px #442a3330)}
+@keyframes counting-result-arrive{0%{opacity:0;transform:translateY(24px) scale(.55) rotate(-8deg)}72%{opacity:1;transform:translateY(-4px) scale(1.06) rotate(2deg)}100%{opacity:1;transform:translateY(0) scale(1) rotate(0)}}
+@keyframes counting-sparkle{from{opacity:.45;scale:.8;rotate:-10deg}to{opacity:1;scale:1.15;rotate:10deg}}
 .math-mode-intro{max-width:600px;margin:0;color:var(--blue);font-size:clamp(1rem,3vw,1.25rem);font-weight:700}
 .math-mode-options .choice-card{min-height:clamp(145px,24vh,190px)}
 .math-learning-card{background:#18865b}.math-questions-card{background:#4d60be}
@@ -128,7 +159,9 @@ header b{flex:1;color:var(--blue);font-size:1.3rem}header button{font-size:.95re
 @media (max-height:560px){#app header{flex-wrap:nowrap;gap:3px;padding:2px 6px}#app header b{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:.9rem}#app header button{flex:0 0 auto;padding:5px 6px;font-size:.68rem;white-space:nowrap}#pad{max-height:21vh;gap:3px;padding:4px 6px}#pad button{min-width:32px;padding:5px 0;font-size:1rem}#stage.language-lesson-stage{gap:2px;padding:4px}#stage.language-lesson-stage .L{font-size:clamp(1.6rem,7vmin,3.2rem)}#stage.language-lesson-stage .E{font-size:clamp(2.4rem,13vmin,5rem)}#stage.language-lesson-stage .W{font-size:clamp(1.1rem,4vmin,1.8rem)}#stage.language-lesson-stage .pronunciation,#stage.language-lesson-stage .meaning{font-size:clamp(.75rem,2.8vmin,1.1rem)}}
 @media (max-height:650px){#language{gap:8px;padding:8px}#language .big{font-size:min(18vmin,88px)}.languages{gap:8px}.languages .choice-card{min-height:100px}.choice-icon{font-size:2.5rem}}
 @media (prefers-reduced-motion:reduce){#splash{transition:none}.splash-logo,.splash-title,.splash-tagline,.splash-sparkle{animation:none}.choice-card{transition:none}}
-@media (max-width:480px){.addition-screen{padding:8px;gap:8px}.addition-header{justify-content:center}.addition-header h1{order:-1;flex-basis:100%}.addition-board{gap:4px;padding:8px 4px}.addition-group{padding:5px 2px}.addition-answer{min-width:66px;min-height:60px}.math-mode-options{width:min(92vw,420px);grid-template-columns:1fr}.math-mode-options .choice-card{min-height:112px;flex-direction:row}}
+@media (prefers-reduced-motion:reduce){.math-counting-display.has-number .math-counting-digit,.math-counting-display.has-number .math-counting-name,.math-counting-display.has-number .math-counting-roman,.math-counting-display.is-number::before,.math-counting-display.is-number::after{animation:none}}
+@media (max-width:480px){.addition-screen{padding:8px;gap:8px}.addition-header{justify-content:center}.addition-header h1{order:-1;flex-basis:100%}.addition-board{gap:4px;padding:8px 4px}.addition-group{padding:5px 2px}.addition-answer{min-width:66px;min-height:60px}.math-mode-options{width:min(92vw,420px);grid-template-columns:1fr}.math-mode-options .choice-card{min-height:112px;flex-direction:row}.math-counting-screen{gap:6px;padding-right:8px;padding-left:8px}.math-counting-header{gap:4px}.math-counting-header .math-back{padding:7px 9px;font-size:.82rem}.math-counting-hear{padding:7px;font-size:.78rem}.math-counting-pager{gap:4px}.math-counting-page-button{padding:6px 4px}.math-counting-keyboard{gap:5px}.math-counting-key{border-radius:12px}}
+@media (max-height:650px){.math-counting-screen{gap:5px}.math-counting-display{min-height:100px}.math-counting-icons{max-height:7vh}.math-counting-key{min-height:38px}}
 @media (max-height:700px){.addition-screen{gap:6px}.addition-board{padding:8px}.addition-icons{min-height:48px}}
 @media (max-width:380px){.addition-level-options{gap:6px}.addition-level-card{min-height:66px}.addition-pickers{gap:6px}.addition-picker{padding:6px 3px}.addition-picker select{min-height:42px}.addition-board{gap:2px}.addition-group{padding:4px 1px}.addition-total{flex-basis:54px;min-height:64px}.addition-icons{font-size:.9rem}}
 .mute-toggle{position:fixed;z-index:1000;top:calc(env(safe-area-inset-top,0px) + 8px);right:10px;min-height:42px;padding:8px 12px;border:2px solid #ffffffb8;border-radius:20px;background:#1f4e9c;box-shadow:0 3px 8px #00000024;font-size:.95rem}
