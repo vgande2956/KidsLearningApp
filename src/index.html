@@ -116,4 +116,21 @@
 <header><b id="hi"></b><button id="again" style="background:#2e9e5b">🔊 Again</button><button id="chg" style="background:#ff9800">Change Name</button><button id="lang" style="background:#5c6bc0">Change Language</button></header>
 <div id="stage"></div><div id="st"></div><div id="pad"></div>
 </section>
+<dialog id="voice-setup-dialog" class="voice-setup-dialog" aria-labelledby="voice-setup-title">
+<h2 id="voice-setup-title">Set up speech voices?</h2>
+<p id="voice-setup-missing"></p>
+<p>Voice availability differs by device and browser. This app cannot install voice packs itself, but it can show you where to check your device settings.</p>
+<div class="voice-setup-actions" id="voice-setup-choice">
+<button type="button" id="voice-setup-show">Show setup instructions</button>
+<button type="button" id="voice-setup-skip">Continue with available voices</button>
+</div>
+<section id="voice-setup-help" hidden>
+<p id="voice-setup-instructions"></p>
+<p>After installing voices, return here and check again. Your browser may need to be restarted before they appear.</p>
+<div class="voice-setup-actions">
+<button type="button" id="voice-setup-recheck">Check voices again</button>
+<button type="button" id="voice-setup-close">Continue</button>
+</div>
+</section>
+</dialog>
 <script src="app.js" defer></script></body></html>

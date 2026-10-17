@@ -33,7 +33,13 @@ const C=[["apple","apples","🍎"],["dog","dogs","🐶"],["star","stars","⭐"],
 const $=id=>document.getElementById(id);let kid="",selectedLanguage="",last=[],cur={},additionRound=null,additionMode="learn",additionFirst=5,additionSecond=1,previousAdditionObject=null;
 try{kid=sessionStorage.getItem("kid")||"";selectedLanguage=sessionStorage.getItem("learningLanguage")||""}catch(e){}
 function pick(language="en-IN",fallback=true){const voices=speechSynthesis.getVoices(),matching=voices.filter(x=>x.lang.toLowerCase().startsWith(language.slice(0,2).toLowerCase()));return matching.find(x=>language==="en-IN"?/Heera/i.test(x.name)&&/India|en-IN/i.test(x.name+" "+x.lang):/Samantha|Zira|Aria|Google US|Karen|Female/i.test(x.name))||matching.find(x=>language==="en-IN"?/India|en-IN/i.test(x.name+" "+x.lang):false)||matching[0]||(fallback?voices.find(x=>/^en/i.test(x.lang))||voices[0]:null)}
-try{speechSynthesis.onvoiceschanged=()=>pick();pick()}catch(e){}
+let voiceSetupPromptShown=false,voiceSetupTimer=0,voiceSetupAttempts=0;
+function missingSpeechLocales(voices=[]){const locales=[["te-IN","Telugu (India)"],["hi-IN","Hindi (India)"],["en-IN","English (India)"]];return locales.filter(([locale])=>!voices.some(voice=>{const voiceLocale=voice.lang.toLowerCase().replace("_","-");return voiceLocale===locale.toLowerCase()||(locale!=="en-IN"&&voiceLocale===locale.slice(0,2).toLowerCase())})).map(([,label])=>label)}
+function voiceSetupInstructions(){const agent=navigator.userAgent;if(/iPhone|iPad|iPod/i.test(agent)||(/Macintosh/i.test(agent)&&navigator.maxTouchPoints>1))return"On iPhone or iPad, open Settings → Accessibility → Spoken Content → Voices. Look for Telugu, Hindi, or English (India) and download a voice if it is listed. Available voices depend on your iOS version and region.";if(/Android/i.test(agent))return"On Android, open Settings → Accessibility → Text-to-speech output. Open the selected speech engine’s settings, choose Install voice data, and download Telugu, Hindi, or English (India) if offered.";if(/Windows/i.test(agent))return"On Windows, open Settings → Time & language → Language & region. Add Telugu or Hindi if needed, then open that language’s options and install Speech. In Settings → Time & language → Speech, check the available voices and add English (India) if offered.";return"Open your device’s Accessibility or Text-to-speech settings. Find the speech engine’s voice or language-data options and download Telugu, Hindi, or English (India) if your device offers them."}
+function closeVoiceSetup(){const dialog=$("voice-setup-dialog");if(typeof dialog.close==="function"&&dialog.open)dialog.close();else dialog.removeAttribute("open");voiceSetupPromptShown=true;sayLanguageOptions()}
+function checkSpeechVoices(){if(voiceSetupPromptShown||$("language").hidden)return;const voices=typeof speechSynthesis==="undefined"?[]:speechSynthesis.getVoices();if(!voices.length&&voiceSetupAttempts<4){voiceSetupAttempts++;voiceSetupTimer=window.setTimeout(checkSpeechVoices,500);return}const missing=missingSpeechLocales(voices);if(!missing.length){voiceSetupPromptShown=true;sayLanguageOptions();return}voiceSetupPromptShown=true;$("voice-setup-missing").textContent=`Not detected: ${missing.join(", ")}.`;const dialog=$("voice-setup-dialog");if(typeof dialog.showModal==="function")dialog.showModal();else dialog.setAttribute("open","")}
+function scheduleSpeechVoiceCheck(){window.clearTimeout(voiceSetupTimer);voiceSetupAttempts=0;voiceSetupTimer=window.setTimeout(checkSpeechVoices,350)}
+try{speechSynthesis.onvoiceschanged=()=>{pick();if(!$("language").hidden)scheduleSpeechVoiceCheck()};pick()}catch(e){}
 const refs=[];let ac,activeBeep,speechGeneration=0,muted=false,englishWordType="",englishLetter="";
 const ADDITION_OBJECTS=[["🍎","apple","apples"],["🍌","banana","bananas"],["⭐","star","stars"],["🐞","ladybug","ladybugs"],["🐟","fish","fish"],["🦋","butterfly","butterflies"],["🍓","strawberry","strawberries"],["🐥","duckling","ducklings"],["🎈","balloon","balloons"],["🍪","cookie","cookies"],["🍊","orange","oranges"],["🥕","carrot","carrots"]];
 let additionLevel=1,mathTopic="Addition";const mathLevelPages={Addition:0,Subtraction:0,Multiplication:0,Division:0};
@@ -104,7 +110,7 @@ function show(){if(selectedLanguage==="Telugu"){showTelugu();return}if(selectedL
  $("stage").innerHTML='<div class="L">A B C &nbsp;1 2 3</div><div class="W">Tap a letter or number!</div>';renderPad();say(["Hello "+kid+"!","Tap any letter or number."])}
 function hideScreens(){["splash","language","name","app","english-types","english-lesson","math-menu","addition-level-screen","addition-screen"].forEach(id=>$(id).hidden=true)}
 function sayLanguageOptions(){say(["Select an option to start having fun learning.","English.","Telugu.","Hindi.","Maths."])}
-function showLanguage(){hideScreens();$("language").hidden=false;sayLanguageOptions()}
+function showLanguage(){hideScreens();$("language").hidden=false;if(voiceSetupPromptShown)sayLanguageOptions();else scheduleSpeechVoiceCheck()}
 function showName(){hideScreens();$("name").hidden=false;$("msg").textContent=""}
 function setMuted(value){muted=value;$("mute-toggle").textContent=muted?"🔇 Sound off":"🔊 Sound on";$("mute-toggle").setAttribute("aria-label",muted?"Turn sound on":"Mute sound");$("mute-toggle").setAttribute("aria-pressed",String(muted));if(muted){stopSpeech();if(activeBeep){activeBeep.stop();activeBeep=null}$("st").textContent="Sound is muted.";$("addition-status").textContent="Sound is muted."}}
 function showMathMenu(){hideScreens();$("math-menu").hidden=false}
@@ -163,6 +169,11 @@ document.querySelectorAll("[data-language]").forEach(b=>b.onclick=chooseLanguage
 document.querySelectorAll("[data-math-topic]").forEach(b=>b.onclick=showMathTopic);
 $("listen-options").onclick=sayLanguageOptions;
 $("mute-toggle").onclick=()=>setMuted(!muted);
+$("voice-setup-show").onclick=()=>{$("voice-setup-instructions").textContent=voiceSetupInstructions();$("voice-setup-choice").hidden=true;$("voice-setup-help").hidden=false};
+$("voice-setup-skip").onclick=closeVoiceSetup;
+$("voice-setup-close").onclick=closeVoiceSetup;
+$("voice-setup-recheck").onclick=()=>{const missing=missingSpeechLocales(typeof speechSynthesis==="undefined"?[]:speechSynthesis.getVoices());if(missing.length){$("voice-setup-missing").textContent=`Still not detected: ${missing.join(", ")}.`;return}closeVoiceSetup()};
+$("voice-setup-dialog").addEventListener("cancel",()=>{voiceSetupPromptShown=true});
 $("english-types-back").onclick=()=>{stopSpeech();showLanguage()};
 document.querySelectorAll("[data-english-type]").forEach(button=>button.onclick=()=>showEnglishLesson(button.dataset.englishType));
 $("english-lesson-back").onclick=()=>{stopSpeech();showEnglishTypes()};
