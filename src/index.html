@@ -11,6 +11,7 @@
 <link rel="icon" href="icon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="stylesheet" href="styles.css"></head><body>
+<button id="mute-toggle" class="mute-toggle" type="button" hidden aria-label="Mute sound" aria-pressed="false">🔊 Sound on</button>
 <section id="splash" aria-label="Kids Learning Fun">
 <div class="splash-sparkle" aria-hidden="true">✨</div>
 <img class="splash-logo" src="icon.svg" alt="">
@@ -26,6 +27,30 @@
 <button class="choice-card hindi-card" type="button" data-language="Hindi"><span class="choice-icon" aria-hidden="true">🪷</span><span class="choice-label">हिन्दी <small>Hindi</small></span></button>
 <button class="choice-card maths-card" type="button" id="math-entry"><span class="choice-icon" aria-hidden="true">🧮</span><span class="choice-label">Maths</span></button>
 </div>
+</section>
+<section id="english-types" class="english-screen" hidden aria-labelledby="english-types-title">
+<div class="big" aria-hidden="true">📚</div>
+<h1 id="english-types-title">Choose a word length</h1>
+<p>Pick the kind of words you want to learn!</p>
+<div class="english-type-options" role="group" aria-label="Choose an English word length">
+<button class="choice-card english-type-card english-two-card" type="button" data-english-type="two"><span class="choice-icon" aria-hidden="true">🐝</span><span class="choice-label">2-letter words<small>am, in, to</small></span></button>
+<button class="choice-card english-type-card english-three-card" type="button" data-english-type="three"><span class="choice-icon" aria-hidden="true">🐈</span><span class="choice-label">3-letter words<small>cat, sun, dog</small></span></button>
+<button class="choice-card english-type-card english-multi-card" type="button" data-english-type="multi"><span class="choice-icon" aria-hidden="true">🦋</span><span class="choice-label">Multi-letter words<small>butterfly, rainbow</small></span></button>
+</div>
+<button class="english-back" type="button" id="english-types-back">← Choose a language</button>
+</section>
+<section id="english-lesson" class="english-screen english-lesson" hidden aria-labelledby="english-lesson-title">
+<header class="english-header">
+<button class="english-back" type="button" id="english-lesson-back">← Word lengths</button>
+<h1 id="english-lesson-title">English words</h1>
+<button class="english-hear" type="button" id="english-hear-letter">🔊 Hear letter</button>
+</header>
+<p id="english-lesson-intro">Choose a letter to see its words.</p>
+<div class="english-alphabet" id="english-alphabet" role="group" aria-label="Choose a letter"></div>
+<section class="english-word-content" id="english-word-content" aria-live="polite">
+<h2 id="english-selected-letter">Choose a letter</h2>
+<div class="english-word-list" id="english-word-list"></div>
+</section>
 </section>
 <section id="math-menu" class="math-screen" hidden>
 <div class="big" aria-hidden="true">🧮</div>
