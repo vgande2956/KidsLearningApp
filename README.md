@@ -8,20 +8,21 @@ available, it asks whether you want to view device-specific setup instructions;
 the web app cannot install system voices itself. Choose English, Telugu, or Hindi,
 then enter a name to begin.
 The Maths option opens Addition, Subtraction, Multiplication, and Division. Each
-operation has a separate level picker with ten selectable levels (Level 1: 1–10,
-Level 2: 11–20, continuing through Level 10: 91–100), followed by a spoken, visual
-lesson and practice questions. Use Previous/Next to browse any number of ten-level
-batches without completion locks; each new batch continues the number ranges by 100.
-The level heading is spoken once when the picker opens. Lessons speak the selected
-numbers and result when a number is chosen and when a practice answer is correct.
+operation offers separate Learning and Questionaries choices. Learning starts with
+a beginner-friendly example and lets children choose numbers to see object counts
+animate into the result, with spoken explanations. Questionaries opens a level
+picker with ten selectable levels (Level 1: 1–10, Level 2: 11–20, continuing
+through Level 10: 91–100), then starts the visual quiz immediately. Use
+Previous/Next to browse any number of ten-level batches without completion locks;
+each new batch continues the number ranges by 100. The level heading is spoken
+once when the picker opens. Questions speak the prompt and explain the answer.
 Addition and subtraction show objects being combined
 or taken away; multiplication shows equal groups; division practices equal sharing
-with exact answers. The selected range controls the first addend, starting amount,
-number of groups, or objects in each share respectively; multiplication uses 1–10
-objects per group, while division uses 2–10 groups. Object illustrations are capped
-for readability at large number levels, with the exact count still displayed.
-Each activity includes number selectors, spoken guidance, multiple-choice questions,
-and feedback.
+with exact answers. The selected level controls question ranges; multiplication
+uses 1–10 objects per group, while division uses 1–10 groups. Object illustrations
+are capped for readability at large number levels, with the exact count still
+displayed. Learning activities include number selectors and spoken guidance;
+questionaries include multiple-choice answers and feedback.
 The language-selection screen reads its heading and available options aloud; use
 “Hear options” to replay the voice guidance.
 English opens a menu for Alphabets, Identify Words, and two-letter, three-letter,
