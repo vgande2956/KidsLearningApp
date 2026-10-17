@@ -109,6 +109,14 @@ header b{flex:1;color:var(--blue);font-size:1.3rem}header button{font-size:.95re
 #pad{display:flex;flex-wrap:wrap;gap:5px;justify-content:center;padding:8px 8px 6px;max-height:34vh;overflow-y:auto}
 #pad button{background:var(--key);color:var(--ink);width:11.5%;min-width:38px;padding:8px 0;font-size:1.15rem;border:2px solid var(--blue)}
 #st{font-size:.8rem;text-align:center;opacity:.85;min-height:1.2em;padding:2px 10px}
+#stage.language-lesson-stage{gap:clamp(2px,1vh,8px);padding:8px;justify-content:center}
+#stage.language-lesson-stage .L{flex:0 0 auto;max-width:100%;font-size:clamp(2rem,9vmin,4.5rem);line-height:1.12}
+#stage.language-lesson-stage .E{flex:0 0 auto;font-size:clamp(2.8rem,17vmin,9rem);line-height:1}
+#stage.language-lesson-stage .W{flex:0 0 auto;max-width:100%;font-size:clamp(1.25rem,5vmin,2.6rem);line-height:1.2;overflow-wrap:anywhere}
+#stage.language-lesson-stage .pronunciation{flex:0 0 auto;max-width:100%;font-size:clamp(.85rem,3.2vmin,1.35rem);line-height:1.2;overflow-wrap:anywhere}
+#stage.language-lesson-stage .meaning{flex:0 0 auto;max-width:100%;font-size:clamp(.9rem,3.4vmin,1.5rem);line-height:1.2;overflow-wrap:anywhere}
+#stage.language-lesson-stage .word-count{flex:0 0 auto;font-size:clamp(.75rem,2.4vmin,1rem);line-height:1.1}
+@media (max-height:560px){#app header{flex-wrap:nowrap;gap:3px;padding:2px 6px}#app header b{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:.9rem}#app header button{flex:0 0 auto;padding:5px 6px;font-size:.68rem;white-space:nowrap}#pad{max-height:21vh;gap:3px;padding:4px 6px}#pad button{min-width:32px;padding:5px 0;font-size:1rem}#stage.language-lesson-stage{gap:2px;padding:4px}#stage.language-lesson-stage .L{font-size:clamp(1.6rem,7vmin,3.2rem)}#stage.language-lesson-stage .E{font-size:clamp(2.4rem,13vmin,5rem)}#stage.language-lesson-stage .W{font-size:clamp(1.1rem,4vmin,1.8rem)}#stage.language-lesson-stage .pronunciation,#stage.language-lesson-stage .meaning{font-size:clamp(.75rem,2.8vmin,1.1rem)}}
 @media (max-height:650px){#language{gap:8px;padding:8px}#language .big{font-size:min(18vmin,88px)}.languages{gap:8px}.languages .choice-card{min-height:100px}.choice-icon{font-size:2.5rem}}
 @media (prefers-reduced-motion:reduce){#splash{transition:none}.splash-logo,.splash-title,.splash-tagline,.splash-sparkle{animation:none}.choice-card{transition:none}}
 @media (max-width:480px){.addition-screen{padding:8px;gap:8px}.addition-header{justify-content:center}.addition-header h1{order:-1;flex-basis:100%}.addition-board{gap:4px;padding:8px 4px}.addition-group{padding:5px 2px}.addition-answer{min-width:66px;min-height:60px}}
