@@ -90,11 +90,21 @@ function number(n){const c=C[Math.floor(Math.random()*C.length)],nm=n==1?c[0]:c[
 function show(){if(selectedLanguage==="Telugu"){showTelugu();return}if(selectedLanguage==="Hindi"){showHindi();return}
  $("language").hidden=true;$("name").hidden=true;$("app").hidden=false;$("hi").textContent="Hello, "+kid+"!";
  $("stage").innerHTML='<div class="L">A B C &nbsp;1 2 3</div><div class="W">Tap a letter or number!</div>';renderPad();say(["Hello "+kid+"!","Tap any letter or number."])}
-function showLanguage(){$("language").hidden=false;$("name").hidden=true;$("app").hidden=true}
-function showName(){$("language").hidden=true;$("name").hidden=false;$("app").hidden=true;$("msg").textContent=""}
+function hideScreens(){["splash","language","name","app","math-menu","math-topic"].forEach(id=>$(id).hidden=true)}
+function sayLanguageOptions(){say(["Select an option to start having fun learning.","English.","Telugu.","Hindi.","Maths."])}
+function showLanguage(){hideScreens();$("language").hidden=false;sayLanguageOptions()}
+function showName(){hideScreens();$("name").hidden=false;$("msg").textContent=""}
+function showMathMenu(){hideScreens();$("math-menu").hidden=false}
+function showMathTopic(event){hideScreens();$("math-topic-title").textContent=event.currentTarget.dataset.mathTopic;$("math-topic").hidden=false}
 function startSplash(){window.setTimeout(()=>{$("splash").classList.add("is-leaving");window.setTimeout(()=>{$("splash").hidden=true;showLanguage()},450)},1900)}
 function chooseLanguage(event){selectedLanguage=event.currentTarget.dataset.language;kid="";try{sessionStorage.setItem("learningLanguage",selectedLanguage);sessionStorage.removeItem("kid")}catch(e){}showName();$("nm").focus()}
 document.querySelectorAll("[data-language]").forEach(b=>b.onclick=chooseLanguage);
+document.querySelectorAll("[data-math-topic]").forEach(b=>b.onclick=showMathTopic);
+$("listen-options").onclick=sayLanguageOptions;
+$("math-entry").onclick=showMathMenu;
+$("math-language-back").onclick=showLanguage;
+$("math-options-back").onclick=showMathMenu;
+$("math-topic-language-back").onclick=showLanguage;
 function go(){const v=$("nm").value.trim();if(!v){$("msg").textContent="Please type your name first";return}
  kid=v.charAt(0).toUpperCase()+v.slice(1);try{sessionStorage.setItem("kid",kid)}catch(e){}show()}
 $("start").onclick=go;$("nm").onkeydown=e=>{if(e.key==="Enter")go()};
