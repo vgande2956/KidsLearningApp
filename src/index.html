@@ -11,13 +11,39 @@
 <link rel="icon" href="icon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="stylesheet" href="styles.css"></head><body>
-<section id="language">
-<div class="big">🌈</div><h1>Choose a language</h1>
+<section id="splash" aria-label="Kids Learning Fun">
+<div class="splash-sparkle" aria-hidden="true">✨</div>
+<img class="splash-logo" src="icon.svg" alt="">
+<h1 class="splash-title">Kids Learning Fun</h1>
+<p class="splash-tagline">Big adventures start with little words!</p>
+</section>
+<section id="language" hidden>
+<div class="big">🌈</div><h1>Select an option to start having fun learning!</h1>
+<button class="listen-options" id="listen-options" type="button" aria-label="Hear the available learning options">🔊 Hear options</button>
 <div class="languages" role="group" aria-label="Choose a learning language">
-<button class="go" type="button" data-language="English">English</button>
-<button class="go" type="button" data-language="Telugu">తెలుగు (Telugu)</button>
-<button class="go" type="button" data-language="Hindi">हिन्दी (Hindi)</button>
+<button class="choice-card english-card" type="button" data-language="English"><span class="choice-icon" aria-hidden="true">🔤</span><span class="choice-label">English</span></button>
+<button class="choice-card telugu-card" type="button" data-language="Telugu"><span class="choice-icon" aria-hidden="true">🌼</span><span class="choice-label">తెలుగు <small>Telugu</small></span></button>
+<button class="choice-card hindi-card" type="button" data-language="Hindi"><span class="choice-icon" aria-hidden="true">🪷</span><span class="choice-label">हिन्दी <small>Hindi</small></span></button>
+<button class="choice-card maths-card" type="button" id="math-entry"><span class="choice-icon" aria-hidden="true">🧮</span><span class="choice-label">Maths</span></button>
 </div>
+</section>
+<section id="math-menu" class="math-screen" hidden>
+<div class="big" aria-hidden="true">🧮</div>
+<h1>Choose your option to start learning Mathematics</h1>
+<div class="math-options" role="group" aria-label="Choose a Maths topic">
+<button class="choice-card addition-card" type="button" data-math-topic="Addition"><span class="choice-icon" aria-hidden="true">➕</span><span class="choice-label">Addition</span></button>
+<button class="choice-card multiplication-card" type="button" data-math-topic="Multiplication"><span class="choice-icon" aria-hidden="true">✖️</span><span class="choice-label">Multiplication</span></button>
+<button class="choice-card subtraction-card" type="button" data-math-topic="Subtraction"><span class="choice-icon" aria-hidden="true">➖</span><span class="choice-label">Subtraction</span></button>
+<button class="choice-card division-card" type="button" data-math-topic="Division"><span class="choice-icon" aria-hidden="true">➗</span><span class="choice-label">Division</span></button>
+</div>
+<button class="math-back" type="button" id="math-language-back">← Choose a language</button>
+</section>
+<section id="math-topic" class="math-screen" hidden aria-live="polite">
+<div class="big" aria-hidden="true">🚧</div>
+<h1 id="math-topic-title"></h1>
+<p class="math-coming-message">We are working on it now. We’ll get back to you soon!</p>
+<button class="go" type="button" id="math-options-back">← Back to Maths options</button>
+<button class="math-back" type="button" id="math-topic-language-back">Choose a language</button>
 </section>
 <section id="name" hidden>
 <div class="big">🌈</div><h1>Welcome!</h1><div style="font-size:1.5rem">Enter your name</div>

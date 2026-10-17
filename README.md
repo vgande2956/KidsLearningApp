@@ -1,11 +1,17 @@
 # KidsLearningApp
 
-Choose English, Telugu, or Hindi on the start screen, then enter a name to begin.
+On launch, an animated Kids Learning Fun logo introduces the app before the
+language-selection screen. Choose English, Telugu, or Hindi, then enter a name to begin.
+The Maths option opens Addition, Multiplication, Subtraction, and Division topic screens;
+each currently displays a coming-soon message.
+The language-selection screen reads its heading and available options aloud; use
+“Hear options” to replay the voice guidance.
 English opens the English letters-and-numbers lessons. Hindi opens an independent Hindi
 Devanagari lesson with 46 characters, 20 words per character, emoji illustrations, and
 Hindi speech. Telugu opens a Telugu letter lesson with Telugu words, emoji illustrations,
 English meanings, and speech. The Hindi and Telugu lessons speak the letter sound followed
-by the example word (for example, “Aa… Aam” or “Ka… Kalam”) and show the pronunciation.
+by the example word (for example, “Aa… Aam” or “Ka… Kalam”) at a slower pace, and show
+the pronunciation.
 Submitting a learner's name also plays a spoken welcome in the selected lesson language.
 If the device has no Telugu speech voice, it speaks the letter sound and the word's
 transliteration using an Indian English voice. Repeated taps cycle through
