@@ -132,6 +132,7 @@
 <div class="math-options math-mode-options" role="group" aria-label="Choose learning or questions">
 <button class="choice-card math-learning-card" type="button" id="math-learning-entry"><span class="choice-icon" aria-hidden="true">📘</span><span class="choice-label">Learning<small>Learn with pictures</small></span></button>
 <button class="choice-card math-questions-card" type="button" id="math-questions-entry"><span class="choice-icon" aria-hidden="true">📝</span><span class="choice-label">Questionaries<small>Practice with questions</small></span></button>
+<button class="choice-card math-story-card" type="button" id="math-story-entry"><span class="choice-icon" aria-hidden="true">📖</span><span class="choice-label">Story Questions<small>Detailed word problems, level by level</small></span></button>
 </div>
 </section>
 <section id="addition-level-screen" class="addition-level-screen" hidden aria-labelledby="addition-level-title">
@@ -176,6 +177,35 @@
 <button class="addition-next" id="addition-next" type="button" hidden>Next question ➜</button>
 <button class="addition-builder-back" id="addition-builder-back" type="button" hidden>← Back</button>
 </div>
+</section>
+<section id="math-story-levels" class="english-screen english-identify-levels math-story-levels" hidden aria-labelledby="math-story-levels-title">
+<header class="english-header">
+<button class="english-back" type="button" id="math-story-levels-back">← Back</button>
+<h1 id="math-story-levels-title">Story Questions</h1>
+<button class="english-hear" type="button" id="math-story-levels-hear">🔊 Hear levels</button>
+</header>
+<p id="math-story-levels-intro">Answer 10 story questions to unlock the next level!</p>
+<nav class="addition-level-pager" aria-label="Story question level pages">
+<button class="addition-level-page-button" type="button" id="math-story-previous">← Previous 10</button>
+<span id="math-story-page-label" aria-live="polite"></span>
+<button class="addition-level-page-button" type="button" id="math-story-next-page">Next 10 ➜</button>
+</nav>
+<div class="english-identify-level-grid" id="math-story-level-grid" role="group" aria-label="Choose a story question level"></div>
+<p class="english-identify-progress" id="math-story-level-feedback" aria-live="polite"></p>
+</section>
+<section id="math-story-quiz" class="english-screen english-identify-quiz math-story-quiz" hidden aria-labelledby="math-story-title">
+<header class="english-header">
+<button class="english-back" type="button" id="math-story-quit">← Back</button>
+<h1 id="math-story-title">Story Questions</h1>
+<button class="english-hear" type="button" id="math-story-hear">🔊 Hear question</button>
+</header>
+<p class="english-identify-counter" id="math-story-counter"></p>
+<div class="math-story-progress" aria-hidden="true"><span id="math-story-progress-bar"></span></div>
+<div class="math-story-picture" id="math-story-picture" aria-hidden="true"></div>
+<p class="math-story-question" id="math-story-question"></p>
+<div class="english-identify-options math-story-options" id="math-story-options" role="group" aria-label="Choose the answer"></div>
+<p class="english-identify-feedback" id="math-story-feedback" aria-live="polite">Choose the correct answer!</p>
+<button class="english-identify-next" id="math-story-next" type="button" disabled>Next question ➜</button>
 </section>
 <section id="name" hidden>
 <button class="name-back" id="name-back" type="button">← Back</button>
