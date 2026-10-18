@@ -39,13 +39,18 @@ selected number is large, colorful, and animated; Roman Numbers show the Arabic
 value and its Roman numeral. Both options speak the selected value.
 The language-selection screen reads its heading and available options aloud; use
 “Hear options” to replay the voice guidance.
-English opens a menu for Alphabets, Identify Words, and two-letter, three-letter,
+English opens a menu for Alphabets, Learn Letters: Indian Gods, Identify Words, and two-letter, three-letter,
 and multi-letter words. Identify Words has ten picture questions per level, four
 image choices per question, and unlocks the next level after each level is
 completed. Its ten-level pages continue without a fixed limit as levels unlock,
 and progress is saved on the device. Alphabets opens an interactive A–Z screen
 that animates each selected uppercase/lowercase letter with an example picture
-and spoken word. In the word lessons, choose a letter to browse matching
+and spoken word. Learn Letters: Indian Gods presents an A–Z letter picker with
+real, bundled deity images, short descriptions, and spoken guidance; image
+licenses and attributions are included in
+`src/images/indian-deities/ATTRIBUTIONS.txt`.
+Letters without a widely used English
+transliteration are clearly identified. In the word lessons, choose a letter to browse matching
 illustrated words; selecting a word speaks its pronunciation using the English
 (India) locale and an Indian English voice when available. Hindi opens an independent Hindi Devanagari lesson with
 46 characters, 20 words per character, emoji illustrations, and Hindi speech.

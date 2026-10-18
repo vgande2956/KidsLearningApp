@@ -1,0 +1,101 @@
+Indian deity images used by the "Learn Letters: Indian Gods" activity
+
+These images are bundled locally for offline use. Sources and original licenses
+are listed below. Each is a Wikimedia Commons-generated thumbnail (a resized
+version of the original linked file).
+
+Agni
+Artist: Unknown artist
+License: Public domain
+Source: https://commons.wikimedia.org/wiki/File:Agni_18th_century_miniature.jpg
+
+Brahma
+Artist: Sailko
+License: CC BY 3.0
+License URL: https://creativecommons.org/licenses/by/3.0/
+Source: https://commons.wikimedia.org/wiki/File:Brahma,_dal_soffitto_del_tempio_di_huchchappaiyya_gudi,_aihole_(balgakot),_karnataka,_VII_secolo_(cropped).jpg
+
+Chandra
+Artist: Not stated
+License: Public domain
+Source: https://commons.wikimedia.org/wiki/File:Chandra,_The_Moon_God;_Folio_from_a_Book_of_Dreams_LACMA_M.83.219.2_(2_of_3).jpg
+
+Durga
+Artist: Sri Shilpi Siddanthi Siddalinga Swami (1885-1952)
+License: Public domain
+Source: https://commons.wikimedia.org/wiki/File:Mahishasura-Mardini_Durga.jpg
+
+Ganesha
+Artist: Anonymous
+License: Public domain
+Source: https://commons.wikimedia.org/wiki/File:Ganesha_Basohli_miniature_circa_1730_Dubost_p73.jpg
+
+Hanuman
+Artist: Kaushlendrapathe
+License: CC0
+License URL: https://creativecommons.org/publicdomain/zero/1.0/
+Source: https://commons.wikimedia.org/wiki/File:Hanuman_Statue_at_Sidhheshwar_Temple,_Chhindwara,_MP.jpg
+
+Indra
+Artist: Not stated
+License: Public domain
+Source: https://commons.wikimedia.org/wiki/File:Indra,_Chief_of_the_Gods_LACMA_M.69.13.4_(1_of_5).jpg
+
+Jagannath
+Artist: no bias - קײן אומװיסנדיקע פּרעפֿערענצן - keyn umvisndike preferentsn
+License: CC BY-SA 4.0
+License URL: https://creativecommons.org/licenses/by-sa/4.0/
+Source: https://commons.wikimedia.org/wiki/File:Rath_Yatra_in_Munich_2020,_Lord_Jagannath_20200725_160839.jpg
+
+Krishna
+Artist: Miskin
+License: CC0
+License URL: https://creativecommons.org/publicdomain/zero/1.0/
+Source: https://commons.wikimedia.org/wiki/File:Krishna_Holds_Up_Mount_Govardhan_(MET_70694)_cropped.png
+
+Lakshmi
+Artist: Raja Ravi Varma
+License: Public domain
+Source: https://commons.wikimedia.org/wiki/File:Raja_Ravi_Varma,_Goddess_Lakshmi,_1896.jpg
+
+Parvati
+Artist: Unknown author
+License: Public domain
+Source: https://commons.wikimedia.org/wiki/File:Goddess_Parvati_and_her_son_Ganesha.jpg
+
+Rama
+Artist: Gita Press Gorakhpur
+License: CC0
+License URL: https://creativecommons.org/publicdomain/zero/1.0/
+Source: https://commons.wikimedia.org/wiki/File:Rama_in_Adhyatma_Ramayana.jpg
+
+Saraswati
+Artist: Raja Ravi Varma
+License: Public domain
+Source: https://commons.wikimedia.org/wiki/File:Saraswati.jpg
+
+Shiva
+Artist: Indianhilbilly
+License: CC BY-SA 3.0
+License URL: https://creativecommons.org/licenses/by-sa/3.0/
+Source: https://commons.wikimedia.org/wiki/File:Bangalore_Shiva.jpg
+
+Tripura Sundari
+Artist: Illegible signature
+License: Public domain
+Source: https://commons.wikimedia.org/wiki/File:Lalita_sm.JPG
+
+Vamana
+Artist: Raja Ravi Varma
+License: Public domain
+Source: https://commons.wikimedia.org/wiki/File:Vaman.jpg
+
+Vishnu
+Artist: Manaku of Guler
+License: Public domain
+Source: https://commons.wikimedia.org/wiki/File:Vishnu_from_Gita_Govinda.jpg
+
+Yama
+Artist: Unknown author
+License: Public domain
+Source: https://commons.wikimedia.org/wiki/File:Yama_on_buffalo.jpg
