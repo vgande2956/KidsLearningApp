@@ -261,3 +261,21 @@ header b{flex:1;color:var(--blue);font-size:1.3rem}header button{font-size:.95re
 .voice-setup-actions button:last-child{background:#5c6bc0}
 #voice-setup-missing{font-weight:800;color:var(--blue)}
 .voice-setup-dialog :focus-visible{outline:4px solid #ffad42;outline-offset:3px}
+/* Maths story questions */
+.math-mode-options .math-story-card{grid-column:1/-1;background:#bd5a14}
+.math-story-progress{width:min(100%,580px);height:10px;flex:0 0 auto;border-radius:999px;background:#ffffffb0;box-shadow:inset 0 1px 3px #00000020;overflow:hidden}
+.math-story-progress span{display:block;height:100%;width:0;border-radius:inherit;background:linear-gradient(90deg,#18865b,#4d60be);transition:width .3s ease}
+.math-story-picture{min-height:1.2em;max-width:720px;font-size:clamp(1.6rem,6vmin,2.6rem);line-height:1.15;letter-spacing:2px;word-break:break-all}
+.math-story-question{max-width:800px;margin:0;color:var(--accent);font-size:clamp(1.15rem,4.2vw,1.8rem);font-weight:900;line-height:1.3}
+.math-story-options{flex:0 1 auto;grid-template-rows:none;grid-auto-rows:minmax(64px,auto)}
+.math-story-options .english-identify-option{position:relative;min-height:72px;padding:10px 8px 10px 44px;border:4px solid #fff;border-radius:22px;background:#e4572e;color:#fff;font-size:clamp(2rem,7vmin,3rem);font-weight:900;text-shadow:0 3px 0 #00000045;box-shadow:0 7px 0 #00000030,0 10px 18px #00000020}
+.math-story-options .english-identify-option:nth-child(2){background:#1f7fd6}.math-story-options .english-identify-option:nth-child(3){background:#2e9e3f}.math-story-options .english-identify-option:nth-child(4){background:#9b3fc4}
+.math-story-options .english-identify-option::before{content:attr(data-letter);position:absolute;left:10px;top:50%;transform:translateY(-50%);display:grid;place-items:center;width:28px;height:28px;border-radius:50%;background:#fff;color:#222;font-size:1rem;text-shadow:none}
+.math-story-options .english-identify-option span{font-size:inherit;filter:none}
+.math-story-options .english-identify-option:hover:not(:disabled){transform:translateY(-3px) scale(1.03);filter:brightness(1.08)}
+.math-story-options .english-identify-option.is-wrong{background:#9e9e9e;border-color:#d32f2f;color:#fff;opacity:.75}
+.math-story-options .english-identify-option.is-correct{background:#18a558;border-color:#ffd600;box-shadow:0 0 0 6px #ffd60088,0 7px 0 #00000030;opacity:1}
+.math-story-options .english-identify-option.is-correct::after{content:"✓";position:absolute;right:12px;top:50%;transform:translateY(-50%);font-size:1.6rem}
+.math-story-options .english-identify-option:disabled:not(.is-correct){opacity:.45}
+@media (max-height:560px){.math-story-picture{font-size:1.3rem}.math-story-options{grid-auto-rows:minmax(48px,auto)}.math-story-options .english-identify-option{min-height:52px;font-size:1.7rem}}
+@media (prefers-reduced-motion:reduce){.math-story-progress span{transition:none}}
