@@ -1,8 +1,6 @@
-:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);--bg:#fff3c4;--ink:#222;--accent:#e4572e;--blue:#1f4e9c;--key:#fff;--l:88%}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1d2433;--ink:#f3f3f3;--accent:#ff8a65;--blue:#9dbdff;--key:#34405c;--l:22%}}
-:root[data-theme="dark"]{--bg:#1d2433;--ink:#f3f3f3;--accent:#ff8a65;--blue:#9dbdff;--key:#34405c;--l:22%}
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);--bg:#fff7f0;--ink:#3f4963;--accent:#a74e78;--blue:#536789;--key:#fff;--l:96%}
 *{box-sizing:border-box}[hidden]{display:none!important}html,body{height:100%;margin:0}
-body{background:var(--bg);color:var(--ink);font-family:"Comic Sans MS","Chalkboard SE",system-ui,sans-serif;overflow:hidden;-webkit-tap-highlight-color:transparent}
+body{background:var(--bg);color:var(--ink);font-family:"Trebuchet MS","Arial Rounded MT Bold","Segoe UI",sans-serif;overflow:hidden;-webkit-tap-highlight-color:transparent}
 #app,#name,#language,#splash,#math-menu{height:100%;display:flex;flex-direction:column}
 #splash{align-items:center;justify-content:center;gap:16px;text-align:center;padding:24px;transition:opacity .45s ease,transform .45s ease}
 #splash.is-leaving{opacity:0;transform:scale(.96);pointer-events:none}
@@ -90,15 +88,23 @@ body{background:var(--bg);color:var(--ink);font-family:"Comic Sans MS","Chalkboa
 .addition-intro{margin:0;color:var(--blue);font-size:clamp(1.1rem,3.5vw,1.5rem);font-weight:700}
 .addition-status{min-height:1em;margin:0;font-size:.8rem;opacity:.8}
 .addition-builder{width:min(100%,850px)}
-.addition-pickers{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
-.addition-picker{display:flex;flex-direction:column;align-items:center;gap:7px;padding:10px;border:2px solid #ffffffc4;border-radius:20px;background:#fff9df;box-shadow:0 4px 12px #24324d14;color:var(--blue);font-size:clamp(1rem,3vw,1.25rem);font-weight:800}
-.addition-picker select{width:min(100%,220px);min-height:48px;padding:6px 12px;border:3px solid #7485dd;border-radius:14px;background:#fff;color:#222;font:inherit;font-size:1.3rem;text-align:center}
-.addition-picker:nth-child(2) select{border-color:#e35b80}
-.addition-picker select:focus-visible{outline:4px solid #ffad42;outline-offset:2px}
+.addition-picker{width:min(100%,850px);display:flex;flex-direction:column;align-items:center;gap:8px;padding:10px;border:2px solid #ffffffc4;border-radius:20px;background:#fff9df;box-shadow:0 4px 12px #24324d14;color:var(--blue);font-size:clamp(1rem,3vw,1.25rem);font-weight:800}
+.addition-picker-title{margin:0;color:var(--blue);font-size:clamp(1.15rem,4vw,1.65rem)}
+.addition-number-pager{width:100%;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:8px;color:var(--blue);font-size:clamp(.75rem,2.7vw,1rem);font-weight:800}
+.addition-number-page-button{min-height:42px;padding:7px 9px;background:#1f4e9c;font-size:clamp(.75rem,2.7vw,.95rem)}
+.addition-number-page-button:last-child{justify-self:end;background:#18865b}
+.addition-number-page-button:disabled{opacity:.45;cursor:not-allowed}
+.addition-number-grid{width:min(100%,620px);display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:clamp(5px,1.4vw,10px)}
+.addition-number-button{min-width:0;min-height:clamp(44px,7vh,64px);padding:5px;border:3px solid #111;border-radius:4px;background:#fff;color:#111;font-size:clamp(1.1rem,4vw,1.55rem);font-weight:900}
+.addition-number-button:hover:not(:disabled){background:#f0f0f0;transform:scale(1.04)}
+.addition-number-button[aria-pressed="true"]{outline:4px solid #1f4e9c;outline-offset:1px}
+.addition-number-button:disabled{opacity:.3;cursor:not-allowed}
+.addition-number-button:focus-visible,.addition-number-page-button:focus-visible{outline:4px solid #ffad42;outline-offset:2px}
 .addition-board{width:min(100%,850px);display:flex;align-items:center;justify-content:center;gap:clamp(6px,2vw,20px);padding:clamp(10px,3vw,24px);border:3px solid #ffffffb8;border-radius:28px;background:linear-gradient(135deg,#fff9df,#e5f6ff);box-shadow:0 8px 18px #24324d20}
+.addition-board:has(.math-visual-flow){border:3px solid #111;border-radius:4px;background:#fff;box-shadow:none}
 .addition-group{min-width:0;flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;padding:8px;border-radius:20px;background:#ffffffb8}
 .addition-count{font-size:clamp(1.5rem,4vw,2rem);font-weight:900;color:var(--blue)}
-.addition-icons{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));align-content:start;justify-items:center;justify-content:center;gap:1px;width:100%;min-height:clamp(58px,13vw,105px);max-height:clamp(80px,18vh,150px);overflow-y:auto;font-size:clamp(1rem,4vw,1.8rem);line-height:1.05}
+.addition-icons{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));align-content:start;justify-items:center;justify-content:center;gap:4px;width:100%;min-height:clamp(58px,13vw,105px);max-height:clamp(80px,18vh,150px);overflow-y:auto;font-size:clamp(1.3rem,5vw,2.2rem);line-height:1.05}
 .addition-icon{line-height:1}
 .addition-icon.is-arriving{animation:addition-icon-arrive .36s cubic-bezier(.2,.8,.3,1) both}
 .addition-group .addition-icon.is-moving,.multiplication-row .addition-icon.is-moving{animation:addition-icon-move .42s ease-in both}
@@ -114,8 +120,39 @@ body{background:var(--bg);color:var(--ink);font-family:"Comic Sans MS","Chalkboa
 .addition-operator{flex:0 0 auto;font-size:clamp(2rem,7vw,4rem);font-weight:900;color:var(--accent)}
 .addition-total{flex:0 0 clamp(66px,17vw,132px);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;min-height:clamp(70px,16vw,128px);border:3px solid #ffad42;border-radius:20px;background:#fff;font-size:clamp(1.8rem,6vw,3.2rem);font-weight:900;color:var(--accent)}
 .addition-total.is-unknown{flex-basis:clamp(48px,12vw,84px);min-height:clamp(48px,12vw,84px);border-style:dashed}
-.addition-total-icons{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));justify-items:center;align-content:start;width:100%;max-height:clamp(56px,11vh,90px);overflow-y:auto;font-size:clamp(.7rem,2.5vw,1.1rem);line-height:1}
+.addition-total-icons{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));justify-items:center;align-content:start;width:100%;max-height:clamp(56px,11vh,90px);overflow-y:auto;font-size:clamp(.9rem,3vw,1.4rem);line-height:1}
 .addition-overflow{grid-column:1/-1;font-size:.8rem;color:var(--blue)}
+.math-visual-flow{width:100%;display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr) auto minmax(0,1fr);align-items:center;justify-items:stretch;gap:clamp(6px,1.5vw,14px)}
+.math-visual-bag{min-width:0;min-height:clamp(120px,22vh,205px);display:flex;flex-direction:column;align-items:center;justify-content:flex-start;gap:8px;padding:12px;border:4px solid #111;border-radius:4px;background:#fff;color:#111;text-align:center}
+.math-visual-bag>strong{font-size:clamp(1rem,3vw,1.35rem);line-height:1.15}
+.math-visual-count{font-size:clamp(.9rem,2.6vw,1.15rem);font-weight:800}
+.math-visual-icons{width:100%;min-height:40px;display:flex;flex-wrap:wrap;align-content:center;align-items:center;justify-content:center;gap:3px;overflow:auto;scrollbar-width:none}
+.math-visual-icons::-webkit-scrollbar{display:none}
+.math-question-icon{font-size:clamp(1.8rem,5.5vmin,2.6rem);line-height:1}
+.math-visual-bag.is-take-away .math-question-icon.is-removed{position:relative}
+.math-visual-bag.is-take-away .math-question-icon.is-removed::after{content:"";position:absolute;inset:48% -8%;height:3px;background:#111;transform:rotate(-45deg)}
+.math-visual-result{flex:initial;min-height:clamp(120px,22vh,205px);border-width:5px;background:#fff;color:#111;font-size:inherit}
+.math-visual-flow .addition-operator{color:#111}
+.math-visual-result .math-visual-count{font-size:clamp(1rem,3vw,1.25rem);color:#111}
+.math-visual-result .math-visual-icons{max-height:clamp(72px,14vh,130px);font-size:inherit}
+.math-visual-arrow{color:#111;font-size:clamp(2rem,6vw,3rem);font-weight:1000}
+.math-visual-equation{grid-column:1/-1;margin:4px 0 0;color:#111;font-size:clamp(2rem,7vw,3.4rem);font-weight:1000;letter-spacing:.04em}
+.math-visual-flow.math-visual-multiplication{grid-template-columns:minmax(0,1fr) auto minmax(0,1fr)}
+.math-visual-groups{min-width:0;max-height:clamp(190px,36vh,230px);display:grid;grid-template-columns:minmax(0,1fr);align-content:start;gap:0;overflow-y:auto;padding:4px 8px;background:#fff;color:#111;scrollbar-width:thin}
+.math-visual-groups>strong{grid-column:1/-1;font-size:clamp(1rem,3vw,1.3rem)}
+.math-visual-groups .math-visual-bag{min-height:0;display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;justify-content:initial;gap:4px 8px;padding:6px 2px;border:0;border-bottom:1px solid #d5d5d5;text-align:left}
+.math-visual-groups .math-visual-bag>strong{font-size:clamp(.9rem,2.5vw,1.1rem)}
+.math-visual-groups .math-visual-count{display:none}
+.math-visual-groups .math-visual-icons{width:auto;min-height:0;max-height:clamp(36px,8vh,64px);justify-content:flex-end;overflow-y:auto}
+.math-visual-share{min-width:0;display:flex;flex-direction:column;align-items:center;gap:8px}
+.math-visual-share .addition-operator{font-size:clamp(1.5rem,4vw,2.2rem);color:#111}
+.math-visual-distribution{grid-column:3;grid-row:1}
+.math-visual-distribution-groups{width:100%;display:grid;grid-template-columns:repeat(auto-fit,minmax(72px,1fr));gap:6px}
+.math-visual-distribution-group{min-width:0;padding:6px;border:2px solid #111;background:#fff;font-size:.85rem;font-weight:800}
+.math-visual-distribution-group .math-visual-icons{min-height:34px;max-height:95px}
+.math-visual-distribution-group .math-question-icon{font-size:clamp(1rem,3vw,1.5rem)}
+.addition-board .math-visual-bag .addition-icon.is-moving{animation:addition-icon-move .42s ease-in both}
+.addition-board.is-animating .math-visual-result{outline:3px solid #111;outline-offset:3px}
 .multiplication-groups{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:3px;width:100%;max-height:clamp(80px,18vh,150px);overflow-y:auto}
 .multiplication-row{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;padding:3px;border-radius:8px;background:#fff;font-size:clamp(.65rem,2vw,.9rem);font-weight:700}
 .multiplication-row>span:first-child{display:flex;gap:1px}
@@ -130,14 +167,12 @@ body{background:var(--bg);color:var(--ink);font-family:"Comic Sans MS","Chalkboa
 .addition-answer:disabled{cursor:default;opacity:.85}
 .addition-feedback{min-height:1.5em;margin:0;color:var(--blue);font-size:clamp(1rem,3.5vw,1.4rem);font-weight:800}
 .addition-actions{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:auto;padding:6px}
-.addition-practice,.addition-next,.addition-builder-back{min-height:48px;background:#18865b}
+.addition-practice,.addition-next,.addition-builder-back,.addition-choose-numbers{min-height:48px;background:#18865b}
+.addition-choose-numbers{background:#1f4e9c}
 .addition-builder-back{background:#5c6bc0}
 .addition-next:disabled{opacity:.55;cursor:not-allowed}
-#name{align-items:center;justify-content:center;gap:14px;text-align:center;padding:20px}
-#name .big{font-size:min(30vmin,150px)}h1{margin:0;color:var(--accent);font-size:2.2rem}
-input{font:inherit;font-size:1.6rem;text-align:center;padding:10px;border-radius:14px;border:3px solid var(--blue);width:min(80vw,360px);background:var(--key);color:var(--ink)}
+h1{margin:0;color:var(--accent);font-size:2.2rem}
 button{font:inherit;border:0;border-radius:14px;cursor:pointer;color:#fff;background:#4caf50;padding:10px 18px;font-weight:bold}
-.go{font-size:1.5rem;padding:12px 30px}
 header{display:flex;align-items:center;gap:8px;padding:8px 12px;flex-wrap:wrap}
 header b{flex:1;color:var(--blue);font-size:1.3rem}header button{font-size:.95rem;padding:7px 12px}
 #stage{flex:1;min-height:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;background:hsl(var(--h,50) 80% var(--l));margin:0 10px;border-radius:22px;padding:6px;overflow:hidden}
@@ -166,9 +201,9 @@ header b{flex:1;color:var(--blue);font-size:1.3rem}header button{font-size:.95re
 @media (max-width:480px){.addition-screen{padding:8px;gap:8px}.addition-header{justify-content:center}.addition-header h1{order:-1;flex-basis:100%}.addition-board{gap:4px;padding:8px 4px}.addition-group{padding:5px 2px}.addition-answer{min-width:66px;min-height:60px}.math-mode-options{width:min(92vw,420px);grid-template-columns:1fr}.math-mode-options .choice-card{min-height:112px;flex-direction:row}.math-counting-screen{gap:6px;padding-right:8px;padding-left:8px}.math-counting-header{gap:4px}.math-counting-header .math-back{padding:7px 9px;font-size:.82rem}.math-counting-hear{padding:7px;font-size:.78rem}.math-counting-pager{gap:4px}.math-counting-page-button{padding:6px 4px}.math-counting-keyboard{gap:5px}.math-counting-key{border-radius:12px}}
 @media (max-height:650px){.math-counting-screen{gap:5px}.math-counting-display{min-height:100px}.math-counting-icons{max-height:7vh}.math-counting-key{min-height:38px}}
 @media (max-height:700px){.addition-screen{gap:6px}.addition-board{padding:8px}.addition-icons{min-height:48px}}
-@media (max-width:380px){.addition-level-options{gap:6px}.addition-level-card{min-height:66px}.addition-pickers{gap:6px}.addition-picker{padding:6px 3px}.addition-picker select{min-height:42px}.addition-board{gap:2px}.addition-group{padding:4px 1px}.addition-total{flex-basis:54px;min-height:64px}.addition-icons{font-size:.9rem}}
+@media (max-width:380px){.addition-level-options{gap:6px}.addition-level-card{min-height:66px}.addition-picker{gap:5px;padding:6px 3px}.addition-number-pager{gap:4px}.addition-number-page-button{min-height:38px;padding:5px 6px}.addition-number-grid{gap:4px}.addition-number-button{min-height:42px;padding:3px}.addition-board{gap:2px}.addition-group{padding:4px 1px}.addition-total{flex-basis:54px;min-height:64px}.addition-icons{font-size:1.1rem}}
 .mute-toggle{position:fixed;z-index:1000;top:calc(env(safe-area-inset-top,0px) + 8px);right:10px;min-height:42px;padding:8px 12px;border:2px solid #ffffffb8;border-radius:20px;background:#1f4e9c;box-shadow:0 3px 8px #00000024;font-size:.95rem}
-#language,#name,#app,.math-screen,.addition-level-screen,.addition-screen,.english-screen{padding-top:58px}
+#language,#app,.math-screen,.addition-level-screen,.addition-screen,.english-screen{padding-top:58px}
 .english-screen{height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:58px 16px 16px;overflow-y:auto;text-align:center}
 .english-screen>.big{font-size:min(22vmin,110px)}
 .english-screen>h1{font-size:clamp(1.8rem,6vw,2.6rem)}
@@ -188,8 +223,6 @@ header b{flex:1;color:var(--blue);font-size:1.3rem}header button{font-size:.95re
 .native-letter-icon{font-family:"Nirmala UI","Noto Sans Telugu","Noto Sans Devanagari",system-ui,sans-serif;font-weight:900;color:#fff;text-shadow:0 3px 0 #00000040}
 .native-types-status{min-height:1.2em;color:var(--accent)!important}
 .english-back,.english-hear{min-height:44px;background:#5c6bc0;font-size:.95rem}
-.name-back{position:absolute;top:calc(env(safe-area-inset-top,0px) + 10px);left:12px;min-height:44px;background:#5c6bc0;font-size:.95rem}
-#name{position:relative}
 .english-lesson{justify-content:flex-start;gap:8px}
 .english-header{width:min(100%,920px);min-height:46px;justify-content:space-between;gap:8px;padding:0;flex-wrap:wrap}
 .english-header h1{flex:1;min-width:140px;font-size:clamp(1.5rem,5vw,2.2rem)}
@@ -230,7 +263,7 @@ header b{flex:1;color:var(--blue);font-size:1.3rem}header button{font-size:.95re
 @media (max-height:650px){.english-screen{gap:6px}.english-screen>.big{font-size:min(12vmin,60px)}.english-type-card{min-height:90px}.english-alphabet{max-height:22vh}.english-word-card{min-height:76px}.english-word-icon{font-size:1.8rem}}
 @media (max-width:480px){.english-alphabet-display{min-height:clamp(135px,24vh,190px)}.alphabet-display-card{grid-template-columns:.9fr 1fr 1.1fr;gap:3px;padding:8px}.english-alphabets-grid{grid-template-columns:repeat(6,minmax(0,1fr));gap:4px}.english-alphabets-grid button{min-height:38px}}
 @media (max-height:560px){.english-alphabet-screen{gap:4px}.english-alphabet-screen>p{font-size:.82rem}.english-alphabet-display{min-height:clamp(100px,34vh,140px)}.english-alphabets-grid{max-height:25vh}.alphabet-display-card{padding:4px}.alphabet-display-letter{font-size:clamp(2rem,9vmin,4rem)}.alphabet-display-icon{font-size:clamp(2.5rem,12vmin,4.5rem)}.alphabet-display-example{font-size:clamp(.8rem,2.6vmin,1.1rem)}.alphabet-display-example span{font-size:clamp(1rem,3.5vmin,1.4rem)}}
-@media (prefers-reduced-motion:reduce){.alphabet-display-placeholder span,.alphabet-display-card,.alphabet-display-icon,.addition-icon.is-arriving,.addition-group .addition-icon.is-moving,.multiplication-row .addition-icon.is-moving,.addition-total.is-counting{animation:none}}
+@media (prefers-reduced-motion:reduce){.alphabet-display-placeholder span,.alphabet-display-card,.alphabet-display-icon,.addition-icon.is-arriving,.addition-group .addition-icon.is-moving,.multiplication-row .addition-icon.is-moving,.addition-total.is-counting,.math-story-visual-group.is-speaking,.math-story-visual-group.is-speaking .math-story-visual-item,.math-story-answer.is-speaking{animation:none}}
 .english-identify-levels,.english-identify-quiz{justify-content:flex-start;gap:clamp(6px,1.2vh,12px)}
 .english-identify-levels>p{margin:0;color:var(--blue);font-size:clamp(.95rem,3vw,1.2rem);font-weight:700}
 .english-identify-levels .addition-level-pager{flex:0 0 auto}
@@ -273,7 +306,7 @@ header b{flex:1;color:var(--blue);font-size:1.3rem}header button{font-size:.95re
 .math-mode-options .math-story-card{grid-column:1/-1;background:#bd5a14}
 .math-story-progress{width:min(100%,580px);height:10px;flex:0 0 auto;border-radius:999px;background:#ffffffb0;box-shadow:inset 0 1px 3px #00000020;overflow:hidden}
 .math-story-progress span{display:block;height:100%;width:0;border-radius:inherit;background:linear-gradient(90deg,#18865b,#4d60be);transition:width .3s ease}
-.math-story-picture{min-height:1.2em;max-width:720px;font-size:clamp(1.6rem,6vmin,2.6rem);line-height:1.15;letter-spacing:2px;word-break:break-all}
+.math-story-picture{min-height:1.2em;max-width:720px;font-size:clamp(2rem,8vmin,3.5rem);line-height:1.2;letter-spacing:4px;word-break:break-word}
 .math-story-question{max-width:800px;margin:0;color:var(--accent);font-size:clamp(1.15rem,4.2vw,1.8rem);font-weight:900;line-height:1.3}
 .math-story-options{flex:0 1 auto;grid-template-rows:none;grid-auto-rows:minmax(64px,auto)}
 .math-story-options .english-identify-option{position:relative;min-height:72px;padding:10px 8px 10px 44px;border:4px solid #fff;border-radius:22px;background:#e4572e;color:#fff;font-size:clamp(2rem,7vmin,3rem);font-weight:900;text-shadow:0 3px 0 #00000045;box-shadow:0 7px 0 #00000030,0 10px 18px #00000020}
@@ -285,7 +318,41 @@ header b{flex:1;color:var(--blue);font-size:1.3rem}header button{font-size:.95re
 .math-story-options .english-identify-option.is-correct{background:#18a558;border-color:#ffd600;box-shadow:0 0 0 6px #ffd60088,0 7px 0 #00000030;opacity:1}
 .math-story-options .english-identify-option.is-correct::after{content:"✓";position:absolute;right:12px;top:50%;transform:translateY(-50%);font-size:1.6rem}
 .math-story-options .english-identify-option:disabled:not(.is-correct){opacity:.45}
-@media (max-height:560px){.math-story-picture{font-size:1.3rem}.math-story-options{grid-auto-rows:minmax(48px,auto)}.math-story-options .english-identify-option{min-height:52px;font-size:1.7rem}}
+.math-story-explain-button{min-height:48px;background:#bd5a14}
+.math-story-explanation{justify-content:flex-start;gap:clamp(8px,1.6vh,14px);padding-top:calc(env(safe-area-inset-top,0px) + 54px);padding-bottom:max(12px,env(safe-area-inset-bottom,0px))}
+.math-story-explanation-question{max-width:820px;font-size:clamp(1rem,3.4vw,1.35rem)!important}
+.math-story-visual{width:min(100%,860px);max-height:50vh;min-height:0;overflow:auto;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:clamp(6px,1.4vh,12px);padding:10px;border:3px solid #ffffffbd;border-radius:24px;background:linear-gradient(135deg,#fff9df,#e5f6ff);box-shadow:0 6px 0 #00000016}
+.math-story-addition{width:100%;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:clamp(4px,1vw,10px)}
+.math-story-addition .math-story-visual-group{flex:1 1 120px;max-width:190px}
+.math-story-visual-group{min-width:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;padding:8px;border:2px solid #ffffff;background:#ffffffd9;border-radius:16px;color:var(--blue);font-size:clamp(.85rem,2.8vw,1.1rem);font-weight:900;text-align:center}
+.math-story-visual-items{min-height:40px;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:5px}
+.math-story-visual-item{display:inline-block;font-size:clamp(1.6rem,6vmin,2.8rem);line-height:1}
+.math-story-visual-group.is-speaking{outline:4px solid #ffbd45;outline-offset:2px;transform:scale(1.04);box-shadow:0 0 0 6px #ffbd4545;animation:math-story-group-pulse .7s ease-in-out infinite alternate}
+.math-story-visual-group.is-speaking .math-story-visual-item{animation:math-story-item-arrive .45s ease both}
+.math-story-visual-group.is-speaking .math-story-visual-item:nth-child(2){animation-delay:.08s}.math-story-visual-group.is-speaking .math-story-visual-item:nth-child(3){animation-delay:.16s}.math-story-visual-group.is-speaking .math-story-visual-item:nth-child(4){animation-delay:.24s}.math-story-visual-group.is-speaking .math-story-visual-item:nth-child(n+5){animation-delay:.32s}
+.math-story-visual-item.is-removed{opacity:.48;filter:grayscale(.8);text-decoration:line-through;text-decoration-color:#c0392b;text-decoration-thickness:3px}
+.math-story-visual-overflow{margin:0;color:var(--blue);font-size:.85rem;font-weight:800}
+.math-story-visual-operator{color:var(--accent);font-size:clamp(1.5rem,5vmin,2.5rem);font-weight:1000}
+.math-story-equal-groups{width:100%;display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));align-items:stretch;gap:6px}
+.math-story-equal-groups .math-story-visual-group{min-height:64px}
+.math-story-equal-groups .math-story-visual-overflow{grid-column:1/-1}
+.math-story-subtraction-start{width:100%;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.math-story-subtraction-steps{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;color:var(--accent);font-size:clamp(1rem,3vw,1.3rem);font-weight:900}
+.math-story-equation{margin:0;color:var(--accent);font-size:clamp(1rem,3.2vw,1.4rem);font-weight:1000}
+.math-story-explanation-text{max-width:820px;font-size:clamp(.95rem,3vw,1.2rem)!important}
+.math-story-answer{margin:0;padding:6px 16px;border:3px solid #ffbd45;border-radius:18px;background:#fff9df;color:var(--accent);font-size:clamp(1.4rem,5vw,2rem);font-weight:1000}
+.math-story-answer.is-speaking{outline:4px solid #18865b;outline-offset:3px;animation:math-story-group-pulse .7s ease-in-out infinite alternate}
+.math-story-explanation-navigation{width:min(100%,560px);display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:8px}
+.math-story-explanation-step-button{min-height:44px;padding:7px 12px;background:#1f4e9c;font-size:clamp(.85rem,2.8vw,1rem)}
+.math-story-explanation-step-button:last-child{background:#18865b}
+.math-story-explanation-step-button:disabled{opacity:.45;cursor:not-allowed}
+.math-story-explanation-step-label{min-width:84px;color:var(--blue);font-weight:900}
+.math-story-explanation-hint{font-size:clamp(.8rem,2.5vw,1rem)!important}
+@keyframes math-story-item-arrive{from{opacity:0;transform:translateY(-8px) scale(.7)}to{opacity:1;transform:translateY(0) scale(1)}}
+@keyframes math-story-group-pulse{to{filter:saturate(1.25);transform:scale(1.06)}}
+@media (max-width:480px){.math-story-explanation{gap:7px;padding-left:8px;padding-right:8px}.math-story-visual{max-height:43vh;padding:6px}.math-story-subtraction-start{gap:4px}.math-story-visual-group{padding:5px}}
+@media (max-width:680px){.math-visual-flow{grid-template-columns:minmax(0,1fr);gap:8px}.math-visual-flow.math-visual-multiplication{grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:clamp(4px,2vw,12px)}.math-visual-flow.math-visual-multiplication .math-visual-arrow{transform:none;font-size:clamp(1.4rem,5vw,2.2rem)}.math-visual-arrow{transform:rotate(90deg);line-height:1}.math-visual-bag{min-height:100px}.math-visual-icons{max-height:120px}.math-visual-distribution{grid-column:1;grid-row:auto}.math-visual-equation{font-size:clamp(1.8rem,8vw,2.8rem)}}
+@media (max-height:560px){.math-story-picture{font-size:1.8rem}.math-story-options{grid-auto-rows:minmax(48px,auto)}.math-story-options .english-identify-option{min-height:52px;font-size:1.7rem}}
 @media (prefers-reduced-motion:reduce){.math-story-progress span{transition:none}}
 /* Fun, floating icon bubbles on the main menu cards */
 .languages .choice-icon,.math-options .choice-icon,.english-type-options .choice-icon{display:grid;place-items:center;width:1.55em;height:1.55em;flex:0 0 auto;border-radius:50%;background:radial-gradient(circle at 35% 30%,#ffffffd9,#ffffff4d 70%);box-shadow:inset 0 -4px 0 #00000014,0 4px 10px #0000001f;animation:icon-float 2.8s ease-in-out infinite}
@@ -329,3 +396,81 @@ header b{flex:1;color:var(--blue);font-size:1.3rem}header button{font-size:.95re
 @media (max-height:560px){.quiz-picture{font-size:clamp(2.2rem,12vmin,3.4rem)}.quiz-question{font-size:1.1rem}.quiz-options.is-text{grid-auto-rows:minmax(48px,auto)}.quiz-options.is-text .quiz-option{min-height:50px}.quiz-tile,.quiz-placed{min-height:40px;padding:4px 10px;font-size:1.05rem}.quiz-sentence{min-height:52px}}
 @media (prefers-reduced-motion:reduce){.languages .choice-icon,.math-options .choice-icon,.english-type-options .choice-icon,.quiz-picture,.quiz-sentence.is-wrong{animation:none}}
 .quiz-options:not(.is-text){min-height:min(46vh,340px)}
+
+/* A soft, consistent palette with clear contrast across every learning screen. */
+body{background:radial-gradient(ellipse at 12% 10%,#fce7f1 0,transparent 32%),radial-gradient(ellipse at 88% 88%,#dff3ee 0,transparent 34%),var(--bg);line-height:1.35}
+button{min-height:44px;border:2px solid #ffffffc9;border-radius:18px;background:#e8e5f8;color:var(--ink);box-shadow:0 4px 0 #65708a20,0 7px 14px #58627b12;transition:transform .15s ease,box-shadow .15s ease,background-color .15s ease}
+button:hover:not(:disabled){filter:brightness(.98);box-shadow:0 6px 0 #65708a20,0 10px 16px #58627b18}
+button:active:not(:disabled){transform:translateY(2px);box-shadow:0 2px 0 #65708a20}
+button:focus-visible{outline:4px solid #9a80d7;outline-offset:3px}
+.choice-card{color:var(--ink);border:3px solid #fff;box-shadow:0 5px 0 #65708a20,0 10px 18px #58627b14}
+.choice-label{text-shadow:none}
+.languages .choice-card,.math-options .choice-card,.english-type-options .choice-card,.native-type-options .choice-card,.math-mode-options .choice-card,.addition-level-card,.english-identify-level-card{background:#e8e5f8;color:var(--ink)}
+.languages .choice-card:nth-child(4n+1),.math-options .choice-card:nth-child(4n+1),.english-type-options .choice-card:nth-child(4n+1),.native-type-options .choice-card:nth-child(4n+1),.math-mode-options .choice-card:nth-child(4n+1),.addition-level-card:nth-child(4n+1),.english-identify-level-card:nth-child(4n+1){background:#ffe4ef}
+.languages .choice-card:nth-child(4n+2),.math-options .choice-card:nth-child(4n+2),.english-type-options .choice-card:nth-child(4n+2),.native-type-options .choice-card:nth-child(4n+2),.math-mode-options .choice-card:nth-child(4n+2),.addition-level-card:nth-child(4n+2),.english-identify-level-card:nth-child(4n+2){background:#dff3e9}
+.languages .choice-card:nth-child(4n+3),.math-options .choice-card:nth-child(4n+3),.english-type-options .choice-card:nth-child(4n+3),.native-type-options .choice-card:nth-child(4n+3),.math-mode-options .choice-card:nth-child(4n+3),.addition-level-card:nth-child(4n+3),.english-identify-level-card:nth-child(4n+3){background:#fff1cb}
+.languages .choice-card:nth-child(4n),.math-options .choice-card:nth-child(4n),.english-type-options .choice-card:nth-child(4n),.native-type-options .choice-card:nth-child(4n),.math-mode-options .choice-card:nth-child(4n),.addition-level-card:nth-child(4n),.english-identify-level-card:nth-child(4n){background:#dff1fb}
+.choice-icon{filter:drop-shadow(0 3px 3px #4a52631a)}
+.languages .choice-icon,.math-options .choice-icon,.english-type-options .choice-icon{background:#ffffffb8;box-shadow:inset 0 -3px 0 #0000000d,0 3px 8px #00000012}
+#splash{width:min(100%,760px);height:auto;min-height:min(88vh,780px);align-self:center;justify-content:center;gap:clamp(10px,2vh,18px);margin:auto;padding:clamp(20px,5vw,48px);border:1px solid #fff;border-radius:36px;background:linear-gradient(145deg,#fffdf8 4%,#fff0f6 52%,#eaf7f3 100%);box-shadow:0 18px 50px #6670851c}
+.splash-logo{width:clamp(220px,42vmin,340px);max-height:48vh;object-fit:contain;filter:drop-shadow(0 8px 10px #6b542c20)}
+.splash-title{background:linear-gradient(100deg,#e75b91 8%,#8c6bd0 48%,#3c9e8b 88%);background-clip:text;-webkit-background-clip:text}
+.splash-tagline{max-width:34ch;color:#66718a;font-size:clamp(.85rem,3vw,1.05rem);font-weight:900;letter-spacing:.18em}
+.splash-sparkle{top:10%;right:12%;color:#d6a84e}
+.welcome-art{display:flex;align-items:center;justify-content:center;gap:clamp(8px,3vw,22px);margin:3px 0 5px}
+.welcome-art span{width:clamp(52px,12vw,76px);height:clamp(52px,12vw,76px);display:grid;place-items:center;border:2px solid #fff;border-radius:24px;background:#fff9e9;box-shadow:0 5px 0 #65708a14;font-size:clamp(1.8rem,7vw,3rem);transform:rotate(-5deg)}
+.welcome-art span:nth-child(2){background:#e4f4fb;transform:translateY(-7px) rotate(4deg)}
+.welcome-art span:nth-child(3){background:#fbe5ef;transform:rotate(6deg)}
+.welcome-start{min-width:min(78vw,280px);min-height:58px;padding:12px 24px;border:0;border-radius:22px;background:#b9dfcf;color:#344f49;font-size:clamp(1.1rem,4vw,1.4rem);font-weight:900;box-shadow:0 6px 0 #829f933b,0 12px 22px #829f9325}
+.app-brand{min-width:0;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:1px;padding:2px 8px 2px 0}
+.app-brand strong{color:#a74e78;font-size:clamp(.95rem,3vw,1.2rem);font-weight:1000;line-height:1.05;white-space:nowrap}
+.app-brand small{color:#66718a;font-size:.57rem;font-weight:900;letter-spacing:.1em;line-height:1.1;white-space:nowrap}
+#name{position:relative;width:min(100%,760px);align-self:center;align-items:center;justify-content:center;gap:clamp(10px,2vh,18px);margin:auto;padding:calc(58px + env(safe-area-inset-top,0px)) 22px 22px;border:1px solid #fff;border-radius:36px;background:linear-gradient(150deg,#fffdf8,#fff0f6 52%,#eaf7f3);text-align:center}
+.name-back{position:absolute;top:calc(env(safe-area-inset-top,0px) + 12px);left:14px;min-width:92px;background:#e7e2f8;color:var(--ink)}
+.name-welcome-art{display:flex;align-items:center;justify-content:center;gap:clamp(12px,4vw,28px)}
+.name-welcome-art span{width:clamp(64px,15vw,96px);height:clamp(64px,15vw,96px);display:grid;place-items:center;border:2px solid #fff;border-radius:26px;background:#ffe8ee;box-shadow:0 6px 0 #65708a15;font-size:clamp(2.5rem,10vw,4.5rem);animation:welcome-mascot-bob 1.8s ease-in-out infinite alternate}
+.name-welcome-art span:nth-child(2){background:#e3f3ed;animation-delay:-.6s}
+.name-welcome-art span:nth-child(3){background:#fff2cf;animation-delay:-1.2s}
+#name h1{max-width:560px;font-size:clamp(1.8rem,6vw,2.8rem);line-height:1.15}
+#name label{color:var(--blue);font-size:clamp(1rem,3.5vw,1.25rem);font-weight:800}
+#name input{width:min(86vw,390px);min-height:58px;padding:12px 18px;border:3px solid #ded8ef;border-radius:20px;background:#fff;color:var(--ink);font-size:clamp(1.2rem,4vw,1.6rem);text-align:center;box-shadow:0 5px 14px #58627b12}
+#name input:focus-visible{outline:4px solid #ad99de;outline-offset:2px}
+#name #msg{min-height:1.3em;margin:0;color:#a34359;font-size:.95rem;font-weight:700}
+#name .go{min-width:min(78vw,280px);min-height:56px;background:#b9dfcf;color:#344f49;font-size:clamp(1.1rem,4vw,1.4rem)}
+#language{width:min(100%,760px);align-self:center;justify-content:center;gap:clamp(10px,2vh,18px);margin:auto;padding:calc(58px + env(safe-area-inset-top,0px)) 18px 20px;border:1px solid #fff;border-radius:36px;background:linear-gradient(150deg,#fffdf8,#f4efff 52%,#eaf7f3);text-align:center}
+#language .big{filter:drop-shadow(0 5px 5px #7c6b9b20)}
+.learning-mascot{position:relative;width:clamp(160px,34vmin,210px);height:clamp(112px,24vmin,152px);display:grid;place-items:center;margin-bottom:2px}
+.learning-mascot img{width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 6px 5px #57627c20);animation:learning-mascot-float 2.8s ease-in-out infinite}
+@keyframes learning-mascot-float{0%,100%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(-5px) rotate(1deg)}}
+@keyframes welcome-mascot-bob{from{transform:translateY(0) rotate(-3deg)}to{transform:translateY(-7px) rotate(3deg)}}
+#language h1,.english-screen h1,.math-screen h1,.addition-level-screen h1{max-width:760px;line-height:1.15}
+.languages,.math-options,.math-mode-options,.english-type-options,.native-type-options,.addition-level-options{align-items:stretch;justify-items:stretch}
+.listen-options,.math-back,.english-back,.english-hear,.math-counting-hear,.addition-level-hear,.addition-number-page-button,.addition-level-page-button,.math-counting-page-button,.math-story-explain-button,.math-story-explanation-step-button{background:#e7e2f8;color:var(--ink)}
+.math-counting-next,.addition-next,.addition-practice,.addition-builder-back,.addition-choose-numbers,.english-identify-next,.quiz-clear{background:#dff1e8;color:#36544a}
+.mute-toggle{border:2px solid #fff;border-radius:20px;background:#e6e1f7;color:#454467;box-shadow:0 4px 10px #58627b18}
+#app header{background:#fff9;padding:10px 14px;border-bottom:1px solid #e5e5ed}
+#app header b{color:var(--blue)}
+#app header button{background:#e9e5f8;color:var(--ink)}
+#stage{background:linear-gradient(145deg,#fffdf8,#eaf4fa 52%,#f4ebf6);border:1px solid #fff;box-shadow:inset 0 0 0 1px #79849a12,0 6px 18px #58627b12}
+#pad button,.english-alphabet button,.english-alphabets-grid button,.addition-number-button,.math-counting-key{border:2px solid #fff;border-radius:14px;background:#e8e5f8;color:var(--ink);box-shadow:0 3px 0 #65708a1a}
+#pad button:nth-child(4n+2),.addition-number-button:nth-child(4n+2),.math-counting-key:nth-child(4n+2){background:#ffe4ef}
+#pad button:nth-child(4n+3),.addition-number-button:nth-child(4n+3),.math-counting-key:nth-child(4n+3){background:#dff3e9}
+#pad button:nth-child(4n),.addition-number-button:nth-child(4n),.math-counting-key:nth-child(4n){background:#fff1cb}
+.english-identify-option{border-color:#fff;background:#fffdf8;color:var(--ink);box-shadow:0 5px 0 #65708a1a}
+.english-identify-option.is-wrong{border-color:#e6a7a7;background:#fbe1df}
+.english-identify-option.is-correct{border-color:#8bc9a5;background:#dff3e9}
+.math-story-options .english-identify-option,.math-story-options .english-identify-option:nth-child(n){border-color:#fff;background:#f1e8fb;color:var(--ink);text-shadow:none;box-shadow:0 5px 0 #65708a1a}
+.math-story-options .english-identify-option:nth-child(2){background:#e1effa}
+.math-story-options .english-identify-option:nth-child(3){background:#dff3e9}
+.math-story-options .english-identify-option:nth-child(4){background:#fff1cb}
+.math-story-options .english-identify-option.is-wrong{background:#fbe1df}
+.math-story-options .english-identify-option.is-correct{background:#dff3e9;border-color:#8bc9a5}
+.math-counting-display,.math-story-visual{border-color:#fff;background:linear-gradient(145deg,#fffdf8,#edf4fa 58%,#f6edf6);box-shadow:0 6px 18px #58627b14}
+.math-visual-flow .addition-operator,.math-visual-equation{color:#4b5873}
+.math-story-answer{border-color:#ead4a3;background:#fff4d7;color:#885d39}
+.voice-setup-dialog{border-color:#fff;background:#fffaf5}
+input{font:inherit}
+@media (max-width:680px){#splash,#name,#language{width:100%;min-height:100%;border-radius:0;box-shadow:none}#language{padding-right:12px;padding-left:12px}.languages{width:min(100%,520px);gap:10px}.languages .choice-card{min-height:clamp(98px,17vh,138px)}}
+@media (max-width:560px){#app header{display:grid;grid-template-columns:minmax(0,1fr) auto auto;gap:5px;padding:6px}#app .app-brand{grid-column:1;grid-row:1}#app header b#hi{grid-column:2/4;grid-row:1;min-width:0;font-size:.95rem;text-align:right}#app #again{grid-column:1;grid-row:2}#app #chg{grid-column:2;grid-row:2}#app #lang{grid-column:3;grid-row:2}#app header button{min-width:0;padding:6px 8px;font-size:.78rem}.app-brand small{font-size:.52rem}}
+@media (max-height:700px){#splash{min-height:100%;gap:clamp(5px,1.2vh,9px);padding:14px 18px}.splash-logo{width:min(52vh,310px);max-height:52vh}.splash-title{font-size:clamp(2rem,6vw,3.2rem)}.splash-tagline{font-size:clamp(.72rem,2.3vw,.9rem)}.welcome-art{gap:12px;margin:0}.welcome-art span{width:48px;height:48px;border-radius:16px;font-size:1.8rem}.welcome-start{min-height:48px;padding:8px 22px}#name{gap:8px;padding-top:calc(58px + env(safe-area-inset-top,0px));padding-bottom:12px}.name-welcome-art span{width:58px;height:58px;border-radius:18px;font-size:2.5rem}#name input{min-height:50px}#name .go{min-height:48px}#language{gap:7px;padding-top:calc(52px + env(safe-area-inset-top,0px));padding-bottom:10px}#language .big{font-size:min(15vmin,72px)}.learning-mascot{width:clamp(145px,32vmin,190px);height:clamp(100px,21vmin,132px)}#language h1{font-size:clamp(1.5rem,4.5vw,2rem)}.languages{gap:8px}.languages .choice-card{min-height:clamp(78px,15vh,100px)}}
+@media (prefers-reduced-motion:reduce){.welcome-art span,.name-welcome-art span{transform:none!important;animation:none!important}.learning-mascot img{animation:none!important}}

@@ -1,16 +1,21 @@
 # KidsLearningApp
 
-On launch, an animated Kids Learning Fun logo introduces the app before the
-language-selection screen. The sound toggle appears after the logo and can mute
-speech and sound effects throughout the app. The app checks for Telugu (India),
+Little Learners uses original panda-and-reader mascots throughout its launch and
+learning screens. On launch, a pastel welcome screen with the animated logo and a
+Start Learning button opens a name-entry screen, followed by language and
+subject selection. The learner's name is used in greetings in English, Telugu,
+and Hindi. The sound toggle appears after the welcome screen and can mute speech
+and sound effects throughout the app. The app checks for Telugu (India),
 Hindi (India), and English (India) speech voices on the device. If any are not
 available, it asks whether you want to view device-specific setup instructions;
-the web app cannot install system voices itself. Choose English, Telugu, or Hindi,
-then enter a name to begin.
+the web app cannot install system voices itself. Choose English, Telugu, Hindi,
+or Maths to begin. The interface uses a coordinated pastel theme, rounded type,
+and consistent button and activity-card styling.
 The Maths option opens Addition, Subtraction, Multiplication, and Division. Each
-operation offers separate Learning and Questionaries choices. Learning starts with
-a beginner-friendly example and lets children choose numbers to see object counts
-animate into the result, with spoken explanations. Questionaries opens a level
+operation offers separate Learning and Questionaries choices. In Learning, children
+choose each number from paged buttons (15 choices per page, from 1 to 105); after
+the first choice, the app asks aloud for the second. Matching object icons animate
+into the result with a spoken explanation. Questionaries opens a level
 picker with ten selectable levels (Level 1: 1–10, Level 2: 11–20, continuing
 through Level 10: 91–100), then starts the visual quiz immediately. Use
 Previous/Next to browse any number of ten-level batches without completion locks;
@@ -21,7 +26,10 @@ or taken away; multiplication shows equal groups; division practices equal shari
 with exact answers. The selected level controls question ranges; multiplication
 uses 1–10 objects per group, while division uses 1–10 groups. Object illustrations
 are capped for readability at large number levels, with the exact count still
-displayed. Learning activities include number selectors and spoken guidance;
+displayed. Story questions include an Answer & explanation screen with operation-
+specific visual models, spoken answers, and Previous/Next step navigation for
+addition, subtraction, multiplication, and division. Learning activities include
+number selectors and spoken guidance;
 questionaries include multiple-choice answers and feedback.
 The Maths menu also includes Numbers and Roman Numbers. Each opens a keyboard
 showing 15 consecutive values at a time, with Previous/Next navigation and no
@@ -45,13 +53,13 @@ Telugu opens a Telugu letter lesson with Telugu words, emoji illustrations, Engl
 meanings, and speech. The Hindi and Telugu lessons speak the letter sound followed
 by the example word (for example, “Aa… Aam” or “Ka… Kalam”) at a slower pace with a
 short pause between them, and show the pronunciation.
-Submitting a learner's name also plays a spoken welcome in the selected lesson language.
-If the device has no Telugu speech voice, it speaks the letter sound and the word's
-transliteration using an Indian English voice. Repeated taps cycle through
-all 20 examples for each Telugu or Hindi character. Hindi speech uses an installed Hindi
-voice when available; otherwise the Hindi word is transliterated and spoken with an
-Indian English voice. The pronunciation is also shown on screen. The English meaning is
-shown but not spoken in Telugu mode.
+Starting a Telugu or Hindi lesson opens its learning choices directly without a
+learner-name prompt. If the device has no Telugu speech voice, the app speaks the
+letter sound and word transliteration using an Indian English voice. Repeated taps
+cycle through all 20 examples for each Telugu or Hindi character. Hindi speech uses
+an installed Hindi voice when available; otherwise the Hindi word is transliterated
+and spoken with an Indian English voice. The pronunciation is also shown on screen.
+The English meaning is shown but not spoken in Telugu mode.
 
 ## Run locally
 

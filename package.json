@@ -1,7 +1,7 @@
 {
-  "name": "kids-learning-fun",
+  "name": "little-learners",
   "version": "2.0.0",
-  "description": "Kids learning web app: tap a letter or number to see a picture and hear the word.",
+  "description": "Little Learners: a playful learning app for children.",
   "private": true,
   "main": "server.js",
   "scripts": {

@@ -96,7 +96,7 @@ if (require.main === module) {
   const PORT = Number(process.env.PORT) || 3000;
   const HOST = process.env.HOST || '0.0.0.0';
   const server = createServer();
-  server.listen(PORT, HOST, () => console.log(`Kids Learning Fun running on http://${HOST}:${PORT}`));
+  server.listen(PORT, HOST, () => console.log(`Little Learners running on http://${HOST}:${PORT}`));
   const stop = () => server.close(() => process.exit(0));
   process.on('SIGTERM', stop);
   process.on('SIGINT', stop);

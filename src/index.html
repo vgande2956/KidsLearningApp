@@ -3,25 +3,36 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-title" content="Kids Learning">
-<title>Kids Learning Fun</title>
-<meta name="theme-color" content="#fff3c4">
-<meta name="description" content="Kids learning app: tap a letter or number to see a picture and hear the word.">
+<meta name="apple-mobile-web-app-title" content="Little Learners">
+<title>Little Learners</title>
+<meta name="theme-color" content="#fff7f0">
+<meta name="description" content="Learn, play, and grow with Little Learners.">
 <link rel="manifest" href="manifest.webmanifest">
-<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="icon" href="mascot.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="stylesheet" href="styles.css"></head><body>
 <button id="mute-toggle" class="mute-toggle" type="button" hidden aria-label="Mute sound" aria-pressed="false">🔊 Sound on</button>
-<section id="splash" aria-label="Kids Learning Fun">
+<section id="splash" aria-label="Little Learners">
 <div class="splash-sparkle" aria-hidden="true">✨</div>
-<img class="splash-logo" src="icon.svg" alt="">
-<h1 class="splash-title">Kids Learning Fun</h1>
-<p class="splash-tagline">Big adventures start with little words!</p>
+<img class="splash-logo" src="mascot.svg" alt="A panda and a little girl sitting on a pencil and reading a book together">
+<h1 class="splash-title">Little Learners</h1>
+<p class="splash-tagline">LEARN <span aria-hidden="true">•</span> PLAY <span aria-hidden="true">•</span> GROW</p>
+<div class="welcome-art" aria-hidden="true"><span>🦋</span><span>🌈</span><span>⭐</span></div>
+<button class="welcome-start" id="welcome-start" type="button">Start Learning <span aria-hidden="true">➜</span></button>
+</section>
+<section id="name" hidden aria-labelledby="name-title">
+<button class="name-back" id="name-back" type="button">← Back</button>
+<div class="name-welcome-art" aria-hidden="true"><span>🦊</span><span>📚</span><span>✏️</span></div>
+<h1 id="name-title">What should we call you?</h1>
+<label for="nm">Enter your name to get started</label>
+<input id="nm" maxlength="20" autocomplete="given-name" placeholder="Your name">
+<p id="msg" role="status" aria-live="polite"></p>
+<button class="go" id="start" type="button">Continue <span aria-hidden="true">➜</span></button>
 </section>
 <section id="language" hidden>
-<div class="big">🌈</div><h1>Select an option to start having fun learning!</h1>
+<div class="learning-mascot" aria-hidden="true"><img src="mascot.svg" alt=""></div><h1>What would you like to learn?</h1>
 <button class="listen-options" id="listen-options" type="button" aria-label="Hear the available learning options">🔊 Hear options</button>
-<div class="languages" role="group" aria-label="Choose a learning language">
+<div class="languages" role="group" aria-label="Choose a language or learning subject">
 <button class="choice-card english-card" type="button" data-language="English"><span class="choice-icon" aria-hidden="true">🔤</span><span class="choice-label">English</span></button>
 <button class="choice-card telugu-card" type="button" data-language="Telugu"><span class="choice-icon" aria-hidden="true">🌼</span><span class="choice-label">తెలుగు <small>Telugu</small></span></button>
 <button class="choice-card hindi-card" type="button" data-language="Hindi"><span class="choice-icon" aria-hidden="true">🪷</span><span class="choice-label">हिन्दी <small>Hindi</small></span></button>
@@ -31,7 +42,7 @@
 <section id="english-types" class="english-screen english-types-screen" hidden aria-labelledby="english-types-title">
 <div class="big" aria-hidden="true">📚</div>
 <h1 id="english-types-title">Choose the option to start learning</h1>
-<p>Pick a fun activity and let’s learn!</p>
+<p id="english-types-intro">Pick a fun activity and let’s learn!</p>
 <div class="english-type-options" role="group" aria-label="Choose an English learning activity">
 <button class="choice-card english-type-card english-two-card" type="button" data-english-type="two"><span class="choice-icon" aria-hidden="true">🐝</span><span class="choice-label">2-letter words<small>am · in · to</small></span></button>
 <button class="choice-card english-type-card english-three-card" type="button" data-english-type="three"><span class="choice-icon" aria-hidden="true">🐈</span><span class="choice-label">3-letter words<small>cat · sun · dog</small></span></button>
@@ -159,14 +170,23 @@
 <p class="addition-intro" id="addition-intro">Addition means putting groups together!</p>
 <p class="addition-status" id="addition-status" aria-live="polite"></p>
 <section class="addition-builder" id="addition-builder" aria-label="Choose how many objects in each group">
-<div class="addition-pickers">
-<label class="addition-picker" for="addition-first-select">
-<span id="addition-builder-first-label">First group (this level)</span>
-<select id="addition-first-select" aria-label="Choose the first group number"></select>
-</label>
-<label class="addition-picker" for="addition-second-select">
-<span id="addition-builder-second-label">Second group</span>
-<select id="addition-second-select" aria-label="Choose the second group number"></select>
+<div class="addition-picker" id="addition-first-picker">
+<h2 class="addition-picker-title" id="addition-builder-first-label">Bag 1 · first number</h2>
+<nav class="addition-number-pager" aria-label="First number pages">
+<button class="addition-number-page-button" id="addition-first-previous" type="button" disabled>← Previous 15</button>
+<span id="addition-first-page-label" aria-live="polite">Numbers 1–15</span>
+<button class="addition-number-page-button" id="addition-first-next" type="button">Next 15 ➜</button>
+</nav>
+<div class="addition-number-grid" id="addition-first-number-grid" role="group" aria-label="Choose the first number"></div>
+</div>
+<div class="addition-picker" id="addition-second-picker" hidden>
+<h2 class="addition-picker-title" id="addition-builder-second-label">Number being added</h2>
+<nav class="addition-number-pager" aria-label="Second number pages">
+<button class="addition-number-page-button" id="addition-second-previous" type="button" disabled>← Previous 15</button>
+<span id="addition-second-page-label" aria-live="polite">Numbers 1–15</span>
+<button class="addition-number-page-button" id="addition-second-next" type="button">Next 15 ➜</button>
+</nav>
+<div class="addition-number-grid" id="addition-second-number-grid" role="group" aria-label="Choose the second number"></div>
 </div>
 </section>
 <div class="addition-board" id="addition-board"></div>
@@ -177,6 +197,7 @@
 <div class="addition-actions">
 <button class="addition-practice" id="addition-practice" type="button">Try a question ➜</button>
 <button class="addition-next" id="addition-next" type="button" hidden>Next question ➜</button>
+<button class="addition-choose-numbers" id="addition-choose-numbers" type="button" hidden>Choose different numbers</button>
 <button class="addition-builder-back" id="addition-builder-back" type="button" hidden>← Back</button>
 </div>
 </section>
@@ -207,12 +228,30 @@
 <p class="math-story-question" id="math-story-question"></p>
 <div class="english-identify-options math-story-options" id="math-story-options" role="group" aria-label="Choose the answer"></div>
 <p class="english-identify-feedback" id="math-story-feedback" aria-live="polite">Choose the correct answer!</p>
+<button class="math-story-explain-button" id="math-story-explain" type="button">💡 Answer &amp; explanation</button>
 <button class="english-identify-next" id="math-story-next" type="button" disabled>Next question ➜</button>
+</section>
+<section id="math-story-explanation" class="english-screen math-story-explanation" hidden aria-labelledby="math-story-explanation-title">
+<header class="english-header">
+<button class="english-back" type="button" id="math-story-explanation-back">← Back to question</button>
+<h1 id="math-story-explanation-title">Let’s work it out!</h1>
+<button class="english-hear" type="button" id="math-story-explanation-hear">🔊 Hear explanation</button>
+</header>
+<p class="math-story-explanation-question" id="math-story-explanation-question"></p>
+<div class="math-story-visual" id="math-story-visual" role="group" aria-label="Visual explanation"></div>
+<p class="math-story-explanation-text" id="math-story-explanation-text"></p>
+<nav class="math-story-explanation-navigation" aria-label="Explanation steps">
+<button class="math-story-explanation-step-button" id="math-story-explanation-previous" type="button" disabled>← Previous step</button>
+<span class="math-story-explanation-step-label" id="math-story-explanation-step-label" aria-live="polite"></span>
+<button class="math-story-explanation-step-button" id="math-story-explanation-next" type="button">Next step ➜</button>
+</nav>
+<p class="math-story-answer" id="math-story-answer" aria-live="polite"></p>
+<p class="math-story-explanation-hint">Go back to the question to choose your answer.</p>
 </section>
 <section id="native-types" class="english-screen english-types-screen native-types-screen" hidden aria-labelledby="native-types-title">
 <div class="big" id="native-types-icon" aria-hidden="true">🌼</div>
 <h1 id="native-types-title">Choose how to learn</h1>
-<p>Choose how to learn — pick a fun activity!</p>
+<p id="native-types-intro">Choose how to learn — pick a fun activity!</p>
 <div class="english-type-options native-type-options" role="group" aria-label="Choose a learning activity">
 <button class="choice-card english-type-card native-letters-card" type="button" id="native-letters-entry"><span class="choice-icon native-letter-icon" id="native-letters-icon" aria-hidden="true">అ</span><span class="choice-label">Letters &amp; Words<small>Tap, see and hear</small></span></button>
 <button class="choice-card english-type-card native-quiz-card" type="button" id="native-quiz-entry"><span class="choice-icon" id="native-quiz-icon" aria-hidden="true">🐘</span><span class="choice-label">Picture Questions<small>Levels that never end</small></span></button>
@@ -254,15 +293,8 @@
 <p class="english-identify-feedback" id="quiz-feedback" aria-live="polite"></p>
 <button class="english-identify-next" id="quiz-next" type="button" disabled>Next question ➜</button>
 </section>
-<section id="name" hidden>
-<button class="name-back" id="name-back" type="button">← Back</button>
-<div class="big">🌈</div><h1>Welcome!</h1><div style="font-size:1.5rem">Enter your name</div>
-<input id="nm" maxlength="20" autocomplete="off" placeholder="Type name">
-<div id="msg" style="color:#c0392b;min-height:1.4em"></div>
-<button class="go" id="start">Let's Learn! ▶</button>
-</section>
 <section id="app" hidden>
-<header><b id="hi"></b><button id="again" style="background:#2e9e5b">🔊 Again</button><button id="chg" style="background:#ff9800">← Back</button><button id="lang" style="background:#5c6bc0">Change Language</button></header>
+<header><div class="app-brand"><strong>Little Learners</strong><small>LEARN • PLAY • GROW</small></div><b id="hi"></b><button id="again" type="button">🔊 Again</button><button id="chg" type="button">← Back</button><button id="lang" type="button">Change Language</button></header>
 <div id="stage"></div><div id="st"></div><div id="pad"></div>
 </section>
 <dialog id="voice-setup-dialog" class="voice-setup-dialog" aria-labelledby="voice-setup-title">

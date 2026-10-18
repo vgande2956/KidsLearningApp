@@ -1,5 +1,5 @@
 // Placeholders in this file are filled in by scripts/build.js at build time.
-const CACHE = "kids-learning-__BUILD__";
+const CACHE = "little-learners-__BUILD__";
 const FILES = __PRECACHE__;
 
 self.addEventListener("install", e => {

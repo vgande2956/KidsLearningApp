@@ -1,16 +1,14 @@
 {
-  "name": "Kids Learning Fun",
-  "short_name": "Kids Learning",
-  "description": "Tap a letter or number to see a picture and hear the word.",
+  "name": "Little Learners - Learn, Play, Grow",
+  "short_name": "Little Learners",
+  "description": "Learn, play, and grow with Little Learners.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
   "orientation": "any",
-  "background_color": "#fff3c4",
-  "theme_color": "#fff3c4",
+  "background_color": "#fff7f0",
+  "theme_color": "#fff7f0",
   "icons": [
-    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
-    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
-    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+    { "src": "mascot.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
   ]
 }

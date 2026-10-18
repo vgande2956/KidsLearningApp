@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 430" role="img" aria-labelledby="title desc">
+<title id="title">Little Learners reading friends</title>
+<desc id="desc">A cheerful panda and a little girl sit together on a giant pencil and read a book.</desc>
+<defs>
+<linearGradient id="pencil" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#ffe98a"/><stop offset="1" stop-color="#ffbf47"/></linearGradient>
+<linearGradient id="book" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#fffef2"/><stop offset="1" stop-color="#dff5ff"/></linearGradient>
+</defs>
+<ellipse cx="300" cy="382" rx="230" ry="22" fill="#68728a" opacity=".12"/>
+<path d="M82 303 120 257l355 70-39 47z" fill="url(#pencil)" stroke="#bd7d39" stroke-width="8" stroke-linejoin="round"/>
+<path d="m82 303-35 15 19-44 54-17z" fill="#f1c69c" stroke="#bd7d39" stroke-width="8" stroke-linejoin="round"/>
+<path d="m47 318 19-44 9-3-18 45z" fill="#4d596d"/>
+<path d="m435 327 40-70 51 10-39 72z" fill="#b6c1cd" stroke="#bd7d39" stroke-width="8" stroke-linejoin="round"/>
+<path d="m487 267 39-4 23 17-52 59-31-12z" fill="#f285a4" stroke="#bd7d39" stroke-width="8" stroke-linejoin="round"/>
+<path d="m491 339 58-59-2 47-26 27z" fill="#df668b" stroke="#bd7d39" stroke-width="7" stroke-linejoin="round"/>
+<path d="M259 176c0-29 22-51 50-51s50 22 50 51v94c0 34-21 55-50 55s-50-21-50-55z" fill="#69c9bc" stroke="#3c7c77" stroke-width="7"/>
+<path d="M262 253c17 10 76 12 96-1l1 38c-23 14-72 13-98-1z" fill="#f7a4bb"/>
+<path d="M218 163c-9-36 6-60 29-63 22-2 36 17 29 41" fill="#63453e" stroke="#493a40" stroke-width="7"/>
+<path d="M342 143c-8-27 5-45 25-43 20 2 28 22 18 47" fill="#63453e" stroke="#493a40" stroke-width="7"/>
+<circle cx="296" cy="165" r="60" fill="#ffd0a6" stroke="#bd805d" stroke-width="7"/>
+<path d="M238 154c3-42 27-69 59-69 31 0 56 24 59 61-22-7-39-20-52-37-14 22-35 37-66 45z" fill="#69483c"/>
+<circle cx="259" cy="131" r="11" fill="#f7a2b9"/>
+<circle cx="370" cy="129" r="11" fill="#f7a2b9"/>
+<path d="M248 107c-16-23-3-47 14-48 20-1 28 25 8 44" fill="#69483c"/>
+<path d="M365 105c2-27 23-39 38-26 16 15 4 39-19 43" fill="#69483c"/>
+<circle cx="281" cy="163" r="5" fill="#493a40"/>
+<circle cx="318" cy="163" r="5" fill="#493a40"/>
+<ellipse cx="300" cy="179" rx="8" ry="6" fill="#8f5b55"/>
+<path d="M291 190c7 8 15 8 21 0" fill="none" stroke="#9d5e56" stroke-width="4" stroke-linecap="round"/>
+<ellipse cx="270" cy="181" rx="11" ry="6" fill="#f29ca3" opacity=".72"/>
+<ellipse cx="330" cy="181" rx="11" ry="6" fill="#f29ca3" opacity=".72"/>
+<path d="M122 229c-11-27 2-48 23-50 19-2 31 17 22 40" fill="#fff" stroke="#393d4c" stroke-width="7"/>
+<path d="M206 224c-4-25 10-43 30-40 21 3 27 25 12 45" fill="#fff" stroke="#393d4c" stroke-width="7"/>
+<ellipse cx="176" cy="279" rx="73" ry="76" fill="#fff" stroke="#393d4c" stroke-width="8"/>
+<ellipse cx="149" cy="264" rx="22" ry="31" fill="#343b4a" transform="rotate(24 149 264)"/>
+<ellipse cx="202" cy="264" rx="22" ry="31" fill="#343b4a" transform="rotate(-24 202 264)"/>
+<circle cx="151" cy="265" r="8" fill="#fff"/>
+<circle cx="201" cy="265" r="8" fill="#fff"/>
+<ellipse cx="176" cy="285" rx="13" ry="10" fill="#343b4a"/>
+<path d="M164 298c8 10 17 10 25 0" fill="none" stroke="#343b4a" stroke-width="5" stroke-linecap="round"/>
+<ellipse cx="132" cy="291" rx="13" ry="7" fill="#f3a0a8" opacity=".75"/>
+<ellipse cx="220" cy="291" rx="13" ry="7" fill="#f3a0a8" opacity=".75"/>
+<path d="M110 318c-9 12-7 24 7 29 12 5 23-3 23-17m102-7c12 7 14 20 4 29-11 9-25 3-29-11" fill="#fff" stroke="#393d4c" stroke-width="7"/>
+<path d="M259 292c-30-27-63-29-89-12-19 13-22 30-13 49l20 33h110l8-41z" fill="#f28bab" stroke="#bc6485" stroke-width="7" stroke-linejoin="round"/>
+<path d="M176 317c-15-16-37-15-45-2-8 13 6 27 24 25l29-4m-9-19c16-16 36-14 43 0 7 14-8 26-25 22l-24-6" fill="#fff" stroke="#393d4c" stroke-width="6" stroke-linejoin="round"/>
+<path d="M201 341c25-21 58-19 82 0l5 40c-28-15-60-15-88 0z" fill="url(#book)" stroke="#648da1" stroke-width="6" stroke-linejoin="round"/>
+<path d="M289 341c24-21 58-21 82 0v40c-27-15-58-15-82 0z" fill="url(#book)" stroke="#648da1" stroke-width="6" stroke-linejoin="round"/>
+<path d="M289 343v38" fill="none" stroke="#648da1" stroke-width="5" stroke-linecap="round"/>
+<path d="M215 351c15-6 31-6 46 0m-44 11c15-5 30-5 43 0m41-11c14-6 30-6 45 0m-45 11c14-5 28-5 42 0" fill="none" stroke="#9ec7d5" stroke-width="4" stroke-linecap="round"/>
+<path d="m411 132 8 17 19 3-14 13 3 19-16-9-17 9 4-19-14-13 19-3z" fill="#ffd45e"/>
+<path d="m94 169 5 10 12 2-9 8 2 12-10-6-11 6 2-12-9-8 12-2z" fill="#a9dbd2"/>
+<circle cx="431" cy="215" r="7" fill="#f28bab"/>
+<circle cx="93" cy="229" r="5" fill="#8f83d7"/>
+</svg>

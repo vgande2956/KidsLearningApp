@@ -1,1 +1,56 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><rect width="512" height="512" fill="#fff3c4"/><g fill="none" stroke-width="34"><path d="M70 330a186 186 0 0 1 372 0" stroke="#e4572e"/><path d="M104 330a152 152 0 0 1 304 0" stroke="#ffb300"/><path d="M138 330a118 118 0 0 1 236 0" stroke="#4caf50"/><path d="M172 330a84 84 0 0 1 168 0" stroke="#1f4e9c"/></g><text x="256" y="440" font-family="Comic Sans MS,Arial,sans-serif" font-size="110" font-weight="700" text-anchor="middle" fill="#1f4e9c">ABC</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+<title id="title">Little Learners</title>
+<desc id="desc">Two happy children reading an open book under a rainbow, with bright stars.</desc>
+<defs>
+<linearGradient id="leftPage" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#fff8d9"/><stop offset="1" stop-color="#ffd36c"/></linearGradient>
+<linearGradient id="rightPage" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#fffef1"/><stop offset="1" stop-color="#ffe8a8"/></linearGradient>
+</defs>
+<g fill="none" stroke-linecap="round">
+<path d="M72 276a184 184 0 0 1 368 0" stroke="#f56c9a" stroke-width="25"/>
+<path d="M99 276a157 157 0 0 1 314 0" stroke="#ffc94f" stroke-width="24"/>
+<path d="M126 276a130 130 0 0 1 260 0" stroke="#5fc8d1" stroke-width="24"/>
+<path d="M153 276a103 103 0 0 1 206 0" stroke="#8b78d0" stroke-width="23"/>
+</g>
+<g fill="#ffd34f">
+<path d="m54 202 7 15 16 2-12 11 3 16-14-8-14 8 3-16-12-11 16-2z"/>
+<path d="m453 139 7 15 16 2-12 11 3 16-14-8-14 8 3-16-12-11 16-2z"/>
+<path d="m472 236 5 11 12 1-9 8 2 12-10-6-10 6 2-12-9-8 12-1z"/>
+<path d="m73 136 5 11 12 1-9 8 2 12-10-6-10 6 2-12-9-8 12-1z"/>
+</g>
+<g>
+<path d="M119 251c-31 8-45 31-38 61l19 58h144l-3-99c-36-26-81-32-122-20z" fill="#37acd0"/>
+<path d="M292 264c26-22 75-27 111-8 23 12 33 35 28 63l-12 51H276l3-78z" fill="#ee75a1"/>
+<path d="M207 248c-21 14-27 40-15 67l22 55h58l19-62c8-28-4-52-24-63z" fill="#42b8d0"/>
+<path d="M124 142c0-49 34-83 82-83 49 0 82 34 82 83v72c0 51-35 88-83 88s-81-37-81-88z" fill="#f6bd8f"/>
+<path d="M119 160c-10-53 14-99 59-111 36-10 75 6 94 35 14 22 18 46 14 74-11-22-24-36-43-44-27 26-67 36-123 30z" fill="#71402f"/>
+<path d="M126 163c-24 10-32 43-18 68 6 11 14 18 25 18v-86z" fill="#e9a77d"/>
+<path d="M282 155c11-18 34-18 42 0 10 22 0 47-17 53l-18-14z" fill="#f6bd8f"/>
+<path d="M303 179c1-40 27-69 67-70 42-1 74 30 74 75v48c0 42-28 74-70 74-43 0-71-32-71-74z" fill="#f6bd8f"/>
+<path d="M299 188c-5-47 22-88 67-96 46-9 88 18 99 62 5 19 3 38-2 54-8-23-21-39-41-50-29 27-69 40-122 36z" fill="#603a31"/>
+<path d="M305 193c-20 7-28 32-19 53 5 11 13 18 24 19z" fill="#e8a37b"/>
+<path d="M424 177c11-13 25-11 31 4 7 18 0 38-15 45l-16-8z" fill="#f6bd8f"/>
+</g>
+<g fill="#fff" stroke="#523b38" stroke-width="4">
+<ellipse cx="169" cy="179" rx="13" ry="17"/><ellipse cx="237" cy="179" rx="13" ry="17"/>
+<ellipse cx="339" cy="191" rx="12" ry="15"/><ellipse cx="397" cy="191" rx="12" ry="15"/>
+</g>
+<g fill="#384254">
+<circle cx="172" cy="181" r="7"/><circle cx="240" cy="181" r="7"/>
+<circle cx="342" cy="193" r="6"/><circle cx="400" cy="193" r="6"/>
+</g>
+<g fill="#ed8b80">
+<ellipse cx="145" cy="211" rx="13" ry="7"/><ellipse cx="259" cy="211" rx="13" ry="7"/>
+<ellipse cx="320" cy="222" rx="11" ry="6"/><ellipse cx="417" cy="222" rx="11" ry="6"/>
+</g>
+<path d="M184 222c12 13 31 13 43-1" fill="none" stroke="#9d4d50" stroke-width="6" stroke-linecap="round"/>
+<path d="M355 240c10 10 25 10 35 0" fill="none" stroke="#9d4d50" stroke-width="5" stroke-linecap="round"/>
+<path d="M398 139c13-16 32-7 29 9 15-7 27 10 14 22-11 11-28 11-43 1-14-10-13-23 0-32z" fill="#ed77a2"/>
+<g stroke="#655874" stroke-width="4" stroke-linecap="round">
+<path d="m158 147 18-7m61 7 17-5m77 34 15-6m56 7 14-5"/>
+</g>
+<path d="M101 333c27-19 75-25 139-5l17 8v91c-48-25-108-25-160-5-11 4-20-4-18-15l10-74z" fill="url(#leftPage)" stroke="#e1a84d" stroke-width="5" stroke-linejoin="round"/>
+<path d="M257 336c43-30 104-27 157-6l11 75c2 12-8 19-19 15-52-20-111-20-149 7z" fill="url(#rightPage)" stroke="#e1a84d" stroke-width="5" stroke-linejoin="round"/>
+<path d="M257 338v87" fill="none" stroke="#e1a84d" stroke-width="6" stroke-linecap="round"/>
+<path d="M103 350c44-17 98-17 148 3M110 369c42-13 94-13 139 5m123-24c-38-12-80-12-117 4m115 14c-38-10-77-9-113 6" fill="none" stroke="#f0c875" stroke-width="4" stroke-linecap="round"/>
+<path d="M245 424c9-14 21-18 31-13 7 3 11 10 8 17-9 13-25 15-39 4z" fill="#f5a626" stroke="#dd8525" stroke-width="4"/>
+</svg>

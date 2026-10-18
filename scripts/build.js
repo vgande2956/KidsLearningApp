@@ -41,7 +41,7 @@ function build() {
     }
   }
 
-  const info = { name: 'kids-learning-fun', build: buildId, builtAt: new Date().toISOString(), files: files.length };
+  const info = { name: 'little-learners', build: buildId, builtAt: new Date().toISOString(), files: files.length };
   fs.writeFileSync(path.join(DIST, 'build-info.json'), JSON.stringify(info, null, 2));
   console.log(`Built ${files.length} files -> dist/ (build ${buildId})`);
   return info;
