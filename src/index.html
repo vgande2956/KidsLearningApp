@@ -40,6 +40,27 @@
 <p id="msg" role="status" aria-live="polite"></p>
 <button class="go" id="start" type="button">Continue <span aria-hidden="true">➜</span></button>
 </section>
+<section id="app-tour" class="app-tour-screen" hidden aria-labelledby="app-tour-title">
+<header class="app-tour-header">
+<span class="app-tour-brand">✨ Little Learners</span>
+<button id="app-tour-skip" type="button">Skip tour</button>
+</header>
+<h1 id="app-tour-title">Take a quick app tour</h1>
+<p class="app-tour-intro">A little look at the fun waiting for you.</p>
+<div class="app-tour-video" role="region" aria-live="polite" aria-label="Animated app tour">
+<div class="app-tour-scene" id="app-tour-scene">
+<span class="app-tour-scene-icon" id="app-tour-icon" aria-hidden="true">🔤</span>
+<div class="app-tour-demo" id="app-tour-demo" aria-hidden="true"><span>English</span><span>తెలుగు</span><span>हिन्दी</span><span>Maths</span></div>
+<h2 id="app-tour-step-title">Choose how to learn</h2>
+<p id="app-tour-step-copy">Pick English, Telugu, Hindi, or Maths to begin.</p>
+</div>
+</div>
+<div class="app-tour-progress" id="app-tour-progress" role="group" aria-label="Tour progress">
+<span class="is-current" aria-label="Step 1 of 3"></span><span aria-label="Step 2 of 3"></span><span aria-label="Step 3 of 3"></span>
+</div>
+<p class="app-tour-status" id="app-tour-status" role="status" aria-live="polite"></p>
+<button class="app-tour-continue" id="app-tour-continue" type="button">Go to learning choices ➜</button>
+</section>
 <section id="language" hidden>
 <div class="learning-mascot" aria-hidden="true"><img src="mascot.svg" alt=""></div><h1>What would you like to learn?</h1>
 <button class="listen-options" id="listen-options" type="button" aria-label="Hear the available learning options">🔊 Hear options</button>
@@ -95,6 +116,10 @@
 <img id="stories-reader-image" class="stories-reader-image" src="images/stories/fun.svg" alt="">
 <p id="stories-reader-genre" class="stories-reader-genre"></p>
 <div id="stories-reader-pages" class="stories-reader-pages" role="region" aria-label="Story" aria-live="polite"></div>
+<aside id="stories-reader-moral" class="stories-reader-moral" aria-label="Moral of the story">
+<strong id="stories-reader-moral-title">Moral of the story</strong>
+<p id="stories-reader-moral-text"></p>
+</aside>
 <div class="stories-reader-controls">
 <button class="english-hear stories-listen" type="button" id="stories-listen">🔊 Listen to the story</button>
 <button class="english-back stories-stop" type="button" id="stories-stop">⏹ Stop</button>
