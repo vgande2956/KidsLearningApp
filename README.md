@@ -2,9 +2,10 @@
 
 Little Learners uses original panda-and-reader mascots throughout its launch and
 learning screens. On launch, a pastel welcome screen with the animated logo and a
-Start Learning button opens a name-entry screen, followed by language and
-subject selection. The learner's name is used in greetings in English, Telugu,
-and Hindi. The sound toggle appears after the welcome screen and can mute speech
+Start Learning button opens a name-entry screen, followed by a short animated,
+spoken app tour. The tour can be skipped; either way, the learner proceeds to
+language and subject selection. The learner's name is used in greetings in English,
+Telugu, and Hindi. The sound toggle appears after the welcome screen and can mute speech
 and sound effects throughout the app. The app checks for Telugu (India),
 Hindi (India), and English (India) speech voices on the device. If any are not
 available, it asks whether you want to view device-specific setup instructions;
@@ -62,10 +63,14 @@ English transliteration are clearly identified. Selecting a word speaks its
 pronunciation using the English
 (India) locale and an Indian English voice when available. Hindi opens an independent Hindi Devanagari lesson with
 46 characters, 20 words per character, emoji illustrations, and Hindi speech.
-English and Telugu each include a Stories button. Stories are grouped into Fun,
-Adventure, Visual Wonder, Indian Mythology, and gentle Horror categories. Each
-story opens an illustrated reader, starts expressive narration in the selected
-language, highlights each paragraph as it is read, and can be replayed or stopped.
+English and Telugu each include a Stories button with three stories in each of
+five genres: Fun, Adventure, Visual Wonder, Indian Mythology, and gentle Horror.
+Each story opens an illustrated reader with a moral, starts expressive narration of
+the story and moral in the selected language, highlights the passage currently
+being read, and can be replayed or stopped. Narration prefers installed
+Natural/Neural voices in the selected language when available; voice quality
+depends on the device and browser, and the app does not provide recorded human
+audio.
 The story artwork is custom-made and bundled locally. Telugu narration needs an
 installed Telugu text-to-speech voice on the device. Telugu opens a Telugu letter
 lesson with Telugu words, emoji illustrations, English
