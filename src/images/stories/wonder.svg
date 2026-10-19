@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" role="img" aria-labelledby="title desc">
+<title id="title">A young prince paints a rainbow across the sky</title>
+<desc id="desc">A curious young prince discovers brilliant colors over a magical hilltop castle.</desc>
+<defs>
+<linearGradient id="dawn" x2="0" y2="1"><stop stop-color="#91d9ff"/><stop offset=".68" stop-color="#fff0d0"/><stop offset="1" stop-color="#ffcbce"/></linearGradient>
+<linearGradient id="hill" x2="0" y2="1"><stop stop-color="#72d39a"/><stop offset="1" stop-color="#3e9f83"/></linearGradient>
+</defs>
+<rect width="640" height="420" rx="34" fill="url(#dawn)"/>
+<path d="M155 286a165 165 0 0 1 330 0" fill="none" stroke="#ef6074" stroke-width="27"/>
+<path d="M178 287a142 142 0 0 1 284 0" fill="none" stroke="#ffad54" stroke-width="24"/>
+<path d="M202 287a118 118 0 0 1 236 0" fill="none" stroke="#ffe26c" stroke-width="23"/>
+<path d="M226 287a94 94 0 0 1 188 0" fill="none" stroke="#61c883" stroke-width="22"/>
+<path d="M249 287a71 71 0 0 1 142 0" fill="none" stroke="#55add9" stroke-width="21"/>
+<path d="M271 287a49 49 0 0 1 98 0" fill="none" stroke="#9066c7" stroke-width="20"/>
+<path d="M0 313Q119 252 250 296T490 285T640 296V420H0Z" fill="url(#hill)"/>
+<circle cx="520" cy="85" r="40" fill="#fff0a3"/>
+<path d="M300 303V191Q300 157 337 157H405Q442 157 442 191V303Z" fill="#ffe2a7" stroke="#985e5c" stroke-width="9"/>
+<path d="M284 198l27-44h120l27 44Z" fill="#f07972" stroke="#985e5c" stroke-width="8" stroke-linejoin="round"/>
+<path d="M330 215q0-21 20-21t20 21v37h-40Z" fill="#7fcae7" stroke="#985e5c" stroke-width="6"/>
+<path d="M383 221q0-18 18-18t18 18v31h-36Z" fill="#7fcae7" stroke="#985e5c" stroke-width="6"/>
+<path d="M359 303v-62q0-24 25-24t25 24v62Z" fill="#ae678d" stroke="#985e5c" stroke-width="7"/>
+<path d="M355 157V108l26 37 24-53 26 65" fill="#ffe26c" stroke="#985e5c" stroke-width="8" stroke-linejoin="round"/>
+<circle cx="237" cy="271" r="23" fill="#efbd8e" stroke="#51446d" stroke-width="5"/>
+<path d="M213 262l6-30 17 22 15-28 10 38" fill="#ffe26c" stroke="#51446d" stroke-width="5" stroke-linejoin="round"/>
+<path d="M211 295q25-20 50 0l11 45h-73Z" fill="#5085cf" stroke="#51446d" stroke-width="6"/>
+<path d="M262 301l34-22" stroke="#efbd8e" stroke-width="9" stroke-linecap="round"/>
+<path d="M297 281l25-40" stroke="#8c594a" stroke-width="8" stroke-linecap="round"/>
+<path d="M313 242l14 6-7 13-14-6z" fill="#ff7e76" stroke="#8c594a" stroke-width="3"/>
+<path d="M69 343q17-25 34 0m413 20q17-25 34 0" fill="none" stroke="#fff" stroke-width="8" stroke-linecap="round"/>
+<circle cx="166" cy="118" r="7" fill="#fff"/><circle cx="474" cy="157" r="6" fill="#fff"/>
+</svg>

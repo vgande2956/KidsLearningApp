@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" role="img" aria-labelledby="title desc">
+<title id="title">A playful young prince and a smiling king</title>
+<desc id="desc">A young prince shares mangoes with friends in a bright palace garden.</desc>
+<defs>
+<linearGradient id="sky" x2="0" y2="1"><stop stop-color="#a9e7ff"/><stop offset="1" stop-color="#fff2c7"/></linearGradient>
+<linearGradient id="cape" x2="0" y2="1"><stop stop-color="#ff7d91"/><stop offset="1" stop-color="#e74676"/></linearGradient>
+<linearGradient id="gold" x2="0" y2="1"><stop stop-color="#ffe676"/><stop offset="1" stop-color="#f7a825"/></linearGradient>
+</defs>
+<rect width="640" height="420" rx="34" fill="url(#sky)"/>
+<circle cx="530" cy="72" r="38" fill="#fff3a8"/>
+<path d="M0 304Q120 244 244 296T488 284T640 292V420H0Z" fill="#8bd890"/>
+<path d="M195 281V155Q195 102 254 102H386Q445 102 445 155V281Z" fill="#ffce90" stroke="#a65547" stroke-width="10"/>
+<path d="M218 169Q218 119 267 119H373Q422 119 422 169V281H218Z" fill="#fff3d6"/>
+<path d="M229 281V188Q229 169 250 169H271Q292 169 292 190V281M348 281V190Q348 169 369 169H390Q411 169 411 190V281" fill="#88cce8" stroke="#d87c68" stroke-width="9"/>
+<path d="M185 282H455" stroke="#a65547" stroke-width="12" stroke-linecap="round"/>
+<path d="M158 181l16-38 20 34 20-39 18 43" fill="url(#gold)" stroke="#bd742d" stroke-width="7" stroke-linejoin="round"/>
+<circle cx="191" cy="179" r="26" fill="#f3b57d"/>
+<path d="M161 217Q190 194 220 217L241 300H144Z" fill="url(#cape)" stroke="#5d4b73" stroke-width="7"/>
+<path d="M160 215Q190 198 219 215L207 255H172Z" fill="#fff2c7"/>
+<circle cx="180" cy="177" r="4" fill="#332b39"/><circle cx="201" cy="177" r="4" fill="#332b39"/>
+<path d="M181 190Q191 198 202 190" fill="none" stroke="#a54749" stroke-width="4" stroke-linecap="round"/>
+<path d="M121 300Q189 278 253 300L266 336H105Z" fill="#b86b42" stroke="#654a56" stroke-width="7"/>
+<circle cx="145" cy="296" r="18" fill="#f8b938"/><circle cx="187" cy="291" r="20" fill="#ffcf45"/><circle cx="225" cy="299" r="17" fill="#f2a92e"/>
+<path d="M145 277q8-14 17-9M187 271q8-14 17-9M225 280q8-14 17-9" fill="none" stroke="#4a9a53" stroke-width="6" stroke-linecap="round"/>
+<path d="M455 335Q467 276 520 281Q572 278 586 335Z" fill="#7f68ad" stroke="#4c4668" stroke-width="8"/>
+<circle cx="522" cy="262" r="30" fill="#f1bd8d" stroke="#4c4668" stroke-width="6"/>
+<path d="M493 251l7-38 19 25 21-34 10 40" fill="url(#gold)" stroke="#bd742d" stroke-width="7" stroke-linejoin="round"/>
+<circle cx="512" cy="261" r="4" fill="#332b39"/><circle cx="532" cy="261" r="4" fill="#332b39"/>
+<path d="M514 275Q522 281 532 274" fill="none" stroke="#a54749" stroke-width="4" stroke-linecap="round"/>
+<path d="M325 293l-12 30m58-32 12 31" stroke="#f3b57d" stroke-width="12" stroke-linecap="round"/>
+<path d="M300 335Q327 302 359 335" fill="#fff3d6" stroke="#d87c68" stroke-width="7"/>
+<path d="M320 318q8-18 16 0" fill="none" stroke="#719b52" stroke-width="5"/>
+<path d="M85 315l12-27 13 27m375-2 12-28 13 28" fill="#ffd66c" stroke="#8b684e" stroke-width="5" stroke-linejoin="round"/>
+<path d="M48 360q22-28 44 0m472 0q22-28 44 0" fill="none" stroke="#fff" stroke-width="8" stroke-linecap="round"/>
+</svg>

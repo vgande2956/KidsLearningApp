@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" role="img" aria-labelledby="title desc">
+<title id="title">A young archer and monkey friends build a bridge</title>
+<desc id="desc">A child-friendly illustration inspired by Indian epics, showing brave friends working together by a blue ocean.</desc>
+<defs>
+<linearGradient id="sky" x2="0" y2="1"><stop stop-color="#a4dfff"/><stop offset="1" stop-color="#fff0c5"/></linearGradient>
+<linearGradient id="sea" x2="0" y2="1"><stop stop-color="#48c3db"/><stop offset="1" stop-color="#2781b9"/></linearGradient>
+</defs>
+<rect width="640" height="420" rx="34" fill="url(#sky)"/>
+<circle cx="530" cy="78" r="42" fill="#ffe994"/>
+<path d="M0 232Q110 196 217 229T428 220T640 233V420H0Z" fill="#f4c67b"/>
+<path d="M0 270Q100 235 201 267T407 258T640 274V420H0Z" fill="url(#sea)"/>
+<path d="M0 305q76-23 154 0t154 0t154 0t178 0M0 356q76-23 154 0t154 0t154 0t178 0" fill="none" stroke="#d7fbff" stroke-width="8" opacity=".7"/>
+<path d="M72 243V151Q72 117 106 117H164Q198 117 198 151V243Z" fill="#f6d28e" stroke="#8e5960" stroke-width="8"/>
+<path d="M57 155l23-39h110l23 39Z" fill="#e97869" stroke="#8e5960" stroke-width="7" stroke-linejoin="round"/>
+<path d="M124 243v-51q0-18 18-18t18 18v51" fill="#82cce5" stroke="#8e5960" stroke-width="6"/>
+<path d="M211 310q87-59 171-1t169-4" fill="none" stroke="#bb8760" stroke-width="26" stroke-linecap="round"/>
+<g fill="#dfb079" stroke="#815c56" stroke-width="4"><ellipse cx="249" cy="303" rx="22" ry="13"/><ellipse cx="293" cy="289" rx="22" ry="13"/><ellipse cx="338" cy="297" rx="22" ry="13"/><ellipse cx="384" cy="310" rx="22" ry="13"/><ellipse cx="430" cy="308" rx="22" ry="13"/><ellipse cx="477" cy="294" rx="22" ry="13"/></g>
+<circle cx="236" cy="208" r="22" fill="#f2bd8b" stroke="#55496b" stroke-width="5"/>
+<path d="M213 199l7-31 17 23 16-30 8 40" fill="#ffcb55" stroke="#55496b" stroke-width="5" stroke-linejoin="round"/>
+<path d="M211 232q25-21 49 0l13 61h-76Z" fill="#ef765d" stroke="#55496b" stroke-width="6"/>
+<path d="M268 244l28 18" stroke="#f2bd8b" stroke-width="10" stroke-linecap="round"/>
+<path d="M281 174q20 65-4 120" fill="none" stroke="#7a5365" stroke-width="6"/>
+<path d="M274 174q31 17 53 0" fill="none" stroke="#7a5365" stroke-width="6"/>
+<path d="M327 242l19 24m-14-30 19 24" stroke="#f2bd8b" stroke-width="10" stroke-linecap="round"/>
+<circle cx="409" cy="215" r="24" fill="#a96042" stroke="#563e56" stroke-width="6"/>
+<circle cx="390" cy="195" r="9" fill="#a96042" stroke="#563e56" stroke-width="4"/>
+<circle cx="428" cy="194" r="9" fill="#a96042" stroke="#563e56" stroke-width="4"/>
+<path d="M383 243q27-23 54 0l11 53h-75Z" fill="#d8944b" stroke="#563e56" stroke-width="6"/>
+<circle cx="402" cy="214" r="3.8" fill="#2f2939"/><circle cx="417" cy="214" r="3.8" fill="#2f2939"/>
+<path d="M402 226q8 7 15 0" fill="none" stroke="#513348" stroke-width="3" stroke-linecap="round"/>
+<path d="M383 279q-29 14-20 34" fill="none" stroke="#a96042" stroke-width="7" stroke-linecap="round"/>
+<circle cx="510" cy="213" r="20" fill="#a96042" stroke="#563e56" stroke-width="5"/>
+<path d="M490 239q21-17 42 0l9 43h-60Z" fill="#f3c265" stroke="#563e56" stroke-width="5"/>
+<path d="M487 266l-29 25m62-24 25 18" stroke="#a96042" stroke-width="8" stroke-linecap="round"/>
+<g fill="#fff4bd"><path d="M283 130l5 12 12 5-12 5-5 12-5-12-12-5 12-5z"/><path d="M344 102l4 9 9 4-9 4-4 9-4-9-9-4 9-4z"/></g>
+</svg>

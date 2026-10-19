@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" role="img" aria-labelledby="title desc">
+<title id="title">A young princess explores a glowing forest</title>
+<desc id="desc">A brave young explorer follows a sparkling map through a friendly forest toward a starlit river.</desc>
+<defs>
+<linearGradient id="night" x2="0" y2="1"><stop stop-color="#263b75"/><stop offset=".62" stop-color="#7359a6"/><stop offset="1" stop-color="#e992a9"/></linearGradient>
+<linearGradient id="water" x2="0" y2="1"><stop stop-color="#a3edfa"/><stop offset="1" stop-color="#47b8ce"/></linearGradient>
+</defs>
+<rect width="640" height="420" rx="34" fill="url(#night)"/>
+<circle cx="508" cy="72" r="43" fill="#fff1bd"/>
+<circle cx="495" cy="62" r="42" fill="#394582"/>
+<g fill="#fff3c2"><path d="M110 59l5 13 13 5-13 5-5 13-5-13-13-5 13-5z"/><path d="M375 55l4 10 10 4-10 4-4 10-4-10-10-4 10-4z"/><path d="M570 153l5 11 11 5-11 5-5 11-5-11-11-5 11-5z"/><path d="M260 72l4 9 9 4-9 4-4 9-4-9-9-4 9-4z"/></g>
+<path d="M0 284Q138 236 272 276T640 260V420H0Z" fill="#314c70"/>
+<path d="M0 336Q116 306 220 334T428 325T640 331V420H0Z" fill="url(#water)"/>
+<path d="M0 375q105-27 220 0t220 0t200 0" fill="none" stroke="#d8ffff" stroke-width="9" opacity=".8"/>
+<path d="M59 303L82 134l25 60 20-92 29 96 25-62 19 167Z" fill="#426f64" stroke="#29475c" stroke-width="8" stroke-linejoin="round"/>
+<path d="M418 299l28-173 25 61 22-95 28 90 25-62 24 180Z" fill="#426f64" stroke="#29475c" stroke-width="8" stroke-linejoin="round"/>
+<path d="M211 323l17-50 16 50 16-40 18 40Z" fill="#fff0b5" stroke="#bd7b58" stroke-width="6" stroke-linejoin="round"/>
+<path d="M232 274l12-32 11 32" fill="#fcdd9a" stroke="#bd7b58" stroke-width="5"/>
+<circle cx="142" cy="266" r="22" fill="#efbd8e" stroke="#51446d" stroke-width="5"/>
+<path d="M117 256l8-29 16 21 17-27 9 34" fill="#ffd566" stroke="#51446d" stroke-width="5" stroke-linejoin="round"/>
+<path d="M116 292Q141 274 165 292L179 337H103Z" fill="#ff719a" stroke="#51446d" stroke-width="6"/>
+<path d="M131 290l-15 23m41-23 18 16" stroke="#efbd8e" stroke-width="9" stroke-linecap="round"/>
+<path d="M162 291l45-35 46 30-46 35Z" fill="#fff2a8" stroke="#9d714b" stroke-width="6" stroke-linejoin="round"/>
+<path d="M199 280l8 6 8-9" fill="none" stroke="#dc8a57" stroke-width="4"/>
+<path d="M328 264l6 16 16 6-16 6-6 16-6-16-16-6 16-6z" fill="#fff2b0"/>
+<path d="M370 312l5 12 12 5-12 5-5 12-5-12-12-5 12-5z" fill="#fff2b0"/>
+<path d="M59 307l9-19 9 19m-23 14h28M490 304l10-22 10 22m-26 15h32" fill="#f8d878" stroke="#ab704e" stroke-width="4"/>
+<circle cx="298" cy="215" r="9" fill="#fff1b7"/><circle cx="341" cy="245" r="7" fill="#fff1b7"/>
+</svg>

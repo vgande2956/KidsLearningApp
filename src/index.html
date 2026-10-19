@@ -12,6 +12,17 @@
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="stylesheet" href="styles.css"></head><body>
 <button id="mute-toggle" class="mute-toggle" type="button" hidden aria-label="Mute sound" aria-pressed="false">🔊 Sound on</button>
+<dialog id="english-warrior-dialog" class="english-warrior-dialog" aria-labelledby="english-warrior-dialog-title" aria-describedby="english-warrior-dialog-description">
+<div class="english-warrior-dialog-card">
+<button id="english-warrior-close" class="english-warrior-close" type="button" aria-label="Close warrior introduction">×</button>
+<span id="english-warrior-dialog-letter" class="english-warrior-dialog-letter" aria-hidden="true"></span>
+<h2 id="english-warrior-dialog-title"></h2>
+<img id="english-warrior-dialog-image" class="english-warrior-dialog-image" alt="" hidden>
+<div id="english-warrior-dialog-image-placeholder" class="english-warrior-dialog-image-placeholder" aria-hidden="true">📖</div>
+<p id="english-warrior-dialog-description"></p>
+<button id="english-warrior-hear" class="english-warrior-hear" type="button">🔊 Hear introduction</button>
+</div>
+</dialog>
 <section id="splash" aria-label="Little Learners">
 <div class="splash-sparkle" aria-hidden="true">✨</div>
 <img class="splash-logo" src="mascot.svg" alt="A panda and a little girl sitting on a pencil and reading a book together">
@@ -49,11 +60,46 @@
 <button class="choice-card english-type-card english-multi-card" type="button" data-english-type="multi"><span class="choice-icon" aria-hidden="true">🦋</span><span class="choice-label">Multi-letter words<small>butterfly · rainbow</small></span></button>
 <button class="choice-card english-type-card english-alphabets-card" type="button" id="english-alphabets-entry"><span class="choice-icon" aria-hidden="true">🔠</span><span class="choice-label">Alphabets<small>Learn A to Z</small></span></button>
 <button class="choice-card english-type-card english-deity-card" type="button" id="english-deity-entry"><span class="choice-icon" aria-hidden="true">🪷</span><span class="choice-label">Learn Letters: Indian Gods<small>A–Z names, pictures &amp; stories</small></span></button>
+<button class="choice-card english-type-card english-warrior-card" type="button" id="english-warriors-entry"><span class="choice-icon" aria-hidden="true">🏹</span><span class="choice-label">Epic Warriors<small>Ramayana &amp; Mahabharata A–Z</small></span></button>
+<button class="choice-card english-type-card english-stories-card" type="button" id="english-stories-entry"><span class="choice-icon" aria-hidden="true">📖</span><span class="choice-label">Stories<small>Listen and imagine together</small></span></button>
 <button class="choice-card english-type-card english-identify-card" type="button" id="english-identify-entry"><span class="choice-icon" aria-hidden="true">🕵️</span><span class="choice-label">Identify words<small>Match the picture</small></span></button>
 <button class="choice-card english-type-card english-sentence-card" type="button" id="english-sentence-entry"><span class="choice-icon" aria-hidden="true">🧩</span><span class="choice-label">Sentence formation<small>Build fun sentences</small></span></button>
 <button class="choice-card english-type-card english-spelling-card" type="button" id="english-spelling-entry"><span class="choice-icon" aria-hidden="true">✏️</span><span class="choice-label">How to spell<small>Spell words level by level</small></span></button>
 </div>
 <button class="english-back" type="button" id="english-types-back">← Back</button>
+</section>
+<section id="stories-genres" class="english-screen stories-screen" hidden aria-labelledby="stories-genres-title">
+<header class="english-header">
+<button class="english-back" type="button" id="stories-genres-back">← Back</button>
+<h1 id="stories-genres-title">Choose a story world</h1>
+<span></span>
+</header>
+<p id="stories-genres-intro">Pick a kind of story to explore.</p>
+<div id="stories-genre-grid" class="stories-genre-grid" role="group" aria-label="Choose a story type"></div>
+</section>
+<section id="stories-list" class="english-screen stories-screen" hidden aria-labelledby="stories-list-title">
+<header class="english-header">
+<button class="english-back" type="button" id="stories-list-back">← Story worlds</button>
+<h1 id="stories-list-title">Stories</h1>
+<span></span>
+</header>
+<p id="stories-list-intro"></p>
+<div id="stories-list-grid" class="stories-list-grid" role="group" aria-label="Choose a story"></div>
+</section>
+<section id="stories-reader" class="english-screen stories-screen stories-reader" hidden aria-labelledby="stories-reader-title">
+<header class="english-header">
+<button class="english-back" type="button" id="stories-reader-back">← Stories</button>
+<h1 id="stories-reader-title"></h1>
+<span></span>
+</header>
+<img id="stories-reader-image" class="stories-reader-image" src="images/stories/fun.svg" alt="">
+<p id="stories-reader-genre" class="stories-reader-genre"></p>
+<div id="stories-reader-pages" class="stories-reader-pages" role="region" aria-label="Story" aria-live="polite"></div>
+<div class="stories-reader-controls">
+<button class="english-hear stories-listen" type="button" id="stories-listen">🔊 Listen to the story</button>
+<button class="english-back stories-stop" type="button" id="stories-stop">⏹ Stop</button>
+</div>
+<p id="stories-reader-status" class="stories-reader-status" role="status" aria-live="polite"></p>
 </section>
 <section id="english-identify-levels" class="english-screen english-identify-levels" hidden aria-labelledby="english-identify-levels-title">
 <header class="english-header">
@@ -105,6 +151,15 @@
 <div class="english-deity-placeholder"><span aria-hidden="true">🪷</span><strong>Choose a letter!</strong></div>
 </div>
 <div class="english-deity-grid" id="english-deity-grid" role="group" aria-label="Choose a letter to learn an Indian deity name"></div>
+</section>
+<section id="english-epic-warriors" class="english-screen english-warrior-screen" hidden aria-labelledby="english-warrior-title">
+<header class="english-header">
+<button class="english-back" type="button" id="english-warriors-back">← Back</button>
+<h1 id="english-warrior-title">Epic Warriors A–Z</h1>
+<span></span>
+</header>
+<p>Choose a warrior from the Ramayana or Mahabharata. Open a letter to see a picture, learn about the warrior, and hear the introduction.</p>
+<div id="english-warrior-grid" class="english-warrior-grid" role="group" aria-label="Choose an epic warrior by letter"></div>
 </section>
 <section id="english-lesson" class="english-screen english-lesson" hidden aria-labelledby="english-lesson-title">
 <header class="english-header">
@@ -194,6 +249,7 @@
 </div>
 <div class="addition-picker" id="addition-second-picker" hidden>
 <h2 class="addition-picker-title" id="addition-builder-second-label">Number being added</h2>
+<p class="addition-picker-hint" id="addition-second-hint" hidden>Choose a group count that divides the total evenly.</p>
 <nav class="addition-number-pager" aria-label="Second number pages">
 <button class="addition-number-page-button" id="addition-second-previous" type="button" disabled>← Previous 15</button>
 <span id="addition-second-page-label" aria-live="polite">Numbers 1–15</span>
@@ -268,6 +324,7 @@
 <div class="english-type-options native-type-options" role="group" aria-label="Choose a learning activity">
 <button class="choice-card english-type-card native-letters-card" type="button" id="native-letters-entry"><span class="choice-icon native-letter-icon" id="native-letters-icon" aria-hidden="true">అ</span><span class="choice-label">Letters &amp; Words<small>Tap, see and hear</small></span></button>
 <button class="choice-card english-type-card native-quiz-card" type="button" id="native-quiz-entry"><span class="choice-icon" id="native-quiz-icon" aria-hidden="true">🐘</span><span class="choice-label">Picture Questions<small>Levels that never end</small></span></button>
+<button class="choice-card english-type-card native-stories-card" type="button" id="native-stories-entry"><span class="choice-icon" aria-hidden="true">📖</span><span class="choice-label" id="native-stories-label">కథలు<small>విని ఊహించండి</small></span></button>
 </div>
 <p class="native-types-status" id="native-types-status" aria-live="polite"></p>
 <button class="english-back" type="button" id="native-types-back">← Back</button>
