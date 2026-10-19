@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" role="img" aria-labelledby="title desc">
+<title id="title">A friendly little ghost visits a moonlit castle</title>
+<desc id="desc">A smiling, harmless ghost and a brave young prince solve a gentle nighttime mystery together.</desc>
+<defs>
+<linearGradient id="twilight" x2="0" y2="1"><stop stop-color="#34376f"/><stop offset="1" stop-color="#bd83ae"/></linearGradient>
+<linearGradient id="window" x2="0" y2="1"><stop stop-color="#fff2a6"/><stop offset="1" stop-color="#faac65"/></linearGradient>
+</defs>
+<rect width="640" height="420" rx="34" fill="url(#twilight)"/>
+<circle cx="515" cy="75" r="42" fill="#fff1c8"/>
+<circle cx="500" cy="66" r="39" fill="#424275"/>
+<g fill="#fff3c6"><circle cx="104" cy="83" r="5"/><circle cx="196" cy="56" r="5"/><circle cx="384" cy="82" r="5"/><circle cx="586" cy="156" r="5"/><circle cx="273" cy="106" r="4"/></g>
+<path d="M0 337Q124 293 250 332T482 324T640 331V420H0Z" fill="#4f527c"/>
+<path d="M114 341V169L160 127l47 42v172Z" fill="#685c89" stroke="#393951" stroke-width="9"/>
+<path d="M90 178l70-73 74 73Z" fill="#d98291" stroke="#393951" stroke-width="9" stroke-linejoin="round"/>
+<path d="M178 160V110Q178 65 220 65t42 45v56Z" fill="#685c89" stroke="#393951" stroke-width="9"/>
+<path d="M167 119l52-70 56 70Z" fill="#d98291" stroke="#393951" stroke-width="9" stroke-linejoin="round"/>
+<path d="M136 204q0-23 22-23t22 23v38h-44Z" fill="url(#window)" stroke="#393951" stroke-width="6"/>
+<path d="M206 204q0-23 22-23t22 23v38h-44Z" fill="url(#window)" stroke="#393951" stroke-width="6"/>
+<path d="M165 341v-68q0-24 25-24t25 24v68Z" fill="#433e63" stroke="#393951" stroke-width="7"/>
+<path d="M343 146q0-57 56-57t56 57v118q-10 8-20-3t-19 3q-11 8-20-3t-20 3q-11 8-18-2t-19 4Z" fill="#fff7e8" stroke="#706589" stroke-width="8"/>
+<circle cx="379" cy="169" r="7" fill="#3b3452"/><circle cx="419" cy="169" r="7" fill="#3b3452"/>
+<path d="M382 195q18 18 36 0" fill="none" stroke="#ae6275" stroke-width="6" stroke-linecap="round"/>
+<circle cx="368" cy="184" r="8" fill="#ffa6a8" opacity=".7"/><circle cx="430" cy="184" r="8" fill="#ffa6a8" opacity=".7"/>
+<path d="M294 275l18-37 21 35 20-36 20 39" fill="#ffdb68" stroke="#544568" stroke-width="6" stroke-linejoin="round"/>
+<circle cx="326" cy="274" r="23" fill="#f3bd8e" stroke="#544568" stroke-width="5"/>
+<path d="M302 266l7-29 17 20 15-26 10 37" fill="#ffdb68" stroke="#544568" stroke-width="5" stroke-linejoin="round"/>
+<path d="M300 297q26-18 51 0l13 49h-78Z" fill="#6bb6ce" stroke="#544568" stroke-width="6"/>
+<circle cx="318" cy="273" r="3.5" fill="#302941"/><circle cx="336" cy="273" r="3.5" fill="#302941"/>
+<path d="M320 284q7 5 14 0" fill="none" stroke="#a24e62" stroke-width="3" stroke-linecap="round"/>
+<path d="M404 297l16 17 17-17 17 17 16-17" fill="none" stroke="#fff2bd" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M76 362q14-21 28 0m436 0q14-21 28 0" fill="none" stroke="#a6dfc1" stroke-width="7" stroke-linecap="round"/>
+</svg>
