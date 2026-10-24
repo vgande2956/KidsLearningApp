@@ -42,7 +42,23 @@ value and its Roman numeral. Both options speak the selected value.
 The language-selection screen reads its heading and available options aloud; use
 “Hear options” to replay the voice guidance.
 English opens a menu for Alphabets, Learn Letters: Indian Gods, Epic Warriors,
-Stories, Identify Words, and two-letter, three-letter, and multi-letter words.
+Stories, Identify Words, Sketch the diagram, and two-letter, three-letter, and
+multi-letter words. Sketch the diagram includes an animated coloring demo and
+open practice: all picture groups and coloring pages are available immediately,
+with no sketch levels or locked pictures. Learners can sketch letters, numbers,
+vegetables, fruits, cartoon pictures, animals, and game equipment; choose paint
+colors, mix new colors, and draw on a white canvas
+while viewing a picture reference. All English letters and digits are available,
+along with expanded original coloring pictures such as rockets, houses, rainbows,
+whales, owls, mushrooms, and more. Completing a picture celebrates the learner and spells its name aloud. More to sketch includes the
+original user-provided portrait JPEG, displayed unchanged, plus open-license
+princess-and-prince, chef, cat, simple-flower, teddy-bear, rose, sea-turtle,
+and dragon raster coloring pages. These licensed pages are bundled as PNGs (no
+sketch SVG assets are used); their source pages and licenses are listed in
+`src/images/sketch/open-license/CREDITS.txt`. Drag or tap near the line art to
+paint; the original outlines remain visible over the color, including on small
+details such as the face, eyes, and hair. The finished, framed picture appears
+with the completion celebration.
 Identify Words has ten picture questions per level, four
 image choices per question, and unlocks the next level after each level is
 completed. Its ten-level pages continue without a fixed limit as levels unlock,
