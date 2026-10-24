@@ -1,0 +1,49 @@
+Open-license sketch artwork
+===========================
+
+All artwork below is bundled as raster PNG. The user's original
+reference-pages.jpg remains unchanged.
+
+Princess and Prince
+Openclipart item 270697, "Princess And Prince Line Art"
+https://openclipart.org/detail/270697/princess-and-prince-line-art
+CC0 1.0 Universal
+
+Chef
+PublicDomainFiles item 13927281017850, "happy chef"
+https://www.publicdomainfiles.com/show_file.php?id=13927281017850
+Dedicated to the public domain by its creator.
+
+Cat
+PublicDomainFiles item 13526065812146, cat coloring artwork
+https://www.publicdomainfiles.com/show_file.php?id=13526065812146
+Dedicated to the public domain by its creator.
+
+Sea Turtle
+Openclipart item 74233, "Green sea turtle line art", by horse50
+https://openclipart.org/detail/74233/green-sea-turtle-line-art
+CC0 1.0 Universal
+
+Friendly Dragon
+"Dragon Vector Art" by Mark / samuraiagency
+https://commons.wikimedia.org/wiki/File:Dragon_Vector_Art.svg
+CC0 1.0 Universal. The bundled file is the PNG rendition supplied by Wikimedia
+Commons; the SVG source is not included in this sketch collection.
+
+Simple Flower
+"Simple Flower bw" by malenki, based on the Simple Flower by HakanL
+https://openclipart.org/detail/215702/simple-flower-bw
+CC0 1.0 Universal. Bundled from Openclipart's PNG preview.
+
+Teddy Bear
+"Teddy bear (outline)" by Firkin
+https://openclipart.org/detail/300722/teddy-bear-outline
+CC0 1.0 Universal. Bundled from Openclipart's PNG preview.
+
+Rose
+"Flower Line Art" by GDJ
+https://openclipart.org/detail/275976/flower-line-art
+CC0 1.0 Universal. The source page notes that the artwork is from Pixabay.
+Bundled from Openclipart's PNG preview.
+
+CC0 1.0 Universal: https://creativecommons.org/publicdomain/zero/1.0/

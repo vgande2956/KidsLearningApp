@@ -86,6 +86,7 @@
 <button class="choice-card english-type-card english-identify-card" type="button" id="english-identify-entry"><span class="choice-icon" aria-hidden="true">🕵️</span><span class="choice-label">Identify words<small>Match the picture</small></span></button>
 <button class="choice-card english-type-card english-sentence-card" type="button" id="english-sentence-entry"><span class="choice-icon" aria-hidden="true">🧩</span><span class="choice-label">Sentence formation<small>Build fun sentences</small></span></button>
 <button class="choice-card english-type-card english-spelling-card" type="button" id="english-spelling-entry"><span class="choice-icon" aria-hidden="true">✏️</span><span class="choice-label">How to spell<small>Spell words level by level</small></span></button>
+<button class="choice-card english-type-card english-sketch-card" type="button" id="english-sketch-entry"><span class="choice-icon" aria-hidden="true">🎨</span><span class="choice-label">Sketch the diagram<small>Color pictures and practice</small></span></button>
 </div>
 <button class="english-back" type="button" id="english-types-back">← Back</button>
 </section>
@@ -198,6 +199,98 @@
 <h2 id="english-selected-letter">Choose a letter</h2>
 <div class="english-word-list" id="english-word-list"></div>
 </section>
+</section>
+<section id="sketch-home" class="english-screen sketch-screen" hidden aria-labelledby="sketch-home-title">
+<header class="english-header">
+<button class="english-back" type="button" id="sketch-home-back">← Back</button>
+<h1 id="sketch-home-title">Sketch the diagram</h1>
+<span></span>
+</header>
+<p>Watch a colorful demo or start your own drawing practice.</p>
+<div class="sketch-home-options" role="group" aria-label="Choose a sketch activity">
+<button class="choice-card sketch-demo-card" type="button" id="sketch-demo-entry"><span class="choice-icon" aria-hidden="true">🖍️</span><span class="choice-label">See a demo<small>Watch a picture come to life</small></span></button>
+<button class="choice-card sketch-practice-card" type="button" id="sketch-practice-entry"><span class="choice-icon" aria-hidden="true">🎨</span><span class="choice-label">Start practice<small>Choose a level and picture</small></span></button>
+</div>
+</section>
+<section id="sketch-demo" class="english-screen sketch-screen" hidden aria-labelledby="sketch-demo-title">
+<header class="english-header">
+<button class="english-back" type="button" id="sketch-demo-back">← Back</button>
+<h1 id="sketch-demo-title">Coloring demo</h1>
+<span></span>
+</header>
+<p>Tap Start demo to watch the picture get colored.</p>
+<div class="sketch-demo-board"><canvas id="sketch-demo-canvas" width="900" height="600" aria-label="A flower drawing on a white background"></canvas></div>
+<p id="sketch-demo-status" class="sketch-status" role="status" aria-live="polite">Ready when you are!</p>
+<button class="english-hear sketch-action" type="button" id="sketch-demo-start">▶ Start demo</button>
+</section>
+<section id="sketch-categories" class="english-screen sketch-screen" hidden aria-labelledby="sketch-categories-title">
+<header class="english-header">
+<button class="english-back" type="button" id="sketch-categories-back">← Back</button>
+<h1 id="sketch-categories-title">What would you like to sketch?</h1>
+<span></span>
+</header>
+<p>Choose any picture group to start sketching.</p>
+<div id="sketch-category-grid" class="sketch-option-grid" role="group" aria-label="Choose a picture category"></div>
+</section>
+<section id="sketch-more" class="english-screen sketch-screen" hidden aria-labelledby="sketch-more-title">
+<header class="english-header">
+<button class="english-back" type="button" id="sketch-more-back">← Categories</button>
+<h1 id="sketch-more-title">More to sketch</h1>
+<span></span>
+</header>
+<p id="sketch-more-intro">All original and open-license coloring pictures are ready to choose.</p>
+<div id="sketch-more-grid" class="sketch-option-grid sketch-more-grid" role="group" aria-label="More coloring pictures"></div>
+</section>
+<section id="sketch-pictures" class="english-screen sketch-screen" hidden aria-labelledby="sketch-pictures-title">
+<header class="english-header">
+<button class="english-back" type="button" id="sketch-pictures-back">← Back</button>
+<h1 id="sketch-pictures-title">Choose a picture</h1>
+<span></span>
+</header>
+<p id="sketch-pictures-intro">Pick a picture to color.</p>
+<div id="sketch-picture-grid" class="sketch-option-grid" role="group" aria-label="Choose a picture"></div>
+</section>
+<section id="sketch-practice" class="english-screen sketch-screen sketch-practice-screen" hidden aria-labelledby="sketch-practice-title">
+<header class="english-header">
+<button class="english-back" type="button" id="sketch-practice-back">← Pictures</button>
+<h1 id="sketch-practice-title">Color your picture</h1>
+<span></span>
+</header>
+<div class="sketch-workspace">
+<div class="sketch-main">
+<p id="sketch-practice-instructions">Choose a color, then draw on the picture.</p>
+<canvas id="sketch-practice-canvas" width="900" height="600" aria-label="Drawing canvas. Choose a color and draw with your finger or mouse."></canvas>
+<div class="sketch-palette" id="sketch-palette" role="group" aria-label="Choose a paint color"></div>
+<div class="sketch-mixer">
+<label>Mix colors
+<select id="sketch-mix-first" aria-label="First color to mix"></select>
+</label>
+<span aria-hidden="true">+</span>
+<label>
+<select id="sketch-mix-second" aria-label="Second color to mix"></select>
+</label>
+<button class="english-hear" type="button" id="sketch-mix-button">Mix colors</button>
+</div>
+<p id="sketch-practice-status" class="sketch-status" role="status" aria-live="polite"></p>
+<button class="english-hear sketch-action" type="button" id="sketch-finish-button" disabled>Finish picture</button>
+</div>
+<aside class="sketch-reference" aria-label="Original picture">
+<strong>Original picture</strong>
+<canvas id="sketch-reference-canvas" width="300" height="220" aria-label="Original image example"></canvas>
+<span id="sketch-reference-name"></span>
+</aside>
+</div>
+<div id="sketch-celebration" class="sketch-celebration" hidden role="dialog" aria-modal="true" aria-labelledby="sketch-celebration-title">
+<div class="sketch-celebration-sparkles" aria-hidden="true"><span>✨</span><span>⭐</span><span>🎉</span><span>✨</span><span>🌟</span><span>🎊</span></div>
+<p class="sketch-celebration-greeting" id="sketch-celebration-greeting"></p>
+<h2 id="sketch-celebration-title">You did it!</h2>
+<div class="sketch-completed-frame"><canvas id="sketch-completed-canvas" width="675" height="1200" aria-label="Your completed colored picture"></canvas></div>
+<strong id="sketch-completed-name"></strong>
+<p>Let’s spell your picture!</p>
+<div class="sketch-spelling" id="sketch-spelling" aria-hidden="true"></div>
+<strong class="sketch-spelling-word" id="sketch-spelling-word" aria-live="polite"></strong>
+<button class="english-hear sketch-action" type="button" id="sketch-celebration-next">Choose next level</button>
+</div>
 </section>
 <section id="math-menu" class="math-screen" hidden>
 <div class="big" aria-hidden="true">🧮</div>
