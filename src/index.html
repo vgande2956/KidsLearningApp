@@ -84,12 +84,75 @@
 <button class="choice-card english-type-card english-deity-card" type="button" id="english-deity-entry"><span class="choice-icon" aria-hidden="true">🪷</span><span class="choice-label">Learn Letters: Indian Gods<small>A–Z names, pictures &amp; stories</small></span></button>
 <button class="choice-card english-type-card english-warrior-card" type="button" id="english-warriors-entry"><span class="choice-icon" aria-hidden="true">🏹</span><span class="choice-label">Epic Warriors<small>Ramayana &amp; Mahabharata A–Z</small></span></button>
 <button class="choice-card english-type-card english-stories-card" type="button" id="english-stories-entry"><span class="choice-icon" aria-hidden="true">📖</span><span class="choice-label">Stories<small>Listen and imagine together</small></span></button>
+<button class="choice-card english-type-card english-everyday-card" type="button" id="english-everyday-entry"><span class="choice-icon" aria-hidden="true">🥛</span><span class="choice-label">Everyday Objects<small>Learn about things around us</small></span></button>
+<button class="choice-card english-type-card animal-trivia-entry" type="button" id="animal-trivia-entry"><span class="choice-icon" aria-hidden="true">🦁</span><span class="choice-label">Animal Trivia<small>Discover amazing animals</small></span></button>
+<button class="choice-card english-type-card food-nature-entry" type="button" id="food-nature-entry"><span class="choice-icon" aria-hidden="true">🌱</span><span class="choice-label">Food &amp; Nature<small>Discover plants, food, and the outdoors</small></span></button>
 <button class="choice-card english-type-card english-identify-card" type="button" id="english-identify-entry"><span class="choice-icon" aria-hidden="true">🕵️</span><span class="choice-label">Identify words<small>Match the picture</small></span></button>
 <button class="choice-card english-type-card english-sentence-card" type="button" id="english-sentence-entry"><span class="choice-icon" aria-hidden="true">🧩</span><span class="choice-label">Sentence formation<small>Build fun sentences</small></span></button>
 <button class="choice-card english-type-card english-spelling-card" type="button" id="english-spelling-entry"><span class="choice-icon" aria-hidden="true">✏️</span><span class="choice-label">How to spell<small>Spell words level by level</small></span></button>
 <button class="choice-card english-type-card english-sketch-card" type="button" id="english-sketch-entry"><span class="choice-icon" aria-hidden="true">🎨</span><span class="choice-label">Sketch the diagram<small>Color pictures and practice</small></span></button>
 </div>
 <button class="english-back" type="button" id="english-types-back">← Back</button>
+</section>
+<section id="english-everyday" class="english-screen everyday-screen" hidden aria-labelledby="english-everyday-title">
+<header class="english-header">
+<button class="english-back" type="button" id="english-everyday-back">← English</button>
+<h1 id="english-everyday-title">Everyday Objects</h1>
+<span></span>
+</header>
+<p class="everyday-intro">Look, listen, and learn about the world around you.</p>
+<article id="everyday-object-card" class="everyday-object-card" aria-live="polite">
+<p id="everyday-object-count" class="everyday-object-count"></p>
+<img id="everyday-object-image" class="everyday-object-image" alt="">
+<h2 id="everyday-object-name"></h2>
+<p id="everyday-object-fact" class="everyday-object-fact"></p>
+<a id="everyday-object-source" class="everyday-object-source" target="_blank" rel="noopener noreferrer" aria-label="Photo and license details"></a>
+</article>
+<button class="everyday-hear" id="everyday-hear" type="button">🔊 Hear the sentence</button>
+<nav class="everyday-navigation" aria-label="Everyday objects navigation">
+<button id="everyday-previous" type="button">← Previous</button>
+<button id="everyday-next" type="button">Next →</button>
+</nav>
+</section>
+<section id="animal-trivia" class="english-screen everyday-screen animal-trivia-screen" hidden aria-labelledby="animal-trivia-title">
+<header class="english-header">
+<button class="english-back" type="button" id="animal-trivia-back">← English</button>
+<h1 id="animal-trivia-title">Animal Trivia</h1>
+<span></span>
+</header>
+<p class="everyday-intro">Listen and learn amazing facts about animals.</p>
+<article id="animal-trivia-card" class="everyday-object-card" aria-live="polite">
+<p id="animal-trivia-count" class="everyday-object-count"></p>
+<img id="animal-trivia-image" class="everyday-object-image" alt="">
+<h2 id="animal-trivia-name"></h2>
+<p id="animal-trivia-fact" class="everyday-object-fact"></p>
+<a id="animal-trivia-source" class="everyday-object-source" target="_blank" rel="noopener noreferrer" aria-label="Photo and license details"></a>
+</article>
+<button class="everyday-hear" id="animal-trivia-hear" type="button">🔊 Hear the sentence</button>
+<nav class="everyday-navigation" aria-label="Animal trivia navigation">
+<button id="animal-trivia-previous" type="button">← Previous</button>
+<button id="animal-trivia-next" type="button">Next →</button>
+</nav>
+</section>
+<section id="food-nature" class="english-screen everyday-screen food-nature-screen" hidden aria-labelledby="food-nature-title">
+<header class="english-header">
+<button class="english-back" type="button" id="food-nature-back">← English</button>
+<h1 id="food-nature-title">Food &amp; Nature</h1>
+<span></span>
+</header>
+<p class="everyday-intro">Explore tasty foods and the wonders of nature.</p>
+<article id="food-nature-card" class="everyday-object-card" aria-live="polite">
+<p id="food-nature-count" class="everyday-object-count"></p>
+<img id="food-nature-image" class="everyday-object-image" alt="">
+<h2 id="food-nature-name"></h2>
+<p id="food-nature-fact" class="everyday-object-fact"></p>
+<a id="food-nature-source" class="everyday-object-source" target="_blank" rel="noopener noreferrer" aria-label="Photo and license details"></a>
+</article>
+<button class="everyday-hear" id="food-nature-hear" type="button">🔊 Hear the sentence</button>
+<nav class="everyday-navigation" aria-label="Food and nature navigation">
+<button id="food-nature-previous" type="button">← Previous</button>
+<button id="food-nature-next" type="button">Next →</button>
+</nav>
 </section>
 <section id="general-knowledge" class="english-screen general-knowledge-screen" hidden aria-labelledby="general-knowledge-title">
 <header class="english-header">
