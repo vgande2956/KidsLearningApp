@@ -36,6 +36,10 @@ function build() {
         .replace(/__BUILD__/g, buildId)
         .replace(/__PRECACHE__/g, JSON.stringify(precache));
       fs.writeFileSync(out, text);
+    } else if (f === 'index.html') {
+      const text = fs.readFileSync(path.join(SRC, f), 'utf8')
+        .replace('src="app.js" defer', `src="app.js?v=${buildId}" defer`);
+      fs.writeFileSync(out, text);
     } else {
       fs.copyFileSync(path.join(SRC, f), out);
     }

@@ -619,6 +619,121 @@ const INDIA_PRIME_MINISTERS=[
  {name:"Narendra Modi",tenure:"Since 26 May 2014 · 2014–present",image:"https://upload.wikimedia.org/wikipedia/commons/b/ba/Narendra_Modi_Portrait_2026.jpg",source:"https://commons.wikimedia.org/wiki/File:Narendra_Modi_Portrait_2026.jpg"}
 ];
 let primeMinisterIndex=0;
+const INDIA_FACT_IMAGES={
+ flag:{image:"https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/Waving_Indian_Flag_At_Red_Fort.jpg/500px-Waving_Indian_Flag_At_Red_Fort.jpg",imageFile:"Waving_Indian_Flag_At_Red_Fort.jpg"},
+ capital:{image:"https://thumb.wikimedia.org/wikipedia/commons/thumb/8/86/India_Gate_1_%28New_Delhi%29.jpg/500px-India_Gate_1_(New_Delhi).jpg",imageFile:"India Gate 1 (New Delhi).jpg"},
+ tiger:ANIMAL_TRIVIA.find(item=>item.name==="Tiger"),
+ bird:{image:"https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9c/Pavo_cristatus_Phasianidae.jpg/500px-Pavo_cristatus_Phasianidae.jpg",imageFile:"Pavo cristatus Phasianidae.jpg"},
+ lotus:{image:"https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d3/Nelumno_nucifera_open_flower_-_botanic_garden_adelaide2.jpg/500px-Nelumno_nucifera_open_flower_-_botanic_garden_adelaide2.jpg",imageFile:"Nelumno nucifera open flower - botanic garden adelaide2.jpg"},
+ tree:{image:"https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/Roadside_Banyan_tree_%28Ficus_benghalensis%29_at_Kothavalasa.jpg/500px-Roadside_Banyan_tree_(Ficus_benghalensis)_at_Kothavalasa.jpg",imageFile:"Roadside Banyan tree (Ficus benghalensis) at Kothavalasa.jpg"},
+ river:{image:"https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f8/Ganges_Delta_ESA22274217.jpeg/500px-Ganges_Delta_ESA22274217.jpeg",imageFile:"Ganges Delta ESA22274217.jpeg"},
+ money:{image:"https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/First_banknote_of_independent_India%2C_one_rupee%2C_1949.jpg/500px-First_banknote_of_independent_India,_one_rupee,_1949.jpg",imageFile:"First banknote of independent India, one rupee, 1949.jpg"},
+ mountains:{image:"https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/Panorama_of_Himalayas_from_Ranikhet%2C_Uttarakhand%2C_India.jpg/500px-Panorama_of_Himalayas_from_Ranikhet,_Uttarakhand,_India.jpg",imageFile:"Panorama of Himalayas from Ranikhet, Uttarakhand, India.jpg"},
+ taj:{image:"https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/Taj_Mahal%2C_Agra%2C_India_edit2.jpg/500px-Taj_Mahal,_Agra,_India_edit2.jpg",imageFile:"Taj Mahal, Agra, India edit2.jpg"},
+ redFort:{image:"https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0d/Red_Fort_in_Delhi_03-2016_img3.jpg/500px-Red_Fort_in_Delhi_03-2016_img3.jpg",imageFile:"Red Fort in Delhi 03-2016 img3.jpg"},
+ book:EVERYDAY_OBJECTS.find(item=>item.name==="A book"),
+ clock:EVERYDAY_OBJECTS.find(item=>item.name==="A clock"),
+ dolphin:ANIMAL_TRIVIA.find(item=>item.name==="Dolphin"),
+ mango:{image:"https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/Mangos_-_single_and_halved.jpg/500px-Mangos_-_single_and_halved.jpg",imageFile:"Mangos - single and halved.jpg"},
+ riverDolphin:{image:"https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3f/South_Asian_river_dolphin.jpg/500px-South_Asian_river_dolphin.jpg",imageFile:"South Asian river dolphin.jpg"},
+ elephant:ANIMAL_TRIVIA.find(item=>item.name==="Elephant"),
+ flower:EVERYDAY_OBJECTS.find(item=>item.name==="A flower"),
+ desert:{image:"https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8f/Thar_desert.jpg/500px-Thar_desert.jpg",imageFile:"Thar desert.jpg"},
+ coast:{image:"https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/Indian_Ocean_-_Andaman_Islands.jpg/500px-Indian_Ocean_-_Andaman_Islands.jpg",imageFile:"Indian Ocean - Andaman Islands.jpg"},
+ bread:EVERYDAY_OBJECTS.find(item=>item.name==="Bread"),
+ bee:ANIMAL_TRIVIA.find(item=>item.name==="Bee"),
+ sun:EVERYDAY_OBJECTS.find(item=>item.name==="The sun"),
+ butterfly:ANIMAL_TRIVIA.find(item=>item.name==="Butterfly"),
+ parrot:ANIMAL_TRIVIA.find(item=>item.name==="Parrot"),
+ cloud:EVERYDAY_OBJECTS.find(item=>item.name==="A cloud"),
+ rainbow:EVERYDAY_OBJECTS.find(item=>item.name==="A rainbow"),
+ riverWater:FOOD_NATURE_IMAGES.water
+};
+const INDIA_NATIONAL_INFORMATION=[
+ {name:"Capital of India",fact:"New Delhi is the capital of India.",photo:INDIA_FACT_IMAGES.capital},
+ {name:"Prime Minister of India",fact:"Narendra Modi is the Prime Minister of India, as of October 2026.",photo:INDIA_PRIME_MINISTERS[INDIA_PRIME_MINISTERS.length-1]},
+ {name:"National Flag",fact:"India’s national flag has saffron, white, and green horizontal bands.",photo:INDIA_FACT_IMAGES.flag},
+ {name:"Ashoka Chakra",fact:"The navy-blue Ashoka Chakra in the flag has 24 spokes.",photo:INDIA_FACT_IMAGES.flag},
+ {name:"National Animal",fact:"The Bengal tiger is India’s national animal.",photo:INDIA_FACT_IMAGES.tiger},
+ {name:"National Bird",fact:"The Indian peafowl, commonly called the peacock, is India’s national bird.",photo:INDIA_FACT_IMAGES.bird},
+ {name:"National Flower",fact:"The lotus is India’s national flower.",photo:INDIA_FACT_IMAGES.lotus},
+ {name:"National Tree",fact:"The banyan is India’s national tree.",photo:INDIA_FACT_IMAGES.tree},
+ {name:"National River",fact:"The Ganga is known as India’s national river.",photo:INDIA_FACT_IMAGES.river},
+ {name:"National Aquatic Animal",fact:"The Ganges river dolphin is India’s national aquatic animal.",photo:INDIA_FACT_IMAGES.riverDolphin},
+ {name:"National Anthem",fact:"“Jana Gana Mana,” written by Rabindranath Tagore, is India’s national anthem.",photo:INDIA_FACT_IMAGES.book},
+ {name:"National Song",fact:"“Vande Mataram,” written by Bankim Chandra Chattopadhyay, is India’s national song.",photo:INDIA_FACT_IMAGES.book},
+ {name:"National Emblem",fact:"India’s National Emblem is adapted from the Lion Capital of Ashoka at Sarnath.",photo:INDIA_FACT_IMAGES.tiger},
+ {name:"Emblem Motto",fact:"The words “Satyameva Jayate” beneath the emblem mean “Truth Alone Triumphs.”",photo:INDIA_FACT_IMAGES.book},
+ {name:"National Calendar",fact:"India’s national calendar is based on the Saka Era.",photo:INDIA_FACT_IMAGES.clock},
+ {name:"Currency",fact:"The currency used in India is the Indian rupee.",photo:INDIA_FACT_IMAGES.money},
+ {name:"Rupee Symbol",fact:"The Indian rupee symbol is ₹.",photo:INDIA_FACT_IMAGES.money},
+ {name:"Independence Day",fact:"India celebrates Independence Day on 15 August.",photo:INDIA_FACT_IMAGES.flag},
+ {name:"Republic Day",fact:"India celebrates Republic Day on 26 January.",photo:INDIA_FACT_IMAGES.flag},
+ {name:"Constitution Day",fact:"Constitution Day is observed in India on 26 November.",photo:INDIA_FACT_IMAGES.book},
+ {name:"The Constitution",fact:"India’s Constitution came into effect on 26 January 1950.",photo:INDIA_FACT_IMAGES.book},
+ {name:"Official Language",fact:"Hindi in Devanagari script is an official language of the Union of India; India has no national language.",photo:INDIA_FACT_IMAGES.book},
+ {name:"Scheduled Languages",fact:"The Eighth Schedule of India’s Constitution lists 22 scheduled languages.",photo:INDIA_FACT_IMAGES.book},
+ {name:"Standard Time",fact:"Indian Standard Time is five hours and thirty minutes ahead of UTC.",photo:INDIA_FACT_IMAGES.clock},
+ {name:"Time Meridian",fact:"Indian Standard Time is based on the 82.5° east longitude meridian.",photo:INDIA_FACT_IMAGES.clock},
+ {name:"States",fact:"India has 28 states.",photo:INDIA_FACT_IMAGES.capital},
+ {name:"Union Territories",fact:"India has 8 union territories.",photo:INDIA_FACT_IMAGES.capital},
+ {name:"The Taj Mahal",fact:"The Taj Mahal is a famous marble monument in Agra, Uttar Pradesh.",photo:INDIA_FACT_IMAGES.taj},
+ {name:"The Red Fort",fact:"The Red Fort is a historic fort in Delhi.",photo:INDIA_FACT_IMAGES.redFort},
+ {name:"India Gate",fact:"India Gate is a prominent war memorial in New Delhi.",photo:INDIA_FACT_IMAGES.capital},
+ {name:"The Himalayas",fact:"The Himalayas form a high mountain region along India’s northern edge.",photo:INDIA_FACT_IMAGES.mountains},
+ {name:"The Thar Desert",fact:"The Thar Desert lies mainly in the Indian state of Rajasthan.",photo:INDIA_FACT_IMAGES.desert},
+ {name:"The Indian Ocean",fact:"India is named after the Indian Ocean, which lies to its south.",photo:INDIA_FACT_IMAGES.coast},
+ {name:"The Ganga Basin",fact:"The Ganga and its tributaries flow across the northern plains of India.",photo:INDIA_FACT_IMAGES.river},
+ {name:"The Mango",fact:"Mango is widely loved in India and is often called the king of fruits.",photo:INDIA_FACT_IMAGES.mango},
+ {name:"The Banyan",fact:"A banyan tree can spread wide as its hanging roots grow down into the soil.",photo:INDIA_FACT_IMAGES.tree},
+ {name:"The Tiger",fact:"A tiger’s stripes make a pattern that is different for each tiger.",photo:INDIA_FACT_IMAGES.tiger},
+ {name:"The Peacock",fact:"The male peafowl displays its colorful tail feathers during courtship.",photo:INDIA_FACT_IMAGES.bird},
+ {name:"The Lotus",fact:"Lotus leaves and flowers grow on long stems above the water.",photo:INDIA_FACT_IMAGES.lotus},
+ {name:"The Ganges Dolphin",fact:"The Ganges river dolphin lives in freshwater rivers of South Asia.",photo:INDIA_FACT_IMAGES.riverDolphin},
+ {name:"The Asian Elephant",fact:"Asian elephants live in parts of India and other countries in Asia.",photo:INDIA_FACT_IMAGES.elephant},
+ {name:"The Indian Ocean Coast",fact:"India has coastlines along the Arabian Sea, the Bay of Bengal, and the Indian Ocean.",photo:INDIA_FACT_IMAGES.coast},
+ {name:"The Himalaya Panorama",fact:"The Himalayas include some of the world’s highest mountain peaks.",photo:INDIA_FACT_IMAGES.mountains},
+ {name:"A National Memorial",fact:"India Gate was built to remember Indian soldiers who died in war.",photo:INDIA_FACT_IMAGES.capital},
+ {name:"A World Heritage Site",fact:"The Taj Mahal is a UNESCO World Heritage Site.",photo:INDIA_FACT_IMAGES.taj},
+ {name:"The Red Fort Tradition",fact:"The Prime Minister addresses the nation from the Red Fort on Independence Day.",photo:INDIA_FACT_IMAGES.redFort},
+ {name:"A National Celebration",fact:"The national flag is ceremonially hoisted on Independence Day.",photo:INDIA_FACT_IMAGES.flag},
+ {name:"The Indian Calendar",fact:"The Saka calendar’s first month is Chaitra.",photo:INDIA_FACT_IMAGES.clock},
+ {name:"The National Bird’s Name",fact:"The Indian peafowl is the species; peacock refers to the male bird.",photo:INDIA_FACT_IMAGES.bird},
+ {name:"A River Dolphin",fact:"River dolphins use sound to find their way in muddy water.",photo:INDIA_FACT_IMAGES.riverDolphin}
+];
+let indiaNationalInformationIndex=0;
+const indiaSpeciesPhoto=file=>({image:`https://commons.wikimedia.org/wiki/Special:FilePath/${encodeURIComponent(file)}?width=500`,imageFile:file});
+const INDIA_STATE_SYMBOLS=[
+ ["Andhra Pradesh","Amaravati","Blackbuck","Rose-ringed parakeet","Blackbuck.jpg","Rose-ringed_parakeet.jpg"],
+ ["Arunachal Pradesh","Itanagar","Mithun","Great hornbill","Mithun.jpg","Great_hornbill.jpg"],
+ ["Assam","Dispur","One-horned rhinoceros","White-winged wood duck","Indian_rhinoceros.jpg","A rare White-winged duck at Nameri national park, Assam.jpg"],
+ ["Bihar","Patna","Gaur","House sparrow","Indian_bison.jpg","House_sparrow.jpg"],
+ ["Chhattisgarh","Raipur","Wild water buffalo","Bastar hill myna","Wild_water_buffalo.jpg","Hill_myna.jpg"],
+ ["Goa","Panaji","Gaur","Flame-throated bulbul","Indian_bison.jpg","Flame-throated_bulbul.jpg"],
+ ["Gujarat","Gandhinagar","Asiatic lion","Greater flamingo","Asiatic_lion.jpg","Greater_flamingo.jpg"],
+ ["Haryana","Chandigarh","Blackbuck","Black francolin","Blackbuck.jpg","Francolinus_francolinus.jpg"],
+ ["Himachal Pradesh","Shimla","Snow leopard","Western tragopan","Snow_leopard.jpg","Western_tragopan.jpg"],
+ ["Jharkhand","Ranchi","Indian elephant","Asian koel","Indian_elephant.jpg","Asian_koel.jpg"],
+ ["Karnataka","Bengaluru","Indian elephant","Indian roller","Indian_elephant.jpg","Indian_roller.jpg"],
+ ["Kerala","Thiruvananthapuram","Indian elephant","Great hornbill","Indian_elephant.jpg","Great_hornbill.jpg"],
+ ["Madhya Pradesh","Bhopal","Barasingha","Asian paradise flycatcher","Barasingha.jpg","Asian_paradise_flycatcher.jpg"],
+ ["Maharashtra","Mumbai","Indian giant squirrel","Yellow-footed green pigeon","Indian_giant_squirrel.jpg","Yellow-footed green pigeon (Treron phoenicopterus) near Nasirpur, Patiala 03.jpg"],
+ ["Manipur","Imphal","Sangai","Mrs. Hume’s pheasant","Sangai.jpg","Syrmaticus_humiae.jpg"],
+ ["Meghalaya","Shillong","Clouded leopard","Hill myna","Clouded_leopard.jpg","Hill_myna.jpg"],
+ ["Mizoram","Aizawl","Serow","Mrs. Hume’s pheasant","Capricornis_sumatraensis.jpg","Syrmaticus_humiae.jpg"],
+ ["Nagaland","Kohima","Mithun","Blyth’s tragopan","Mithun.jpg","Tragopan blythii01.jpg"],
+ ["Odisha","Bhubaneswar","Sambar deer","Indian roller","Rusa_unicolor.jpg","Indian_roller.jpg"],
+ ["Punjab","Chandigarh","Blackbuck","Northern goshawk","Blackbuck.jpg","Accipiter_gentilis.jpg"],
+ ["Rajasthan","Jaipur","Chinkara","Great Indian bustard","Chinkara.jpg","Great_Indian_bustard.jpg"],
+ ["Sikkim","Gangtok","Red panda","Blood pheasant","Red_panda.jpg","Blood_Pheasant.jpg"],
+ ["Tamil Nadu","Chennai","Nilgiri tahr","Emerald dove","Nilgiri_tahr.jpg","Emerald_dove.jpg"],
+ ["Telangana","Hyderabad","Spotted deer (jinka)","Indian roller (palapitta)","Spotted_deer.jpg","Indian_roller.jpg"],
+ ["Tripura","Agartala","Phayre’s leaf monkey","Green imperial pigeon","Trachypithecus_phayrei.jpg","Ducula_aenea.jpg"],
+ ["Uttar Pradesh","Lucknow","Swamp deer (barasingha)","Sarus crane","Barasingha.jpg","Sarus_crane.jpg"],
+ ["Uttarakhand","Dehradun (winter); Gairsain (summer)","Alpine musk deer","Himalayan monal","Moschus_chrysogaster.jpg","Lophophorus_impejanus.jpg"],
+ ["West Bengal","Kolkata","Fishing cat","White-throated kingfisher","Fishing_cat.jpg","White-throated_kingfisher.jpg"]
+].map(([name,capital,animal,bird,animalFile,birdFile])=>({name,capital,animal,bird,animalPhoto:indiaSpeciesPhoto(animalFile),birdPhoto:indiaSpeciesPhoto(birdFile)}));
+let indiaStateInformationIndex=0;
 const INDIA_STATE_CAPITALS=[
  {name:"Andhra Pradesh",kind:"State",places:[{name:"Amaravati",lat:16.5131,lon:80.5165}]},
  {name:"Arunachal Pradesh",kind:"State",places:[{name:"Itanagar",lat:27.0844,lon:93.6053}]},
@@ -685,11 +800,21 @@ function showStateCapitalOnMap(index){
 }
 function selectIndiaStateCapital(index){showStateCapitalOnMap(index);const entry=INDIA_STATE_CAPITALS[index];say([{text:`${entry.name}. Capital${entry.places.length>1?"s":""}: ${describeIndiaCapital(entry)}.`}])}
 function renderStateCapitalsScreen(){renderIndiaCapitalButtons();renderIndiaCapitalMarkers();$("state-capitals-selected").textContent="Choose a state or union territory below.";document.querySelectorAll("[data-state-capital-index]").forEach(button=>button.setAttribute("aria-pressed","false"));$("india-map-camera").style.transform="translate(0px,0px) scale(1)"}
-function showGeneralKnowledge(){stopSpeech();hideScreens();$("general-knowledge").hidden=false;say([`Hello ${kid}! Choose a general knowledge topic.`,"Explore States and Capitals, or learn about the Prime Ministers of India."])}
+function showGeneralKnowledge(){stopSpeech();hideScreens();$("general-knowledge").hidden=false;say([`Hello ${kid}! Choose a general knowledge topic.`,"Explore States and Capitals, learn about the Prime Ministers of India, or discover India’s national symbols."])}
 function showStateCapitals(){stopSpeech();hideScreens();$("state-capitals").hidden=false;renderStateCapitalsScreen();say(["India has 28 states and 8 union territories. Choose a button to hear its capital and find it on the map."])}
 function renderPrimeMinister(index){const minister=INDIA_PRIME_MINISTERS[index];if(!minister)throw new RangeError(`Unknown India prime minister index: ${index}`);primeMinisterIndex=index;$("prime-minister-image").src=minister.image;$("prime-minister-image").alt=`Portrait of ${minister.name}`;$("prime-minister-source").href=minister.source;$("prime-minister-count").textContent=`Prime Minister ${index+1} of ${INDIA_PRIME_MINISTERS.length}`;$("prime-minister-name").textContent=minister.name;$("prime-minister-tenure").textContent=minister.tenure;$("prime-minister-previous").disabled=index===0;$("prime-minister-next").textContent=index===INDIA_PRIME_MINISTERS.length-1?"Done ✓":"Next →"}
 function showPrimeMinisters(){stopSpeech();hideScreens();primeMinisterIndex=0;$("prime-ministers").hidden=false;renderPrimeMinister(primeMinisterIndex);say(["Meet the Prime Ministers of India in order. Tap Next to see the next leader."])}
 function movePrimeMinister(direction){const next=primeMinisterIndex+direction;if(next<0)return;if(next>=INDIA_PRIME_MINISTERS.length){showGeneralKnowledge();return}stopSpeech();renderPrimeMinister(next)}
+function showIndiaNationalSymbols(){stopSpeech();hideScreens();$("india-symbols").hidden=false;say(["Choose National Information to explore facts about India, or States to explore the states and their symbols."])}
+function renderIndiaNationalInformation(index){const item=INDIA_NATIONAL_INFORMATION[index];if(!item)throw new RangeError(`Unknown India national information index: ${index}`);indiaNationalInformationIndex=index;const image=$("india-national-image");image.src=item.photo.image;image.alt=`Photo illustrating ${item.name.toLowerCase()}`;$("india-national-count").textContent=`Fact ${index+1} of ${INDIA_NATIONAL_INFORMATION.length}`;$("india-national-name").textContent=item.name;$("india-national-fact").textContent=item.fact;$("india-national-source").href=item.photo.source||commonsFilePage(item.photo.imageFile);$("india-national-previous").disabled=index===0;$("india-national-next").textContent=index===INDIA_NATIONAL_INFORMATION.length-1?"Done ✓":"Next →"}
+function hearIndiaNationalInformation(){const item=INDIA_NATIONAL_INFORMATION[indiaNationalInformationIndex];if(!item)throw new RangeError(`Unknown India national information index: ${indiaNationalInformationIndex}`);say([`${item.name}. ${item.fact}`])}
+function showIndiaNationalInformation(){stopSpeech();hideScreens();indiaNationalInformationIndex=0;$("india-national-information").hidden=false;renderIndiaNationalInformation(indiaNationalInformationIndex);hearIndiaNationalInformation()}
+function moveIndiaNationalInformation(direction){const next=indiaNationalInformationIndex+direction;if(next<0)return;if(next>=INDIA_NATIONAL_INFORMATION.length){showIndiaNationalSymbols();return}stopSpeech();renderIndiaNationalInformation(next);hearIndiaNationalInformation()}
+function renderIndiaStateInformation(index){const item=INDIA_STATE_SYMBOLS[index];if(!item)throw new RangeError(`Unknown India state index: ${index}`);indiaStateInformationIndex=index;const image=$("india-state-image");image.src=item.animalPhoto.image;image.alt=`Photo of the ${item.animal.toLowerCase()} associated with ${item.name}`;$("india-state-animal-image").src=item.animalPhoto.image;$("india-state-animal-image").alt=`Photo of the ${item.animal}`;$("india-state-bird-image").src=item.birdPhoto.image;$("india-state-bird-image").alt=`Photo of the ${item.bird}`;$("india-state-count").textContent=`State ${index+1} of ${INDIA_STATE_SYMBOLS.length}`;$("india-state-name").textContent=item.name;$("india-state-capital").textContent=`Capital: ${item.capital}`;$("india-state-animal").textContent=`State animal: ${item.animal}`;$("india-state-bird").textContent=`State bird: ${item.bird}`;$("india-state-source").href=commonsFilePage(item.animalPhoto.imageFile);$("india-state-picker").value=String(index);$("india-state-previous").disabled=index===0;$("india-state-next").textContent=index===INDIA_STATE_SYMBOLS.length-1?"Done ✓":"Next →"}
+function hearIndiaStateInformation(){const item=INDIA_STATE_SYMBOLS[indiaStateInformationIndex];if(!item)throw new RangeError(`Unknown India state index: ${indiaStateInformationIndex}`);say([`${item.name}. Capital: ${item.capital}. State animal: ${item.animal}. State bird: ${item.bird}.`])}
+function renderIndiaStatePicker(){$("india-state-picker").innerHTML=INDIA_STATE_SYMBOLS.map((item,index)=>`<option value="${index}">${item.name}</option>`).join("")}
+function showIndiaStatesInformation(){stopSpeech();hideScreens();renderIndiaStatePicker();$("india-states-information").hidden=false;indiaStateInformationIndex=0;renderIndiaStateInformation(indiaStateInformationIndex);hearIndiaStateInformation()}
+function moveIndiaStateInformation(direction){const next=indiaStateInformationIndex+direction;if(next<0)return;if(next>=INDIA_STATE_SYMBOLS.length){showIndiaNationalSymbols();return}stopSpeech();renderIndiaStateInformation(next);hearIndiaStateInformation()}
 function renderHighlightedText(element,text,highlight){const start=text.indexOf(highlight);if(start<0)throw new Error(`The highlighted word "${highlight}" is missing from its sentence.`);element.replaceChildren(document.createTextNode(text.slice(0,start)));const emphasized=document.createElement("strong");emphasized.textContent=highlight;element.append(emphasized,document.createTextNode(text.slice(start+highlight.length)))}
 function commonsFilePage(filename){return `https://commons.wikimedia.org/wiki/File:${encodeURIComponent(filename)}`}
 function renderEverydayObject(index){const item=EVERYDAY_LESSONS[index];if(!item)throw new RangeError(`Unknown everyday object lesson index: ${index}`);everydayObjectIndex=index;const image=$("everyday-object-image");image.classList.remove("is-arriving");image.src=item.image;image.alt=`Photo of ${item.name.toLowerCase()}`;$("everyday-object-count").textContent=`Sentence ${index+1} of ${EVERYDAY_LESSONS.length}`;$("everyday-object-name").textContent=item.name;renderHighlightedText($("everyday-object-fact"),item.fact,item.highlight);$("everyday-object-source").href=commonsFilePage(item.imageFile);$("everyday-previous").disabled=index===0;$("everyday-next").textContent=index===EVERYDAY_LESSONS.length-1?"Done ✓":"Next →";requestAnimationFrame(()=>image.classList.add("is-arriving"))}
@@ -704,7 +829,7 @@ function renderFoodNature(index){const item=FOOD_NATURE_LESSONS[index];if(!item)
 function hearFoodNature(){const item=FOOD_NATURE_LESSONS[foodNatureIndex];if(!item)throw new RangeError(`Unknown food and nature lesson index: ${foodNatureIndex}`);say([item.sentence])}
 function showFoodNature(){stopSpeech();hideScreens();foodNatureIndex=0;$("food-nature").hidden=false;renderFoodNature(foodNatureIndex);hearFoodNature()}
 function moveFoodNature(direction){const next=foodNatureIndex+direction;if(next<0)return;if(next>=FOOD_NATURE_LESSONS.length){stopSpeech();showEnglishTypes();return}stopSpeech();renderFoodNature(next);hearFoodNature()}
-function hideScreens(){window.clearInterval(tourTimer);tourTimer=0;window.clearInterval(sketchDemoTimer);sketchDemoTimer=0;sketchCelebrationTimers.forEach(window.clearTimeout);sketchCelebrationTimers=[];if($("sketch-celebration"))$("sketch-celebration").hidden=true;["splash","name","app-tour","language","app","english-types","english-everyday","animal-trivia","food-nature","english-alphabets","english-deity-letters","english-epic-warriors","english-lesson","english-identify-levels","english-identify-quiz","general-knowledge","state-capitals","prime-ministers","stories-genres","stories-list","stories-reader","sketch-home","sketch-demo","sketch-categories","sketch-more","sketch-pictures","sketch-practice","math-menu","math-counting-screen","math-mode-screen","addition-level-screen","addition-screen","math-story-levels","math-story-quiz","math-story-explanation","native-types","quiz-levels","quiz-play"].forEach(id=>$(id).hidden=true)}
+function hideScreens(){window.clearInterval(tourTimer);tourTimer=0;window.clearInterval(sketchDemoTimer);sketchDemoTimer=0;sketchCelebrationTimers.forEach(window.clearTimeout);sketchCelebrationTimers=[];if($("sketch-celebration"))$("sketch-celebration").hidden=true;["splash","name","app-tour","language","app","english-types","english-everyday","animal-trivia","food-nature","english-alphabets","english-deity-letters","english-epic-warriors","english-lesson","english-identify-levels","english-identify-quiz","general-knowledge","state-capitals","prime-ministers","india-symbols","india-national-information","india-states-information","stories-genres","stories-list","stories-reader","sketch-home","sketch-demo","sketch-categories","sketch-more","sketch-pictures","sketch-practice","math-menu","math-counting-screen","math-mode-screen","addition-level-screen","addition-screen","math-story-levels","math-story-quiz","math-story-explanation","native-types","quiz-levels","quiz-play"].forEach(id=>$(id).hidden=true)}
 function sayLanguageOptions(){say([`Hello ${kid}! What would you like to learn?`,"English.","Telugu.","Hindi.","Maths.","General Knowledge."])}
 function showLanguage(){hideScreens();$("language").hidden=false;if(voiceSetupPromptShown)sayLanguageOptions();else scheduleSpeechVoiceCheck()}
 function showName(){hideScreens();$("name").hidden=false;$("msg").textContent="";$("nm").value=kid;$("nm").focus();say(["Welcome! What is your name? Then tap Continue."])}
@@ -955,6 +1080,19 @@ $("prime-ministers-entry").onclick=showPrimeMinisters;
 $("prime-ministers-back").onclick=showGeneralKnowledge;
 $("prime-minister-previous").onclick=()=>movePrimeMinister(-1);
 $("prime-minister-next").onclick=()=>movePrimeMinister(1);
+$("india-symbols-entry").onclick=showIndiaNationalSymbols;
+$("india-symbols-back").onclick=showGeneralKnowledge;
+$("india-national-entry").onclick=showIndiaNationalInformation;
+$("india-states-entry").onclick=showIndiaStatesInformation;
+$("india-national-back").onclick=showIndiaNationalSymbols;
+$("india-national-hear").onclick=hearIndiaNationalInformation;
+$("india-national-previous").onclick=()=>moveIndiaNationalInformation(-1);
+$("india-national-next").onclick=()=>moveIndiaNationalInformation(1);
+$("india-states-back").onclick=showIndiaNationalSymbols;
+$("india-state-picker").onchange=event=>{stopSpeech();renderIndiaStateInformation(Number(event.target.value));hearIndiaStateInformation()};
+$("india-state-hear").onclick=hearIndiaStateInformation;
+$("india-state-previous").onclick=()=>moveIndiaStateInformation(-1);
+$("india-state-next").onclick=()=>moveIndiaStateInformation(1);
 $("state-capitals-read-all").onclick=()=>say([
  {text:"Let's learn all 28 states and 8 union territories of India."},
  ...INDIA_STATE_CAPITALS.map((entry,index)=>({text:`${entry.name}. Capital${entry.places.length>1?"s":""}: ${describeIndiaCapital(entry)}.`,onStart:()=>showStateCapitalOnMap(index)}))
