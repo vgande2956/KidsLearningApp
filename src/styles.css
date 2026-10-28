@@ -203,6 +203,60 @@ header b{flex:1;color:var(--blue);font-size:1.3rem}header button{font-size:.95re
 @media (max-height:650px){.math-counting-screen{gap:5px}.math-counting-display{min-height:100px}.math-counting-icons{max-height:7vh}.math-counting-key{min-height:38px}}
 @media (max-height:700px){.addition-screen{gap:6px}.addition-board{padding:8px}.addition-icons{min-height:48px}}
 @media (max-width:380px){.addition-level-options{gap:6px}.addition-level-card{min-height:66px}.addition-picker{gap:5px;padding:6px 3px}.addition-number-pager{gap:4px}.addition-number-page-button{min-height:38px;padding:5px 6px}.addition-number-grid{gap:4px}.addition-number-button{min-height:42px;padding:3px}.addition-board{gap:2px}.addition-group{padding:4px 1px}.addition-total{flex-basis:54px;min-height:64px}.addition-icons{font-size:1.1rem}}
+.general-knowledge-entry{grid-column:1/-1;min-height:clamp(88px,14vh,112px);flex-direction:row;background:linear-gradient(135deg,#dff3e9,#e5f2ff);color:var(--ink)}
+.general-knowledge-entry .choice-icon{font-size:clamp(2rem,7vmin,3rem)}
+.general-knowledge-screen{justify-content:flex-start;gap:14px}
+.general-knowledge-options{width:min(92vw,520px);display:grid;grid-template-columns:1fr;gap:12px}
+.state-capitals-entry{min-height:clamp(130px,24vh,190px);background:linear-gradient(145deg,#fff1cb,#ffe4ef);color:var(--ink)}
+.prime-ministers-entry{min-height:clamp(130px,24vh,190px);background:linear-gradient(145deg,#e5f2ff,#dff3e9);color:var(--ink)}
+.prime-ministers-screen{justify-content:flex-start;align-items:stretch;gap:clamp(8px,2vh,16px);padding:calc(env(safe-area-inset-top,0px) + 58px) 16px max(14px,env(safe-area-inset-bottom,0px))}
+.prime-ministers-screen .english-header h1{font-size:clamp(1.3rem,4vw,2rem);text-align:center}
+.prime-ministers-screen .english-header .english-back{padding:7px 9px;font-size:clamp(.76rem,2.4vw,.92rem);white-space:nowrap}
+.prime-ministers-intro{margin:0;color:var(--blue);font-weight:800;text-align:center}
+.prime-minister-card{width:min(100%,760px);min-height:0;flex:1;align-self:center;display:flex;align-items:center;justify-content:center;gap:clamp(16px,4vw,32px);padding:clamp(14px,3vw,26px);border:2px solid #fff;border-radius:28px;background:linear-gradient(145deg,#fffdf8,#eef6ff 55%,#f8efff);box-shadow:0 10px 28px #58627b18}
+.prime-minister-image{width:min(38%,260px);height:min(44vh,390px);min-height:180px;object-fit:cover;object-position:center 25%;border:5px solid #fff;border-radius:22px;background:#e8e5f8;box-shadow:0 7px 20px #24324d24}
+.prime-minister-details{min-width:0;display:flex;flex-direction:column;align-items:flex-start;gap:clamp(8px,2vh,16px);text-align:left}
+.prime-minister-count{margin:0;color:#6b6b8a;font-size:.95rem;font-weight:900;letter-spacing:.04em}
+.prime-minister-details h2{margin:0;color:var(--accent);font-size:clamp(1.7rem,5vw,2.8rem);line-height:1.12}
+.prime-minister-tenure{margin:0;color:var(--ink);font-size:clamp(1rem,2.8vw,1.3rem);font-weight:800;line-height:1.5}
+.prime-minister-source{color:#365f9a;font-size:.82rem;font-weight:700}
+.prime-ministers-navigation{width:min(100%,760px);align-self:center;display:flex;justify-content:space-between;gap:14px}
+.prime-ministers-navigation button{min-width:120px;min-height:54px;padding:10px 20px;background:#e8e5f8;color:var(--ink);font-size:1.05rem;font-weight:900}
+.prime-ministers-navigation #prime-minister-next{background:#dff3e9}
+.prime-ministers-navigation button:disabled{opacity:.45;cursor:not-allowed}
+.state-capitals-screen{justify-content:flex-start;align-items:stretch;gap:8px;padding:calc(env(safe-area-inset-top,0px) + 58px) 12px max(10px,env(safe-area-inset-bottom,0px))}
+.state-capitals-screen .english-header h1{font-size:clamp(1.35rem,4vw,2rem);text-align:center}
+.state-capitals-screen .english-header .english-back{padding:7px 9px;font-size:clamp(.76rem,2.4vw,.92rem);white-space:nowrap}
+.state-capitals-content{width:min(100%,1200px);min-height:0;flex:1;align-self:center;display:flex;flex-direction:column;align-items:center;gap:8px;overflow:hidden}
+.state-capitals-map-section{min-width:0;width:100%;flex:0 0 auto;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px}
+.india-map-viewport{position:relative;width:min(100%,320px,35vh);aspect-ratio:9/10;overflow:hidden;border:2px solid #fff;border-radius:22px;background:linear-gradient(145deg,#e7f6ff,#fff8e6);box-shadow:0 6px 18px #24324d20}
+.india-map-camera{position:absolute;inset:0;transform-origin:0 0;transition:transform .75s cubic-bezier(.2,.8,.2,1)}
+.india-map-camera>img,.india-map-camera>svg{position:absolute;inset:0;width:100%;height:100%}
+.india-map-camera>img{object-fit:fill}
+.india-map-camera>svg{overflow:visible}
+.india-capital-dot{fill:#294f88;stroke:#fff;stroke-width:1}
+.india-capital-dot.is-selected{fill:#e25a43;stroke:#fff;stroke-width:1.5}
+.india-capital-pin path{fill:#e84e45;stroke:#fff;stroke-width:1.5}
+.india-capital-pin circle{fill:#fff}
+.india-capital-label{fill:#24324d;stroke:#fff;stroke-width:3px;paint-order:stroke;font-family:Arial,sans-serif;font-size:12px;font-weight:800}
+.state-capitals-selected{min-height:2.5em;margin:0;color:var(--blue);font-size:clamp(.78rem,2.1vw,.98rem);font-weight:800;line-height:1.3}
+.state-capitals-lists{width:100%;min-width:0;min-height:0;flex:1;display:flex;flex-direction:column;gap:10px;overflow-y:auto;padding:2px 4px 8px}
+.state-capitals-lists section{display:flex;flex-direction:column;gap:6px}
+.state-capitals-lists h2{margin:0;color:var(--accent);font-size:clamp(1rem,2.5vw,1.25rem);text-align:left}
+.india-states-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr));gap:7px}
+.india-state-button{min-width:0;min-height:60px;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:3px;padding:7px 9px;border:2px solid #fff;border-radius:13px;background:#fff9df;color:var(--ink);box-shadow:0 3px 0 #65708a1a;text-align:left}
+.india-state-button:nth-child(4n+2){background:#e5f2ff}
+.india-state-button:nth-child(4n+3){background:#dff3e9}
+.india-state-button:nth-child(4n){background:#ffe4ef}
+.india-state-button strong{font-size:clamp(.78rem,1.8vw,.94rem);line-height:1.2}
+.india-state-button small{color:#536789;font-size:clamp(.68rem,1.6vw,.8rem);font-weight:700;line-height:1.2}
+.india-state-button[aria-pressed="true"]{outline:3px solid #e25a43;outline-offset:1px}
+.india-state-button:focus-visible,.state-capitals-read-all:focus-visible{outline:4px solid #1f4e9c;outline-offset:2px}
+.state-capitals-read-all{width:min(100%,560px);min-height:48px;align-self:center;flex:0 0 auto;padding:10px 16px;background:#1f4e9c;color:#fff;font-size:clamp(.9rem,2.5vw,1.05rem)}
+@media (max-width:760px){.state-capitals-content{gap:4px}.india-map-viewport{width:min(100%,270px,32vh)}.state-capitals-map-section{gap:3px}.state-capitals-lists{gap:8px}.india-states-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}.india-state-button{min-height:56px;padding:6px 8px}}
+@media (max-width:560px){.prime-ministers-screen{padding-right:10px;padding-left:10px}.prime-ministers-screen .english-header{gap:4px}.prime-ministers-screen .english-header h1{min-width:110px;font-size:1.2rem}.prime-ministers-screen .english-header .english-back{padding:6px;font-size:.7rem}.prime-minister-card{flex-direction:column;gap:12px;padding:14px}.prime-minister-image{width:min(64%,250px);height:min(34vh,280px);min-height:120px}.prime-minister-details{align-items:center;gap:7px;text-align:center}.prime-minister-count{font-size:.82rem}.prime-minister-details h2{font-size:clamp(1.5rem,7vw,2.1rem)}.prime-minister-tenure{font-size:.95rem}.prime-ministers-navigation button{min-width:110px;padding:8px 14px}}
+@media (max-width:360px){.state-capitals-screen{padding-right:8px;padding-left:8px}.state-capitals-screen .english-header{gap:4px}.state-capitals-screen .english-header h1{min-width:110px;font-size:1.2rem}.state-capitals-screen .english-header .english-back{padding:6px;font-size:.7rem}.india-state-button strong{font-size:.72rem}.india-state-button small{font-size:.64rem}}
+@media (prefers-reduced-motion:reduce){.india-map-camera{transition:none}}
 .mute-toggle{position:fixed;z-index:1000;top:calc(env(safe-area-inset-top,0px) + 8px);right:10px;min-height:42px;padding:8px 12px;border:2px solid #ffffffb8;border-radius:20px;background:#1f4e9c;box-shadow:0 3px 8px #00000024;font-size:.95rem}
 #language,#app,.math-screen,.addition-level-screen,.addition-screen,.english-screen{padding-top:58px}
 .english-screen{height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:58px 16px 16px;overflow-y:auto;text-align:center}

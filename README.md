@@ -10,8 +10,13 @@ and sound effects throughout the app. The app checks for Telugu (India),
 Hindi (India), and English (India) speech voices on the device. If any are not
 available, it asks whether you want to view device-specific setup instructions;
 the web app cannot install system voices itself. Choose English, Telugu, Hindi,
-or Maths to begin. The interface uses a coordinated pastel theme, rounded type,
+Maths, or General Knowledge to begin. The interface uses a coordinated pastel theme, rounded type,
 and consistent button and activity-card styling.
+General Knowledge opens a States & Capitals activity with an offline map of all
+28 Indian states and 8 union territories. Selecting a state or territory reads
+its capital aloud and moves a pin to its location; the bottom button narrates all
+36 entries and moves the map as each is read. Map boundary attribution and license
+are recorded in `src/images/india/ATTRIBUTIONS.txt`.
 The Maths option opens Addition, Subtraction, Multiplication, and Division. Each
 operation offers separate Learning and Questionaries choices. In Learning, children
 choose each number from paged buttons (15 choices per page, from 1 to 105); after

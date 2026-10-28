@@ -52,7 +52,7 @@
 <span class="app-tour-scene-icon" id="app-tour-icon" aria-hidden="true">🔤</span>
 <div class="app-tour-demo" id="app-tour-demo" aria-hidden="true"><span>English</span><span>తెలుగు</span><span>हिन्दी</span><span>Maths</span></div>
 <h2 id="app-tour-step-title">Choose how to learn</h2>
-<p id="app-tour-step-copy">Pick English, Telugu, Hindi, or Maths to begin.</p>
+<p id="app-tour-step-copy">Pick English, Telugu, Hindi, Maths, or General Knowledge to begin.</p>
 </div>
 </div>
 <div class="app-tour-progress" id="app-tour-progress" role="group" aria-label="Tour progress">
@@ -69,6 +69,7 @@
 <button class="choice-card telugu-card" type="button" data-language="Telugu"><span class="choice-icon" aria-hidden="true">🌼</span><span class="choice-label">తెలుగు <small>Telugu</small></span></button>
 <button class="choice-card hindi-card" type="button" data-language="Hindi"><span class="choice-icon" aria-hidden="true">🪷</span><span class="choice-label">हिन्दी <small>Hindi</small></span></button>
 <button class="choice-card maths-card" type="button" id="math-entry"><span class="choice-icon" aria-hidden="true">🧮</span><span class="choice-label">Maths</span></button>
+<button class="choice-card general-knowledge-entry" type="button" id="general-knowledge-entry"><span class="choice-icon" aria-hidden="true">🗺️</span><span class="choice-label">General Knowledge<small>Explore India and more</small></span></button>
 </div>
 </section>
 <section id="english-types" class="english-screen english-types-screen" hidden aria-labelledby="english-types-title">
@@ -89,6 +90,71 @@
 <button class="choice-card english-type-card english-sketch-card" type="button" id="english-sketch-entry"><span class="choice-icon" aria-hidden="true">🎨</span><span class="choice-label">Sketch the diagram<small>Color pictures and practice</small></span></button>
 </div>
 <button class="english-back" type="button" id="english-types-back">← Back</button>
+</section>
+<section id="general-knowledge" class="english-screen general-knowledge-screen" hidden aria-labelledby="general-knowledge-title">
+<header class="english-header">
+<button class="english-back" type="button" id="general-knowledge-back">← Back</button>
+<h1 id="general-knowledge-title">General Knowledge</h1>
+<span></span>
+</header>
+<p>Choose a topic to explore.</p>
+<div class="general-knowledge-options" role="group" aria-label="Choose a general knowledge topic">
+<button class="choice-card state-capitals-entry" type="button" id="state-capitals-entry"><span class="choice-icon" aria-hidden="true">🇮🇳</span><span class="choice-label">States &amp; Capitals<small>Explore the map of India</small></span></button>
+<button class="choice-card prime-ministers-entry" type="button" id="prime-ministers-entry"><span class="choice-icon" aria-hidden="true">🏛️</span><span class="choice-label">Prime Ministers of India<small>Learn about India’s leaders</small></span></button>
+</div>
+</section>
+<section id="state-capitals" class="english-screen state-capitals-screen" hidden aria-labelledby="state-capitals-title">
+<header class="english-header">
+<button class="english-back" type="button" id="state-capitals-back">← General Knowledge</button>
+<h1 id="state-capitals-title">India: States &amp; Capitals</h1>
+<span></span>
+</header>
+<div class="state-capitals-content">
+<div class="state-capitals-map-section">
+<div id="india-map-viewport" class="india-map-viewport" role="img" aria-label="Map of India with state and union territory capital locations">
+<div id="india-map-camera" class="india-map-camera">
+<img src="images/india/india-admin1.svg" alt="">
+<svg id="india-capital-markers" viewBox="0 0 720 800" aria-hidden="true">
+<g id="india-capital-dots"></g>
+<g id="india-capital-pin"></g>
+</svg>
+</div>
+</div>
+<p id="state-capitals-selected" class="state-capitals-selected" role="status" aria-live="polite">Choose a state or union territory below.</p>
+</div>
+<div class="state-capitals-lists">
+<section aria-labelledby="indian-states-heading">
+<h2 id="indian-states-heading">28 States</h2>
+<div id="india-states-grid" class="india-states-grid" role="group" aria-label="Indian states and their capitals"></div>
+</section>
+<section aria-labelledby="indian-union-territories-heading">
+<h2 id="indian-union-territories-heading">8 Union Territories</h2>
+<div id="india-union-territories-grid" class="india-states-grid" role="group" aria-label="Indian union territories and their capitals"></div>
+</section>
+</div>
+</div>
+<button id="state-capitals-read-all" class="state-capitals-read-all" type="button">🔊 Read all 28 States &amp; 8 Union Territories</button>
+</section>
+<section id="prime-ministers" class="english-screen prime-ministers-screen" hidden aria-labelledby="prime-ministers-title">
+<header class="english-header">
+<button class="english-back" type="button" id="prime-ministers-back">← General Knowledge</button>
+<h1 id="prime-ministers-title">Prime Ministers of India</h1>
+<span></span>
+</header>
+<p class="prime-ministers-intro">Meet India’s prime ministers in the order they first took office.</p>
+<article id="prime-minister-card" class="prime-minister-card" aria-live="polite">
+<img id="prime-minister-image" class="prime-minister-image" alt="">
+<div class="prime-minister-details">
+<p id="prime-minister-count" class="prime-minister-count"></p>
+<h2 id="prime-minister-name"></h2>
+<p id="prime-minister-tenure" class="prime-minister-tenure"></p>
+<a id="prime-minister-source" class="prime-minister-source" target="_blank" rel="noopener noreferrer">Photo and license details: Wikimedia Commons</a>
+</div>
+</article>
+<nav class="prime-ministers-navigation" aria-label="Prime minister navigation">
+<button id="prime-minister-previous" type="button">← Previous</button>
+<button id="prime-minister-next" type="button">Next →</button>
+</nav>
 </section>
 <section id="stories-genres" class="english-screen stories-screen" hidden aria-labelledby="stories-genres-title">
 <header class="english-header">

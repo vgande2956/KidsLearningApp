@@ -1,0 +1,12 @@
+India state and union territory boundary map
+
+The map is derived from geoBoundaries India ADM1 geometry (36 administrative
+areas), sourced from the DataMeet India community and Election Commission of
+India. The source boundary data represents 2011 and was released by
+geoBoundaries on December 12, 2023. The geometry was simplified and converted
+to SVG for local, offline use.
+
+License: Creative Commons Attribution 2.5 India (CC BY 2.5 IN)
+License text: https://creativecommons.org/licenses/by/2.5/in/
+Source dataset: https://www.geoboundaries.org/
+Source GeoJSON: https://github.com/wmgeolab/geoBoundaries/blob/9469f09/releaseData/gbOpen/IND/ADM1/geoBoundaries-IND-ADM1_simplified.geojson
