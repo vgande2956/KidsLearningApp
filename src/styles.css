@@ -209,6 +209,37 @@ header b{flex:1;color:var(--blue);font-size:1.3rem}header button{font-size:.95re
 .general-knowledge-options{width:min(92vw,520px);display:grid;grid-template-columns:1fr;gap:12px}
 .state-capitals-entry{min-height:clamp(130px,24vh,190px);background:linear-gradient(145deg,#fff1cb,#ffe4ef);color:var(--ink)}
 .prime-ministers-entry{min-height:clamp(130px,24vh,190px);background:linear-gradient(145deg,#e5f2ff,#dff3e9);color:var(--ink)}
+.india-symbols-entry{min-height:clamp(130px,24vh,190px);background:linear-gradient(145deg,#fff1cb,#e5f2ff);color:var(--ink)}
+.india-symbols-screen{justify-content:flex-start;align-items:stretch;gap:clamp(8px,2vh,16px);padding:calc(env(safe-area-inset-top,0px) + 58px) 16px max(14px,env(safe-area-inset-bottom,0px))}
+.india-symbols-screen .english-header h1{font-size:clamp(1.3rem,4vw,2rem);text-align:center}
+.india-symbols-screen .english-header .english-back{padding:7px 9px;font-size:clamp(.76rem,2.4vw,.92rem);white-space:nowrap}
+.india-symbols-intro{margin:0;color:var(--blue);font-weight:800;text-align:center}
+.india-symbols-options{width:min(92vw,520px);display:grid;grid-template-columns:1fr;gap:12px;align-self:center}
+.india-national-entry,.india-states-entry{min-height:clamp(130px,24vh,190px);color:var(--ink)}
+.india-national-entry{background:linear-gradient(145deg,#fff1cb,#ffe4ef)}
+.india-states-entry{background:linear-gradient(145deg,#e5f2ff,#dff3e9)}
+.india-information-screen{justify-content:flex-start;align-items:stretch;gap:clamp(7px,1.5vh,12px);padding:calc(env(safe-area-inset-top,0px) + 58px) 16px max(10px,env(safe-area-inset-bottom,0px))}
+.india-information-screen .english-header h1{font-size:clamp(1.2rem,4vw,1.9rem);text-align:center}
+.india-information-screen .english-header .english-back{padding:7px 9px;font-size:clamp(.72rem,2.3vw,.9rem);white-space:nowrap}
+.india-information-card{width:min(100%,820px);min-height:0;flex:1;align-self:center;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:clamp(6px,1.4vh,12px);padding:clamp(10px,2.5vw,20px);border:2px solid #fff;border-radius:24px;background:linear-gradient(145deg,#fffdf8,#eef6ff 55%,#f8efff);box-shadow:0 10px 28px #58627b18;overflow:auto}
+.india-information-count{margin:0;color:#6b6b8a;font-size:.9rem;font-weight:900;letter-spacing:.04em}
+.india-information-image{width:min(44vw,320px);height:min(27vh,220px);min-height:100px;object-fit:contain;padding:5px;border:4px solid #fff;border-radius:18px;background:#fff;box-shadow:0 6px 16px #24324d20;animation:everyday-object-float 2.8s ease-in-out infinite}
+.india-information-card h2{margin:0;color:var(--accent);font-size:clamp(1.45rem,4.5vw,2.3rem);line-height:1.15;text-align:center}
+.india-information-fact{max-width:700px;margin:0;color:var(--ink);font-size:clamp(.95rem,2.5vw,1.2rem);font-weight:800;line-height:1.45;text-align:center}
+.india-information-source{color:#365f9a;font-size:.78rem;font-weight:700}
+.india-information-hear{min-height:44px;align-self:center;background:#fff0c2;color:var(--ink)}
+.india-information-navigation{width:min(100%,820px);align-self:center;display:flex;justify-content:space-between;gap:12px}
+.india-information-navigation button{min-width:112px;min-height:50px;padding:8px 18px;background:#e8e5f8;color:var(--ink);font-size:1rem;font-weight:900}
+.india-information-navigation #india-national-next,.india-information-navigation #india-state-next{background:#dff3e9}
+.india-information-navigation button:disabled{opacity:.45;cursor:not-allowed}
+.india-state-picker-label{align-self:center;color:var(--ink);font-weight:800}
+.india-state-picker{width:min(100%,420px);min-height:44px;align-self:center;padding:8px 12px;border:2px solid #c9d8ee;border-radius:14px;background:#fff;color:var(--ink);font:inherit;font-weight:700}
+.india-states-information-screen .india-information-card{gap:6px}
+.india-state-image{width:min(100%,520px);height:min(18vh,140px)}
+.india-state-symbols{width:min(100%,620px);display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.india-state-symbol{min-width:0;display:flex;flex-direction:column;align-items:center;gap:5px}
+.india-state-symbol-image{width:min(100%,220px);height:min(15vh,112px);min-height:68px;object-fit:contain;padding:4px;border:3px solid #fff;border-radius:14px;background:#fff;box-shadow:0 4px 12px #24324d18;animation:everyday-object-float 2.8s ease-in-out infinite}
+.india-states-information-screen .india-information-source{font-size:.72rem}
 .prime-ministers-screen{justify-content:flex-start;align-items:stretch;gap:clamp(8px,2vh,16px);padding:calc(env(safe-area-inset-top,0px) + 58px) 16px max(14px,env(safe-area-inset-bottom,0px))}
 .prime-ministers-screen .english-header h1{font-size:clamp(1.3rem,4vw,2rem);text-align:center}
 .prime-ministers-screen .english-header .english-back{padding:7px 9px;font-size:clamp(.76rem,2.4vw,.92rem);white-space:nowrap}
@@ -254,7 +285,8 @@ header b{flex:1;color:var(--blue);font-size:1.3rem}header button{font-size:.95re
 .india-state-button:focus-visible,.state-capitals-read-all:focus-visible{outline:4px solid #1f4e9c;outline-offset:2px}
 .state-capitals-read-all{width:min(100%,560px);min-height:48px;align-self:center;flex:0 0 auto;padding:10px 16px;background:#1f4e9c;color:#fff;font-size:clamp(.9rem,2.5vw,1.05rem)}
 @media (max-width:760px){.state-capitals-content{gap:4px}.india-map-viewport{width:min(100%,270px,32vh)}.state-capitals-map-section{gap:3px}.state-capitals-lists{gap:8px}.india-states-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}.india-state-button{min-height:56px;padding:6px 8px}}
-@media (max-width:560px){.prime-ministers-screen{padding-right:10px;padding-left:10px}.prime-ministers-screen .english-header{gap:4px}.prime-ministers-screen .english-header h1{min-width:110px;font-size:1.2rem}.prime-ministers-screen .english-header .english-back{padding:6px;font-size:.7rem}.prime-minister-card{flex-direction:column;gap:12px;padding:14px}.prime-minister-image{width:min(64%,250px);height:min(34vh,280px);min-height:120px}.prime-minister-details{align-items:center;gap:7px;text-align:center}.prime-minister-count{font-size:.82rem}.prime-minister-details h2{font-size:clamp(1.5rem,7vw,2.1rem)}.prime-minister-tenure{font-size:.95rem}.prime-ministers-navigation button{min-width:110px;padding:8px 14px}}
+@media (max-width:560px){.prime-ministers-screen{padding-right:10px;padding-left:10px}.prime-ministers-screen .english-header{gap:4px}.prime-ministers-screen .english-header h1{min-width:110px;font-size:1.2rem}.prime-ministers-screen .english-header .english-back{padding:6px;font-size:.7rem}.prime-minister-card{flex-direction:column;gap:12px;padding:14px}.prime-minister-image{width:min(64%,250px);height:min(34vh,280px);min-height:120px}.prime-minister-details{align-items:center;gap:7px;text-align:center}.prime-minister-count{font-size:.82rem}.prime-minister-details h2{font-size:clamp(1.5rem,7vw,2.1rem)}.prime-minister-tenure{font-size:.95rem}.prime-ministers-navigation button{min-width:110px;padding:8px 14px}.india-symbols-screen,.india-information-screen{padding-right:10px;padding-left:10px}.india-symbols-screen .english-header,.india-information-screen .english-header{gap:4px}.india-symbols-screen .english-header h1,.india-information-screen .english-header h1{min-width:100px;font-size:1.05rem}.india-symbols-screen .english-header .english-back,.india-information-screen .english-header .english-back{padding:6px;font-size:.68rem}.india-information-image{width:min(58vw,260px);height:min(22vh,170px)}.india-information-navigation button{min-width:100px;padding:7px 12px}.india-state-image{height:min(15vh,110px)}.india-state-symbols{gap:6px}.india-state-symbol-image{height:min(12vh,88px)}.india-state-symbol .india-information-fact{font-size:.82rem}}
+@media (prefers-reduced-motion:reduce){.india-information-image,.india-state-symbol-image{animation:none}}
 @media (max-width:360px){.state-capitals-screen{padding-right:8px;padding-left:8px}.state-capitals-screen .english-header{gap:4px}.state-capitals-screen .english-header h1{min-width:110px;font-size:1.2rem}.state-capitals-screen .english-header .english-back{padding:6px;font-size:.7rem}.india-state-button strong{font-size:.72rem}.india-state-button small{font-size:.64rem}}
 @media (prefers-reduced-motion:reduce){.india-map-camera{transition:none}}
 .mute-toggle{position:fixed;z-index:1000;top:calc(env(safe-area-inset-top,0px) + 8px);right:10px;min-height:42px;padding:8px 12px;border:2px solid #ffffffb8;border-radius:20px;background:#1f4e9c;box-shadow:0 3px 8px #00000024;font-size:.95rem}

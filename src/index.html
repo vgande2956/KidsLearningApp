@@ -164,6 +164,7 @@
 <div class="general-knowledge-options" role="group" aria-label="Choose a general knowledge topic">
 <button class="choice-card state-capitals-entry" type="button" id="state-capitals-entry"><span class="choice-icon" aria-hidden="true">🇮🇳</span><span class="choice-label">States &amp; Capitals<small>Explore the map of India</small></span></button>
 <button class="choice-card prime-ministers-entry" type="button" id="prime-ministers-entry"><span class="choice-icon" aria-hidden="true">🏛️</span><span class="choice-label">Prime Ministers of India<small>Learn about India’s leaders</small></span></button>
+<button class="choice-card india-symbols-entry" type="button" id="india-symbols-entry"><span class="choice-icon" aria-hidden="true">🇮🇳</span><span class="choice-label">India &amp; National Symbols<small>Discover the symbols of India</small></span></button>
 </div>
 </section>
 <section id="state-capitals" class="english-screen state-capitals-screen" hidden aria-labelledby="state-capitals-title">
@@ -217,6 +218,68 @@
 <nav class="prime-ministers-navigation" aria-label="Prime minister navigation">
 <button id="prime-minister-previous" type="button">← Previous</button>
 <button id="prime-minister-next" type="button">Next →</button>
+</nav>
+</section>
+<section id="india-symbols" class="english-screen india-symbols-screen" hidden aria-labelledby="india-symbols-title">
+<header class="english-header">
+<button class="english-back" type="button" id="india-symbols-back">← General Knowledge</button>
+<h1 id="india-symbols-title">India &amp; National Symbols</h1>
+<span></span>
+</header>
+<p class="india-symbols-intro">Choose what you would like to explore.</p>
+<div class="india-symbols-options" role="group" aria-label="Choose national information or a state">
+<button class="choice-card india-national-entry" type="button" id="india-national-entry"><span class="choice-icon" aria-hidden="true">🇮🇳</span><span class="choice-label">National Information<small>Symbols, places, and facts about India</small></span></button>
+<button class="choice-card india-states-entry" type="button" id="india-states-entry"><span class="choice-icon" aria-hidden="true">🗺️</span><span class="choice-label">States<small>Explore all 28 states and their symbols</small></span></button>
+</div>
+</section>
+<section id="india-national-information" class="english-screen india-information-screen" hidden aria-labelledby="india-national-title">
+<header class="english-header">
+<button class="english-back" type="button" id="india-national-back">← India &amp; Symbols</button>
+<h1 id="india-national-title">National Information</h1>
+<span></span>
+</header>
+<article id="india-national-card" class="india-information-card" aria-live="polite">
+<p id="india-national-count" class="india-information-count"></p>
+<img id="india-national-image" class="india-information-image" alt="">
+<h2 id="india-national-name"></h2>
+<p id="india-national-fact" class="india-information-fact"></p>
+<a id="india-national-source" class="india-information-source" target="_blank" rel="noopener noreferrer" aria-label="Photo and license details">Photo and license details</a>
+</article>
+<button class="india-information-hear" id="india-national-hear" type="button">🔊 Hear the fact</button>
+<nav class="india-information-navigation" aria-label="National information navigation">
+<button id="india-national-previous" type="button">← Previous</button>
+<button id="india-national-next" type="button">Next →</button>
+</nav>
+</section>
+<section id="india-states-information" class="english-screen india-information-screen india-states-information-screen" hidden aria-labelledby="india-states-title">
+<header class="english-header">
+<button class="english-back" type="button" id="india-states-back">← India &amp; Symbols</button>
+<h1 id="india-states-title">Indian States</h1>
+<span></span>
+</header>
+<label class="india-state-picker-label" for="india-state-picker">Choose a state</label>
+<select id="india-state-picker" class="india-state-picker"></select>
+<article id="india-state-card" class="india-information-card india-state-card" aria-live="polite">
+<p id="india-state-count" class="india-information-count"></p>
+<img id="india-state-image" class="india-information-image india-state-image" alt="">
+<h2 id="india-state-name"></h2>
+<p id="india-state-capital" class="india-information-fact"></p>
+<div class="india-state-symbols">
+<div class="india-state-symbol">
+<img id="india-state-animal-image" class="india-state-symbol-image" alt="">
+<p id="india-state-animal" class="india-information-fact"></p>
+</div>
+<div class="india-state-symbol">
+<img id="india-state-bird-image" class="india-state-symbol-image" alt="">
+<p id="india-state-bird" class="india-information-fact"></p>
+</div>
+</div>
+<a id="india-state-source" class="india-information-source" target="_blank" rel="noopener noreferrer" aria-label="Photo and license details">Photo and license details</a>
+</article>
+<button class="india-information-hear" id="india-state-hear" type="button">🔊 Hear the facts</button>
+<nav class="india-information-navigation" aria-label="State navigation">
+<button id="india-state-previous" type="button">← Previous</button>
+<button id="india-state-next" type="button">Next →</button>
 </nav>
 </section>
 <section id="stories-genres" class="english-screen stories-screen" hidden aria-labelledby="stories-genres-title">
