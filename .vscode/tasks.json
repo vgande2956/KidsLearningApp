@@ -32,14 +32,6 @@
 			"command": "npm run build",
 			"isBackground": false,
 			"problemMatcher": []
-		},
-		{
-			"label": "Run project smoke tests",
-			"type": "shell",
-			"command": "npm test",
-			"isBackground": false,
-			"problemMatcher": [],
-			"group": "test"
 		}
 	]
 }
