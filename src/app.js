@@ -485,15 +485,104 @@ function show(){if(selectedLanguage==="Telugu"||selectedLanguage==="Hindi"){show
  $("stage").innerHTML='<div class="L">A B C &nbsp;1 2 3</div><div class="W">Tap a letter or number!</div>';renderPad();say(["Hello "+kid+"!","Tap any letter or number."])}
 let tourTimer=0,tourStep=0;
 const APP_TOUR_STEPS=[
- {icon:"🔤",title:"Choose how to learn",copy:"Pick English, Telugu, Hindi, or Maths to begin.",demo:["English","తెలుగు","हिन्दी","Maths"],speech:"First, choose English, Telugu, Hindi, or Maths."},
+ {icon:"🔤",title:"Choose how to learn",copy:"Pick English, Telugu, Hindi, Maths, or General Knowledge to begin.",demo:["English","తెలుగు","हिन्दी","Maths","General Knowledge"],speech:"First, choose English, Telugu, Hindi, Maths, or General Knowledge."},
  {icon:"📚",title:"Explore playful lessons",copy:"Discover letters, words, stories, numbers, and picture games.",demo:["🔠 Letters","📖 Stories","🧮 Maths","🕵️ Games"],speech:"Explore playful lessons with letters, words, stories, numbers, and picture games."},
  {icon:"🔊",title:"Listen, learn, and try",copy:"Tap the sound button to hear a lesson, then explore at your own pace.",demo:["Tap to listen","Try together","Learn at your pace"],speech:"Tap the sound button to hear a lesson, then explore and learn at your own pace."}
 ];
 function showTourStep(index){tourStep=index;const step=APP_TOUR_STEPS[index];$("app-tour-icon").textContent=step.icon;$("app-tour-step-title").textContent=step.title;$("app-tour-step-copy").textContent=step.copy;$("app-tour-demo").innerHTML=step.demo.map(label=>`<span>${label}</span>`).join("");$("app-tour-progress").querySelectorAll("span").forEach((dot,dotIndex)=>dot.classList.toggle("is-current",dotIndex===index));$("app-tour-status").textContent=`Tour step ${index+1} of ${APP_TOUR_STEPS.length}`;say([{text:step.speech,lang:"en-IN",rate:.92,pitch:1.02}])}
 function showAppTour(){stopSpeech();hideScreens();$("app-tour").hidden=false;showTourStep(0);tourTimer=window.setInterval(()=>{if(tourStep+1<APP_TOUR_STEPS.length)showTourStep(tourStep+1);else{window.clearInterval(tourTimer);tourTimer=0}},7000)}
 function leaveAppTour(){window.clearInterval(tourTimer);tourTimer=0;stopSpeech();showLanguage()}
-function hideScreens(){window.clearInterval(tourTimer);tourTimer=0;window.clearInterval(sketchDemoTimer);sketchDemoTimer=0;sketchCelebrationTimers.forEach(window.clearTimeout);sketchCelebrationTimers=[];if($("sketch-celebration"))$("sketch-celebration").hidden=true;["splash","name","app-tour","language","app","english-types","english-alphabets","english-deity-letters","english-epic-warriors","english-lesson","english-identify-levels","english-identify-quiz","stories-genres","stories-list","stories-reader","sketch-home","sketch-demo","sketch-categories","sketch-more","sketch-pictures","sketch-practice","math-menu","math-counting-screen","math-mode-screen","addition-level-screen","addition-screen","math-story-levels","math-story-quiz","math-story-explanation","native-types","quiz-levels","quiz-play"].forEach(id=>$(id).hidden=true)}
-function sayLanguageOptions(){say([`Hello ${kid}! What would you like to learn?`,"English.","Telugu.","Hindi.","Maths."])}
+const INDIA_PRIME_MINISTERS=[
+ {name:"Jawaharlal Nehru",tenure:"15 August 1947 – 27 May 1964 · 1947–1964",image:"https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/Nehru_in_the_Netherlands%2C_1957.jpg/500px-Nehru_in_the_Netherlands%2C_1957.jpg",source:"https://commons.wikimedia.org/wiki/File:Nehru_in_the_Netherlands,_1957.jpg"},
+ {name:"Gulzarilal Nanda",tenure:"Acting Prime Minister · 27 May–9 June 1964 and 11–24 January 1966 · 1964, 1966",image:"https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f7/Gulzarilal_Nanda_1.jpg/500px-Gulzarilal_Nanda_1.jpg",source:"https://commons.wikimedia.org/wiki/File:Gulzarilal_Nanda_1.jpg"},
+ {name:"Lal Bahadur Shastri",tenure:"9 June 1964 – 11 January 1966 · 1964–1966",image:"https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/Lal_Bahadur_Shastri_%28from_stamp%29.jpg/500px-Lal_Bahadur_Shastri_%28from_stamp%29.jpg",source:"https://commons.wikimedia.org/wiki/File:Lal_Bahadur_Shastri_(from_stamp).jpg"},
+ {name:"Indira Gandhi",tenure:"24 January 1966 – 24 March 1977; 14 January 1980 – 31 October 1984 · 1966–1977, 1980–1984",image:"https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a1/Indira_Gandhi_official_portrait.png/500px-Indira_Gandhi_official_portrait.png",source:"https://commons.wikimedia.org/wiki/File:Indira_Gandhi_official_portrait.png"},
+ {name:"Morarji Desai",tenure:"24 March 1977 – 28 July 1979 · 1977–1979",image:"https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e4/Morarji_Desai_During_his_visit_to_the_United_States_of_America_%28cropped%29.jpg/500px-Morarji_Desai_During_his_visit_to_the_United_States_of_America_%28cropped%29.jpg",source:"https://commons.wikimedia.org/wiki/File:Morarji_Desai_During_his_visit_to_the_United_States_of_America_(cropped).jpg"},
+ {name:"Charan Singh",tenure:"28 July 1979 – 14 January 1980 · 1979–1980",image:"https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/Charan_Singh_Portrait.jpg/500px-Charan_Singh_Portrait.jpg",source:"https://commons.wikimedia.org/wiki/File:Charan_Singh_Portrait.jpg"},
+ {name:"Rajiv Gandhi",tenure:"31 October 1984 – 2 December 1989 · 1984–1989",image:"https://thumb.wikimedia.org/wikipedia/commons/thumb/0/02/Rajiv_Gandhi_%281987%29.jpg/500px-Rajiv_Gandhi_%281987%29.jpg",source:"https://commons.wikimedia.org/wiki/File:Rajiv_Gandhi_(1987).jpg"},
+ {name:"V. P. Singh",tenure:"2 December 1989 – 10 November 1990 · 1989–1990",image:"https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3f/Visit_of_Vishwanath_Pratap_Singh%2C_Indian_Minister_for_Trade%2C_to_the_CEC_%28cropped%29.jpg/500px-Visit_of_Vishwanath_Pratap_Singh%2C_Indian_Minister_for_Trade%2C_to_the_CEC_%28cropped%29.jpg",source:"https://commons.wikimedia.org/wiki/File:Visit_of_Vishwanath_Pratap_Singh,_Indian_Minister_for_Trade,_to_the_CEC_(cropped).jpg"},
+ {name:"Chandra Shekhar",tenure:"10 November 1990 – 21 June 1991 · 1990–1991",image:"https://upload.wikimedia.org/wikipedia/commons/a/a1/PM_Chandra_Shekhar_at_ThakurJi_Pathak_home%28cropped%29.jpg",source:"https://commons.wikimedia.org/wiki/File:PM_Chandra_Shekhar_at_ThakurJi_Pathak_home_(cropped).jpg"},
+ {name:"P. V. Narasimha Rao",tenure:"21 June 1991 – 16 May 1996 · 1991–1996",image:"https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/Visit_of_Narasimha_Rao%2C_Indian_Minister_for_Foreign_Affairs%2C_to_the_CEC_%28cropped%29.jpg/500px-Visit_of_Narasimha_Rao%2C_Indian_Minister_for_Foreign_Affairs%2C_to_the_CEC_%28cropped%29.jpg",source:"https://commons.wikimedia.org/wiki/File:Visit_of_Narasimha_Rao,_Indian_Minister_for_Foreign_Affairs,_to_the_CEC_(cropped).jpg"},
+ {name:"Atal Bihari Vajpayee",tenure:"16 May–1 June 1996; 19 March 1998 – 22 May 2004 · 1996, 1998–2004",image:"https://thumb.wikimedia.org/wikipedia/commons/thumb/b/be/Atal_Bihari_Vajpayee_%28crop_2%29.jpg/500px-Atal_Bihari_Vajpayee_%28crop_2%29.jpg",source:"https://commons.wikimedia.org/wiki/File:Atal_Bihari_Vajpayee_(crop_2).jpg"},
+ {name:"H. D. Deve Gowda",tenure:"1 June 1996 – 21 April 1997 · 1996–1997",image:"https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/H._D._Deve_Gowda.jpg/500px-H._D._Deve_Gowda.jpg",source:"https://commons.wikimedia.org/wiki/File:H._D._Deve_Gowda.jpg"},
+ {name:"I. K. Gujral",tenure:"21 April 1997 – 19 March 1998 · 1997–1998",image:"https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c1/Inder_Kumar_Gujral_%28cropped%29.jpg/500px-Inder_Kumar_Gujral_%28cropped%29.jpg",source:"https://commons.wikimedia.org/wiki/File:Inder_Kumar_Gujral_(cropped).jpg"},
+ {name:"Manmohan Singh",tenure:"22 May 2004 – 26 May 2014 · 2004–2014",image:"https://thumb.wikimedia.org/wikipedia/commons/thumb/7/73/Official_Portrait_of_the_Prime_Minister_Dr._Manmohan_Singh_%283x4_cropped%29.jpg/500px-Official_Portrait_of_the_Prime_Minister_Dr._Manmohan_Singh_%283x4_cropped%29.jpg",source:"https://commons.wikimedia.org/wiki/File:Official_Portrait_of_the_Prime_Minister_Dr._Manmohan_Singh_(3x4_cropped).jpg"},
+ {name:"Narendra Modi",tenure:"Since 26 May 2014 · 2014–present",image:"https://upload.wikimedia.org/wikipedia/commons/b/ba/Narendra_Modi_Portrait_2026.jpg",source:"https://commons.wikimedia.org/wiki/File:Narendra_Modi_Portrait_2026.jpg"}
+];
+let primeMinisterIndex=0;
+const INDIA_STATE_CAPITALS=[
+ {name:"Andhra Pradesh",kind:"State",places:[{name:"Amaravati",lat:16.5131,lon:80.5165}]},
+ {name:"Arunachal Pradesh",kind:"State",places:[{name:"Itanagar",lat:27.0844,lon:93.6053}]},
+ {name:"Assam",kind:"State",places:[{name:"Dispur",lat:26.1433,lon:91.7898}]},
+ {name:"Bihar",kind:"State",places:[{name:"Patna",lat:25.5941,lon:85.1376}]},
+ {name:"Chhattisgarh",kind:"State",places:[{name:"Raipur",lat:21.2514,lon:81.6296}]},
+ {name:"Goa",kind:"State",places:[{name:"Panaji",lat:15.4909,lon:73.8278}]},
+ {name:"Gujarat",kind:"State",places:[{name:"Gandhinagar",lat:23.2156,lon:72.6369}]},
+ {name:"Haryana",kind:"State",places:[{name:"Chandigarh",lat:30.7333,lon:76.7794}]},
+ {name:"Himachal Pradesh",kind:"State",places:[{name:"Shimla",lat:31.1048,lon:77.1734},{name:"Dharamshala",season:"winter",lat:32.2190,lon:76.3234}]},
+ {name:"Jharkhand",kind:"State",places:[{name:"Ranchi",lat:23.3441,lon:85.3096}]},
+ {name:"Karnataka",kind:"State",places:[{name:"Bengaluru",lat:12.9716,lon:77.5946}]},
+ {name:"Kerala",kind:"State",places:[{name:"Thiruvananthapuram",lat:8.5241,lon:76.9366}]},
+ {name:"Madhya Pradesh",kind:"State",places:[{name:"Bhopal",lat:23.2599,lon:77.4126}]},
+ {name:"Maharashtra",kind:"State",places:[{name:"Mumbai",lat:19.0760,lon:72.8777},{name:"Nagpur",season:"winter",lat:21.1458,lon:79.0882}]},
+ {name:"Manipur",kind:"State",places:[{name:"Imphal",lat:24.8170,lon:93.9368}]},
+ {name:"Meghalaya",kind:"State",places:[{name:"Shillong",lat:25.5788,lon:91.8933}]},
+ {name:"Mizoram",kind:"State",places:[{name:"Aizawl",lat:23.7271,lon:92.7176}]},
+ {name:"Nagaland",kind:"State",places:[{name:"Kohima",lat:25.6751,lon:94.1086}]},
+ {name:"Odisha",kind:"State",places:[{name:"Bhubaneswar",lat:20.2961,lon:85.8245}]},
+ {name:"Punjab",kind:"State",places:[{name:"Chandigarh",lat:30.7333,lon:76.7794}]},
+ {name:"Rajasthan",kind:"State",places:[{name:"Jaipur",lat:26.9124,lon:75.7873}]},
+ {name:"Sikkim",kind:"State",places:[{name:"Gangtok",lat:27.3389,lon:88.6065}]},
+ {name:"Tamil Nadu",kind:"State",places:[{name:"Chennai",lat:13.0827,lon:80.2707}]},
+ {name:"Telangana",kind:"State",places:[{name:"Hyderabad",lat:17.3850,lon:78.4867}]},
+ {name:"Tripura",kind:"State",places:[{name:"Agartala",lat:23.8315,lon:91.2868}]},
+ {name:"Uttar Pradesh",kind:"State",places:[{name:"Lucknow",lat:26.8467,lon:80.9462}]},
+ {name:"Uttarakhand",kind:"State",places:[{name:"Dehradun",lat:30.3165,lon:78.0322},{name:"Gairsain",season:"summer",lat:30.0626,lon:79.2820}]},
+ {name:"West Bengal",kind:"State",places:[{name:"Kolkata",lat:22.5726,lon:88.3639}]},
+ {name:"Andaman and Nicobar Islands",kind:"Union Territory",places:[{name:"Sri Vijaya Puram",lat:11.6234,lon:92.7265}]},
+ {name:"Chandigarh",kind:"Union Territory",places:[{name:"Chandigarh",lat:30.7333,lon:76.7794}]},
+ {name:"Dadra and Nagar Haveli and Daman and Diu",kind:"Union Territory",places:[{name:"Daman",lat:20.3974,lon:72.8328}]},
+ {name:"Delhi",kind:"Union Territory",places:[{name:"New Delhi",lat:28.6139,lon:77.2090}]},
+ {name:"Jammu and Kashmir",kind:"Union Territory",places:[{name:"Srinagar",season:"summer",lat:34.0837,lon:74.7973},{name:"Jammu",season:"winter",lat:32.7266,lon:74.8570}]},
+ {name:"Ladakh",kind:"Union Territory",places:[{name:"Leh",lat:34.1526,lon:77.5771}]},
+ {name:"Lakshadweep",kind:"Union Territory",places:[{name:"Kavaratti",lat:10.5593,lon:72.6358}]},
+ {name:"Puducherry",kind:"Union Territory",places:[{name:"Puducherry",lat:11.9416,lon:79.8083}]}
+];
+function indiaMapPoint(place){const scale=25,latitudeOffset=37.5,longitudeOffset=67.9,longitudeScale=Math.cos(22.5*Math.PI/180);return{x:20+(place.lon-longitudeOffset)*longitudeScale*scale,y:20+(latitudeOffset-place.lat)*scale}}
+function describeIndiaCapital(entry){return entry.places.map(place=>`${place.name}${place.season?` (${place.season})`:""}`).join(", ")}
+function renderIndiaCapitalButtons(){
+ const states=INDIA_STATE_CAPITALS.map((entry,index)=>({entry,index}));
+ const renderGroup=(kind,targetId)=>{$(targetId).innerHTML=states.filter(({entry})=>entry.kind===kind).map(({entry,index})=>`<button class="india-state-button" type="button" data-state-capital-index="${index}" aria-pressed="false"><strong>${entry.name}</strong><small>${describeIndiaCapital(entry)}</small></button>`).join("")};
+ renderGroup("State","india-states-grid");
+ renderGroup("Union Territory","india-union-territories-grid");
+}
+function renderIndiaCapitalMarkers(selectedIndex=-1){
+ const markers=[];
+ INDIA_STATE_CAPITALS.forEach((entry,index)=>entry.places.forEach(place=>{const point=indiaMapPoint(place);markers.push(`<circle class="india-capital-dot${index===selectedIndex?" is-selected":""}" cx="${point.x.toFixed(1)}" cy="${point.y.toFixed(1)}" r="${index===selectedIndex?5:3.2}"></circle>`)}));
+ $("india-capital-dots").innerHTML=markers.join("");
+ const entry=INDIA_STATE_CAPITALS[selectedIndex];
+ if(!entry){$("india-capital-pin").innerHTML="";return}
+ const point=indiaMapPoint(entry.places[0]);
+ $("india-capital-pin").innerHTML=`<g class="india-capital-pin" transform="translate(${point.x.toFixed(1)} ${point.y.toFixed(1)})"><path d="M0 1C-2-5-11-12-11-19a11 11 0 1 1 22 0C11-12 2-5 0 1Z"></path><circle cx="0" cy="-19" r="3.6"></circle></g><text class="india-capital-label" x="${(point.x+13).toFixed(1)}" y="${(point.y-24).toFixed(1)}">${entry.places[0].name}</text>`;
+}
+function showStateCapitalOnMap(index){
+ const entry=INDIA_STATE_CAPITALS[index];
+ if(!entry)throw new RangeError(`Unknown India state/capital index: ${index}`);
+ $("state-capitals-selected").textContent=`${entry.kind}: ${entry.name}. Capital${entry.places.length>1?"s":""}: ${describeIndiaCapital(entry)}.`;
+ document.querySelectorAll("[data-state-capital-index]").forEach(button=>button.setAttribute("aria-pressed",String(Number(button.dataset.stateCapitalIndex)===index)));
+ renderIndiaCapitalMarkers(index);
+ const viewport=$("india-map-viewport").getBoundingClientRect(),point=indiaMapPoint(entry.places[0]),zoom=2.1,x=point.x*viewport.width/720,y=point.y*viewport.height/800;
+ $("india-map-camera").style.transform=`translate(${viewport.width/2-x*zoom}px,${viewport.height/2-y*zoom}px) scale(${zoom})`;
+}
+function selectIndiaStateCapital(index){showStateCapitalOnMap(index);const entry=INDIA_STATE_CAPITALS[index];say([{text:`${entry.name}. Capital${entry.places.length>1?"s":""}: ${describeIndiaCapital(entry)}.`}])}
+function renderStateCapitalsScreen(){renderIndiaCapitalButtons();renderIndiaCapitalMarkers();$("state-capitals-selected").textContent="Choose a state or union territory below.";document.querySelectorAll("[data-state-capital-index]").forEach(button=>button.setAttribute("aria-pressed","false"));$("india-map-camera").style.transform="translate(0px,0px) scale(1)"}
+function showGeneralKnowledge(){stopSpeech();hideScreens();$("general-knowledge").hidden=false;say([`Hello ${kid}! Choose a general knowledge topic.`,"Explore States and Capitals, or learn about the Prime Ministers of India."])}
+function showStateCapitals(){stopSpeech();hideScreens();$("state-capitals").hidden=false;renderStateCapitalsScreen();say(["India has 28 states and 8 union territories. Choose a button to hear its capital and find it on the map."])}
+function renderPrimeMinister(index){const minister=INDIA_PRIME_MINISTERS[index];if(!minister)throw new RangeError(`Unknown India prime minister index: ${index}`);primeMinisterIndex=index;$("prime-minister-image").src=minister.image;$("prime-minister-image").alt=`Portrait of ${minister.name}`;$("prime-minister-source").href=minister.source;$("prime-minister-count").textContent=`Prime Minister ${index+1} of ${INDIA_PRIME_MINISTERS.length}`;$("prime-minister-name").textContent=minister.name;$("prime-minister-tenure").textContent=minister.tenure;$("prime-minister-previous").disabled=index===0;$("prime-minister-next").textContent=index===INDIA_PRIME_MINISTERS.length-1?"Done ✓":"Next →"}
+function showPrimeMinisters(){stopSpeech();hideScreens();primeMinisterIndex=0;$("prime-ministers").hidden=false;renderPrimeMinister(primeMinisterIndex);say(["Meet the Prime Ministers of India in order. Tap Next to see the next leader."])}
+function movePrimeMinister(direction){const next=primeMinisterIndex+direction;if(next<0)return;if(next>=INDIA_PRIME_MINISTERS.length){showGeneralKnowledge();return}stopSpeech();renderPrimeMinister(next)}
+function hideScreens(){window.clearInterval(tourTimer);tourTimer=0;window.clearInterval(sketchDemoTimer);sketchDemoTimer=0;sketchCelebrationTimers.forEach(window.clearTimeout);sketchCelebrationTimers=[];if($("sketch-celebration"))$("sketch-celebration").hidden=true;["splash","name","app-tour","language","app","english-types","english-alphabets","english-deity-letters","english-epic-warriors","english-lesson","english-identify-levels","english-identify-quiz","general-knowledge","state-capitals","prime-ministers","stories-genres","stories-list","stories-reader","sketch-home","sketch-demo","sketch-categories","sketch-more","sketch-pictures","sketch-practice","math-menu","math-counting-screen","math-mode-screen","addition-level-screen","addition-screen","math-story-levels","math-story-quiz","math-story-explanation","native-types","quiz-levels","quiz-play"].forEach(id=>$(id).hidden=true)}
+function sayLanguageOptions(){say([`Hello ${kid}! What would you like to learn?`,"English.","Telugu.","Hindi.","Maths.","General Knowledge."])}
 function showLanguage(){hideScreens();$("language").hidden=false;if(voiceSetupPromptShown)sayLanguageOptions();else scheduleSpeechVoiceCheck()}
 function showName(){hideScreens();$("name").hidden=false;$("msg").textContent="";$("nm").value=kid;$("nm").focus();say(["Welcome! What is your name? Then tap Continue."])}
 function continueToLanguage(){const value=$("nm").value.trim();if(!value){$("msg").textContent="Please enter your name to continue.";say(["Please enter your name to continue."]);$("nm").focus();return}kid=value.charAt(0).toLocaleUpperCase()+value.slice(1);try{sessionStorage.setItem("kid",kid)}catch(error){console.warn("Could not save learner name:",error)}showAppTour()}
@@ -735,7 +824,21 @@ $("voice-setup-close").onclick=closeVoiceSetup;
 $("voice-setup-recheck").onclick=()=>{const missing=missingSpeechLocales(typeof speechSynthesis==="undefined"?[]:speechSynthesis.getVoices());if(missing.length){$("voice-setup-missing").textContent=`Still not detected: ${missing.join(", ")}.`;return}closeVoiceSetup()};
 $("voice-setup-dialog").addEventListener("cancel",()=>{voiceSetupPromptShown=true});
 $("english-types-back").onclick=()=>{stopSpeech();showLanguage()};
- $("english-stories-entry").onclick=showStories;
+$("general-knowledge-entry").onclick=showGeneralKnowledge;
+$("general-knowledge-back").onclick=()=>{stopSpeech();showLanguage()};
+$("state-capitals-entry").onclick=showStateCapitals;
+$("state-capitals-back").onclick=showGeneralKnowledge;
+$("prime-ministers-entry").onclick=showPrimeMinisters;
+$("prime-ministers-back").onclick=showGeneralKnowledge;
+$("prime-minister-previous").onclick=()=>movePrimeMinister(-1);
+$("prime-minister-next").onclick=()=>movePrimeMinister(1);
+$("state-capitals-read-all").onclick=()=>say([
+ {text:"Let's learn all 28 states and 8 union territories of India."},
+ ...INDIA_STATE_CAPITALS.map((entry,index)=>({text:`${entry.name}. Capital${entry.places.length>1?"s":""}: ${describeIndiaCapital(entry)}.`,onStart:()=>showStateCapitalOnMap(index)}))
+]);
+$("india-states-grid").addEventListener("click",event=>{const button=event.target.closest("[data-state-capital-index]");if(button)selectIndiaStateCapital(Number(button.dataset.stateCapitalIndex))});
+$("india-union-territories-grid").addEventListener("click",event=>{const button=event.target.closest("[data-state-capital-index]");if(button)selectIndiaStateCapital(Number(button.dataset.stateCapitalIndex))});
+$("english-stories-entry").onclick=showStories;
  $("stories-genres-back").onclick=()=>{stopSpeech();if(selectedLanguage==="Telugu")showNativeTypes();else showEnglishTypes()};
  $("stories-list-back").onclick=returnToStoryGenres;
  $("stories-reader-back").onclick=returnToStoryList;

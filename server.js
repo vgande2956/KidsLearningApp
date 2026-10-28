@@ -21,7 +21,7 @@ const SECURITY = {
   'Permissions-Policy': 'camera=(), microphone=(), geolocation=()',
   'Content-Security-Policy':
     "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; " +
-    "img-src 'self' data:; media-src 'self' data: blob:; object-src 'none'; " +
+    "img-src 'self' data: https://upload.wikimedia.org https://thumb.wikimedia.org; media-src 'self' data: blob:; object-src 'none'; " +
     "base-uri 'self'; frame-ancestors 'self'",
 };
 const gzipCache = new Map();
