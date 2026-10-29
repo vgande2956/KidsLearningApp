@@ -135,3 +135,12 @@ The English meaning is shown but not spoken in Telugu mode.
 
 - `npm run dev` builds the app and starts the local server at http://localhost:3000.
 - `npm test` runs the server smoke tests.
+
+## Android app
+
+The Android app has its own repository, Capacitor configuration, and APK build
+workflow: [KidsLittleLearnersMobileApp](https://github.com/vgande2956/KidsLittleLearnersMobileApp).
+Open that repository to build the app or download its
+`little-learners-android-apk` GitHub Actions artifact. The Android app loads
+this deployed web app, so account services and uncached learning content require
+an internet connection.

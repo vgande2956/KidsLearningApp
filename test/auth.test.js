@@ -239,7 +239,8 @@ test('Firebase signup sends verification and login waits for Firebase email veri
     firebaseRequest: async (endpoint, payload) => {
       calls.push({ endpoint, payload });
       if (endpoint === 'accounts:signUp') return { idToken: 'firebase-id-token' };
-      if (endpoint === 'accounts:lookup') return { users: [{ emailVerified }] };
+      if (endpoint === 'accounts:update') return { idToken: 'firebase-updated-id-token' };
+      if (endpoint === 'accounts:lookup') return { users: [{ email: 'avery@example.com', emailVerified }] };
       return {};
     },
   });
@@ -249,10 +250,11 @@ test('Firebase signup sends verification and login waits for Firebase email veri
     body: { firstName: 'Avery', email: 'avery@example.com', password: 'a secure password' },
   });
   assert.equal(signup.status, 202);
-  assert.deepEqual(calls.map(call => call.endpoint), ['accounts:signUp', 'accounts:sendOobCode']);
-  assert.equal(calls[1].payload.requestType, 'VERIFY_EMAIL');
-  assert.equal(calls[1].payload.idToken, 'firebase-id-token');
-  assert.equal(calls[1].payload.continueUrl, 'http://localhost:3000/?verified=1');
+  assert.deepEqual(calls.map(call => call.endpoint), ['accounts:signUp', 'accounts:update', 'accounts:sendOobCode']);
+  assert.equal(calls[1].payload.displayName, 'Avery');
+  assert.equal(calls[2].payload.requestType, 'VERIFY_EMAIL');
+  assert.equal(calls[2].payload.idToken, 'firebase-updated-id-token');
+  assert.equal(calls[2].payload.continueUrl, 'http://localhost:3000/?verified=1');
 
   const unverifiedLogin = await request('/api/auth/login', {
     method: 'POST',
@@ -268,6 +270,42 @@ test('Firebase signup sends verification and login waits for Firebase email veri
   });
   assert.equal(login.status, 200);
   assert.deepEqual(JSON.parse(login.body), { firstName: 'Avery' });
+});
+
+test('Firebase login restores a missing local profile after a database reset', async t => {
+  const emailVerified = true;
+  const { dbPath, request } = await createFixture(t, {
+    emailProvider: 'firebase',
+    firebaseApiKey: 'test-web-api-key',
+    firebaseRequest: async endpoint => {
+      if (endpoint === 'accounts:signInWithPassword') return { idToken: 'firebase-id-token' };
+      if (endpoint === 'accounts:lookup') {
+        return { users: [{ email: 'avery@example.com', emailVerified, displayName: 'Avery Gande' }] };
+      }
+      return {};
+    },
+  });
+
+  const database = new Database(dbPath);
+  database.prepare(`
+    INSERT INTO users (first_name,email,password_salt,password_hash,email_verified,created_at)
+    VALUES (?,?,?,?,?,?)
+  `).run('Avery', 'avery@example.com', 'old-salt', 'old-hash', 1, Date.now());
+  database.prepare('DELETE FROM users WHERE email = ?').run('avery@example.com');
+  database.close();
+
+  const login = await request('/api/auth/login', {
+    method: 'POST',
+    body: { email: 'avery@example.com', password: 'a secure password' },
+  });
+  assert.equal(login.status, 200);
+  assert.deepEqual(JSON.parse(login.body), { firstName: 'Avery' });
+
+  const restoredDatabase = new Database(dbPath, { readonly: true });
+  const restoredUser = restoredDatabase.prepare('SELECT first_name, email_verified FROM users WHERE email = ?')
+    .get('avery@example.com');
+  assert.deepEqual(restoredUser, { first_name: 'Avery', email_verified: 1 });
+  restoredDatabase.close();
 });
 
 test('Firebase verification resend authenticates with the supplied password', async t => {
@@ -330,6 +368,7 @@ test('Firebase signup removes both accounts when sending verification fails', as
   assert.equal(signup.status, 503);
   assert.deepEqual(calls.map(call => call.endpoint), [
     'accounts:signUp',
+    'accounts:update',
     'accounts:sendOobCode',
     'accounts:delete',
   ]);

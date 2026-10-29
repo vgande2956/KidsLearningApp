@@ -269,7 +269,20 @@ function createAuthHandler(options = {}) {
           returnSecureToken: true,
         });
         firebaseIdToken = account.idToken;
+        const updatedAccount = await requestFirebase('accounts:update', {
+          idToken: firebaseIdToken,
+          displayName: firstName,
+          returnSecureToken: true,
+        });
+        firebaseIdToken = updatedAccount.idToken || firebaseIdToken;
       } catch (error) {
+        if (firebaseIdToken) {
+          try {
+            await requestFirebase('accounts:delete', { idToken: firebaseIdToken });
+          } catch (cleanupError) {
+            console.error('Could not roll back Firebase account registration:', cleanupError.firebaseCode || cleanupError.message);
+          }
+        }
         console.error('Firebase account registration failed:', error.firebaseCode || error.message);
         const status = error.firebaseCode === 'EMAIL_EXISTS' ? 409 :
           error.firebaseCode === 'OPERATION_NOT_ALLOWED' ? 503 : 502;
@@ -330,10 +343,10 @@ function createAuthHandler(options = {}) {
     if (!validEmail(email) || password.length > PASSWORD_MAX_LENGTH) {
       return json(res, 401, { error: 'Email or password is incorrect.' });
     }
-    const user = userByEmail.get(email);
+    let user = userByEmail.get(email);
     if (firebaseConfigured) {
-      if (!user || !validEmail(email)) return json(res, 401, { error: 'Email or password is incorrect.' });
       let verified;
+      let firebaseUser;
       try {
         const identity = await requestFirebase('accounts:signInWithPassword', {
           email,
@@ -341,7 +354,11 @@ function createAuthHandler(options = {}) {
           returnSecureToken: true,
         });
         const profile = await requestFirebase('accounts:lookup', { idToken: identity.idToken });
-        verified = Boolean(profile.users?.[0]?.emailVerified);
+        firebaseUser = profile.users?.[0];
+        if (!firebaseUser || normalizeEmail(firebaseUser.email) !== email) {
+          throw Object.assign(new Error('Firebase returned no matching account profile.'), { firebaseCode: 'INVALID_USER_PROFILE' });
+        }
+        verified = Boolean(firebaseUser.emailVerified);
       } catch (error) {
         const code = error.firebaseCode || '';
         if (['EMAIL_NOT_FOUND', 'INVALID_PASSWORD', 'INVALID_LOGIN_CREDENTIALS', 'USER_DISABLED'].includes(code)) {
@@ -349,6 +366,18 @@ function createAuthHandler(options = {}) {
         }
         console.error('Firebase sign-in failed:', code || error.message);
         return json(res, 502, { error: 'The email sign-in service could not complete this request.' });
+      }
+      if (!user) {
+        const displayName = typeof firebaseUser.displayName === 'string' ? firebaseUser.displayName.trim() : '';
+        const firstName = (displayName || email.split('@')[0])
+          .replace(/[\u0000-\u001f\u007f]/g, '').trim().split(/\s+/)[0]?.slice(0, 40) || 'Learner';
+        const now = Date.now();
+        db.prepare(`
+          INSERT INTO users (first_name,email,password_salt,password_hash,email_verified,created_at)
+          VALUES (?,?,?,?,?,?)
+          ON CONFLICT(email) DO NOTHING
+        `).run(firstName, email, crypto.randomBytes(16).toString('hex'), crypto.randomBytes(64).toString('hex'), verified ? 1 : 0, now);
+        user = userByEmail.get(email);
       }
       if (!verified) return json(res, 403, { error: 'Confirm your email before logging in.', code: 'EMAIL_NOT_VERIFIED' });
       if (!user.email_verified) db.prepare('UPDATE users SET email_verified = 1 WHERE id = ?').run(user.id);
