@@ -50,7 +50,8 @@
 
   function setGuestHidden(element, shouldHide) {
     if (!originalHiddenStates.has(element)) originalHiddenStates.set(element, element.hidden);
-    element.hidden = shouldHide || originalHiddenStates.get(element);
+    const hidden = shouldHide || originalHiddenStates.get(element);
+    if (element.hidden !== hidden) element.hidden = hidden;
   }
 
   function restoreGuestVisibility() {
@@ -98,7 +99,8 @@
 
     const authFlowVisible = ['splash', 'auth-login', 'auth-signup', 'app-tour']
       .some(id => !document.getElementById(id).hidden);
-    guestLoginButton.hidden = !guest || authFlowVisible;
+    const hideGuestLogin = !guest || authFlowVisible;
+    if (guestLoginButton.hidden !== hideGuestLogin) guestLoginButton.hidden = hideGuestLogin;
 
     if (!guest) {
       restoreGuestVisibility();
@@ -127,14 +129,13 @@
     if (target?.closest('#welcome-guest')) {
       sessionStorage.setItem(GUEST_KEY, 'true');
       applyGuestRestrictions();
-      return;
-    }
-    if (target?.closest('#guest-login-button')) {
+    } else if (target?.closest('#guest-login-button')) {
       document.getElementById('welcome-login').click();
     }
+    requestAnimationFrame(applyGuestRestrictions);
   }, true);
 
   const observer = new MutationObserver(applyGuestRestrictions);
-  observer.observe(document.body, { childList: true, subtree: true, attributes: true, attributeFilter: ['hidden'] });
+  observer.observe(document.body, { childList: true, subtree: true });
   applyGuestRestrictions();
 })();
