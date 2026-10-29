@@ -17,7 +17,10 @@ the email provider must authorize that sender address, and SMTP credentials
 belong only in the local `.env` file. Start the authentication-enabled app with
 `npm run dev` (or `npm start` after building); a static-only file server does
 not serve account API requests. The SQLite database is created at `data/accounts.sqlite` by
-default and is excluded from Git. Guest access remains available. After login
+default and is excluded from Git. Guest access is limited to foundational
+English activities, number practice through 10, and Level 1 of available quizzes;
+advanced activities and later levels require an account. Guests can use the
+always-available sign-in button to switch to their account. After login
 or guest access, a short animated, spoken app tour leads to language and subject
 selection. The sound toggle appears after the welcome screen and can mute speech
 and sound effects throughout the app. The app checks for Telugu (India),
