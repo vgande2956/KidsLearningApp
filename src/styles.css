@@ -609,6 +609,8 @@ button:focus-visible{outline:4px solid #9a80d7;outline-offset:3px}
 .welcome-art span:nth-child(3){background:#fbe5ef;transform:rotate(6deg)}
 .welcome-start{min-width:min(78vw,280px);min-height:58px;padding:12px 24px;border:0;border-radius:22px;background:#b9dfcf;color:#344f49;font-size:clamp(1.1rem,4vw,1.4rem);font-weight:900;box-shadow:0 6px 0 #829f933b,0 12px 22px #829f9325}
 .welcome-auth-actions{width:min(100%,360px);display:grid;gap:10px}
+.welcome-download-link{color:#536789;font-size:1rem;font-weight:800;text-underline-offset:3px}
+.welcome-download-link:focus-visible{outline:3px solid #536789;outline-offset:4px;border-radius:3px}
 .welcome-signup{background:#e8e2f8;color:#494768}
 .app-brand{min-width:0;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:1px;padding:2px 8px 2px 0}
 .app-brand strong{color:#a74e78;font-size:clamp(.95rem,3vw,1.2rem);font-weight:1000;line-height:1.05;white-space:nowrap}
