@@ -10,8 +10,9 @@ with scrypt, never saved as plain text. Sessions use HTTP-only, SameSite cookies
 Copy `.env.example` to `.env` and add a Gmail app password to `SMTP_PASSWORD`
 for `littlelearner1325@gmail.com`; keep that password private and never commit
 it. Gmail must allow the account to send mail with app passwords. Set
-`APP_BASE_URL` to the public HTTPS origin
-when deploying. The default sender is `Little Learners <littlelearner1325@gmail.com>`;
+`APP_BASE_URL` to the public HTTPS origin when deploying outside Render. On Render,
+the app uses Render's `RENDER_EXTERNAL_URL` automatically when `APP_BASE_URL` is
+not set. The default sender is `Little Learners <littlelearner1325@gmail.com>`;
 the email provider must authorize that sender address, and SMTP credentials
 belong only in the local `.env` file. Start the authentication-enabled app with
 `npm run dev` (or `npm start` after building); a static-only file server does
