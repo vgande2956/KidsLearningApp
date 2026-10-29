@@ -1,9 +1,11 @@
 'use strict';
-// Zero-dependency static web server for the built app (dist/).
+require('dotenv').config();
+// Static web server and email/password account API for the built app (dist/).
 const http = require('http');
 const fs = require('fs');
 const path = require('path');
 const zlib = require('zlib');
+const { createAuthHandler } = require('./auth');
 
 const ROOT = path.join(__dirname, 'dist');
 const MIME = {
@@ -38,17 +40,22 @@ function send(res, status, headers, body) {
   res.end(body);
 }
 
-function createServer() {
+function createServer(options = {}) {
   ensureBuilt();
-  return http.createServer((req, res) => {
-    if (req.method !== 'GET' && req.method !== 'HEAD') {
-      return send(res, 405, { Allow: 'GET, HEAD', 'Content-Type': 'text/plain' }, 'Method Not Allowed');
-    }
+  const handleAuthRequest = createAuthHandler(options.auth || {});
+  const server = http.createServer((req, res) => {
     let urlPath;
     try {
       urlPath = decodeURIComponent(new URL(req.url, 'http://x').pathname);
     } catch {
       return send(res, 400, { 'Content-Type': 'text/plain' }, 'Bad Request');
+    }
+    if (urlPath.startsWith('/api/auth/')) {
+      for (const [name, value] of Object.entries(SECURITY)) res.setHeader(name, value);
+      return handleAuthRequest(req, res);
+    }
+    if (req.method !== 'GET' && req.method !== 'HEAD') {
+      return send(res, 405, { Allow: 'GET, HEAD', 'Content-Type': 'text/plain' }, 'Method Not Allowed');
     }
     if (urlPath === '/health') {
       return send(res, 200, { 'Content-Type': 'application/json', 'Cache-Control': 'no-store' },
@@ -89,6 +96,8 @@ function createServer() {
       });
     });
   });
+  server.on('close', () => handleAuthRequest.close());
+  return server;
 }
 
 module.exports = { createServer };
