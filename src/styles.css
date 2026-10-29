@@ -468,6 +468,8 @@ header b{flex:1;color:var(--blue);font-size:1.3rem}header button{font-size:.95re
 .english-identify-options{width:min(100%,580px);min-height:0;flex:1;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(2,minmax(0,1fr));gap:clamp(8px,2vh,16px);padding:4px}
 .english-identify-option{display:grid;place-items:center;min-height:0;border:3px solid #ffffffc9;border-radius:24px;background:linear-gradient(145deg,#ffffff,#e6f3ff);box-shadow:0 6px 0 #00000018;color:var(--ink);transition:transform .15s ease,background .15s ease}
 .english-identify-option span{font-size:clamp(3.3rem,14vmin,7rem);line-height:1;filter:drop-shadow(0 5px 2px #00000016)}
+.guest-login-button{position:fixed;z-index:1001;top:calc(env(safe-area-inset-top,0px) + 8px);left:10px;min-height:42px;padding:8px 14px;border:2px solid #fff;border-radius:20px;background:#a74e78;color:#fff;box-shadow:0 4px 10px #58627b24;font-size:.9rem;font-weight:850}
+.guest-login-button:focus-visible{outline:4px solid #ffad42;outline-offset:2px}
 .english-identify-option:hover:not(:disabled){transform:translateY(-3px) scale(1.02)}
 .english-identify-option.is-wrong{border-color:#df5a5a;background:#ffe2df;animation:identify-shake .25s ease}
 .english-identify-option.is-correct{border-color:#18865b;background:#d9f6e6;box-shadow:0 0 0 4px #18865b35}
