@@ -13,20 +13,6 @@
 			"problemMatcher": []
 		},
 		{
-			"label": "Serve app locally without Node",
-			"type": "shell",
-			"command": "py",
-			"args": [
-				"-m",
-				"http.server",
-				"3000",
-				"--directory",
-				"src"
-			],
-			"isBackground": true,
-			"problemMatcher": []
-		},
-		{
 			"label": "Build current app for verification",
 			"type": "shell",
 			"command": "npm run build",

@@ -1,11 +1,24 @@
 # KidsLearningApp
 
-Little Learners uses original panda-and-reader mascots throughout its launch and
-learning screens. On launch, a pastel welcome screen with the animated logo and a
-Start Learning button opens a name-entry screen, followed by a short animated,
-spoken app tour. The tour can be skipped; either way, the learner proceeds to
-language and subject selection. The learner's name is used in greetings in English,
-Telugu, and Hindi. The sound toggle appears after the welcome screen and can mute speech
+Requires Node.js 20 or newer. Little Learners uses original panda-and-reader mascots throughout its launch and
+learning screens. On launch, a pastel welcome screen offers email/password login,
+account creation, and guest access. Signup asks for the account holder's first
+name and sends an email confirmation link before login is enabled. Confirming
+the link starts a protected session; the account first name is used in learning
+greetings. Accounts are stored in SQLite and passwords are salted and hashed
+with scrypt, never saved as plain text. Sessions use HTTP-only, SameSite cookies.
+Copy `.env.example` to `.env` and add a Gmail app password to `SMTP_PASSWORD`
+for `littlelearner1325@gmail.com`; keep that password private and never commit
+it. Gmail must allow the account to send mail with app passwords. Set
+`APP_BASE_URL` to the public HTTPS origin
+when deploying. The default sender is `Little Learners <littlelearner1325@gmail.com>`;
+the email provider must authorize that sender address, and SMTP credentials
+belong only in the local `.env` file. Start the authentication-enabled app with
+`npm run dev` (or `npm start` after building); a static-only file server does
+not serve account API requests. The SQLite database is created at `data/accounts.sqlite` by
+default and is excluded from Git. Guest access remains available. After login
+or guest access, a short animated, spoken app tour leads to language and subject
+selection. The sound toggle appears after the welcome screen and can mute speech
 and sound effects throughout the app. The app checks for Telugu (India),
 Hindi (India), and English (India) speech voices on the device. If any are not
 available, it asks whether you want to view device-specific setup instructions;

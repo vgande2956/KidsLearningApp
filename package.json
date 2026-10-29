@@ -10,5 +10,15 @@
     "dev": "node scripts/build.js && node server.js",
     "test": "node --test"
   },
-  "engines": { "node": ">=18" }
+  "dependencies": {
+    "better-sqlite3": "^12.4.1",
+    "dotenv": "^16.6.1",
+    "nodemailer": "^10.2.1"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "allowScripts": {
+    "better-sqlite3@12.11.1": true
+  }
 }

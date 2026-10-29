@@ -29,16 +29,80 @@
 <h1 class="splash-title">Little Learners</h1>
 <p class="splash-tagline">LEARN <span aria-hidden="true">•</span> PLAY <span aria-hidden="true">•</span> GROW</p>
 <div class="welcome-art" aria-hidden="true"><span>🦋</span><span>🌈</span><span>⭐</span></div>
-<button class="welcome-start" id="welcome-start" type="button">Start Learning <span aria-hidden="true">➜</span></button>
+<div class="welcome-auth-actions" role="group" aria-label="Account options">
+<button class="welcome-start" id="welcome-login" type="button">Log in <span aria-hidden="true">➜</span></button>
+<button class="welcome-start welcome-signup" id="welcome-signup" type="button">Create account</button>
+<button class="welcome-guest" id="welcome-guest" type="button">Continue as a guest</button>
+</div>
+<p id="auth-session-status" class="auth-status" role="status" aria-live="polite"></p>
 </section>
-<section id="name" hidden aria-labelledby="name-title">
-<button class="name-back" id="name-back" type="button">← Back</button>
-<div class="name-welcome-art" aria-hidden="true"><span>🦊</span><span>📚</span><span>✏️</span></div>
-<h1 id="name-title">What should we call you?</h1>
-<label for="nm">Enter your name to get started</label>
-<input id="nm" maxlength="20" autocomplete="given-name" placeholder="Your name">
-<p id="msg" role="status" aria-live="polite"></p>
-<button class="go" id="start" type="button">Continue <span aria-hidden="true">➜</span></button>
+<section id="auth-login" class="auth-screen" hidden aria-labelledby="auth-login-title">
+<button class="auth-back" id="auth-login-back" type="button">← Welcome</button>
+<div class="auth-layout">
+<aside class="auth-showcase">
+<span class="auth-brand">✨ Little Learners</span>
+<div class="auth-art" aria-hidden="true"><span class="auth-art-book">📚</span><span class="auth-art-star">⭐</span><span class="auth-art-panda">🐼</span><span class="auth-art-pencil">✏️</span></div>
+<p class="auth-eyebrow">YOUR LEARNING ADVENTURE</p>
+<h2>Every day is a chance to discover something new.</h2>
+<p class="auth-showcase-copy">Pick up where you left off and keep learning, one little step at a time.</p>
+<div class="auth-trust-note"><span aria-hidden="true">🔒</span><span>Your account is protected with secure sign-in.</span></div>
+</aside>
+<div class="auth-panel">
+<div class="auth-panel-heading"><span class="auth-kicker">WELCOME BACK</span><h1 id="auth-login-title">Log in to learn</h1><p class="auth-intro">Use the email address and password for your account.</p></div>
+<div class="auth-method-badge"><span aria-hidden="true">✉️</span> Email and password</div>
+<form id="auth-login-form" class="auth-form">
+<label for="auth-login-email">Email address</label>
+<input id="auth-login-email" name="email" type="email" maxlength="254" autocomplete="email" placeholder="you@example.com" required>
+<label for="auth-login-password">Password</label>
+<input id="auth-login-password" name="password" type="password" autocomplete="current-password" placeholder="Enter your password" required>
+<p id="auth-login-status" class="auth-status" role="status" aria-live="polite"></p>
+<button class="auth-resend" id="auth-login-resend" type="button" hidden>Resend confirmation email</button>
+<button class="auth-submit" type="submit"><span>Log in</span><span aria-hidden="true">→</span></button>
+</form>
+<p class="auth-switch">New to Little Learners? <button id="auth-show-signup" type="button">Create an account</button></p>
+<p class="auth-privacy-note">🔐 We never store your password in plain text.</p>
+</div>
+</div>
+</section>
+<section id="auth-signup" class="auth-screen" hidden aria-labelledby="auth-signup-title">
+<button class="auth-back" id="auth-signup-back" type="button">← Welcome</button>
+<div class="auth-layout auth-layout-signup">
+<aside class="auth-showcase">
+<span class="auth-brand">✨ Little Learners</span>
+<div class="auth-art" aria-hidden="true"><span class="auth-art-book">📚</span><span class="auth-art-star">🌈</span><span class="auth-art-panda">🦊</span><span class="auth-art-pencil">✨</span></div>
+<p class="auth-eyebrow">A BRIGHTER WAY TO LEARN</p>
+<h2>Big ideas start with little learners.</h2>
+<p class="auth-showcase-copy">Create your family account and make room for stories, languages, numbers, and curious questions.</p>
+<div class="auth-feature-pills"><span>📖 Stories</span><span>🔤 Languages</span><span>🧮 Maths</span></div>
+</aside>
+<div class="auth-panel">
+<div id="auth-signup-panel-heading" class="auth-panel-heading"><span class="auth-kicker">GET STARTED</span><h1 id="auth-signup-title">Create your account</h1><p class="auth-intro">A parent or guardian can sign up with an email address.</p></div>
+<div id="auth-signup-method-badge" class="auth-method-badge"><span aria-hidden="true">✉️</span> Email verification required</div>
+<form id="auth-signup-form" class="auth-form">
+<label for="auth-signup-first-name">Your first name</label>
+<input id="auth-signup-first-name" name="firstName" type="text" maxlength="40" autocomplete="given-name" placeholder="e.g. Asha" required>
+<label for="auth-signup-email">Email address</label>
+<input id="auth-signup-email" name="email" type="email" maxlength="254" autocomplete="email" placeholder="you@example.com" required>
+<label for="auth-signup-password">Create a password</label>
+<input id="auth-signup-password" name="password" type="password" minlength="10" maxlength="1024" autocomplete="new-password" placeholder="At least 10 characters" required>
+<p class="auth-password-hint">Use at least 10 characters. Your password is securely hashed before it is saved.</p>
+<p id="auth-signup-status" class="auth-status" role="status" aria-live="polite"></p>
+<button class="auth-resend" id="auth-signup-resend" type="button" hidden>Send confirmation email again</button>
+<button class="auth-submit" type="submit"><span>Create account</span><span aria-hidden="true">→</span></button>
+</form>
+<p id="auth-signup-switch" class="auth-switch">Already have an account? <button id="auth-show-login" type="button">Log in</button></p>
+<p id="auth-signup-privacy" class="auth-privacy-note">By continuing, you agree to keep your sign-in details private.</p>
+<section id="auth-signup-confirmation" class="auth-confirmation" hidden aria-labelledby="auth-signup-confirmation-title">
+<span class="auth-confirmation-icon" aria-hidden="true">✉️</span>
+<span class="auth-kicker">ONE LAST STEP</span>
+<h1 id="auth-signup-confirmation-title">Check your inbox</h1>
+<p class="auth-intro">We sent a confirmation link to <strong id="auth-signup-confirmation-email"></strong>. Open it to activate your account and start learning.</p>
+<p id="auth-signup-confirmation-status" class="auth-status" role="status" aria-live="polite"></p>
+<button id="auth-signup-confirmation-resend" class="auth-resend" type="button">Send the link again</button>
+<button id="auth-signup-confirmation-login" class="auth-submit" type="button">Back to log in</button>
+</section>
+</div>
+</div>
 </section>
 <section id="app-tour" class="app-tour-screen" hidden aria-labelledby="app-tour-title">
 <header class="app-tour-header">
@@ -63,6 +127,7 @@
 </section>
 <section id="language" hidden>
 <div class="learning-mascot" aria-hidden="true"><img src="mascot.svg" alt=""></div><h1>What would you like to learn?</h1>
+<div class="account-toolbar"><span id="account-greeting"></span><button id="account-logout" type="button" hidden>Log out</button></div>
 <button class="listen-options" id="listen-options" type="button" aria-label="Hear the available learning options">🔊 Hear options</button>
 <div class="languages" role="group" aria-label="Choose a language or learning subject">
 <button class="choice-card english-card" type="button" data-language="English"><span class="choice-icon" aria-hidden="true">🔤</span><span class="choice-label">English</span></button>
