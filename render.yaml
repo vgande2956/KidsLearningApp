@@ -4,3 +4,16 @@ services:
     runtime: docker
     plan: free
     healthCheckPath: /health
+    envVars:
+      - key: SMTP_HOST
+        value: smtp.gmail.com
+      - key: SMTP_PORT
+        value: "465"
+      - key: SMTP_SECURE
+        value: "true"
+      - key: SMTP_USER
+        value: littlelearner1325@gmail.com
+      - key: SMTP_FROM
+        value: "Little Learners <littlelearner1325@gmail.com>"
+      - key: SMTP_PASSWORD
+        sync: false

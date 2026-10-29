@@ -33,13 +33,13 @@ test('home page is served with security headers', async () => {
   assert.equal(r.headers['x-content-type-options'], 'nosniff');
   assert.match(r.body.toString(), /<title>Little Learners<\/title>/);
   assert.match(r.body.toString(), /<section id="splash"[^>]*aria-label="Little Learners"/);
-  assert.match(r.body.toString(), /class="splash-logo" src="mascot\.svg"/);
-  assert.match(r.body.toString(), /rel="icon" href="mascot\.svg"/);
-  assert.match(r.body.toString(), /class="splash-tagline">LEARN[\s\S]*?PLAY[\s\S]*?GROW<\/p>/);
+  assert.match(r.body.toString(), /class="splash-logo" src="images\/little-learners-logo-transparent\.png"/);
+  assert.match(r.body.toString(), /rel="icon" href="images\/little-learners-logo-transparent\.png" type="image\/png"/);
+  assert.match(r.body.toString(), /class="splash-title visually-hidden">Little Learners<\/h1>/);
   assert.match(r.body.toString(), /class="app-brand"><strong>Little Learners<\/strong><small>LEARN • PLAY • GROW<\/small>/);
   assert.match(r.body.toString(), /id="welcome-login"[^>]*>Log in/);
   assert.match(r.body.toString(), /id="welcome-signup"[^>]*>Create account/);
-  assert.match(r.body.toString(), /id="welcome-guest"[^>]*>Continue as a guest/);
+  assert.doesNotMatch(r.body.toString(), /welcome-guest|Continue as a guest|guest-access\.js/);
   assert.ok(r.body.toString().indexOf('id="splash"') < r.body.toString().indexOf('id="language"'));
   assert.ok(r.body.toString().indexOf('id="splash"') < r.body.toString().indexOf('id="auth-login"'));
   assert.ok(r.body.toString().indexOf('id="splash"') < r.body.toString().indexOf('id="auth-signup"'));
@@ -139,12 +139,20 @@ test('sketch practice includes the demo, open picture choices, and painting tool
   assert.match(html, /id="sketch-spelling"/);
 });
 
-test('Little Learners branding is used by the PWA manifest and launch mascot', async () => {
-  const [manifestResponse, mascotResponse] = await Promise.all([get('/manifest.webmanifest'), get('/mascot.svg')]);
+test('Little Learners raster logo is used by the PWA manifest and welcome screen', async () => {
+  const [manifestResponse, mascotResponse, logoResponse] = await Promise.all([
+    get('/manifest.webmanifest'), get('/mascot.svg'), get('/images/little-learners-logo-transparent.png')
+  ]);
   const manifest = JSON.parse(manifestResponse.body.toString());
   assert.equal(manifest.name, 'Little Learners - Learn, Play, Grow');
   assert.equal(manifest.short_name, 'Little Learners');
-  assert.equal(manifest.icons[0].src, 'mascot.svg');
+  assert.deepEqual(manifest.icons.map(icon => icon.src), [
+    'images/little-learners-logo-transparent.png', 'images/little-learners-logo-transparent.png'
+  ]);
+  assert.equal(logoResponse.status, 200);
+  assert.match(logoResponse.headers['content-type'], /image\/png/);
+  assert.deepEqual([...logoResponse.body.subarray(0, 8)], [137, 80, 78, 71, 13, 10, 26, 10]);
+  assert.equal(logoResponse.body[25], 6, 'logo PNG should preserve its transparent background');
   assert.equal(mascotResponse.status, 200);
   assert.match(mascotResponse.body.toString(), /A cheerful panda and a little girl sit together on a giant pencil and read a book/);
 });
@@ -172,17 +180,17 @@ test('launch offers login and signup before the app tour', async () => {
   assert.match(script, /function startSplash\(\)/);
   assert.match(script, /\$\("welcome-login"\)\.onclick=showLogin/);
   assert.match(script, /\$\("welcome-signup"\)\.onclick=showSignup/);
-  assert.match(script, /\$\("welcome-guest"\)\.onclick=continueAsGuest/);
+  assert.doesNotMatch(script, /welcome-guest|continueAsGuest/);
   assert.match(script, /async function submitAccount\(mode,event\)/);
   assert.match(script, /fetch\(`\/api\/auth\/\$\{mode\}`/);
   assert.match(script, /function enterLearning\(firstName\)/);
-  assert.match(script, /function continueAsGuest\(\)\{kid="friend";\$\("account-greeting"\)\.textContent="";\$\("account-logout"\)\.hidden=true;showAppTour\(\)\}/);
   assert.match(script, /\$\("auth-login-form"\)\.onsubmit=event=>submitAccount\("login",event\)/);
   assert.match(script, /\$\("auth-signup-form"\)\.onsubmit=event=>submitAccount\("signup",event\)/);
   assert.match(script, /startSplash\(\);/);
   assert.match(styles, /\.splash-logo[^}]*animation:logo-bob/);
   assert.match(styles, /@keyframes logo-bob/);
   assert.match(styles, /\.welcome-start/);
+  assert.match(styles, /@media \(max-height:620px\) and \(min-width:781px\)\{[\s\S]*?\.auth-layout\{min-height:0;grid-template-rows:minmax\(0,1fr\)\}[\s\S]*?\.auth-panel\{min-height:0;gap:8px;overflow-y:auto;/);
   assert.match(styles, /\.learning-mascot/);
   assert.match(styles, /@keyframes learning-mascot-float/);
   assert.match(styles, /font-family:"Trebuchet MS","Arial Rounded MT Bold","Segoe UI",sans-serif/);
@@ -199,6 +207,7 @@ test('account onboarding uses the account first name without storing credentials
   assert.match(html, /id="auth-signup-first-name"[^>]*name="firstName"/);
   assert.match(html, /id="auth-signup-email"[^>]*type="email"/);
   assert.match(html, /id="auth-signup-password"[^>]*type="password"[^>]*minlength="10"/);
+  assert.match(html, /<button class="auth-submit" type="submit"><span>Create account<\/span>/);
   assert.match(script, /function enterLearning\(firstName\)\{const value=String\(firstName\|\|""\)\.trim\(\)\.split\(\/\\s\+\/\)\[0\]/);
   assert.match(script, /JSON\.stringify\(values\)/);
   assert.doesNotMatch(script, /sessionStorage\.setItem\("kid"/);
@@ -896,6 +905,7 @@ test('selecting a language or Maths option cancels speech, including delayed spe
 test('assets have the right MIME types', async () => {
   for (const [p, re] of [['/app.js', /javascript/], ['/styles.css', /css/], ['/manifest.webmanifest', /manifest\+json/],
     ['/icon-192.png', /image\/png/], ['/icon.svg', /svg/], ['/mascot.svg', /svg/],
+    ['/images/little-learners-logo-transparent.png', /image\/png/],
     ['/images/india/india-admin1.svg', /image\/svg\+xml/],
     ...['agni','brahma','chandra','durga','ganesha','hanuman','indra','jagannath','lakshmi','parvati','rama','saraswati','shiva','tripura-sundari','vamana','vishnu','yama'].map(name=>[`/images/indian-deities/${name}.jpg`,/image\/jpeg/]),
     ['/images/indian-deities/krishna.png',/image\/png/]]) {

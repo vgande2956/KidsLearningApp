@@ -8,11 +8,10 @@
 <meta name="theme-color" content="#fff7f0">
 <meta name="description" content="Learn, play, and grow with Little Learners.">
 <link rel="manifest" href="manifest.webmanifest">
-<link rel="icon" href="mascot.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="icon" href="images/little-learners-logo-transparent.png" type="image/png">
+<link rel="apple-touch-icon" href="images/little-learners-logo-transparent.png">
 <link rel="stylesheet" href="styles.css"></head><body>
 <button id="mute-toggle" class="mute-toggle" type="button" hidden aria-label="Mute sound" aria-pressed="false">🔊 Sound on</button>
-<button id="guest-login-button" class="guest-login-button" type="button" hidden>Log in for full access</button>
 <dialog id="english-warrior-dialog" class="english-warrior-dialog" aria-labelledby="english-warrior-dialog-title" aria-describedby="english-warrior-dialog-description">
 <div class="english-warrior-dialog-card">
 <button id="english-warrior-close" class="english-warrior-close" type="button" aria-label="Close warrior introduction">×</button>
@@ -26,14 +25,12 @@
 </dialog>
 <section id="splash" aria-label="Little Learners">
 <div class="splash-sparkle" aria-hidden="true">✨</div>
-<img class="splash-logo" src="mascot.svg" alt="A panda and a little girl sitting on a pencil and reading a book together">
-<h1 class="splash-title">Little Learners</h1>
-<p class="splash-tagline">LEARN <span aria-hidden="true">•</span> PLAY <span aria-hidden="true">•</span> GROW</p>
+<img class="splash-logo" src="images/little-learners-logo-transparent.png" alt="Little Learners logo showing two children reading together">
+<h1 class="splash-title visually-hidden">Little Learners</h1>
 <div class="welcome-art" aria-hidden="true"><span>🦋</span><span>🌈</span><span>⭐</span></div>
 <div class="welcome-auth-actions" role="group" aria-label="Account options">
 <button class="welcome-start" id="welcome-login" type="button">Log in <span aria-hidden="true">➜</span></button>
 <button class="welcome-start welcome-signup" id="welcome-signup" type="button">Create account</button>
-<button class="welcome-guest" id="welcome-guest" type="button">Continue as a guest</button>
 </div>
 <p id="auth-session-status" class="auth-status" role="status" aria-live="polite"></p>
 </section>
@@ -760,4 +757,4 @@
 </div>
 </section>
 </dialog>
-<script src="app.js" defer></script><script src="guest-access.js" defer></script></body></html>
+<script src="app.js" defer></script></body></html>
