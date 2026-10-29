@@ -26,6 +26,14 @@
 			"args": ["--test", "test/smoke.test.js"],
 			"isBackground": false,
 			"problemMatcher": []
+		},
+		{
+			"label": "Run authentication tests",
+			"type": "shell",
+			"command": "node",
+			"args": ["--test", "test/auth.test.js"],
+			"isBackground": false,
+			"problemMatcher": []
 		}
 	]
 }

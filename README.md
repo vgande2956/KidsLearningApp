@@ -7,20 +7,24 @@ name and sends an email confirmation link before login is enabled. Confirming
 the link starts a protected session; the account first name is used in learning
 greetings. Accounts are stored in SQLite and passwords are salted and hashed
 with scrypt, never saved as plain text. Sessions use HTTP-only, SameSite cookies.
-Copy `.env.example` to `.env` and set `SMTP_PASSWORD` to a Gmail App Password
-for `littlelearner1325@gmail.com`; do not use the account's normal password.
-Keep the App Password private and never commit it. The Render blueprint sets the
-Gmail SMTP host, port, TLS mode, username, and sender address; add the App
-Password as the `SMTP_PASSWORD` secret in the Render service's Environment
-settings. If that secret is not present, account creation reports that email
-confirmation is unavailable. Revoke any App Password shared in chat or another
-public location and generate a replacement before deploying. Set `APP_BASE_URL`
-to the public HTTPS origin when deploying outside Render. On Render, the app
-uses Render's `RENDER_EXTERNAL_URL` automatically when `APP_BASE_URL` is not set.
-The sender is `Little Learners <littlelearner1325@gmail.com>`; the email provider
-must authorize that sender address, and SMTP credentials must only be stored in
-the local `.env` or the deployment provider's secret environment settings. Start
-the authentication-enabled app with
+Copy `.env.example` to `.env` and configure Gmail OAuth2 to send confirmation
+email from `littlelearner1325@gmail.com`; this avoids an App Password, which may
+not be available for some Google accounts. Create an OAuth client in Google
+Cloud, configure the OAuth consent screen, and add the sending Google account
+as a test user if the app remains in Testing. For SMTP, authorize the
+`https://mail.google.com/` scope and obtain a refresh token using your OAuth
+client. Nodemailer's [Gmail OAuth2 guide](https://nodemailer.com/smtp/oauth2)
+documents the token flow. Set `GOOGLE_OAUTH_CLIENT_ID`,
+`GOOGLE_OAUTH_CLIENT_SECRET`, and `GOOGLE_OAUTH_REFRESH_TOKEN`; keep these
+credentials private and never commit them. The Render blueprint sets the Gmail
+SMTP host, port, TLS mode, auth mode, username, and sender address. Add the
+three OAuth values as secret environment variables in the Render service.
+Missing OAuth values cause signup to report that confirmation email is
+unavailable. Google may expire refresh tokens for OAuth apps left in Testing;
+publishing or verifying an app that requests Gmail access can require Google's
+OAuth review. Set `APP_BASE_URL` to the public HTTPS origin when deploying
+outside Render. On Render, the app uses `RENDER_EXTERNAL_URL` automatically
+when `APP_BASE_URL` is not set. Start the authentication-enabled app with
 `npm run dev` (or `npm start` after building); a static-only file server does
 not serve account API requests. The SQLite database is created at `data/accounts.sqlite` by
 default and is excluded from Git. Guest access is currently unavailable. After
