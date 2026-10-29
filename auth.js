@@ -121,12 +121,16 @@ function createAuthHandler(options = {}) {
   const smtpPort = Number(options.smtpPort ?? process.env.SMTP_PORT ?? 587);
   const smtpSecure = options.smtpSecure ?? process.env.SMTP_SECURE === 'true';
   const smtpUser = options.smtpUser ?? process.env.SMTP_USER;
+  const emailProvider = options.emailProvider ?? process.env.AUTH_EMAIL_PROVIDER ?? 'smtp';
   const smtpAuthMethod = options.smtpAuthMethod ?? process.env.SMTP_AUTH_METHOD ?? 'password';
   const smtpPassword = options.smtpPassword ?? process.env.SMTP_PASSWORD;
   const googleOAuthClientId = options.googleOAuthClientId ?? process.env.GOOGLE_OAUTH_CLIENT_ID;
   const googleOAuthClientSecret = options.googleOAuthClientSecret ?? process.env.GOOGLE_OAUTH_CLIENT_SECRET;
   const googleOAuthRefreshToken = options.googleOAuthRefreshToken ?? process.env.GOOGLE_OAUTH_REFRESH_TOKEN;
   const mailFrom = options.smtpFrom ?? process.env.SMTP_FROM ?? 'Little Learners <littlelearner1325@gmail.com>';
+  const firebaseApiKey = options.firebaseApiKey ?? process.env.FIREBASE_WEB_API_KEY;
+  const firebaseSelected = emailProvider === 'firebase';
+  const firebaseConfigured = firebaseSelected && Boolean(firebaseApiKey);
   const oauthConfigured = smtpAuthMethod === 'oauth2' && smtpUser && googleOAuthClientId &&
     googleOAuthClientSecret && googleOAuthRefreshToken;
   const passwordConfigured = smtpAuthMethod === 'password' && (!smtpUser || smtpPassword);
@@ -150,6 +154,27 @@ function createAuthHandler(options = {}) {
       })
       : null;
   const sendEmail = options.sendEmail || (message => transport.sendMail({ from: mailFrom, ...message }));
+  const emailConfigured = firebaseSelected
+    ? firebaseConfigured
+    : Boolean(transport || options.sendEmail);
+  const requestFirebase = options.firebaseRequest || (async (endpoint, payload) => {
+    const response = await fetch(
+      `https://identitytoolkit.googleapis.com/v1/${endpoint}?key=${encodeURIComponent(firebaseApiKey)}`,
+      {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+        signal: AbortSignal.timeout(15000),
+      },
+    );
+    const result = await response.json();
+    if (!response.ok) {
+      const error = new Error(result.error?.message || 'Firebase Authentication request failed.');
+      error.firebaseCode = result.error?.message || 'UNKNOWN';
+      throw error;
+    }
+    return result;
+  });
   const configuredAppBaseUrl = options.appBaseUrl || process.env.APP_BASE_URL || process.env.RENDER_EXTERNAL_URL;
   const appBaseUrl = new URL(configuredAppBaseUrl || `http://localhost:${process.env.PORT || 3000}`);
   if (appBaseUrl.protocol !== 'https:' && !['localhost', '127.0.0.1'].includes(appBaseUrl.hostname)) {
@@ -197,7 +222,15 @@ function createAuthHandler(options = {}) {
   }
 
   async function sendVerification(user, token) {
-    if (!transport && !options.sendEmail) throw new Error('Email delivery is not configured.');
+    if (firebaseConfigured) {
+      await requestFirebase('accounts:sendOobCode', {
+        requestType: 'VERIFY_EMAIL',
+        idToken: token,
+        continueUrl: new URL('/?verified=1', appBaseUrl).href,
+      });
+      return;
+    }
+    if (!emailConfigured) throw new Error('Email delivery is not configured.');
     const verifyUrl = new URL('/api/auth/verify-email', appBaseUrl);
     verifyUrl.searchParams.set('token', token);
     const firstName = escapeHtml(user.first_name);
@@ -222,9 +255,30 @@ function createAuthHandler(options = {}) {
     if (password.length < PASSWORD_MIN_LENGTH || password.length > PASSWORD_MAX_LENGTH) {
       return json(res, 400, { error: `Use a password between ${PASSWORD_MIN_LENGTH} and ${PASSWORD_MAX_LENGTH} characters.` });
     }
-    if (!transport && !options.sendEmail) return json(res, 503, { error: 'Email confirmation is not configured on this server yet.' });
+    if (!emailConfigured) return json(res, 503, { error: 'Email confirmation is not configured on this server yet.' });
     if (userByEmail.get(email)) {
       return json(res, 202, { message: 'If this address can be used, a confirmation email will be sent.' });
+    }
+
+    let firebaseIdToken = '';
+    if (firebaseConfigured) {
+      try {
+        const account = await requestFirebase('accounts:signUp', {
+          email,
+          password,
+          returnSecureToken: true,
+        });
+        firebaseIdToken = account.idToken;
+      } catch (error) {
+        console.error('Firebase account registration failed:', error.firebaseCode || error.message);
+        const status = error.firebaseCode === 'EMAIL_EXISTS' ? 409 :
+          error.firebaseCode === 'OPERATION_NOT_ALLOWED' ? 503 : 502;
+        return json(res, status, {
+          error: status === 409
+            ? 'An account already exists for this email. Try logging in.'
+            : 'Could not create the account with the configured email service. Please try again later.',
+        });
+      }
     }
 
     const salt = crypto.randomBytes(16).toString('hex');
@@ -235,6 +289,13 @@ function createAuthHandler(options = {}) {
     try {
       result = insertUser.run(firstName, email, salt, passwordHash.toString('hex'), hashToken(token), now + VERIFICATION_TTL_MS, now);
     } catch (error) {
+      if (firebaseIdToken) {
+        try {
+          await requestFirebase('accounts:delete', { idToken: firebaseIdToken });
+        } catch (cleanupError) {
+          console.error('Could not roll back Firebase account registration:', cleanupError.firebaseCode || cleanupError.message);
+        }
+      }
       if (error.code === 'SQLITE_CONSTRAINT_UNIQUE') {
         return json(res, 202, { message: 'If this address can be used, a confirmation email will be sent.' });
       }
@@ -242,10 +303,17 @@ function createAuthHandler(options = {}) {
     }
     const user = { id: Number(result.lastInsertRowid), first_name: firstName, email };
     try {
-      await sendVerification(user, token);
+      await sendVerification(user, firebaseConfigured ? firebaseIdToken : token);
     } catch (error) {
       db.prepare('DELETE FROM users WHERE id = ? AND email_verified = 0').run(user.id);
-      console.error('Could not send account verification email:', error.message);
+      if (firebaseIdToken) {
+        try {
+          await requestFirebase('accounts:delete', { idToken: firebaseIdToken });
+        } catch (cleanupError) {
+          console.error('Could not roll back Firebase account registration:', cleanupError.firebaseCode || cleanupError.message);
+        }
+      }
+      console.error('Could not send account verification email:', error.firebaseCode || error.message);
       return json(res, 503, { error: 'We could not send the confirmation email. Check the email service configuration and try again.' });
     }
     return json(res, 202, { message: 'Check your email for a confirmation link. It expires in 24 hours.' });
@@ -256,10 +324,42 @@ function createAuthHandler(options = {}) {
     const body = await readJson(req);
     const email = normalizeEmail(body.email);
     const password = typeof body.password === 'string' ? body.password : '';
+    if (firebaseSelected && !firebaseConfigured) {
+      return json(res, 503, { error: 'Firebase email sign-in is not configured on this server yet.' });
+    }
     if (!validEmail(email) || password.length > PASSWORD_MAX_LENGTH) {
       return json(res, 401, { error: 'Email or password is incorrect.' });
     }
     const user = userByEmail.get(email);
+    if (firebaseConfigured) {
+      if (!user || !validEmail(email)) return json(res, 401, { error: 'Email or password is incorrect.' });
+      let verified;
+      try {
+        const identity = await requestFirebase('accounts:signInWithPassword', {
+          email,
+          password,
+          returnSecureToken: true,
+        });
+        const profile = await requestFirebase('accounts:lookup', { idToken: identity.idToken });
+        verified = Boolean(profile.users?.[0]?.emailVerified);
+      } catch (error) {
+        const code = error.firebaseCode || '';
+        if (['EMAIL_NOT_FOUND', 'INVALID_PASSWORD', 'INVALID_LOGIN_CREDENTIALS', 'USER_DISABLED'].includes(code)) {
+          return json(res, 401, { error: 'Email or password is incorrect.' });
+        }
+        console.error('Firebase sign-in failed:', code || error.message);
+        return json(res, 502, { error: 'The email sign-in service could not complete this request.' });
+      }
+      if (!verified) return json(res, 403, { error: 'Confirm your email before logging in.', code: 'EMAIL_NOT_VERIFIED' });
+      if (!user.email_verified) db.prepare('UPDATE users SET email_verified = 1 WHERE id = ?').run(user.id);
+      const token = crypto.randomBytes(32).toString('base64url');
+      const now = Date.now();
+      issueSession.run(hashToken(token), user.id, now + SESSION_TTL_MS, now);
+      db.prepare('DELETE FROM sessions WHERE expires_at <= ?').run(now);
+      return json(res, 200, { firstName: user.first_name }, {
+        'Set-Cookie': cookie(token, Math.floor(SESSION_TTL_MS / 1000)),
+      });
+    }
     const salt = user?.password_salt || dummySalt;
     const expected = Buffer.from(user?.password_hash || dummyHash.toString('hex'), 'hex');
     const actual = await scrypt(password, salt, 64);
@@ -281,16 +381,35 @@ function createAuthHandler(options = {}) {
     if (rateLimited(req, res)) return;
     const body = await readJson(req);
     const email = normalizeEmail(body.email);
-    if (validEmail(email) && (transport || options.sendEmail)) {
+    if (firebaseSelected && !firebaseConfigured) {
+      return json(res, 503, { error: 'Firebase email sign-in is not configured on this server yet.' });
+    }
+    if (validEmail(email) && emailConfigured) {
       const user = userByEmail.get(email);
       if (user && !user.email_verified) {
-        const token = crypto.randomBytes(32).toString('base64url');
-        db.prepare('UPDATE users SET verification_token_hash = ?, verification_expires_at = ? WHERE id = ?')
-          .run(hashToken(token), Date.now() + VERIFICATION_TTL_MS, user.id);
         try {
-          await sendVerification(user, token);
+          if (firebaseConfigured) {
+            const password = typeof body.password === 'string' ? body.password : '';
+            if (!password) return json(res, 400, { error: 'Enter your password on the login screen to resend the confirmation email.' });
+            const identity = await requestFirebase('accounts:signInWithPassword', {
+              email,
+              password,
+              returnSecureToken: true,
+            });
+            const profile = await requestFirebase('accounts:lookup', { idToken: identity.idToken });
+            if (!profile.users?.[0]?.emailVerified) await sendVerification(user, identity.idToken);
+          } else {
+            const token = crypto.randomBytes(32).toString('base64url');
+            db.prepare('UPDATE users SET verification_token_hash = ?, verification_expires_at = ? WHERE id = ?')
+              .run(hashToken(token), Date.now() + VERIFICATION_TTL_MS, user.id);
+            await sendVerification(user, token);
+          }
         } catch (error) {
-          console.error('Could not resend account verification email:', error.message);
+          const code = error.firebaseCode || '';
+          if (['EMAIL_NOT_FOUND', 'INVALID_PASSWORD', 'INVALID_LOGIN_CREDENTIALS', 'USER_DISABLED'].includes(code)) {
+            return json(res, 401, { error: 'Email or password is incorrect.' });
+          }
+          console.error('Could not resend account verification email:', code || error.message);
           return json(res, 503, { error: 'We could not send the confirmation email. Please try again later.' });
         }
       }

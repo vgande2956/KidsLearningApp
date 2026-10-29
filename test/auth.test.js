@@ -229,3 +229,140 @@ test('Gmail OAuth2 credentials configure Nodemailer XOAUTH2 transport', async t 
   assert.equal(sentMessage.from, 'Little Learners <littlelearner1325@gmail.com>');
   assert.equal(sentMessage.to, 'avery@example.com');
 });
+
+test('Firebase signup sends verification and login waits for Firebase email verification', async t => {
+  const calls = [];
+  let emailVerified = false;
+  const { request } = await createFixture(t, {
+    emailProvider: 'firebase',
+    firebaseApiKey: 'test-web-api-key',
+    firebaseRequest: async (endpoint, payload) => {
+      calls.push({ endpoint, payload });
+      if (endpoint === 'accounts:signUp') return { idToken: 'firebase-id-token' };
+      if (endpoint === 'accounts:lookup') return { users: [{ emailVerified }] };
+      return {};
+    },
+  });
+
+  const signup = await request('/api/auth/signup', {
+    method: 'POST',
+    body: { firstName: 'Avery', email: 'avery@example.com', password: 'a secure password' },
+  });
+  assert.equal(signup.status, 202);
+  assert.deepEqual(calls.map(call => call.endpoint), ['accounts:signUp', 'accounts:sendOobCode']);
+  assert.equal(calls[1].payload.requestType, 'VERIFY_EMAIL');
+  assert.equal(calls[1].payload.idToken, 'firebase-id-token');
+  assert.equal(calls[1].payload.continueUrl, 'http://localhost:3000/?verified=1');
+
+  const unverifiedLogin = await request('/api/auth/login', {
+    method: 'POST',
+    body: { email: 'avery@example.com', password: 'a secure password' },
+  });
+  assert.equal(unverifiedLogin.status, 403);
+  assert.equal(JSON.parse(unverifiedLogin.body).code, 'EMAIL_NOT_VERIFIED');
+
+  emailVerified = true;
+  const login = await request('/api/auth/login', {
+    method: 'POST',
+    body: { email: 'avery@example.com', password: 'a secure password' },
+  });
+  assert.equal(login.status, 200);
+  assert.deepEqual(JSON.parse(login.body), { firstName: 'Avery' });
+});
+
+test('Firebase verification resend authenticates with the supplied password', async t => {
+  const calls = [];
+  const { request } = await createFixture(t, {
+    emailProvider: 'firebase',
+    firebaseApiKey: 'test-web-api-key',
+    firebaseRequest: async (endpoint, payload) => {
+      calls.push({ endpoint, payload });
+      if (endpoint === 'accounts:signUp') return { idToken: 'signup-token' };
+      if (endpoint === 'accounts:signInWithPassword') {
+        if (payload.password !== 'a secure password') {
+          throw Object.assign(new Error('INVALID_PASSWORD'), { firebaseCode: 'INVALID_PASSWORD' });
+        }
+        return { idToken: 'resend-token' };
+      }
+      if (endpoint === 'accounts:lookup') return { users: [{ emailVerified: false }] };
+      return {};
+    },
+  });
+  await request('/api/auth/signup', {
+    method: 'POST',
+    body: { firstName: 'Avery', email: 'avery@example.com', password: 'a secure password' },
+  });
+
+  const missingPassword = await request('/api/auth/resend-verification', {
+    method: 'POST',
+    body: { email: 'avery@example.com' },
+  });
+  assert.equal(missingPassword.status, 400);
+
+  const resend = await request('/api/auth/resend-verification', {
+    method: 'POST',
+    body: { email: 'avery@example.com', password: 'a secure password' },
+  });
+  assert.equal(resend.status, 202);
+  assert.equal(calls.at(-1).endpoint, 'accounts:sendOobCode');
+  assert.equal(calls.at(-1).payload.idToken, 'resend-token');
+});
+
+test('Firebase signup removes both accounts when sending verification fails', async t => {
+  const calls = [];
+  const { dbPath, request } = await createFixture(t, {
+    emailProvider: 'firebase',
+    firebaseApiKey: 'test-web-api-key',
+    firebaseRequest: async (endpoint, payload) => {
+      calls.push({ endpoint, payload });
+      if (endpoint === 'accounts:signUp') return { idToken: 'firebase-id-token' };
+      if (endpoint === 'accounts:sendOobCode') {
+        throw Object.assign(new Error('EMAIL_NOT_SENT'), { firebaseCode: 'EMAIL_NOT_SENT' });
+      }
+      return {};
+    },
+  });
+
+  const signup = await request('/api/auth/signup', {
+    method: 'POST',
+    body: { firstName: 'Avery', email: 'avery@example.com', password: 'a secure password' },
+  });
+  assert.equal(signup.status, 503);
+  assert.deepEqual(calls.map(call => call.endpoint), [
+    'accounts:signUp',
+    'accounts:sendOobCode',
+    'accounts:delete',
+  ]);
+  const database = new Database(dbPath, { readonly: true });
+  assert.equal(database.prepare('SELECT COUNT(*) AS count FROM users').get().count, 0);
+  database.close();
+});
+
+test('Firebase provider fails closed when its API key is missing', async t => {
+  let firebaseCalled = false;
+  const { request } = await createFixture(t, {
+    emailProvider: 'firebase',
+    sendEmail: async () => {},
+    firebaseRequest: async () => {
+      firebaseCalled = true;
+      return {};
+    },
+  });
+
+  const signup = await request('/api/auth/signup', {
+    method: 'POST',
+    body: { firstName: 'Avery', email: 'avery@example.com', password: 'a secure password' },
+  });
+  assert.equal(signup.status, 503);
+  const login = await request('/api/auth/login', {
+    method: 'POST',
+    body: { email: 'avery@example.com', password: 'a secure password' },
+  });
+  assert.equal(login.status, 503);
+  const resend = await request('/api/auth/resend-verification', {
+    method: 'POST',
+    body: { email: 'avery@example.com', password: 'a secure password' },
+  });
+  assert.equal(resend.status, 503);
+  assert.equal(firebaseCalled, false);
+});
