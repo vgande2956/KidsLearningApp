@@ -50,6 +50,34 @@ async function createFixture(t, options = {}) {
   return { dbPath, request };
 }
 
+test('Render external URL is used for production email confirmation links', async t => {
+  const previousNodeEnv = process.env.NODE_ENV;
+  const previousRenderUrl = process.env.RENDER_EXTERNAL_URL;
+  const messages = [];
+  process.env.NODE_ENV = 'production';
+  process.env.RENDER_EXTERNAL_URL = 'https://kids-learning-fun.onrender.com';
+
+  let fixture;
+  try {
+    fixture = await createFixture(t, {
+      appBaseUrl: undefined,
+      sendEmail: async message => messages.push(message),
+    });
+  } finally {
+    if (previousNodeEnv === undefined) delete process.env.NODE_ENV;
+    else process.env.NODE_ENV = previousNodeEnv;
+    if (previousRenderUrl === undefined) delete process.env.RENDER_EXTERNAL_URL;
+    else process.env.RENDER_EXTERNAL_URL = previousRenderUrl;
+  }
+
+  const signup = await fixture.request('/api/auth/signup', {
+    method: 'POST',
+    body: { firstName: 'Avery', email: 'avery@example.com', password: 'a secure password' },
+  });
+  assert.equal(signup.status, 202);
+  assert.match(messages[0].text, /https:\/\/kids-learning-fun\.onrender\.com\/api\/auth\/verify-email\?token=/);
+});
+
 test('email signup, confirmation, session, login, and logout use hashed credentials', async t => {
   const messages = [];
   const { dbPath, request } = await createFixture(t, {

@@ -133,11 +133,12 @@ function createAuthHandler(options = {}) {
       })
       : null;
   const sendEmail = options.sendEmail || (message => transport.sendMail({ from: mailFrom, ...message }));
-  const appBaseUrl = new URL(options.appBaseUrl || process.env.APP_BASE_URL || `http://localhost:${process.env.PORT || 3000}`);
+  const configuredAppBaseUrl = options.appBaseUrl || process.env.APP_BASE_URL || process.env.RENDER_EXTERNAL_URL;
+  const appBaseUrl = new URL(configuredAppBaseUrl || `http://localhost:${process.env.PORT || 3000}`);
   if (appBaseUrl.protocol !== 'https:' && !['localhost', '127.0.0.1'].includes(appBaseUrl.hostname)) {
     throw new Error('APP_BASE_URL must use HTTPS outside localhost.');
   }
-  if (process.env.NODE_ENV === 'production' && !options.appBaseUrl && !process.env.APP_BASE_URL) {
+  if (process.env.NODE_ENV === 'production' && !configuredAppBaseUrl) {
     throw new Error('Set APP_BASE_URL to the deployed HTTPS origin before starting in production.');
   }
   const secureCookie = options.secureCookie ?? process.env.NODE_ENV === 'production';
