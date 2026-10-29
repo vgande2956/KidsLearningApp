@@ -609,8 +609,10 @@ button:focus-visible{outline:4px solid #9a80d7;outline-offset:3px}
 .welcome-art span:nth-child(3){background:#fbe5ef;transform:rotate(6deg)}
 .welcome-start{min-width:min(78vw,280px);min-height:58px;padding:12px 24px;border:0;border-radius:22px;background:#b9dfcf;color:#344f49;font-size:clamp(1.1rem,4vw,1.4rem);font-weight:900;box-shadow:0 6px 0 #829f933b,0 12px 22px #829f9325}
 .welcome-auth-actions{width:min(100%,360px);display:grid;gap:10px}
-.welcome-download-link{color:#536789;font-size:1rem;font-weight:800;text-underline-offset:3px}
-.welcome-download-link:focus-visible{outline:3px solid #536789;outline-offset:4px;border-radius:3px}
+.welcome-download-link{width:min(100%,360px);min-height:50px;display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:10px 20px;border:2px solid #fff;border-radius:18px;background:linear-gradient(135deg,#536789,#4d60be);color:#fff;font-size:clamp(.98rem,3.8vw,1.08rem);font-weight:900;letter-spacing:.01em;text-decoration:none;box-shadow:0 5px 0 #53678938,0 9px 18px #53678920;transition:transform .15s ease,box-shadow .15s ease,filter .15s ease}
+.welcome-download-link:hover{transform:translateY(-2px);filter:brightness(1.07);box-shadow:0 7px 0 #53678938,0 12px 20px #53678925}
+.welcome-download-link:active{transform:translateY(2px);box-shadow:0 2px 0 #53678938}
+.welcome-download-link:focus-visible{outline:4px solid #9a80d7;outline-offset:3px}
 .welcome-signup{background:#e8e2f8;color:#494768}
 .app-brand{min-width:0;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:1px;padding:2px 8px 2px 0}
 .app-brand strong{color:#a74e78;font-size:clamp(.95rem,3vw,1.2rem);font-weight:1000;line-height:1.05;white-space:nowrap}
@@ -800,6 +802,8 @@ button{font-family:inherit;line-height:1.25;text-wrap:balance}
 .sketch-color-button[aria-pressed="true"]{border-color:#1f4e9c;box-shadow:0 0 0 2px #1f4e9c35}
 .sketch-color-button span{width:22px;height:22px;border:1px solid #0002;border-radius:50%;background:var(--swatch)}
 .sketch-color-button small{max-width:74px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.sketch-eraser{min-height:42px;padding:7px 18px;border:2px solid #d7dcef;border-radius:12px;background:#fff;color:var(--ink);font-weight:850}
+.sketch-eraser[aria-pressed="true"]{border-color:#a74e78;background:#fbe5ef;box-shadow:0 0 0 2px #a74e7835}
 .sketch-mixer{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:6px;color:var(--blue);font-size:.82rem;font-weight:800}
 .sketch-mixer label{display:flex;align-items:center;gap:4px}
 .sketch-mixer select{max-width:105px;min-height:35px;padding:4px;border:2px solid #d7dcef;border-radius:9px;background:#fff;color:var(--ink);font:inherit}
