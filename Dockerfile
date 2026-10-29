@@ -6,11 +6,19 @@ COPY scripts ./scripts
 COPY src ./src
 RUN npm run build
 
+# ---- production dependencies ----
+FROM node:20-alpine AS dependencies
+WORKDIR /app
+COPY package.json package-lock.json ./
+RUN apk add --no-cache python3 make g++ \
+  && npm ci --omit=dev
+
 # ---- run stage ----
 FROM node:20-alpine
 ENV NODE_ENV=production PORT=3000
 WORKDIR /app
-COPY package.json server.js ./
+COPY --from=dependencies /app/node_modules ./node_modules
+COPY server.js auth.js ./
 COPY scripts ./scripts
 COPY --from=build /app/dist ./dist
 USER node

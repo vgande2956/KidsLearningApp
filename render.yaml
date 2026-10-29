@@ -1,8 +1,6 @@
 services:
   - type: web
     name: kids-learning-fun
-    runtime: node
+    runtime: docker
     plan: free
-    buildCommand: npm ci --omit=dev && npm run build
-    startCommand: npm start
     healthCheckPath: /health
