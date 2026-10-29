@@ -18,6 +18,14 @@
 			"command": "npm run build",
 			"isBackground": false,
 			"problemMatcher": []
+		},
+		{
+			"label": "Run smoke tests",
+			"type": "shell",
+			"command": "node",
+			"args": ["--test", "test/smoke.test.js"],
+			"isBackground": false,
+			"problemMatcher": []
 		}
 	]
 }

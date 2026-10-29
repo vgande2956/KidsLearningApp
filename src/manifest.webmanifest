@@ -9,6 +9,7 @@
   "background_color": "#fff7f0",
   "theme_color": "#fff7f0",
   "icons": [
-    { "src": "mascot.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+    { "src": "images/little-learners-logo-transparent.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "images/little-learners-logo-transparent.png", "sizes": "512x512", "type": "image/png", "purpose": "any" }
   ]
 }

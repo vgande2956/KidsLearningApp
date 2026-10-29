@@ -2,26 +2,29 @@
 
 Requires Node.js 20 or newer. Little Learners uses original panda-and-reader mascots throughout its launch and
 learning screens. On launch, a pastel welcome screen offers email/password login,
-account creation, and guest access. Signup asks for the account holder's first
+account creation. Signup asks for the account holder's first
 name and sends an email confirmation link before login is enabled. Confirming
 the link starts a protected session; the account first name is used in learning
 greetings. Accounts are stored in SQLite and passwords are salted and hashed
 with scrypt, never saved as plain text. Sessions use HTTP-only, SameSite cookies.
-Copy `.env.example` to `.env` and add a Gmail app password to `SMTP_PASSWORD`
-for `littlelearner1325@gmail.com`; keep that password private and never commit
-it. Gmail must allow the account to send mail with app passwords. Set
-`APP_BASE_URL` to the public HTTPS origin when deploying outside Render. On Render,
-the app uses Render's `RENDER_EXTERNAL_URL` automatically when `APP_BASE_URL` is
-not set. The default sender is `Little Learners <littlelearner1325@gmail.com>`;
-the email provider must authorize that sender address, and SMTP credentials
-belong only in the local `.env` file. Start the authentication-enabled app with
+Copy `.env.example` to `.env` and set `SMTP_PASSWORD` to a Gmail App Password
+for `littlelearner1325@gmail.com`; do not use the account's normal password.
+Keep the App Password private and never commit it. The Render blueprint sets the
+Gmail SMTP host, port, TLS mode, username, and sender address; add the App
+Password as the `SMTP_PASSWORD` secret in the Render service's Environment
+settings. If that secret is not present, account creation reports that email
+confirmation is unavailable. Revoke any App Password shared in chat or another
+public location and generate a replacement before deploying. Set `APP_BASE_URL`
+to the public HTTPS origin when deploying outside Render. On Render, the app
+uses Render's `RENDER_EXTERNAL_URL` automatically when `APP_BASE_URL` is not set.
+The sender is `Little Learners <littlelearner1325@gmail.com>`; the email provider
+must authorize that sender address, and SMTP credentials must only be stored in
+the local `.env` or the deployment provider's secret environment settings. Start
+the authentication-enabled app with
 `npm run dev` (or `npm start` after building); a static-only file server does
 not serve account API requests. The SQLite database is created at `data/accounts.sqlite` by
-default and is excluded from Git. Guest access is limited to foundational
-English activities, number practice through 10, and Level 1 of available quizzes;
-advanced activities and later levels require an account. Guests can use the
-always-available sign-in button to switch to their account. After login
-or guest access, a short animated, spoken app tour leads to language and subject
+default and is excluded from Git. Guest access is currently unavailable. After
+login, a short animated, spoken app tour leads to language and subject
 selection. The sound toggle appears after the welcome screen and can mute speech
 and sound effects throughout the app. The app checks for Telugu (India),
 Hindi (India), and English (India) speech voices on the device. If any are not
