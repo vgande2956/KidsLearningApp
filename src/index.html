@@ -170,7 +170,7 @@
 <img id="everyday-object-image" class="everyday-object-image" alt="">
 <h2 id="everyday-object-name"></h2>
 <p id="everyday-object-fact" class="everyday-object-fact"></p>
-<a id="everyday-object-source" class="everyday-object-source" target="_blank" rel="noopener noreferrer" aria-label="Photo and license details"></a>
+<a id="everyday-object-source" class="everyday-object-source" target="_blank" rel="noopener noreferrer" aria-label="Photo and license details" hidden></a>
 </article>
 <button class="everyday-hear" id="everyday-hear" type="button">🔊 Hear the sentence</button>
 <nav class="everyday-navigation" aria-label="Everyday objects navigation">
@@ -190,7 +190,7 @@
 <img id="animal-trivia-image" class="everyday-object-image" alt="">
 <h2 id="animal-trivia-name"></h2>
 <p id="animal-trivia-fact" class="everyday-object-fact"></p>
-<a id="animal-trivia-source" class="everyday-object-source" target="_blank" rel="noopener noreferrer" aria-label="Photo and license details"></a>
+<a id="animal-trivia-source" class="everyday-object-source" target="_blank" rel="noopener noreferrer" aria-label="Photo and license details" hidden></a>
 </article>
 <button class="everyday-hear" id="animal-trivia-hear" type="button">🔊 Hear the sentence</button>
 <nav class="everyday-navigation" aria-label="Animal trivia navigation">
@@ -210,7 +210,7 @@
 <img id="food-nature-image" class="everyday-object-image" alt="">
 <h2 id="food-nature-name"></h2>
 <p id="food-nature-fact" class="everyday-object-fact"></p>
-<a id="food-nature-source" class="everyday-object-source" target="_blank" rel="noopener noreferrer" aria-label="Photo and license details"></a>
+<a id="food-nature-source" class="everyday-object-source" target="_blank" rel="noopener noreferrer" aria-label="Photo and license details" hidden></a>
 </article>
 <button class="everyday-hear" id="food-nature-hear" type="button">🔊 Hear the sentence</button>
 <nav class="everyday-navigation" aria-label="Food and nature navigation">
@@ -276,7 +276,7 @@
 <p id="prime-minister-count" class="prime-minister-count"></p>
 <h2 id="prime-minister-name"></h2>
 <p id="prime-minister-tenure" class="prime-minister-tenure"></p>
-<a id="prime-minister-source" class="prime-minister-source" target="_blank" rel="noopener noreferrer">Photo and license details: Wikimedia Commons</a>
+<a id="prime-minister-source" class="prime-minister-source" target="_blank" rel="noopener noreferrer" hidden>Photo and license details: Wikimedia Commons</a>
 </div>
 </article>
 <nav class="prime-ministers-navigation" aria-label="Prime minister navigation">
@@ -307,7 +307,7 @@
 <img id="india-national-image" class="india-information-image" alt="">
 <h2 id="india-national-name"></h2>
 <p id="india-national-fact" class="india-information-fact"></p>
-<a id="india-national-source" class="india-information-source" target="_blank" rel="noopener noreferrer" aria-label="Photo and license details">Photo and license details</a>
+<a id="india-national-source" class="india-information-source" target="_blank" rel="noopener noreferrer" aria-label="Photo and license details" hidden>Photo and license details</a>
 </article>
 <button class="india-information-hear" id="india-national-hear" type="button">🔊 Hear the fact</button>
 <nav class="india-information-navigation" aria-label="National information navigation">
@@ -338,7 +338,7 @@
 <p id="india-state-bird" class="india-information-fact"></p>
 </div>
 </div>
-<a id="india-state-source" class="india-information-source" target="_blank" rel="noopener noreferrer" aria-label="Photo and license details">Photo and license details</a>
+<a id="india-state-source" class="india-information-source" target="_blank" rel="noopener noreferrer" aria-label="Photo and license details" hidden>Photo and license details</a>
 </article>
 <button class="india-information-hear" id="india-state-hear" type="button">🔊 Hear the facts</button>
 <nav class="india-information-navigation" aria-label="State navigation">
@@ -517,6 +517,7 @@
 <p id="sketch-practice-instructions">Choose a color, then draw on the picture.</p>
 <canvas id="sketch-practice-canvas" width="900" height="600" aria-label="Drawing canvas. Choose a color and draw with your finger or mouse."></canvas>
 <div class="sketch-palette" id="sketch-palette" role="group" aria-label="Choose a paint color"></div>
+<button id="sketch-eraser" class="sketch-eraser" type="button" aria-pressed="false">Eraser</button>
 <div class="sketch-mixer">
 <label>Mix colors
 <select id="sketch-mix-first" aria-label="First color to mix"></select>
