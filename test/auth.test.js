@@ -194,3 +194,38 @@ test('signup reports missing email configuration instead of leaving a pending ac
   assert.equal(database.prepare('SELECT COUNT(*) AS count FROM users').get().count, 0);
   database.close();
 });
+
+test('Gmail OAuth2 credentials configure Nodemailer XOAUTH2 transport', async t => {
+  let transportOptions;
+  let sentMessage;
+  const { request } = await createFixture(t, {
+    smtpAuthMethod: 'oauth2',
+    smtpHost: 'smtp.gmail.com',
+    smtpPort: 465,
+    smtpSecure: true,
+    smtpUser: 'littlelearner1325@gmail.com',
+    googleOAuthClientId: 'client-id',
+    googleOAuthClientSecret: 'client-secret',
+    googleOAuthRefreshToken: 'refresh-token',
+    createTransport: options => {
+      transportOptions = options;
+      return { sendMail: async message => { sentMessage = message; } };
+    },
+  });
+
+  const signup = await request('/api/auth/signup', {
+    method: 'POST',
+    body: { firstName: 'Avery', email: 'avery@example.com', password: 'a secure password' },
+  });
+
+  assert.equal(signup.status, 202);
+  assert.deepEqual(transportOptions.auth, {
+    type: 'OAuth2',
+    user: 'littlelearner1325@gmail.com',
+    clientId: 'client-id',
+    clientSecret: 'client-secret',
+    refreshToken: 'refresh-token',
+  });
+  assert.equal(sentMessage.from, 'Little Learners <littlelearner1325@gmail.com>');
+  assert.equal(sentMessage.to, 'avery@example.com');
+});

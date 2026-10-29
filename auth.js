@@ -121,15 +121,32 @@ function createAuthHandler(options = {}) {
   const smtpPort = Number(options.smtpPort ?? process.env.SMTP_PORT ?? 587);
   const smtpSecure = options.smtpSecure ?? process.env.SMTP_SECURE === 'true';
   const smtpUser = options.smtpUser ?? process.env.SMTP_USER;
+  const smtpAuthMethod = options.smtpAuthMethod ?? process.env.SMTP_AUTH_METHOD ?? 'password';
   const smtpPassword = options.smtpPassword ?? process.env.SMTP_PASSWORD;
+  const googleOAuthClientId = options.googleOAuthClientId ?? process.env.GOOGLE_OAUTH_CLIENT_ID;
+  const googleOAuthClientSecret = options.googleOAuthClientSecret ?? process.env.GOOGLE_OAUTH_CLIENT_SECRET;
+  const googleOAuthRefreshToken = options.googleOAuthRefreshToken ?? process.env.GOOGLE_OAUTH_REFRESH_TOKEN;
   const mailFrom = options.smtpFrom ?? process.env.SMTP_FROM ?? 'Little Learners <littlelearner1325@gmail.com>';
+  const oauthConfigured = smtpAuthMethod === 'oauth2' && smtpUser && googleOAuthClientId &&
+    googleOAuthClientSecret && googleOAuthRefreshToken;
+  const passwordConfigured = smtpAuthMethod === 'password' && (!smtpUser || smtpPassword);
+  const mailConfigured = smtpHost && smtpPort && mailFrom && (oauthConfigured || passwordConfigured);
+  const createTransport = options.createTransport || nodemailer.createTransport;
   const transport = options.sendEmail ? null :
-    smtpHost && smtpPort && mailFrom && (!smtpUser || smtpPassword)
-      ? nodemailer.createTransport({
+    mailConfigured
+      ? createTransport({
         host: smtpHost,
         port: smtpPort,
         secure: smtpSecure,
-        auth: smtpUser ? { user: smtpUser, pass: smtpPassword } : undefined,
+        auth: smtpAuthMethod === 'oauth2'
+          ? {
+            type: 'OAuth2',
+            user: smtpUser,
+            clientId: googleOAuthClientId,
+            clientSecret: googleOAuthClientSecret,
+            refreshToken: googleOAuthRefreshToken,
+          }
+          : smtpUser ? { user: smtpUser, pass: smtpPassword } : undefined,
       })
       : null;
   const sendEmail = options.sendEmail || (message => transport.sendMail({ from: mailFrom, ...message }));

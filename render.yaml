@@ -11,9 +11,15 @@ services:
         value: "465"
       - key: SMTP_SECURE
         value: "true"
+      - key: SMTP_AUTH_METHOD
+        value: oauth2
       - key: SMTP_USER
         value: littlelearner1325@gmail.com
       - key: SMTP_FROM
         value: "Little Learners <littlelearner1325@gmail.com>"
-      - key: SMTP_PASSWORD
+      - key: GOOGLE_OAUTH_CLIENT_ID
+        sync: false
+      - key: GOOGLE_OAUTH_CLIENT_SECRET
+        sync: false
+      - key: GOOGLE_OAUTH_REFRESH_TOKEN
         sync: false
