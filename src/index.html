@@ -416,7 +416,7 @@
 <h1 id="english-alphabets-title">English Alphabets</h1>
 <button class="english-hear" type="button" id="english-alphabets-hear">🔊 Hear letter</button>
 </header>
-<p>Tap a letter to see it, learn an example, and hear its name.</p>
+<p>Tap a letter or press its key to see it, learn an example, and hear its name.</p>
 <div id="english-alphabet-display" class="english-alphabet-display" aria-live="polite">
 <div class="alphabet-display-placeholder"><span aria-hidden="true">🌟</span><strong>Choose a letter!</strong></div>
 </div>
@@ -449,7 +449,7 @@
 <h1 id="english-lesson-title">English words</h1>
 <button class="english-hear" type="button" id="english-hear-letter">🔊 Hear letter</button>
 </header>
-<p id="english-lesson-intro">Choose a letter to see its words.</p>
+<p id="english-lesson-intro">Choose a letter or press its key to see its words.</p>
 <div class="english-alphabet" id="english-alphabet" role="group" aria-label="Choose a letter"></div>
 <section class="english-word-content" id="english-word-content" aria-live="polite">
 <h2 id="english-selected-letter">Choose a letter</h2>
@@ -515,7 +515,7 @@
 <div class="sketch-workspace">
 <div class="sketch-main">
 <p id="sketch-practice-instructions">Choose a color, then draw on the picture.</p>
-<canvas id="sketch-practice-canvas" width="900" height="600" aria-label="Drawing canvas. Choose a color and draw with your finger or mouse."></canvas>
+<canvas id="sketch-practice-canvas" width="900" height="600" tabindex="0" aria-label="Drawing canvas" aria-describedby="sketch-practice-instructions sketch-practice-status"></canvas>
 <div class="sketch-palette" id="sketch-palette" role="group" aria-label="Choose a paint color"></div>
 <button id="sketch-eraser" class="sketch-eraser" type="button" aria-pressed="false">Eraser</button>
 <div class="sketch-mixer">
