@@ -589,6 +589,7 @@ button{min-height:44px;border:2px solid #ffffffc9;border-radius:18px;background:
 button:hover:not(:disabled){filter:brightness(.98);box-shadow:0 6px 0 #65708a20,0 10px 16px #58627b18}
 button:active:not(:disabled){transform:translateY(2px);box-shadow:0 2px 0 #65708a20}
 button:focus-visible{outline:4px solid #9a80d7;outline-offset:3px}
+input:focus-visible,select:focus-visible,textarea:focus-visible,#sketch-practice-canvas:focus-visible{outline:4px solid #9a80d7;outline-offset:3px}
 .choice-card{color:var(--ink);border:3px solid #fff;box-shadow:0 5px 0 #65708a20,0 10px 18px #58627b14}
 .choice-label{text-shadow:none}
 .languages .choice-card,.math-options .choice-card,.english-type-options .choice-card,.native-type-options .choice-card,.math-mode-options .choice-card,.addition-level-card,.english-identify-level-card{background:#e8e5f8;color:var(--ink)}
