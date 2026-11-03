@@ -43,7 +43,7 @@ async function createFixture(t, options = {}) {
       }));
     });
     req.on('error', reject);
-    if (body !== undefined) req.write(JSON.stringify(body));
+    if (body !== undefined) req.write(typeof body === 'string' ? body : JSON.stringify(body));
     req.end();
   });
 
@@ -132,6 +132,60 @@ test('email signup, confirmation, session, login, and logout use hashed credenti
   });
   assert.equal(login.status, 200);
   assert.deepEqual(JSON.parse(login.body), { firstName: 'Avery' });
+});
+
+test('forgot password emails a one-time link and the new password replaces the old one', async t => {
+  const messages = [];
+  const { request } = await createFixture(t, {
+    sendEmail: async message => messages.push(message),
+  });
+  const verify = async email => {
+    await request('/api/auth/signup', { method: 'POST', body: { firstName: 'Noor', email, password: 'old secure password' } });
+    const token = messages.at(-1).text.match(/token=([\w-]+)/)[1];
+    await request(`/api/auth/verify-email?token=${token}`);
+  };
+  await verify('noor@example.com');
+  const before = messages.length;
+
+  const unknown = await request('/api/auth/forgot-password', { method: 'POST', body: { email: 'nobody@example.com' } });
+  assert.equal(unknown.status, 202);
+  assert.equal(messages.length, before);
+
+  const forgot = await request('/api/auth/forgot-password', { method: 'POST', body: { email: 'Noor@example.com' } });
+  assert.equal(forgot.status, 202);
+  assert.equal(messages.length, before + 1);
+  const token = messages.at(-1).text.match(/reset-password\?token=([\w-]+)/)[1];
+
+  assert.equal((await request(`/api/auth/reset-password?token=${token}`)).status, 200);
+  const form = { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' } };
+  const tooShort = await request('/api/auth/reset-password', { ...form, body: `token=${token}&password=short` });
+  assert.equal(tooShort.status, 400);
+  const reset = await request('/api/auth/reset-password', { ...form, body: `token=${token}&password=${encodeURIComponent('brand new password')}` });
+  assert.equal(reset.status, 200);
+  assert.match(reset.body, /Password updated/);
+  assert.equal((await request(`/api/auth/reset-password?token=${token}`)).status, 400);
+
+  const oldLogin = await request('/api/auth/login', { method: 'POST', body: { email: 'noor@example.com', password: 'old secure password' } });
+  assert.equal(oldLogin.status, 401);
+  const newLogin = await request('/api/auth/login', { method: 'POST', body: { email: 'noor@example.com', password: 'brand new password' } });
+  assert.equal(newLogin.status, 200);
+});
+
+test('Firebase forgot password asks Firebase to send a reset email', async t => {
+  const calls = [];
+  const { request } = await createFixture(t, {
+    emailProvider: 'firebase',
+    firebaseApiKey: 'test-key',
+    firebaseRequest: async (endpoint, payload) => {
+      calls.push({ endpoint, payload });
+      return {};
+    },
+  });
+  const response = await request('/api/auth/forgot-password', { method: 'POST', body: { email: 'Kid@example.com' } });
+  assert.equal(response.status, 202);
+  assert.equal(calls[0].endpoint, 'accounts:sendOobCode');
+  assert.equal(calls[0].payload.requestType, 'PASSWORD_RESET');
+  assert.equal(calls[0].payload.email, 'kid@example.com');
 });
 
 test('resend confirmation uses the configured email sender and rotates the token', async t => {

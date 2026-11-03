@@ -10,6 +10,7 @@ const nodemailer = require('nodemailer');
 const scrypt = promisify(crypto.scrypt);
 const SESSION_TTL_MS = 30 * 24 * 60 * 60 * 1000;
 const VERIFICATION_TTL_MS = 24 * 60 * 60 * 1000;
+const RESET_TTL_MS = 60 * 60 * 1000;
 const PASSWORD_MIN_LENGTH = 10;
 const PASSWORD_MAX_LENGTH = 1024;
 const JSON_BODY_LIMIT = 8192;
@@ -52,6 +53,22 @@ function readJson(req) {
       } catch {
         reject(Object.assign(new Error('Request body must be valid JSON.'), { status: 400 }));
       }
+    });
+    req.on('error', reject);
+  });
+}
+
+function readForm(req) {
+  return new Promise((resolve, reject) => {
+    const chunks = [];
+    let length = 0;
+    req.on('data', chunk => {
+      length += chunk.length;
+      if (length <= JSON_BODY_LIMIT) chunks.push(chunk);
+    });
+    req.on('end', () => {
+      if (length > JSON_BODY_LIMIT) return reject(Object.assign(new Error('Request body is too large.'), { status: 413 }));
+      resolve(new URLSearchParams(Buffer.concat(chunks).toString('utf8')));
     });
     req.on('error', reject);
   });
@@ -116,6 +133,9 @@ function createAuthHandler(options = {}) {
     );
     CREATE INDEX IF NOT EXISTS sessions_expiry ON sessions(expires_at);
   `);
+  const userColumns = db.prepare('PRAGMA table_info(users)').all().map(column => column.name);
+  if (!userColumns.includes('reset_token_hash')) db.exec('ALTER TABLE users ADD COLUMN reset_token_hash TEXT');
+  if (!userColumns.includes('reset_expires_at')) db.exec('ALTER TABLE users ADD COLUMN reset_expires_at INTEGER');
 
   const smtpHost = options.smtpHost ?? process.env.SMTP_HOST;
   const smtpPort = Number(options.smtpPort ?? process.env.SMTP_PORT ?? 587);
@@ -446,6 +466,99 @@ function createAuthHandler(options = {}) {
     return json(res, 202, { message: 'If the address has an unconfirmed account, a new confirmation email will be sent.' });
   }
 
+  async function forgotPassword(req, res) {
+    if (rateLimited(req, res)) return;
+    const body = await readJson(req);
+    const email = normalizeEmail(body.email);
+    const reply = () => json(res, 202, { message: 'If an account exists for this email, a password reset link is on its way. Check your inbox and spam folder.' });
+    if (!validEmail(email)) return json(res, 400, { error: 'Enter a valid email address.' });
+    if (firebaseSelected && !firebaseConfigured) {
+      return json(res, 503, { error: 'Firebase email sign-in is not configured on this server yet.' });
+    }
+    if (!emailConfigured) return json(res, 503, { error: 'Email delivery is not configured on this server yet.' });
+    try {
+      if (firebaseConfigured) {
+        await requestFirebase('accounts:sendOobCode', {
+          requestType: 'PASSWORD_RESET',
+          email,
+          continueUrl: new URL('/', appBaseUrl).href,
+        });
+      } else {
+        const user = userByEmail.get(email);
+        if (user && user.email_verified) {
+          const token = crypto.randomBytes(32).toString('base64url');
+          db.prepare('UPDATE users SET reset_token_hash = ?, reset_expires_at = ? WHERE id = ?')
+            .run(hashToken(token), Date.now() + RESET_TTL_MS, user.id);
+          const resetUrl = new URL('/api/auth/reset-password', appBaseUrl);
+          resetUrl.searchParams.set('token', token);
+          const firstName = escapeHtml(user.first_name);
+          await sendEmail({
+            to: user.email,
+            subject: 'Reset your Little Learners password',
+            text: `Hello ${user.first_name},\n\nChoose a new password here:\n${resetUrl.href}\n\nThis link expires in 1 hour. If you did not ask for this, you can ignore this message.`,
+            html: `<div style="font-family:Arial,sans-serif;max-width:560px;margin:24px auto;padding:32px;border-radius:20px;background:#fff7f0;color:#3f4963"><p style="font-size:30px">🔑</p><h1>Reset your password</h1><p>Hello ${firstName}, choose a new password for your Little Learners account.</p><p style="margin:28px 0"><a href="${resetUrl.href}" style="display:inline-block;padding:14px 22px;border-radius:14px;background:#385d8d;color:white;text-decoration:none;font-weight:bold">Choose new password</a></p><p>This link expires in 1 hour. If you did not ask for this, you can ignore this message.</p></div>`,
+          });
+        }
+      }
+    } catch (error) {
+      const code = error.firebaseCode || '';
+      if (code === 'EMAIL_NOT_FOUND') return reply();
+      console.error('Could not send password reset email:', code || error.message);
+      return json(res, 503, { error: 'We could not send the reset email. Please try again later.' });
+    }
+    return reply();
+  }
+
+  function resetPage(res, { status = 200, title, message, token = '', showForm = false }) {
+    const form = showForm
+      ? `<form method="post" action="/api/auth/reset-password" style="margin-top:20px"><input type="hidden" name="token" value="${escapeHtml(token)}"><input type="password" name="password" minlength="${PASSWORD_MIN_LENGTH}" maxlength="${PASSWORD_MAX_LENGTH}" autocomplete="new-password" placeholder="New password (at least ${PASSWORD_MIN_LENGTH} characters)" required style="width:100%;box-sizing:border-box;padding:14px;border-radius:12px;border:1px solid #b9c3d8;font-size:16px"><button type="submit" style="margin-top:16px;padding:14px 22px;border:0;border-radius:14px;background:#385d8d;color:white;font-size:16px;font-weight:bold">Save new password</button></form>`
+      : '<a href="/" style="display:inline-block;margin-top:16px;padding:14px 22px;border-radius:14px;background:#385d8d;color:white;text-decoration:none">Open Little Learners</a>';
+    const body = `<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>${title} · Little Learners</title><body style="font-family:Arial,sans-serif;max-width:520px;margin:12vh auto;padding:24px;color:#3f4963;text-align:center;background:#fff7f0"><h1>${title}</h1><p>${message}</p>${form}</body></html>`;
+    res.writeHead(status, {
+      'Content-Type': 'text/html; charset=utf-8',
+      'Cache-Control': 'no-store',
+      'Content-Length': Buffer.byteLength(body),
+    });
+    res.end(body);
+  }
+
+  function resetUserForToken(token) {
+    if (!/^[\w-]{43}$/.test(token)) return null;
+    return db.prepare('SELECT id FROM users WHERE reset_token_hash = ? AND reset_expires_at > ?')
+      .get(hashToken(token), Date.now()) || null;
+  }
+
+  function resetPasswordPage(req, res, url) {
+    const token = url.searchParams.get('token') || '';
+    if (!resetUserForToken(token)) {
+      return resetPage(res, { status: 400, title: 'This link has expired', message: 'Request a new password reset from the log in screen.' });
+    }
+    return resetPage(res, { title: 'Choose a new password', message: 'Pick a password you will remember.', token, showForm: true });
+  }
+
+  async function resetPassword(req, res) {
+    if (rateLimited(req, res)) return;
+    const form = await readForm(req);
+    const token = form.get('token') || '';
+    const password = form.get('password') || '';
+    const user = resetUserForToken(token);
+    if (!user) {
+      return resetPage(res, { status: 400, title: 'This link has expired', message: 'Request a new password reset from the log in screen.' });
+    }
+    if (password.length < PASSWORD_MIN_LENGTH || password.length > PASSWORD_MAX_LENGTH) {
+      return resetPage(res, {
+        status: 400, title: 'Choose a longer password',
+        message: `Use a password between ${PASSWORD_MIN_LENGTH} and ${PASSWORD_MAX_LENGTH} characters.`, token, showForm: true,
+      });
+    }
+    const salt = crypto.randomBytes(16).toString('hex');
+    const passwordHash = await scrypt(password, salt, 64);
+    db.prepare('UPDATE users SET password_salt = ?, password_hash = ?, reset_token_hash = NULL, reset_expires_at = NULL WHERE id = ?')
+      .run(salt, passwordHash.toString('hex'), user.id);
+    db.prepare('DELETE FROM sessions WHERE user_id = ?').run(user.id);
+    return resetPage(res, { title: 'Password updated!', message: 'You can now log in with your new password in the app or on the website.' });
+  }
+
   function verifyEmail(req, res, url) {
     const token = url.searchParams.get('token') || '';
     if (!/^[\w-]{43}$/.test(token)) return verificationPage(res, false);
@@ -502,6 +615,9 @@ function createAuthHandler(options = {}) {
       if (url.pathname === '/api/auth/signup' && req.method === 'POST') return await signup(req, res);
       if (url.pathname === '/api/auth/login' && req.method === 'POST') return await login(req, res);
       if (url.pathname === '/api/auth/resend-verification' && req.method === 'POST') return await resendVerification(req, res);
+      if (url.pathname === '/api/auth/forgot-password' && req.method === 'POST') return await forgotPassword(req, res);
+      if (url.pathname === '/api/auth/reset-password' && req.method === 'GET') return resetPasswordPage(req, res, url);
+      if (url.pathname === '/api/auth/reset-password' && req.method === 'POST') return await resetPassword(req, res);
       if (url.pathname === '/api/auth/logout' && req.method === 'POST') return logout(req, res);
       if (url.pathname.startsWith('/api/auth/')) return json(res, 404, { error: 'Account endpoint not found.' });
       return false;

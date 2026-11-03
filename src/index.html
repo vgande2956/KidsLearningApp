@@ -56,10 +56,25 @@
 <input id="auth-login-password" name="password" type="password" autocomplete="current-password" placeholder="Enter your password" required>
 <p id="auth-login-status" class="auth-status" role="status" aria-live="polite"></p>
 <button class="auth-resend" id="auth-login-resend" type="button" hidden>Send confirmation email again</button>
+<button class="auth-resend" id="auth-forgot-link" type="button">Forgot password?</button>
 <button class="auth-submit" type="submit"><span>Log in</span><span aria-hidden="true">→</span></button>
 </form>
 <p class="auth-switch">New to Little Learners? <button id="auth-show-signup" type="button">Create an account</button></p>
 <p class="auth-privacy-note">🔐 We never store your password in plain text.</p>
+</div>
+</div>
+</section>
+<section id="auth-forgot" class="auth-screen" hidden aria-labelledby="auth-forgot-title">
+<button class="auth-back" id="auth-forgot-back" type="button">← Log in</button>
+<div class="auth-layout">
+<div class="auth-panel">
+<div class="auth-panel-heading"><span class="auth-kicker">RESET PASSWORD</span><h1 id="auth-forgot-title">Forgot your password?</h1><p class="auth-intro">Enter your account email and we will send a link to choose a new password.</p></div>
+<form id="auth-forgot-form" class="auth-form">
+<label for="auth-forgot-email">Email address</label>
+<input id="auth-forgot-email" name="email" type="email" maxlength="254" autocomplete="email" placeholder="you@example.com" required>
+<p id="auth-forgot-status" class="auth-status" role="status" aria-live="polite"></p>
+<button class="auth-submit" type="submit"><span>Send reset link</span><span aria-hidden="true">→</span></button>
+</form>
 </div>
 </div>
 </section>
