@@ -467,7 +467,9 @@ test('English lessons filter word lengths and provide a global mute control', as
   assert.match(home.body.toString(), /id="stories-reader-moral"/);
   assert.match(home.body.toString(), /id="stories-reader-moral-text"/);
   const storyData = app.body.toString().split('const CHILDREN_STORIES=[')[1].split('const STORY_MORALS=')[0];
-  assert.equal((storyData.match(/\{id:"[^"]+",genre:"/g) || []).length, 15);
+  assert.equal((storyData.match(/\{id:"[^"]+",genre:"/g) || []).length, 16);
+  assert.match(storyData, /id:"great-acorn-adventure",genre:"fun",englishOnly:true/);
+  assert.match(storyData, /The Great Acorn Adventure/);
   assert.match(home.body.toString(), /Moral of the story/);
   assert.match(script, /function showAppTour\(\)/);
   assert.match(script, /\$\("app-tour-skip"\)\.onclick=leaveAppTour/);
@@ -591,6 +593,10 @@ test('English and Telugu story worlds include animated narration and licensed la
     assert.match(image.body.toString(), /<svg[\s\S]*<title/);
     assert.match(image.body.toString(), /<desc/);
   }
+  const acornImage = await get('/images/stories/great-acorn-adventure.png');
+  assert.equal(acornImage.status, 200);
+  assert.match(acornImage.headers['content-type'], /image\/png/);
+  assert.match(script, /stories-reader-image--contain/);
   assert.match(script, /teTitle:/);
   assert.match(script, /storyRate:\.86/);
   assert.match(script, /requiredVoice:native/);

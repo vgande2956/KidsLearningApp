@@ -356,6 +356,7 @@ header b{flex:1;color:var(--blue);font-size:1.3rem}header button{font-size:.95re
 .stories-list-card .stories-list-arrow{grid-column:2;grid-row:2;justify-self:start;margin:0 8px 9px 3px;padding:5px 9px;border-radius:14px;background:#fff;color:#1f4e9c;font-size:.78rem;font-weight:900}
 .stories-reader{gap:9px}
 .stories-reader-image{width:min(100%,760px);height:clamp(150px,25vh,235px);flex:0 0 auto;object-fit:cover;border:3px solid #fff;border-radius:22px;background:#e5f6ff;box-shadow:0 7px 20px #24324d24}
+.stories-reader-image.stories-reader-image--contain{width:min(100%,420px);height:auto;max-height:clamp(150px,25vh,235px);object-fit:contain}
 .stories-reader-genre{width:fit-content;padding:5px 14px;border-radius:20px;background:#e8dcff;color:#573c94!important;font-size:.86rem!important;font-weight:900!important}
 .stories-reader-pages{width:min(100%,760px);max-height:36vh;flex:0 1 auto;overflow-y:auto;padding:5px 12px;border:2px solid #ffffffd9;border-radius:18px;background:#fffdf7;box-shadow:0 4px 12px #24324d12;text-align:start}
 .stories-reader-pages p{margin:8px 0;padding:8px 10px;border-radius:13px;color:var(--ink);font-size:clamp(1rem,2.8vw,1.18rem);font-weight:650;line-height:1.65;transition:background .25s,box-shadow .25s}
